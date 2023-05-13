@@ -1,0 +1,62 @@
+- type: entity
+  noSpawn:  false
+  parent: ClothingBackpackSWAT
+  id: ClothingBackpackSWATFilled
+  components:
+  - type:  StorageFill
+    contents:
+      - id: BoxSurvivalSecurity
+      - id: Flash
+      - id: ClusterBangFull
+      - id: ClusterBangFull
+      - id: WeaponPistolCobra
+      - id: WeaponDisabler
+      - id: BoxHandcuff
+
+- type: entity
+  parent: CentcomIDCard
+  id: SWATIDCard
+  name: ID карта спецназа
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idcentcom
+  - type: Item
+    heldPrefix: gold
+
+- type: entity
+  id: ClothingBeltMilitaryWebbingfilled
+  parent: ClothingBeltMilitaryWebbing
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazinePistolCaselessRifle
+      - id: MagazinePistolCaselessRifle
+
+- type: entity
+  parent: BasePDA
+  id: SWATPDA
+  name: КПК спецназа
+  description: ...
+  components:
+  - type: PDA
+    id: SWATIDCard
+    state: pda-bartender
+  - type: Icon
+    state: pda-bartender
+
+- type: startingGear
+  id: SWATGear
+  equipment:
+    head: SWATHelmet
+    jumpsuit: ClothingUniformJumpskirtSWAT
+    back: ClothingBackpackSWATFilled
+    shoes: ClothingShoesSwat
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterVestWeb
+    id: SWATPDA
+    ears: ClothingHeadsetCommand
+    belt: ClothingBeltMilitaryWebbingfilled
+    eyes: ClothingEyesGlassesSWAT

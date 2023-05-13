@@ -1,0 +1,91 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatWeddingVeill
+  name: cвадебный венок
+  description: 'В ней ты неотразима'
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/weddingveil.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/weddingveil.rsi
+
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtWeddingDress
+  name: платье невесты
+  description: Настолько белого цвета более нигде не увидеть. Не светится в темноте.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/weddingdress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/weddingdress.rsi
+
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesWeddingShoes
+  name: свадебные туфельки
+  description: Прекрасная обувь, что прекрасно подчёркивает походку невесты.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Misc/weddingshoes.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Misc/weddingshoes.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformWeddingtuxedo
+  name: свадебный смокинг
+  description: Не верится, что нужно надеть именно вам, верно?
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/weddingtuxedo.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/weddingtuxedo.rsi
+
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesWeddingGlaceups
+  name: свадебные туфли
+  description: На самом деле универсальны, но с костюмом смотрятся лучше.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Misc/weddinglaceups.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Misc/weddinglaceups.rsi
+
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsWeddingRing
+  name: обручальное кольцо
+  description: Главное не уронить в важный момент. Или потерять палец.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/weddingring.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/weddingring.rsi
+  - type: FingerprintMask
+
+
+- type: entity
+  name: Букет
+  parent: BaseItem
+  id: bouquet
+  description: Стоило это дарить даме и раньше.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/bouquet.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 1
+  - type: Item
+    size: 15
+    sprite: Objects/Weapons/Melee/bouquet.rsi
+  - type: DisarmMalus

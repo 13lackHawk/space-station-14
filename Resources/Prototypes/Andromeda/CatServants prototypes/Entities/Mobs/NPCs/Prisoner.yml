@@ -1,0 +1,29 @@
+- type: startingGear
+  id: Katorga13PrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack
+
+
+- type: randomHumanoidSettings
+  id: prisonerkatorga-13
+  components:
+    - type: GhostTakeoverAvailable
+      name: Заключенный Каторги-13
+      description: Созданы чтобы работать
+    - type: Loadout
+      prototypes: [ Katorga13PrisonerGear ]
+
+
+- type: entity
+  id: prisoner
+  name: Заключенный
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - type: RandomMetadata
+      nameSegments: [ corvax_names_death_commando ] # Corvax-Localization
+    - type: RandomHumanoidSpawner
+      settings: prisonerkatorga-13

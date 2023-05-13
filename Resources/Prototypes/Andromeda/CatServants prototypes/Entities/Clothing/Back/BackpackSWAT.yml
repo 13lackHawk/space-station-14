@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackSWAT
+  name: рюкзак спецназа
+  description: вместительный рюкзак спецназа.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/SWAT.rsi
+  - type: Storage
+    capacity: 200

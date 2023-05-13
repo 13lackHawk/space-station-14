@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtRubydress
+  name: Платье с рубином
+  description: Чёрное изящное платье с большим рубином в груди. Пахнет блеском и стариной.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/rubydress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/rubydress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtBluebowdress
+  name: Элегантное платье
+  description: Изящное платье с красивенькой синей ленточкой и бантом.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/bluebowdress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/bluebowdress.rsi
+
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterluxuriantdress
+  name: Пышное платье
+  description: Платье, демонстрирующее роскошь и выдежку владельца.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/luxuriantdress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/luxuriantdress.rsi

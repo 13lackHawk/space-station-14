@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleCentCom
+  name: Мантия ЦентКома
+  description: Мантия показывает высокий статус владельца.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/mantles/Centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/mantles/Centcom.rsi

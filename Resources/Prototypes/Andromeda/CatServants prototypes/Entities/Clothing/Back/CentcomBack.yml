@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackSOO
+  name: Рюкзак ОСО
+  description: Рюкзак офицера СО
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/SOOBackpack.rsi
+  - type: Storage
+    capacity: 300
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelCentCom
+  name: Сумка ЦентКома
+  description: Уникальная сумка для представителей ЦентКома
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/CentComsatchel.rsi
+  - type: Storage
+    capacity: 140

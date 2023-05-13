@@ -1,0 +1,232 @@
+- type: radioChannel
+  id: DeathSquadron
+  name: Эскадрон
+  keycode: 'э'
+  frequency: 0404
+  color: '#3b65a0'
+  longRange: true
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyDeatSquadron
+  name: Ключ шифрования эскадрона
+  description: Где ты это взял черт возьми?!
+  components:
+    - type: EncryptionKey
+      channels:
+      - DeathSquadron
+      defaultChannel: DeathSquadron
+    - type: Sprite
+      layers:
+      - state: crypt_gold
+      - state: nano_label
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDeath
+  name: Форма спецвойск
+  description:
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/Color/black.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/Color/black.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskDeathSquadron
+  name: Маска эскадрона смерти
+  description: высокотехнологичная маска эскадрона смерти.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Mask/deathsquadronmask.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Mask/deathsquadronmask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.8
+        Blunt: 0.8
+        Piercing: 0.8
+        Slash: 0.8
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetDeathSquadron
+  name: Гарнитура эскадрона смерти
+  description: Гарнитура выдаваемая эскадрону смерти
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentCom
+      - EncryptionKeyStationMaster
+      - EncryptionKeyDeatSquadron
+  - type: Sprite
+    sprite: Andromeda/Clothing/Ears/deathsquadron.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/deathsquadron.rsi
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsDeathSquadron
+  name: Магнитные ботинки эскадрона
+  description: Специальные магнитные ботинки эскадрона смерти
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Shoes/deathsquadronboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Andromeda/Clothing/Shoes/deathsquadronboots.rsi
+  - type: Magboots
+    toggleAction:
+      icon: { sprite: Clothing/Shoes/Boots/deathsquadronboots.rsi, state: icon }
+      iconOn: Clothing/Shoes/Boots/deathsquadronboots.rsi/icon-on.png
+      name: action-name-magboot-toggle
+      description: action-decription-magboot-toggle
+      itemIconStyle: NoItem
+      event: !type:ToggleActionEvent
+  - type: ClothingSpeedModifier
+    walkModifier: 1.5
+    sprintModifier: 1.5
+    enabled: false
+
+- type: entity
+  name: Медицинский медипен
+  parent: ChemicalMedipen
+  id: EmergencyMedipenOmnizine
+  description: Специальный медипен для военных содержит в себе омнизин, лечит большинство травм
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 30
+  - type: Tag
+    tags: []
+
+- type: entity
+  parent: IDCardStandard
+  id: DeathSquadronIDCard
+  name: ID карта эскадрона смерти
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idcentcom
+  - type: Item
+    heldPrefix: gold
+  - type: IdCard
+    jobTitle: ERR*?*%!
+  - type: Access
+    groups:
+    - AllAccess
+
+- type: entity
+  parent: BasePDA
+  id: DeathSquadronPDA
+  name: КПК эскадрона смерти
+  description: Пахнет смертью.
+  components:
+  - type: PDA
+    id: DeathSquadronIDCard
+    state: pda-bartender
+  - type: Icon
+    state: pda-bartender
+
+- type: entity
+  noSpawn: false
+  parent: ClothingDeathSquadronBackpack
+  id: ClothingDeathSquadronBackpackFilled
+  components:
+  - type:  StorageFill
+    contents:
+      - id: Cautery
+      - id: ClusterBangFull
+      - id: ClusterBangFull
+      - id: ClusterBangFull
+      - id: ClusterBangFull
+      - id: EmergencyMedipen
+      - id: EmergencyMedipen
+      - id: EmergencyMedipen
+      - id: EmergencyMedipen
+      - id: EmergencyMedipenOmnizine
+      - id: EmergencyMedipenOmnizine
+      - id: EmergencyMedipenOmnizine
+      - id: EmergencyMedipenOmnizine
+      - id: StimpackMini
+      - id: StimpackMini
+      - id: StimpackMini
+      - id: StimpackMini
+      - id: MedkitCombatFilled
+      - id: Omnitool
+
+- type: startingGear
+  id: DeathSquadronGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDeath
+    mask: ClothingMaskDeathSquadron
+    back: ClothingDeathSquadronBackpackFilled
+    shoes: ClothingShoesBootsDeathSquadron
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitDeathsquad
+    id: DeathSquadronPDA
+    ears: ClothingHeadsetDeathSquadron
+    pocket1: EnergySword
+
+- type: dataset
+  id: NamesFirstMilitaryDeathSquadron
+  values:
+  - Альфа
+  - Бета
+  - Гамма
+  - Дельта
+  - Эпсилон
+  - Дзета
+  - Лямбда
+  - Омикрон
+  - Сигма
+  - Тау
+  - Пси
+  - Омега
+  - Тэта
+  - Йота
+  - Каппа
+  - Юпсилон
+
+- type: randomHumanoidSettings
+  id: DeathSquadronSpawnSettings
+  randomizeName: false
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryDeathSquadron
+    - type: Loadout
+      prototypes: [ DeathSquadronGear ]
+
+
+- type: entity
+  id: DeathSquadronSpawn
+  name: Эскадрон смерти
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Mobs/Species/Skeleton/parts.rsi
+      state: full
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstMilitaryDeathSquadron
+    - type: RandomHumanoidSpawner
+      settings: DeathSquadronSpawnSettings

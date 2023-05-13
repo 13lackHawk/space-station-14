@@ -1,0 +1,18 @@
+
+- type: entity
+  parent: PosterBase
+  id: poster1new
+  name: "Скажем "Нет" хулиганству!"
+  description: "Плакат, пропагандирующий порядок и отказ от мыла в массы"
+  components:
+  - type: Sprite
+    state: poster40_legit
+
+- type: entity
+  parent: PosterBase
+  id: poster2new
+  name: "Мир, труд, Иан"
+  description: "Картина с лучшим работником НТ. Рисунок на ней вдохновляет вас на труд"
+  components:
+  - type: Sprite
+    state: poster41_legit
