@@ -28,6 +28,8 @@
 - type: entity
   id: ClothingBeltMilitaryWebbingfilled
   parent: ClothingBeltMilitaryWebbing
+  name: армейская РПС
+  description: Ременно-поясная система тактических ремней, которую носят элитные спецназовцы.
   suffix: Filled
   components:
   - type: StorageFill
@@ -39,7 +41,7 @@
   parent: BasePDA
   id: SWATPDA
   name: КПК спецназа
-  description: ...
+  description: На обратной его стороне ножом выцарапано "КIRA". Что бы это могло значить?
   components:
   - type: PDA
     id: SWATIDCard
