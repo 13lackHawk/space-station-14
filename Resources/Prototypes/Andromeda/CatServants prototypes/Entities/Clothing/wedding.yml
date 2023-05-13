@@ -2,12 +2,12 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatWeddingVeill
   name: cвадебный венок
-  description: 'В ней ты неотразима'
+  description: 'Такую надевают только раз в жизни'
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hats/weddingveil.rsi
+    sprite: Andromeda/Clothing/Head/weddingveil.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hats/weddingveil.rsi
+    sprite: Andromeda/Clothing/Head/weddingveil.rsi
 
 
 - type: entity
@@ -17,9 +17,9 @@
   description: Настолько белого цвета более нигде не увидеть. Не светится в темноте.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpskirt/weddingdress.rsi
+    sprite: Andromeda/Clothing/Uniforms/weddingdress.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpskirt/weddingdress.rsi
+    sprite: Andromeda/Clothing/Uniforms/weddingdress.rsi
 
 
 - type: entity
@@ -29,9 +29,9 @@
   description: Прекрасная обувь, что прекрасно подчёркивает походку невесты.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/Misc/weddingshoes.rsi
+    sprite: Andromeda/Clothing/Shoes/weddingshoes.rsi
   - type: Clothing
-    sprite: Clothing/Shoes/Misc/weddingshoes.rsi
+    sprite: Andromeda/Clothing/Shoes/weddingshoes.rsi
 
 
 - type: entity
@@ -41,9 +41,9 @@
   description: Не верится, что нужно надеть именно вам, верно?
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/weddingtuxedo.rsi
+    sprite: Andromeda/Clothing/Uniforms/weddingtuxedo.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/weddingtuxedo.rsi
+    sprite: Andromeda/Clothing/Uniforms/weddingtuxedo.rsi
 
 
 - type: entity
@@ -53,9 +53,9 @@
   description: На самом деле универсальны, но с костюмом смотрятся лучше.
   components:
   - type: Sprite
-    sprite: Clothing/Shoes/Misc/weddinglaceups.rsi
+    sprite: Andromeda/Clothing/Shoes/weddinglaceups.rsi
   - type: Clothing
-    sprite: Clothing/Shoes/Misc/weddinglaceups.rsi
+    sprite: Andromeda/Clothing/Shoes/weddinglaceups.rsi
 
 
 - type: entity
@@ -65,9 +65,9 @@
   description: Главное не уронить в важный момент. Или потерять палец.
   components:
   - type: Sprite
-    sprite: Clothing/Hands/Gloves/weddingring.rsi
+    sprite: Andromeda/Clothing/Hands/weddingring.rsi
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/weddingring.rsi
+    sprite: Andromeda/Clothing/Hands/weddingring.rsi
   - type: FingerprintMask
 
 
@@ -79,7 +79,7 @@
   components:
   - type: Sharp
   - type: Sprite
-    sprite: Objects/Weapons/Melee/bouquet.rsi
+    sprite: Andromeda/Objects/Weapons/bouquet.rsi
     state: icon
   - type: MeleeWeapon
     damage:
@@ -87,5 +87,5 @@
         Slash: 1
   - type: Item
     size: 15
-    sprite: Objects/Weapons/Melee/bouquet.rsi
+    sprite: Andromeda/Objects/Weapons/bouquet.rsi
   - type: DisarmMalus
