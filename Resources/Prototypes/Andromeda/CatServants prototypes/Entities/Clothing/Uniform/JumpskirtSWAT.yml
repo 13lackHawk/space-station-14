@@ -5,6 +5,6 @@
   description: Комбинезон элитных бойцов спецназа.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/SWAT.rsi
+    sprite: Clothing/Uniforms/Jumpskirt/SWAT.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/SWAT.rsi
+    sprite: Clothing/Uniforms/Jumpskirt/SWAT.rsi
