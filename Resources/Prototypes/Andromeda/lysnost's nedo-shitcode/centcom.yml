@@ -1,0 +1,102 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNavyAdmiral
+  name: Форма Верховного Главнокомандующего
+  description: Парадный плащ, спроектированный и сшитый под индивидуальную мерку действующего Верховного Главнокомандующего Флота NanoTrasen. Внутренний слой формы представляет из себя защитную оболочку, состоящую из миллионов нанитов; кластеры этих миниатюрных роботов способны эффективно рассеивать кинетическую и термальную энергию, обеспечивая превосходный уровень защиты для носителя.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/admiralflotuniform.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/admiralflotuniform.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNavyAdmiral
+  name: Офицерская фуражка Верховного Главнокомандующего
+  description: Парадная фуражка, спроектированная и изготовленная под индивидуальную мерку действующего Верховного Главнокомандующего Флота NanoTrasen. Если вы когда-нибудь увидите её носителя, вам стоит надеяться, что он прибыл для награждения вас за ваши заслуги, а не разрешения вызванного вами кризиса.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/admiralcap.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/admiralcap.rsi 
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNavyCaptain
+  name: Полевая форма Офицера Флота NanoTrasen
+  description: Парадный плащ, разработанный в качестве массового варианта формы Верховного Главнокомандующего. У этой униформы нет тех же защитных свойств, что и у оригинала, но она все ещё является довольно удобным и стильным предметом гардероба.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/captainflotsuit1.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/captainflotsuit1.rsi
+
+    - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNavyCaptain
+  name:  Форма Офицера Флота NanoTrasen
+  description: Стандартный плащ офицера Флота NanoTrasen.Выглядит устрашающе.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/captainflotsuit2.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/captainflotsuit2.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNavyBeret
+  name: Офицерский берет
+  description: Офицерский берет, используемый высшим командованием NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/centcomnavyberet.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/centcomnavyberet.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNavyService
+  name: форма Сервисного Работника Центрального Командоавния
+  description: Элитная форма, для элитных горничных.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/centcomservice.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/centcomservice.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSwatKazarmaSoldier
+  name:  повседневная форма СПБсТ
+  description: Повседневная форма спецназовца, говорят что в таких они сидят в своих казармах.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma1.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma1.rsi
+
+    - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSwatKazarmaSoldier
+  name:  повседневная форма лидера СПБсТ
+  description: Повседневная форма спецназовца, украшена золотыми вшивками.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma2.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma2.rsi
+
+        - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSwatKazarmaSoldier
+  name:  парадная форма СПБсТ
+  description: Парадная форма, для особых мероприятий.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma3.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma3.rsi
+
+
+
+
