@@ -1,10 +1,10 @@
 ﻿// © SS220, An EULA/CLA with a hosting restriction, full text: https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/CLA.txt
 
 using System.Collections.Immutable;
-using Content.Shared.SS220.Photocopier.Forms;
-using Content.Shared.SS220.Photocopier.Forms.FormManagerShared;
+using Content.Shared.Andromeda.Photocopier.Forms;
+using Content.Shared.Andromeda.Photocopier.Forms.FormManagerShared;
 
-namespace Content.Client.SS220.Photocopier.Forms;
+namespace Content.Client.Andromeda.Photocopier.Forms;
 
 /// <summary>
 /// Asks server for a complete form tree. Gives it as an immutable to photocopier's UI.
