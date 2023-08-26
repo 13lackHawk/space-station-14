@@ -6,7 +6,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Utility;
 
-namespace Content.Client.SS220.Photocopier.UI;
+namespace Content.Client.Andromeda.Photocopier.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class IconButton : Button
