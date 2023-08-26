@@ -1,12 +1,12 @@
 // © SS220, An EULA/CLA with a hosting restriction, full text: https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/CLA.txt
 
-using Content.Shared.SS220.Photocopier;
-using Content.Client.SS220.Photocopier.UI;
+using Content.Shared.Andromeda.Photocopier;
+using Content.Client.Andromeda.Photocopier.UI;
 using Content.Shared.Containers.ItemSlots;
-using Content.Shared.SS220.Photocopier.Forms.FormManagerShared;
+using Content.Shared.Andromeda.Photocopier.Forms.FormManagerShared;
 using Robust.Client.GameObjects;
 
-namespace Content.Client.SS220.Photocopier;
+namespace Content.Client.Andromeda.Photocopier;
 
 /// <inheritdoc />
 public sealed class PhotocopierBoundUi : BoundUserInterface
