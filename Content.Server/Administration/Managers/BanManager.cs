@@ -2,6 +2,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Content.Server.Andromeda;
 using Content.Server.Chat.Managers;
 using Content.Server.Database;
 using Content.Server.GameTicking;
@@ -30,6 +31,7 @@ public sealed class BanManager : IBanManager, IPostInjectInit
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly IBansNotificationsSystem _andromedaBans = default!;
 
     private ISawmill _sawmill = default!;
 
@@ -167,6 +169,8 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         _sawmill.Info(logMessage);
         _chat.SendAdminAlert(logMessage);
 
+        _andromedaBans.RaiseLocalBanEvent(targetUsername ?? Loc.GetString("system-user"), expires, reason, severity, adminName);
+
         // If we're not banning a player we don't care about disconnecting people
         if (target == null)
             return;
@@ -185,7 +189,7 @@ public sealed class BanManager : IBanManager, IPostInjectInit
     // Removing it will clutter the note list. Please also make sure that department bans are applied to roles with the same DateTimeOffset.
     public async void CreateRoleBan(NetUserId? target, string? targetUsername, NetUserId? banningAdmin, (IPAddress, int)? addressRange, ImmutableArray<byte>? hwid, string role, uint? minutes, NoteSeverity severity, string reason, DateTimeOffset timeOfBan)
     {
-        if (!_prototypeManager.TryIndex(role, out JobPrototype? _))
+        if (!_prototypeManager.TryIndex(role, out JobPrototype? jobPrototype))
         {
             throw new ArgumentException($"Invalid role '{role}'", nameof(role));
         }
@@ -200,6 +204,9 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         _systems.TryGetEntitySystem(out GameTicker? ticker);
         int? roundId = ticker == null || ticker.RoundId == 0 ? null : ticker.RoundId;
         var playtime = target == null ? TimeSpan.Zero : (await _db.GetPlayTimes(target.Value)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall)?.TimeSpent ?? TimeSpan.Zero;
+        var adminName = banningAdmin == null
+            ? Loc.GetString("system-user")
+            : (await _db.GetPlayerRecordByUserId(banningAdmin.Value))?.LastSeenUserName ?? Loc.GetString("system-user");
 
         var banDef = new ServerRoleBanDef(
             null,
@@ -229,6 +236,9 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         {
             SendRoleBans(target.Value);
         }
+
+        _andromedaBans
+            .RaiseLocalJobBanEvent(targetUsername ?? "null", expires, jobPrototype, reason, severity, adminName);
     }
 
     public HashSet<string>? GetJobBans(NetUserId playerUserId)
