@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitNavyCaptain
+  id: ClothingUniformJumpsuitNavyFieldCaptain
   name: Полевая форма Офицера Флота NanoTrasen
   description: Парадный плащ, разработанный в качестве массового варианта формы Верховного Главнокомандующего. У этой униформы нет тех же защитных свойств, что и у оригинала, но она все ещё является довольно удобным и стильным предметом гардероба.
   components:
@@ -31,7 +31,7 @@
   - type: Clothing
     sprite: Andromeda/Clothing/Uniforms/CentCom/captainflotsuit1.rsi
 
-    - type: entity
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNavyCaptain
   name:  Форма Офицера Флота NanoTrasen
@@ -75,9 +75,9 @@
   - type: Clothing
     sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma1.rsi
 
-    - type: entity
+- type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitSwatKazarmaSoldier
+  id: ClothingUniformJumpsuitSwatKazarmaLeader
   name:  повседневная форма лидера СПБсТ
   description: Повседневная форма спецназовца, украшена золотыми вшивками.
   components:
@@ -86,9 +86,9 @@
   - type: Clothing
     sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma2.rsi
 
-        - type: entity
+- type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitSwatKazarmaSoldier
+  id: ClothingUniformJumpsuitSwatSpecial
   name:  парадная форма СПБсТ
   description: Парадная форма, для особых мероприятий.
   components:
@@ -96,7 +96,3 @@
     sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma3.rsi
   - type: Clothing
     sprite: Andromeda/Clothing/Uniforms/CentCom/swatkazarma3.rsi
-
-
-
-
