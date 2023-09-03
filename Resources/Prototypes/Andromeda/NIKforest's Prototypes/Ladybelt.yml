@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBeltSecurity
+  id: ClothingBeltLedy
+  name: пояс леди
+  description: Кажется в нём может поместиться всё оружие, для убийства отца.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/ledybelt.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/ledybelt.rsi

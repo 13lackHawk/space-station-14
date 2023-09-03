@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitProParamed
-  name: профиссиональный скафандр парамедика
+  name: профессиональный скафандр парамедика
   description: Экспериментальный скафандр для парамедика с опытом. Обладает высокой мобильностью, но слабой защитой от физического урона. Разработка Nikola Corporations для NT.
   components:
   - type: Sprite

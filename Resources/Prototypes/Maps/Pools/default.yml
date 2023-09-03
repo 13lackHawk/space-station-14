@@ -2,16 +2,16 @@
   id: DefaultMapPool
   maps:
   - Aspid
-  - Bagel
+  #- Bagel
   - Box
   - Cluster
+  - CorvaxDelta
+  - Fland
   #- Core
-  #- Fland
-  - Kettle
-  - Marathon
   - Meta
-  - Omega
+  - Marathon
   - Origin
+  - Kettle
+  - Omega
   - Saltern
   - Packed
-  - CorvaxDelta

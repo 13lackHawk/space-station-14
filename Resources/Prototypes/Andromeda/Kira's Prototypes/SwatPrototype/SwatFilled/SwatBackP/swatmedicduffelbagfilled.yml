@@ -2,7 +2,7 @@
   noSpawn: false
   parent: ClothingBackpackSwatDuffel
   id: ClothingBackpackSwatMedicDuffelFilled
-  suffix: Заполненный
+  suffix: Заполненный, Медик
   components:
   - type:  StorageFill
     contents:

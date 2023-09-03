@@ -176,7 +176,7 @@ public sealed partial class EmergencyShuttleSystem
                     Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
                     playSound: false,
                     colorOverride: DangerColor);
-                SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+                _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
                 trashcheck60++;
             }
         }
@@ -190,7 +190,7 @@ public sealed partial class EmergencyShuttleSystem
                   Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_AndromedaEmergency30:0}")),
                   playSound: false,
                   colorOverride: DangerColor);
-                SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+                _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
                 trashcheck30++;
             }
         }

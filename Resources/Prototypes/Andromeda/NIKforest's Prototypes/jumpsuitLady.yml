@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitLadyDMC
+  name: костюм леди
+  description: Вы чувствуете себя довольно уверенно, не хватает только крюка кошки и РПГ.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/ladyjumpsuit.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/ladyjumpsuit.rsi

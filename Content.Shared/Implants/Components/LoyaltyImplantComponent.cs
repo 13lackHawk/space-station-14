@@ -3,7 +3,7 @@ using Content.Shared.Damage;
 namespace Content.Shared.Implants.Components;
 
 [RegisterComponent]
-public sealed class LoyaltyImplantComponent : Component
+public sealed partial class LoyaltyImplantComponent : Component
 {
     [DataField("damage", required: true)]
     [ViewVariables(VVAccess.ReadWrite)]

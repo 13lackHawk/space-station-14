@@ -3,7 +3,6 @@
   mapName: 'Marathon Station'
   mapPath: /Maps/marathon.yml
   minPlayers: 35
-  maxPlayers: 70
   stations:
     Marathon:
       stationProto: StandardNanotrasenStation
@@ -48,6 +47,7 @@
             SeniorResearcher: [ 1, 1 ] # A-13 no senior
             Scientist: [ 3, 3 ]
             ResearchAssistant: [ 3, 3 ]
+            Borg: [ 2, 2 ]
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]

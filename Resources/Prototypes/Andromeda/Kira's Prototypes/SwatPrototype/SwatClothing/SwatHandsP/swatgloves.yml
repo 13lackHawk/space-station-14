@@ -5,9 +5,9 @@
   description: Тактические перчатки спецназа, способные защитить от неприятности по типу электричества.
   components:
   - type: Sprite
-    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/swatgloves.rsi
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/SwatGloves.rsi
   - type: Clothing
-    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/swatgloves.rsi
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/SwatGloves.rsi
   - type: GloveHeatResistance
     heatResistance: 1400
   - type: Insulated

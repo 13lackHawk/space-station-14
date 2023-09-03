@@ -8,7 +8,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Server.Chemistry.ReagentEffects;
 
 [UsedImplicitly]
-public sealed class AdaptSpaceMob : ReagentEffect
+public sealed partial class AdaptSpaceMob : ReagentEffect
 {
     // cringe, fix later
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)

@@ -1,7 +1,7 @@
 namespace Content.Server.Chemistry.Components;
 
 [RegisterComponent]
-public sealed class DestroyableOnBoilComponent : Component
+public sealed partial class DestroyableOnBoilComponent : Component
 {
 
 }

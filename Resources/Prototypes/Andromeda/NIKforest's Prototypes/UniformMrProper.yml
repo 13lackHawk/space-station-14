@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMrProper
+  name: костюм уборщика
+  description: Яркий и очень белый. Белый и очень яркий. Чистый.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/mrproperform.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/mrproperform.rsi

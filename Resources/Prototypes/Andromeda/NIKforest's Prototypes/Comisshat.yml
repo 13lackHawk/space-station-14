@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatComiss
+  name: комиссарская фуражка
+  description: На комиссарской фуражке венчается золотой, окрыленный, мрачный череп. Золото сверкает и словно готовится взмыть в воздух.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/comiss.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/comiss.rsi

@@ -1,9 +1,9 @@
 - type: entity
   parent: MarkerBase
   id: MobEvilTwinSpawn
-  name: парадоксальная аномалия
+  name: парадоксальная аномалия(НЕ РАБОТАЕТ)
   components:
-  - type: EvilTwinSpawner
+#  - type: EvilTwinSpawner
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
@@ -11,7 +11,7 @@
       - sprite: Mobs/Ghosts/ghost_human.rsi
         state: icon
   - type: GhostRole
-    name: парадоксальная аномалия
+    name: парадоксальная аномалия(НЕ РАБОТАЕТ)
     description: Замените своего двойника или подружитесь с ним.
     rules: |
       Попытайтесь заменить собой своего двойника.

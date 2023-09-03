@@ -28,8 +28,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakCeElite
-  name: элитный плащ старшего инженера
-  description: Выдается самым ответственным и выдающимся старшим инженерам. Пахнет сингулярностью.
+  name: элитный плащ инженера
+  description: Выдается самым ответственным и выдающимся инженерам. Пахнет сингулярностью.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Neck/Sponsor/ce_elite.rsi  
+    sprite: Andromeda/Clothing/Neck/Sponsor/ce_elite.rsi

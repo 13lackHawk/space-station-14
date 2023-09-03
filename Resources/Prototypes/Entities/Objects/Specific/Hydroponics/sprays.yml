@@ -37,10 +37,10 @@
   - type: SolutionContainerManager
     solutions:
       spray:
-        maxVol: 100 # anti kudzu
+        maxVol: 50
         reagents:
         - ReagentId: WeedKiller
-          Quantity: 100 # anti kudzu
+          Quantity: 50
   - type: DrainableSolution
     solution: spray
   - type: Spillable
@@ -51,10 +51,6 @@
     - Spray
   - type: Spray
     transferAmount: 1
-    vaporAmount: 20  # Andromeda anti-kudzu start
-    vaporSpread: 120
-    sprayVelocity: 3
-    sprayDistance: 150 # Andromeda anti-kudzu end
   - type: Item
     sprite: Objects/Tools/Hydroponics/sprays.rsi
 

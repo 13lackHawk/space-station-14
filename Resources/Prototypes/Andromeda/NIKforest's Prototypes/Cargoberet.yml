@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCargo
+  name: берет отдела снабжения
+  description: Берет покрашенный в цвета отдела снабжения с эмблемой карго.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/cargoberet.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/cargoberet.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable

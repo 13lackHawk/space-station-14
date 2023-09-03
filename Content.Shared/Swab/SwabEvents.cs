@@ -5,15 +5,15 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Swab;
 
 [Serializable, NetSerializable]
-public sealed class BotanySwabDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class BotanySwabDoAfterEvent : SimpleDoAfterEvent
 {
 }
 
 [Serializable, NetSerializable]
-public sealed class MedicalSwabDoAfterEvent : DoAfterEvent
+public sealed partial class MedicalSwabDoAfterEvent : DoAfterEvent
 {
     [DataField("solution", required: true)]
-    public readonly Solution Solution = default!;
+    public Solution Solution = default!;
 
     private MedicalSwabDoAfterEvent()
     {

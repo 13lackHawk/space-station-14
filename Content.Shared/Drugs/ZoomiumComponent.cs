@@ -1,7 +1,7 @@
 ﻿namespace Content.Shared.Drugs;
 
 [RegisterComponent]
-public sealed class ZoomiumComponent : Component
+public sealed partial class ZoomiumComponent : Component
 {
     [ViewVariables] public TimeSpan NextUpdate = TimeSpan.Zero;
     public TimeSpan UpdateDelay = TimeSpan.FromMilliseconds(900);

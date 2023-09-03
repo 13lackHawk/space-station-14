@@ -25,7 +25,7 @@
             Bartender: [ 2, 2 ]
             Botanist: [ 3, 3 ]
             Chef: [ 2, 2 ]
-            Janitor: [ 2, 2 ]
+            Janitor: [ 4, 4 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
@@ -33,21 +33,22 @@
             ChiefEngineer: [ 1, 1 ]
             SeniorEngineer: [ 1, 1 ] # A-13 no senior
             AtmosphericTechnician: [ 3, 3 ]
-            StationEngineer: [ 4, 4 ]
+            StationEngineer: [ 6, 6 ]
             TechnicalAssistant: [ 4, 4 ]
             #medical
             ChiefMedicalOfficer: [ 1, 1 ]
             SeniorPhysician: [ 1, 1 ] # A-13 no senior
             Chemist: [ 2, 3 ]
-            MedicalDoctor: [ 3, 3 ]
+            MedicalDoctor: [ 5, 5 ]
             Paramedic: [ 1, 1 ]
             MedicalIntern: [ 4, 4 ]
             Psychologist: [ 1, 1 ]
             #science
             ResearchDirector: [ 1, 1 ]
             SeniorResearcher: [ 1, 1 ] # A-13 no senior
-            Scientist: [ 4, 4 ]
+            Scientist: [ 6, 6 ]
             ResearchAssistant: [ 4, 4 ]
+            Borg: [ 2, 2 ]
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
@@ -59,7 +60,7 @@
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
-            CargoTechnician: [ 3, 3 ]
+            CargoTechnician: [ 5, 5 ]
             #civilian
             Passenger: [ -1, -1 ]
             Clown: [ 1, 1 ]

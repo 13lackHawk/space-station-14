@@ -3,7 +3,7 @@
 namespace Content.Shared.Drugs;
 
 [RegisterComponent, NetworkedComponent]
-public sealed class CrazyRussianDrugComponent : Component
+public sealed partial class CrazyRussianDrugComponent : Component
 {
 
 }

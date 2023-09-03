@@ -38,9 +38,9 @@
   id: StationGoalAnomalyResearch
   text: station-goal-anomaly-research
 
-- type: stationGoal
-  id: StationGoalMiningOres
-  text: station-goal-mining-ores
+#- type: stationGoal
+#  id: StationGoalMiningOres
+#  text: station-goal-mining-ores
 
 - type: stationGoal
   id: StationGoalBounty

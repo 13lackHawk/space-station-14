@@ -17,11 +17,11 @@
   - type: Gun
     minAngle: 2
     maxAngle: 6
-    fireRate: 8
+    fireRate: 6
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
       params:
-        volume: -10
+        volume: -3
     availableModes:
     - SemiAuto
     - FullAuto

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCargoExpert
+  name: комбинезон элитного эксперта по утилизации
+  description: Сшит по манере обычного комбинезона утилизатора, но из кожи опасного космического существа - королевы ксеноморфов.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/elitesalvage.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/elitesalvage.rsi

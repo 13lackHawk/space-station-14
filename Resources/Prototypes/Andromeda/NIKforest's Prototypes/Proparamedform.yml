@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitProParamed
-  name: комбинезон профиссионального парамедика
+  name: комбинезон профессионального парамедика
   description: Удобный комбинезон для бега. Удаляет пот.
   components:
   - type: Sprite

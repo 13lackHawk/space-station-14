@@ -8,7 +8,7 @@
     eyes: ClothingEyesGlassesTacticalSwat
     mask: ClothingSwatGasMask
     gloves: ClothingHandsGlovesSwat
-    outerClothing: ClothingOuterVestSwat
+    outerClothing: ClothingOuterLightVestSwat
     id: SwatMedicPDA
     ears: ClothingHeadsetSwat
     belt: ClothingBeltSwatMedicWeddingFilled

@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelCaptainSponsor
+  name: вещмешок Nanotrasen
+  description: Большой синий вещмешок с логотипом NT.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/captain.rsi

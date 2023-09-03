@@ -1,8 +1,8 @@
 - type: entity
   noSpawn: false
   parent: ClothingSwatBackpack
-  id: ClothingSwatBackpackFilled
-  suffix: Заполненный
+  id: ClothingSwatBackpackStandartFilled
+  suffix: Заполненный, Стандарт
   components:
   - type:  StorageFill
     contents:

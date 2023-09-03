@@ -3,12 +3,12 @@ using Content.Server.StationEvents.Events;
 namespace Content.Server.StationEvents.Components;
 
 [RegisterComponent, Access(typeof(MidRoundAntagRule))]
-public sealed class MidRoundAntagRuleComponent : Component
+public sealed partial class MidRoundAntagRuleComponent : Component
 {
     [DataField("antags")]
-    public readonly IReadOnlyList<string> MidRoundAntags = new[]
+    public IReadOnlyList<string> MidRoundAntags = new[]
     {
-        //"MobEvilTwinSpawn", 
+        //"MobEvilTwinSpawn",
         "SpawnPointGhostRatKing"
     };
 }

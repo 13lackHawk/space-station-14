@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBeltJanitor
+  id: ClothingBeltMrProper
+  name: пояс Мистера Пропера
+  description: Белый, чистый пояс. Носит в себе не белые и не чистые вещи.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/mrproperbelt.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/mrproperbelt.rsi

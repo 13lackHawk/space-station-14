@@ -2,7 +2,7 @@
   noSpawn: false
   parent: ClothingBeltSwatWedding
   id: ClothingBeltSwatLeaderWeddingFilled
-  suffix: Заполненный
+  suffix: Заполненный, Лидер
   components:
   - type:  StorageFill
     contents:

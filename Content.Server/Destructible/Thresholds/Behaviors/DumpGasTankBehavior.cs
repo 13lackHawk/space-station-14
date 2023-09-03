@@ -4,7 +4,7 @@ namespace Content.Server.Destructible.Thresholds.Behaviors;
 
 [Serializable]
 [DataDefinition]
-public sealed class DumpGasTankBehavior : IThresholdBehavior
+public sealed partial class DumpGasTankBehavior : IThresholdBehavior
 {
     public void Execute(EntityUid owner, DestructibleSystem system, EntityUid? cause = null)
     {

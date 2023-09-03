@@ -76,19 +76,25 @@
   id: ClothingHeadHatCueballLoadout
   entity: ClothingHeadHatCueball
   sponsorOnly: true
-  whitelistJobs: [ResearchDirector, Scientist]
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingNeckHealerCloakLoadout
   entity: ClothingNeckHealerCloak
   sponsorOnly: true
-  whitelistJobs: [ChiefMedicalOfficer, MedicalDoctor, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, ChiefMedicalOfficer, MedicalDoctor, Chemist]
 
 - type: loadout
   id: ClothingNeckMinerCloakLoadout
   entity: ClothingNeckMinerCloak
   sponsorOnly: true
   whitelistJobs: [SalvageSpecialist, Quartermaster]
+
+- type: loadout
+  id: ClothingNeckCleanerCloakLoadout
+  entity: ClothingNeckCleanerCloak
+  sponsorOnly: true
+  whitelistJobs: [Janitor]
 
 # Zluka
 - type: loadout
@@ -111,12 +117,6 @@
   id: ClothingMaskSkullLoadoutZluka
   entity: ClothingMaskSkull
   sponsorOnly: true
-
-- type: loadout
-  id: ClothingNeckCleanerCloakLoadout
-  entity: ClothingNeckCleanerCloak
-  sponsorOnly: true
-  whitelistJobs: [Janitor]
 
 # Verslebas
 - type: loadout
@@ -146,37 +146,37 @@
   id: BluespaceBeakerLoadout
   entity: BluespaceBeaker
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
+  whitelistJobs: [SeniorResearcher, MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingEyesHudMedicalLoadout
   entity: ClothingEyesHudMedical
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingHandsGlovesNitrileLoadout
   entity: ClothingHandsGlovesNitrile
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+#  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingMaskBreathMedicalLoadout
   entity: ClothingMaskBreathMedical
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingHeadHatBeretBrigmedicLoadout
   entity: ClothingHeadHatBeretBrigmedic
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: AnomalyLocatorLoadout
   entity: AnomalyLocator
   sponsorOnly: true
-  whitelistJobs: [ResearchDirector, Scientist]
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
 
 #Naik21
 - type: loadout
@@ -208,6 +208,12 @@
   entity: ClothingBackpackCMOEliteSatchel
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
+
+- type: loadout
+  id: ClothingOuterCoatHoSOvercoatLoadout
+  entity: ClothingOuterCoatHoSOvercoat
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, SeniorOfficer]
 
 #Ramsody
 - type: loadout
@@ -476,6 +482,11 @@
   entity: ClothingOuterCoatGentle
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingUniformJumpskirtTacticalMaidLoadout
+  entity: ClothingUniformJumpskirtTacticalMaid
+  sponsorOnly: true
+
 #JNON
 - type: loadout
   id: WeaponRevolverDeckardLoadout
@@ -559,4 +570,20 @@
 - type: loadout
   id: PlushieSpaceLizardLoadout
   entity: PlushieSpaceLizard
+  sponsorOnly: true
+
+#STEFANICH
+- type: loadout
+  id: DrinkRumBottleFullLoadout
+  entity: DrinkRumBottleFull
+  sponsorOnly: true
+
+- type: loadout
+  id: CigarGoldCaseLoadout
+  entity: CigarGoldCase
+  sponsorOnly: true
+
+- type: loadout
+  id: FoodPizzaMargheritaLoadout
+  entity: FoodPizzaMargherita
   sponsorOnly: true

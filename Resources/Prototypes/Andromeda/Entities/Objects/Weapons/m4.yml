@@ -12,7 +12,7 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
-    fireRate: 6
+    fireRate: 5
     selectedMode: FullAuto
     availableModes:
       - SemiAuto

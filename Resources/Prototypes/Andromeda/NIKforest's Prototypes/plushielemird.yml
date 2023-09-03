@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseItem
+  id: PlushieLemird
+  name: плюшевая Lemird
+  description: Хотите обнимашек и милоты? Нехватка хорни в вашем организме? Новая серия игрушек "Lemird"! Лучшие вайфу Andromeda-13! *На обратной стороне игрушки написано то что может издавать хорни фразочки и вызвать возбуждение при долгом ношении, а так же надпись "A.R.C.H.I like it."*
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/plushielemird.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/NIKforest/plushielemird.rsi
+  - type: ItemCooldown
+  - type: EmitSoundOnUse
+    sound: /Audio/Items/Toys/meow1.ogg
+  - type: UseDelay
+    delay: 5.0

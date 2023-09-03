@@ -1,7 +1,7 @@
 ﻿namespace Content.Server.Explosion.Components;
 
 [RegisterComponent]
-public sealed class LemonkaComponent : Component
+public sealed partial class LemonkaComponent : Component
 {
 
 }

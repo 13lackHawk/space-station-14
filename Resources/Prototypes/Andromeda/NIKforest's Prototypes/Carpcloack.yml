@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCarpcloack
+  name: плащ из карпокожи
+  description: Сшит из лучших чешуек подходящих для костюма из карпокожи. Без него не обходится на рок-концертах.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/carpcloack.rsi

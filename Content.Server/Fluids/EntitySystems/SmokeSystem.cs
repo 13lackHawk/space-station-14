@@ -29,15 +29,11 @@ namespace Content.Server.Fluids.EntitySystems;
 public sealed class SmokeSystem : EntitySystem
 {
     // If I could do it all again this could probably use a lot more of puddles.
-    [Dependency] private readonly IAdminLogManager _logger = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly AppearanceSystem _appearance = default!;
-    [Dependency] private readonly BloodstreamSystem _blood = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly InternalsSystem _internals = default!;
-    [Dependency] private readonly ReactiveSystem _reactive = default!;
     [Dependency] private readonly SolutionContainerSystem _solutionSystem = default!;
 
     /// <inheritdoc/>
@@ -216,27 +212,6 @@ public sealed class SmokeSystem : EntitySystem
                 continue;
 
             // NOOP, react with entities on the tile or whatever.
-            // Andromeda SMOKE AND FOAM LIVES MATTERS
-            var reagent = _prototype.Index<ReagentPrototype>(reagentQuantity.ReagentId);
-
-            // React with the tile the effect is on
-            // We don't multiply by solutionFraction here since the tile is only ever reacted once
-            if (!component.ReactedTile)
-            {
-                reagent.ReactionTile(tile, reagentQuantity.Quantity);
-                component.ReactedTile = true;
-            }
-
-            // Touch every entity on tile.
-            foreach (var entity in ents)
-            {
-                if (entity == uid)
-                continue;
-
-                _reactive.ReactionEntity(entity, ReactionMethod.Touch, reagent,
-                reagentQuantity.Quantity * solutionFraction, solution);
-            }
-            // Andromeda SMOKE AND FOAM LIVES MATTERS
         }
 
         foreach (var entity in ents)
@@ -263,34 +238,7 @@ public sealed class SmokeSystem : EntitySystem
     private void ReactWithEntity(EntityUid entity, Solution solution, double solutionFraction)
     {
         // NOOP due to people complaining constantly.
-        // Andromeda SMOKE AND FOAM LIVES MATTERS
-        if (!TryComp<BloodstreamComponent>(entity, out var bloodstream))
-            return;
-
-        if (TryComp<InternalsComponent>(entity, out var internals) &&
-            _internals.AreInternalsWorking(internals))
-        {
-            return;
-        }
-
-        var cloneSolution = solution.Clone();
-        var transferAmount = FixedPoint2.Min(cloneSolution.Volume * solutionFraction, bloodstream.ChemicalSolution.AvailableVolume);
-        var transferSolution = cloneSolution.SplitSolution(transferAmount);
-
-        foreach (var reagentQuantity in transferSolution.Contents.ToArray())
-        {
-            if (reagentQuantity.Quantity == FixedPoint2.Zero)
-                continue;
-
-            _reactive.ReactionEntity(entity, ReactionMethod.Ingestion, reagentQuantity.ReagentId, reagentQuantity.Quantity, transferSolution);
-        }
-
-        if (_blood.TryAddToChemicals(entity, transferSolution, bloodstream))
-        {
-            // Log solution addition by smoke
-            _logger.Add(LogType.ForceFeed, LogImpact.Medium, $"{ToPrettyString(entity):target} was affected by smoke {SolutionContainerSystem.ToPrettyString(transferSolution)}");
-        }
-        // Andromeda SMOKE AND FOAM LIVES MATTERS
+        return;
     }
 
     /// <summary>

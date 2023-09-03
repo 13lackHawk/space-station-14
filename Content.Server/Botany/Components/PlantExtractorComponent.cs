@@ -7,7 +7,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 namespace Content.Server.Botany.Components
 {
     [Access(typeof(PlantExtractorSystem)), RegisterComponent]
-    public sealed class PlantExtractorComponent : Component
+    public sealed partial class PlantExtractorComponent : Component
     {
         [ViewVariables(VVAccess.ReadWrite)]
         public int StorageMaxEntities = 10;
@@ -46,7 +46,7 @@ namespace Content.Server.Botany.Components
     }
 
     [Access(typeof(PlantExtractorSystem)), RegisterComponent]
-    public sealed class ActivePlantExtractorComponent : Component
+    public sealed partial class ActivePlantExtractorComponent : Component
     {
         /// <summary>
         /// Remaining time until the plant extractor finishes extracting.

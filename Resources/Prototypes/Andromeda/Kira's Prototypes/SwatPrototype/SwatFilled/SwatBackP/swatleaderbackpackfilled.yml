@@ -2,7 +2,7 @@
   noSpawn: false
   parent: ClothingSwatBackpack
   id: ClothingSwatLeaderBackpackFilled
-  suffix: Заполненный
+  suffix: Заполненный, Лидер
   components:
   - type:  StorageFill
     contents:

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCarpglov
+  name: перчатки из карпокожи
+  description: Замечательные перчатки вышитые из кожи опасного космического карпа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/carpgloves.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/carpgloves.rsi

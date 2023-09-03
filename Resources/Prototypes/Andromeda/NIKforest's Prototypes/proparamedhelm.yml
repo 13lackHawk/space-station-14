@@ -2,7 +2,7 @@
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitProParamed
   noSpawn: true
-  name: шлем профиссионального парамедика
+  name: шлем профессионального парамедика
   description: Лёгкий шлем для парамедика, встроен в скафандр.
   components:
   - type: Sprite

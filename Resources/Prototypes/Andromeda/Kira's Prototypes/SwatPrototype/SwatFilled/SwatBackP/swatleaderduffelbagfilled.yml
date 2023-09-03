@@ -2,11 +2,11 @@
   noSpawn: false
   parent: ClothingBackpackSwatDuffel
   id: ClothingBackpackSwatLeaderDuffelFilled
-  suffix: Заполненный
+  suffix: Заполненный, Лидер
   components:
   - type:  StorageFill
     contents:
-      - id: WeaponLighhtMachineGunL6
+      - id: WeaponLightMachineGunL6
       - id: WeaponSubmachineGunMP5
       - id: WeaponDisabler
       - id: Crowbar

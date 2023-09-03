@@ -59,10 +59,11 @@
     prototype: Felinid
     requiredLegs: 2
   - type: Vocal
+    wilhelm: "/Audio/Voice/Felinid/cat_wilhelm.ogg"
     sounds:
       Male: MaleFelinid
       Female: FemaleFelinid
-      Unsexed: FemaleFelinid
+      Unsexed: MaleFelinid
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Felinid

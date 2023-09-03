@@ -5,16 +5,16 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxPillCanister
       - id: BoxSyringe
       - id: EpinephrineChemistryBottle
-        amount: 3
+        amount: 1
       - id: Brutepack
         amount: 2
       - id: Ointment
         amount: 2
       - id: Bloodpack
         amount: 2
+      - id: Gauze
       - id: IodineChemistryBottle
         amount: 3
       - id: BoxMouthSwab
@@ -28,16 +28,16 @@
   components:
   - type: StorageFill
     contents:
-      - id: BoxPillCanister
       - id: BoxSyringe
       - id: EpinephrineChemistryBottle
-        amount: 3
+        amount: 1
       - id: Brutepack
         amount: 2
       - id: Ointment
         amount: 2
       - id: Bloodpack
         amount: 2
+      - id: Gauze
       - id: IodineChemistryBottle
         amount: 3
       - id: BoxMouthSwab
@@ -75,8 +75,6 @@
       - id: UniformScrubsColorPurple
         prob: 0.05
         orGroup: Surgshrubs
-      - id: NitrousOxideTankFilled
-        prob: 0.3
       - id: ClothingMaskSterile
 
 - type: entity
@@ -111,8 +109,6 @@
       - id: UniformScrubsColorPurple
         prob: 0.05
         orGroup: Surgshrubs
-      - id: NitrousOxideTankFilled
-        prob: 0.3
       - id: ClothingMaskSterile
 
 - type: entity
@@ -124,10 +120,17 @@
     contents:
       - id: BoxSyringe
       - id: BoxBeaker
+      - id: BoxBeaker
+        prob: 0.3
       - id: BoxPillCanister
       - id: BoxBottle
-        amount: 2
-        
+      - id: ChemBag
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetMedical
+      - id: ClothingMaskSterile
+      - id: HandLabeler
+        prob: 0.5
+
 - type: entity
   id: LockerParamedicFilled
   suffix: Filled
@@ -142,4 +145,8 @@
       - id: ClothingUniformJumpsuitParamedic
       - id: ClothingUniformJumpskirtParamedic
       - id: ClothingEyesHudMedical
-      
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetMedical
+      - id: ClothingMaskSterile
+      - id: MedkitFilled
+        prob: 0.3

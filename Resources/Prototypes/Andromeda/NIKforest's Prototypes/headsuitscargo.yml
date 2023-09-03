@@ -2,7 +2,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCargo
   noSpawn: true
-  name: Шлем от скафандра отдела снабженния
+  name: Шлем от скафандра отдела снабжения
   description: Удобный шлем, с оранжевым свечением.
   components:
     - type: Sprite
