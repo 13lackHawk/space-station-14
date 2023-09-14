@@ -12,3 +12,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "By Naik21 for Andromeda-13"
   source: "https://github.com/13lackHawk/space-station-14"
+
+- files: ["holo.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "By Nekachek for Andromeda-13"
+  source: "https://github.com/13lackHawk/space-station-14"

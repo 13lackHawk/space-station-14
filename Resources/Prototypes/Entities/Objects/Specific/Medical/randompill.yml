@@ -41,6 +41,8 @@
     reagents:
     - SpaceDrugs
     - Toxin
+    - Zoomium
+    - CrazyRussianDrug
 
 - type: entity
   name: strange pill

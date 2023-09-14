@@ -138,6 +138,7 @@
     - !type:IncompatibleConditionsRequirement
       conditions:
         - DieCondition
+        - EscapeShuttleCondition # A-13
     - !type:NotRoleRequirement
       roleId: Captain
     - !type:NotRoleRequirement

@@ -9,3 +9,7 @@
 - type: lobbyBackground
   id: Holo
   background: /Textures/Andromeda/LobbyScreens/holo.png
+
+- type: lobbyBackground
+  id: ExplosiveKiss
+  background: /Textures/Andromeda/LobbyScreens/explosive-kiss.png

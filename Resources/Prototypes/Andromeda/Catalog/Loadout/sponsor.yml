@@ -146,7 +146,7 @@
   id: BluespaceBeakerLoadout
   entity: BluespaceBeaker
   sponsorOnly: true
-  whitelistJobs: [SeniorResearcher, MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
+  whitelistJobs: [Paramedic, SeniorPhysician, SeniorResearcher, MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingEyesHudMedicalLoadout
@@ -158,7 +158,7 @@
   id: ClothingHandsGlovesNitrileLoadout
   entity: ClothingHandsGlovesNitrile
   sponsorOnly: true
-#  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingMaskBreathMedicalLoadout
@@ -236,11 +236,6 @@
 - type: loadout
   id: Blyat2Loadout
   entity: Blyat2
-  sponsorOnly: true
-
-- type: loadout
-  id: ClothingHeadHatUshankaLoadout
-  entity: ClothingHeadHatUshanka
   sponsorOnly: true
 
 - type: loadout
@@ -487,6 +482,11 @@
   entity: ClothingUniformJumpskirtTacticalMaid
   sponsorOnly: true
 
+- type: loadout
+  id: PlushieLemirdLoadout
+  entity: PlushieLemird
+  sponsorOnly: true
+
 #JNON
 - type: loadout
   id: WeaponRevolverDeckardLoadout
@@ -586,4 +586,22 @@
 - type: loadout
   id: FoodPizzaMargheritaLoadout
   entity: FoodPizzaMargherita
+  sponsorOnly: true
+
+#CaxapoK
+
+- type: loadout
+  id: ToySwordLoadout
+  entity: ToySword
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatBeretRNDLoadout
+  entity: ClothingHeadHatBeretRND
+  sponsorOnly: true
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
+
+- type: loadout
+  id: ClothingHeadHatBizarreSoftLoadout
+  entity: ClothingHeadHatBizarreSoft
   sponsorOnly: true

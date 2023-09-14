@@ -57,6 +57,8 @@
       reagents:
       - ReagentId: SpaceDrugs
         Quantity: 10
+      - ReagentId: Zoomium
+        Quantity: 5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -79,6 +81,10 @@
     weight: 10
     reagents:
     - SpaceDrugs
+  - quantity: 10
+    weight: 10
+    reagents:
+    - Zoomium
   - quantity: 0
     weight: 5
     reagents:
