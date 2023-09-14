@@ -1,4 +1,3 @@
-using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Popups;
 using Content.Server.UserInterface;
@@ -12,7 +11,6 @@ using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
-using Robust.Shared.Audio;
 using static Content.Shared.Paper.SharedPaperComponent;
 
 namespace Content.Server.Paper
@@ -91,7 +89,7 @@ namespace Content.Server.Paper
 
             if (paperComp.StampedBy.Count > 0)
             {
-                var commaSeparated = string.Join(", ", paperComp.StampedBy.Select(s => Loc.GetString(s.StampedName)));
+                var commaSeparated = string.Join(", ", paperComp.StampedBy);
                 args.PushMarkup(
                     Loc.GetString(
                         "paper-component-examine-detail-stamped-by", ("paper", uid), ("stamps", commaSeparated))
@@ -101,7 +99,7 @@ namespace Content.Server.Paper
 
         private void OnInteractUsing(EntityUid uid, PaperComponent paperComp, InteractUsingEvent args)
         {
-            if (_tagSystem.HasTag(args.Used, "Write") && paperComp.StampedBy.Count == 0)
+            if (_tagSystem.HasTag(args.Used, "Write") && paperComp.StampedBy.Count == 0 && paperComp.Writable)
             {
                 var writeEvent = new PaperWriteEvent(uid, args.User);
                 RaiseLocalEvent(args.Used, ref writeEvent);
@@ -115,15 +113,13 @@ namespace Content.Server.Paper
             }
 
             // If a stamp, attempt to stamp paper
-            if (TryComp<StampComponent>(args.Used, out var stampComp) && TryStamp(uid, GetStampInfo(stampComp), stampComp.StampState, paperComp))
+            if (TryComp<StampComponent>(args.Used, out var stampComp) && TryStamp(uid, stampComp.StampedName, stampComp.StampState, paperComp))
             {
                 // successfully stamped, play popup
-                var stampPaperOtherMessage = Loc.GetString("paper-component-action-stamp-paper-other",
-                        ("user", args.User), ("target", args.Target), ("stamp", args.Used));
-
+                var stampPaperOtherMessage = Loc.GetString("paper-component-action-stamp-paper-other", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target, EntityManager)), ("stamp", args.Used));
                 _popupSystem.PopupEntity(stampPaperOtherMessage, args.User, Filter.PvsExcept(args.User, entityManager: EntityManager), true);
-                var stampPaperSelfMessage = Loc.GetString("paper-component-action-stamp-paper-self",
-                        ("target", args.Target), ("stamp", args.Used));
+
+                var stampPaperSelfMessage = Loc.GetString("paper-component-action-stamp-paper-self", ("target", Identity.Entity(args.Target, EntityManager)), ("stamp", args.Used));
                 _popupSystem.PopupEntity(stampPaperSelfMessage, args.User, args.User);
 
                 _audio.PlayPvs(stampComp.Sound, uid);
@@ -132,21 +128,15 @@ namespace Content.Server.Paper
             }
         }
 
-        private StampDisplayInfo GetStampInfo(StampComponent stamp)
-        {
-            return new StampDisplayInfo {
-                StampedName = stamp.StampedName,
-                StampedColor = stamp.StampedColor
-            };
-        }
-
         private void OnInputTextMessage(EntityUid uid, PaperComponent paperComp, PaperInputTextMessage args)
         {
             if (string.IsNullOrEmpty(args.Text))
                 return;
 
-            if (args.Text.Length + paperComp.Content.Length <= paperComp.ContentSize)
-                paperComp.Content = args.Text;
+            var text = FormattedMessage.EscapeText(args.Text);
+
+            if (text.Length + paperComp.Content.Length <= paperComp.ContentSize)
+                paperComp.Content = text;
 
             if (TryComp<AppearanceComponent>(uid, out var appearance))
                 _appearance.SetData(uid, PaperVisuals.Status, PaperStatus.Written, appearance);
@@ -170,19 +160,17 @@ namespace Content.Server.Paper
         /// <summary>
         ///     Accepts the name and state to be stamped onto the paper, returns true if successful.
         /// </summary>
-        public bool TryStamp(EntityUid uid, StampDisplayInfo stampInfo, string spriteStampState, PaperComponent? paperComp = null)
+        public bool TryStamp(EntityUid uid, string stampName, string stampState, PaperComponent? paperComp = null)
         {
             if (!Resolve(uid, ref paperComp))
                 return false;
 
-            if (!paperComp.StampedBy.Contains(stampInfo))
+            if (!paperComp.StampedBy.Contains(Loc.GetString(stampName)))
             {
-                paperComp.StampedBy.Add(stampInfo);
+                paperComp.StampedBy.Add(Loc.GetString(stampName));
                 if (paperComp.StampState == null && TryComp<AppearanceComponent>(uid, out var appearance))
                 {
-                    paperComp.StampState = spriteStampState;
-                    // Would be nice to be able to display multiple sprites on the paper
-                    // but most of the existing images overlap
+                    paperComp.StampState = stampState;
                     _appearance.SetData(uid, PaperVisuals.Stamp, paperComp.StampState, appearance);
                 }
             }
