@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Content.Server.Chat.Managers;
 using Content.Server.Database;
 using Content.Server.GameTicking;
+using Content.Shared.GameTicking;
 using Content.Shared.Database;
 using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
@@ -25,6 +26,7 @@ public sealed class BanManager : IBanManager, IPostInjectInit
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IEntitySystemManager _systems = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly ILocalizationManager _localizationManager = default!;
     [Dependency] private readonly IChatManager _chat = default!;
@@ -167,6 +169,8 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         _sawmill.Info(logMessage);
         _chat.SendAdminAlert(logMessage);
 
+        _entityManager.EventBus.RaiseEvent(EventSource.Local, new BanEvent(targetUsername ?? Loc.GetString("system-user"), expires, reason, severity, adminName));
+
         // If we're not banning a player we don't care about disconnecting people
         if (target == null)
             return;
@@ -185,7 +189,7 @@ public sealed class BanManager : IBanManager, IPostInjectInit
     // Removing it will clutter the note list. Please also make sure that department bans are applied to roles with the same DateTimeOffset.
     public async void CreateRoleBan(NetUserId? target, string? targetUsername, NetUserId? banningAdmin, (IPAddress, int)? addressRange, ImmutableArray<byte>? hwid, string role, uint? minutes, NoteSeverity severity, string reason, DateTimeOffset timeOfBan)
     {
-        if (!_prototypeManager.TryIndex(role, out JobPrototype? _))
+        if (!_prototypeManager.TryIndex(role, out JobPrototype? jobPrototype))
         {
             throw new ArgumentException($"Invalid role '{role}'", nameof(role));
         }
@@ -198,6 +202,9 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         }
 
         _systems.TryGetEntitySystem(out GameTicker? ticker);
+        var adminName = banningAdmin == null
+            ? Loc.GetString("system-user")
+            : (await _db.GetPlayerRecordByUserId(banningAdmin.Value))?.LastSeenUserName ?? Loc.GetString("system-user");
         int? roundId = ticker == null || ticker.RoundId == 0 ? null : ticker.RoundId;
         var playtime = target == null ? TimeSpan.Zero : (await _db.GetPlayTimes(target.Value)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall)?.TimeSpent ?? TimeSpan.Zero;
 
@@ -229,6 +236,7 @@ public sealed class BanManager : IBanManager, IPostInjectInit
         {
             SendRoleBans(target.Value);
         }
+        _entityManager.EventBus.RaiseEvent(EventSource.Local, new JobBanEvent(targetUsername ?? Loc.GetString("system-user"), expires, jobPrototype, reason, severity, adminName));
     }
 
     public HashSet<string>? GetJobBans(NetUserId playerUserId)
