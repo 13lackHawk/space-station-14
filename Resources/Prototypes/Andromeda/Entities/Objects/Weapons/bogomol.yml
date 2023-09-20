@@ -1,0 +1,61 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: mantisImplant
+  name: mantis implant
+  description: This implant grants hidden storage within a person's body using bluespace technology.
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleSuitPiece
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHandsGlovesmantis
+      slot: gloves
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  id: mantisImplanter
+  name: mantis implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: mantisImplant
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesmantis
+  name: клинки богомола
+  description: Смертоносные клинки.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Misc/mantis.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Misc/mantis.rsi
+    equipSound: /Uploaded/base/ogg/bogomol/on.ogg
+    unequipSound: /Uploaded/base/ogg/bogomol/off.ogg
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+        Piercing: 10
+    soundSwing: /Uploaded/base/ogg/bogomol/miss.ogg
+    soundHit: /Uploaded/base/ogg/bogomol/hit.ogg
+    heavyWindupModifier: .9
+    heavyDamageModifier: 1.5
+  - type: Tool
+    qualities:
+      - Prying
+  - type: StaticPrice
+    price: 1000
+
+- type: listing
+  id: UplinkBogomol
+  name: Клинки богомола
+  description: Смертоносные клинки, в качестве импланта, скрытные, смертоносные, а самое главное стильные.
+  icon: { sprite: /Uploaded/base/rsi/Textures/Misc/bogomol.rsi, state: icon }
+  productEntity: BogomolImplanter
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkImplants
