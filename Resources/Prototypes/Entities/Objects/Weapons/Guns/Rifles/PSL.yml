@@ -1,8 +1,8 @@
 - type: entity
-  name: PSL
+  name: СВД
   parent: BaseWeaponRifle
   id: WeaponRiflePSL
-  description: An iconic weapon of war. Uses .30 rifle ammo.
+  description: Самозарядная снайперская винтовка. Использует .30 винтовочные патроны
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/PSL.rsi
