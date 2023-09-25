@@ -1,0 +1,63 @@
+- type: reagent
+  id: BeerDark
+  name: тёмное пиво
+  parent: BaseAlcohol
+  desc: Внутри непроглядная тёмная пивная тьма, заставляющая вас задуматься о бытие в непроглядном космосе, таком красивом, но таком далёком.
+  physicalDesc: густое
+  flavor: beerdark
+  color: "#A0522D"
+  spritePath: Andromeda/Lemird/beerdark.rsi
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.3
+
+- type: flavor
+  id: beerdark
+  flavorType: Complex
+  description: как крепкий хмель и тёмный краситель.
+
+- type: reaction
+  id: BeerDark
+  reactants:
+    Beer:
+      amount: 2
+    BlackRussian:
+      amount: 2
+  products:
+    BeerDark: 4
+
+- type: entity
+  parent: DrinkBottleBaseFull
+  id: DrinkBeerDarkBottleFull
+  name: бутылка тёмного пива
+  description: это выдающееся тёмное пиво, внутри бутылки которого не видно бурлящих пузырьков. Этот напиток ничем не похож на пиво со вкусом мочи. Он призван удовлетворить самых изысканных ценителей тёмного пива и был создан специально для компании "13lackHawk". Разнообразные ноты и насыщенный вкус делают его идеальным выбором для путешественников в космосе.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: BeerDark
+          Quantity: 100
+  - type: Sprite
+    sprite: Andromeda/Lemird/beerdarktbottle.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkBeerDarkglass
+  name: стакан тёмного пива
+  description: Идеальный спутник ваших космических приключений. Этот стакан создан для тех, кто предпочитает тёмное пиво, с хорошим стилем и тёмным юмором.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: BeerDark
+          Quantity: 50
+  - type: Sprite
+    sprite: Andromeda/Lemird/beerdark.rsi

@@ -1,0 +1,63 @@
+- type: reagent
+  id: BeerLight
+  name: светлое пиво
+  parent: BaseAlcohol
+  desc: Это светлое пиво, жёлтое и яркое как солнце.
+  physicalDesc: пенистое
+  flavor: beerlight
+  color: "#FFFF00"
+  spritePath: Andromeda/Lemird/beerlight.rsi
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
+
+- type: flavor
+  id: beerlight
+  flavorType: Complex
+  description: как безмочевой хмель
+
+- type: reaction
+  id: BeerLight
+  reactants:
+    Beer:
+      amount: 2
+    TonicWater:
+      amount: 1
+  products:
+    BeerLight: 2
+
+- type: entity
+  parent: DrinkBottleBaseFull
+  id: DrinkBeerLightBottleFull
+  name: бутылка светлого пива
+  description: В нём невидно никаких пузырьков, производитель заверяет, что пузырьки были из-за вкусовой добавки. Почему то все думают, то что это пиво из компании "Лемирд"...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: BeerLight
+          Quantity: 100
+  - type: Sprite
+    sprite: Andromeda/Lemird/beerlightbottle.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkBeerLightglass
+  name: стакан светлого пива
+  description: Прозрачный стеклянный сосуд, наполненный золотистым напитком с плотной белой пеной. Аромат свежей травы и цитрусовая горчинка. Легкий, прохладный вкус, словно солнечный пикник.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: BeerLight
+          Quantity: 50
+  - type: Sprite
+    sprite: Andromeda/Lemird/beerlight.rsi
