@@ -70,7 +70,8 @@
   - type: Stamina
   - type: StatusIcon
   - type: StatusEffects
-  - Stun
+    allowed:
+    - Stun
     - KnockedDown
     - SlowedDown
     - Stutter
