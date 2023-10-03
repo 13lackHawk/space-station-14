@@ -1,6 +1,6 @@
 # Cyrillic letters
 - type: decal # Б
-  id: letter_cyr_b
+  id: cyr_b
   tags: ["crayon"]
   sprite:
     sprite: Corvax/Effects/crayondecals.rsi

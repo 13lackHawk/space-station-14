@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesColorSheriff
   name: сапоги шерифа

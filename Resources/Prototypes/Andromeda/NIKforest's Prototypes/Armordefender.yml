@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingOuterBase
   id: ClothingOuterDefenderArmor
   name: Тяжёлая броня рыцаря

@@ -1,0 +1,11 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRuMilitry
+  name: форма военного
+  description: Камуфляжная одежда солдата. 
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/rumilitry.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/rumilitry.rsi

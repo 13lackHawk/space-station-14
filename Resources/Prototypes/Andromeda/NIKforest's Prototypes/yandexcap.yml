@@ -1,8 +1,0 @@
-- type: entity
-  parent: DrinkBaseMug
-  id: DrinkYandexCup
-  name: редкая кружка
-  description: Старая кружка, написано Яндекс.
-  components:
-  - type: Sprite
-    sprite: Andromeda/NIKforest/yandexcap.rsi

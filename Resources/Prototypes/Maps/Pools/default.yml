@@ -1,13 +1,13 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
+  - Bagel
   - Aspid
-  #- Bagel
   - Box
   - CorvaxSpectrum
   - Cluster
   - CorvaxDelta
-  - Origin
+#  - Origin
   - Marathon
   - Fland
   #- Core

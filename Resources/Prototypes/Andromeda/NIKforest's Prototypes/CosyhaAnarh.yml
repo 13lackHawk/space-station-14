@@ -1,0 +1,11 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatCosyhaAnarh
+  name: плащ анархиста
+  description: Кожаная куртка с зауженной талией и молнией наискосок. По все куртке видны надписи, а также на всю спину знак анархии. Хой!
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/cosyhaanarh.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/cosyhaanarh.rsi

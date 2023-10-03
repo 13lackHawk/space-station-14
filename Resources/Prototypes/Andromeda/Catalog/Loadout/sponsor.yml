@@ -9,7 +9,7 @@
   id: ClothingShoesBlingLoadout
   entity: ClothingShoesBling
   sponsorOnly: true
-  whitelistJobs: [Clown, Passenger]
+  whitelistJobs: [Clown]
 
 - type: loadout
   id: CyberPenLoadout
@@ -215,6 +215,30 @@
   sponsorOnly: true
   whitelistJobs: [SecurityOfficer, SeniorOfficer]
 
+- type: loadout
+  id: SlipperyBlobLoadout
+  entity: SlipperyBlob
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: SlipperyBlobLoadout2
+  entity: SlipperyBlob
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: SlipperyBlobLoadout3
+  entity: SlipperyBlob
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: BananiumHornLoadout
+  entity: BananiumHorn
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
 #Ramsody
 - type: loadout
   id: DrugsBriefcaseFilledLoadout
@@ -318,6 +342,16 @@
   entity: ClothingHeadHelmetHeavyAltynOld
   sponsorOnly: true
   whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: ClothingMaskNeckGaiterLoadout
+  entity: ClothingMaskNeckGaiter
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitDetectiveGreyLoadout
+  entity: ClothingUniformJumpsuitDetectiveGrey
+  sponsorOnly: true
 
 #PANDA1
 - type: loadout
@@ -589,7 +623,6 @@
   sponsorOnly: true
 
 #CaxapoK
-
 - type: loadout
   id: ToySwordLoadout
   entity: ToySword
@@ -604,4 +637,91 @@
 - type: loadout
   id: ClothingHeadHatBizarreSoftLoadout
   entity: ClothingHeadHatBizarreSoft
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCloakPurpleFoxLoadout
+  entity: ClothingNeckCloakPurpleFox
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatUshankaLoadout
+  entity: ClothingHeadHatUshanka
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingEyesGlassesLoadout
+  entity: ClothingEyesGlasses
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingUniformJumpsuitFlannelLoadout
+  entity: ClothingUniformJumpsuitFlannel
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingOuterCoatBomberLoadout
+  entity: ClothingOuterCoatBomber
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingShoesColorRedLoadout
+  entity: ClothingShoesColorRed
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+# ilnaz
+- type: loadout
+  id: SurvivalKnifeLoadout
+  entity: SurvivalKnife
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatTacticalMaidHeadbandLoadout
+  entity: ClothingHeadHatTacticalMaidHeadband
+  sponsorOnly: true
+
+- type: loadout
+  id: LanternPinkLoadout
+  entity: LanternPink
+  sponsorOnly: true
+
+- type: loadout
+  id: FlashlightLanternPinkLoadout
+  entity: FlashlightLanternPink
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCobraCloakLoadout
+  entity: ClothingNeckCobraCloak
+  sponsorOnly: true
+
+# AbramMoskov
+- type: loadout
+  id: ClothingBackpackSatchelLeatherLoadout
+  entity: ClothingBackpackSatchelLeather
+  sponsorOnly: true
+
+- type: loadout
+  id: FlashlightLanternOrangeLoadout
+  entity: FlashlightLanternOrange
+  sponsorOnly: true
+
+- type: loadout
+  id: LanternOrangeLoadout
+  entity: LanternOrange
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesBootsCombatLoadout
+  entity: ClothingShoesBootsCombat
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitDetectiveLoadout
+  entity: ClothingUniformJumpsuitDetective
   sponsorOnly: true

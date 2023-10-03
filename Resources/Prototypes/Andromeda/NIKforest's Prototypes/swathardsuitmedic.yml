@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitSwatMedic
   name: экзокостюм медика СПБсТ

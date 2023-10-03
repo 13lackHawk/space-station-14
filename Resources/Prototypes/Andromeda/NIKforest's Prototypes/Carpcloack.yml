@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingNeckBase
   id: ClothingNeckCloakCarpcloack
   name: плащ из карпокожи

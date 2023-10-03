@@ -18,17 +18,6 @@
     guides:
   # - Virology (when it's back)
     - Botany
-  - type: MedicalSwab
-  - type: SolutionContainerManager
-    solutions:
-      swab:
-        canBoil: false
-        maxVol: 5
-  - type: RefillableSolution
-    solution: swab
-  - type: InjectableSolution
-    solution: swab
-
 
 - type: entity
   parent: BaseItem

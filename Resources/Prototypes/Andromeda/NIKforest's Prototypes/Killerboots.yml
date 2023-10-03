@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingShoesStorageBase
   id: ClothingShoesBootsKiller
   name: старые ботинки

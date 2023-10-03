@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitHippiBlue
   name: синий костюм хиппи

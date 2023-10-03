@@ -1,0 +1,11 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRuMilitryCold
+  name: зимний камуфляжный костюм
+  description: Этот камуфляж выглядит достаточно белым, чтобы коммунисты не заметили вас, вы финский снайпер?
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/rumilitrycold.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/rumilitrycold.rsi

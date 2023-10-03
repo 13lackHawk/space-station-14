@@ -1,7 +1,7 @@
 - type: entity
   save: false
   name: Урист МакВульп
-  parent: BaseMobOrganic
+  parent: BaseMobSpeciesOrganic
   id: BaseMobVulpkanin
   abstract: true
   components:

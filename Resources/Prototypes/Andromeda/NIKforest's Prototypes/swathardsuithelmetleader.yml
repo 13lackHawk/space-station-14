@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSwatLeader
   noSpawn: true

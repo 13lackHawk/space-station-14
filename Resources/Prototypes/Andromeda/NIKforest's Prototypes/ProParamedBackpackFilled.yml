@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   noSpawn: true
   parent: ClothingBackpackParamedPro
   id: ClothingBackpackParamedProFilled

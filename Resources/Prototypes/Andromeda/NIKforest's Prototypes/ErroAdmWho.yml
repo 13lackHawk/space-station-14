@@ -1,0 +1,13 @@
+- type: entity
+  suffix: Andromeda
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterErrorAdminWho
+  name: накидка незнакомца
+  description: Тёмное пальто, выглядит жутко. Оно скрывает своего владельца
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/erroadmwho.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/erroadmwho.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodErrorAdminWho

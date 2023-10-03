@@ -42,7 +42,7 @@
   - BorgModuleHarvesting
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
-  - PlantExtractorMachineCircuitboard
+#  - PlantExtractorMachineCircuitboard
 
 - type: technology
   id: CritterMechs

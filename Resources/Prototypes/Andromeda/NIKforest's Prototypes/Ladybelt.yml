@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingBeltSecurity
   id: ClothingBeltLedy
   name: пояс леди

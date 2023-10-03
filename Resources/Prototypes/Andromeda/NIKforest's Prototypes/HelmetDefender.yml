@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingHeadBase
   id: ClothingHeadHelmetDefenderHelmet
   name: Тяжёлый шлем рыцаря

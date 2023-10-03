@@ -1,7 +1,7 @@
 - type: entity
+  suffix: Андромеда, заполненный
   id: ClothingBeltProParamedicFilled
   parent: ClothingBeltMedicalParamedic
-  suffix: Filled
   components:
   - type: StorageFill
     contents:

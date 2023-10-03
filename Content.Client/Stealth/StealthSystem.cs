@@ -93,4 +93,3 @@ public sealed class StealthSystem : SharedStealthSystem
         args.Sprite.Color = new Color(visibility, visibility, 1, 1);
     }
 }
-

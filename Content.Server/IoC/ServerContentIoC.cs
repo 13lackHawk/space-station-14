@@ -64,7 +64,7 @@ namespace Content.Server.IoC
             IoCManager.Register<TTSManager>(); // Corvax-TTS
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
             IoCManager.Register<ServerInfoManager>();
-            IoCManager.Register<BansNotificationsSystem>(); // Andromeda BanNotification
+            //IoCManager.Register<BansNotificationsSystem>(); // Andromeda BanNotification
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();
         }

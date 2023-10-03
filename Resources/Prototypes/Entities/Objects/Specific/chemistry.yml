@@ -46,7 +46,6 @@
     - key: enum.TransferAmountUiKey.Key
       type: TransferAmountBoundUserInterface
   - type: Drink
-    isOpen: true
     solution: beaker
   - type: Appearance
   - type: SolutionContainerVisuals
@@ -137,7 +136,6 @@
     - key: enum.TransferAmountUiKey.Key
       type: TransferAmountBoundUserInterface
   - type: Drink
-    isOpen: true
     solution: beaker
   - type: Appearance
   - type: SolutionContainerVisuals

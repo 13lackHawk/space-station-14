@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingHandsBase
   id: ClothingHandsGlovesSecurityGloves
   name: Перчатки Службы Безопасности

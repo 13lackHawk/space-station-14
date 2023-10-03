@@ -33,6 +33,7 @@ using Content.Shared.Tools.Components;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Zombies;
 using Robust.Shared.Audio;
+using Content.Shared.Prying.Components;
 
 namespace Content.Server.Zombies
 {
@@ -106,8 +107,8 @@ namespace Content.Server.Zombies
 
             //This is needed for stupid entities that fuck up combat mode component
             //in an attempt to make an entity not attack. This is the easiest way to do it.
-            RemComp<CombatModeComponent>(target);
-            var combat = AddComp<CombatModeComponent>(target);
+            var combat = EnsureComp<CombatModeComponent>(target);
+            _combat.SetCanDisarm(target, false, combat);
             _combat.SetInCombatMode(target, true, combat);
 
             RemComp<PacifiedComponent>(target); // Corvax-DionaPacifist: Allow dionas zombies to harm
@@ -165,11 +166,12 @@ namespace Content.Server.Zombies
                 melee.Damage = dspec;
 
                 // humanoid zombies get to pry open doors and shit
-                var tool = EnsureComp<ToolComponent>(target);
-                tool.SpeedModifier = 0.75f;
-                tool.Qualities = new ("Prying");
-                tool.UseSound = new SoundPathSpecifier("/Audio/Items/crowbar.ogg");
-                Dirty(tool);
+                var pryComp = EnsureComp<PryingComponent>(target);
+                pryComp.SpeedModifier = 0.75f;
+                pryComp.PryPowered = true;
+                pryComp.Force = true;
+
+                Dirty(target, pryComp);
             }
 
             Dirty(melee);
@@ -235,7 +237,7 @@ namespace Content.Server.Zombies
             else
             {
                 var htn = EnsureComp<HTNComponent>(target);
-                htn.RootTask = new HTNCompoundTask() {Task = "SimpleHostileCompound"};
+                htn.RootTask = new HTNCompoundTask() { Task = "SimpleHostileCompound" };
                 htn.Blackboard.SetValue(NPCBlackboard.Owner, target);
                 _npc.WakeNPC(target, htn);
             }

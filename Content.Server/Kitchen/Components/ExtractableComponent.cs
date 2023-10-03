@@ -1,5 +1,4 @@
-using Content.Server.Botany.Systems;
-using Content.Server.Kitchen.EntitySystems;
+﻿using Content.Server.Kitchen.EntitySystems;
 using Content.Shared.Chemistry.Components;
 
 namespace Content.Server.Kitchen.Components
@@ -8,7 +7,7 @@ namespace Content.Server.Kitchen.Components
     /// Tag component that denotes an entity as Extractable
     /// </summary>
     [RegisterComponent]
-    [Access(typeof(ReagentGrinderSystem), typeof(PlantExtractorSystem))]
+    [Access(typeof(ReagentGrinderSystem))]
     public sealed partial class ExtractableComponent : Component
     {
         [DataField("juiceSolution")]

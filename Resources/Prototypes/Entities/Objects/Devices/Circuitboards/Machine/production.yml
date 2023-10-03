@@ -435,7 +435,7 @@
     - type: Sprite
       state: service
     - type: MachineBoard
-      prototype: hydroponicsTray
+      prototype: HydroponicsTrayEmpty
       materialRequirements:
         # replacing the console screen
         Glass: 5
@@ -934,26 +934,26 @@
             DefaultPrototype: Beaker
             ExamineName: Glass Beaker
 
-- type: entity
-  id: PlantExtractorMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: plant extractor machine board
-  description: A machine printed circuit board for a plant extractor
-  components:
-    - type: Sprite
-      state: service
-    - type: MachineBoard
-      prototype: plant_extractor
-      requirements:
-        MatterBin: 2
-        Manipulator: 2
-      tagRequirements:
-        GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
-      materialRequirements:
-        Steel: 2
+#- type: entity
+#  id: PlantExtractorMachineCircuitboard
+#  parent: BaseMachineCircuitboard
+#  name: plant extractor machine board
+#  description: A machine printed circuit board for a plant extractor
+#  components:
+#    - type: Sprite
+#      state: service
+#    - type: MachineBoard
+#      prototype: plant_extractor
+#      requirements:
+#        MatterBin: 2
+#        Manipulator: 2
+#      tagRequirements:
+#        GlassBeaker:
+#          Amount: 2
+#          DefaultPrototype: Beaker
+#          ExamineName: Glass Beaker
+#      materialRequirements:
+#        Steel: 2
 
 - type: entity
   id: AtmosDeviceFanTinyMachineCircuitboard

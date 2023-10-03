@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Text.Json.Serialization;
 using Lidgren.Network;
 using Robust.Shared.Network;

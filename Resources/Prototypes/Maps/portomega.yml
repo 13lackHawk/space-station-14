@@ -1,0 +1,44 @@
+﻿- type: gameMap
+  id: PortOmega
+  mapName: 'NT-KC Port Omega'
+  mapPath: /Maps/Military-Outpost-ready.yml
+  minPlayers: 10
+  stations:
+    PortOmega:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Port Omega {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'NT-KC '
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_raven.yml
+        - type: StationJobs
+          availableJobs:
+            HeadOfPersonnel: [ 1, 1 ] #ommand
+            ChiefEngineer: [ 1, 1 ]
+            Quartermaster: [ 1, 1 ]
+            Captain: [ 1, 2 ]
+            HeadOfSecurity: [ 2, 3 ]
+            ChiefMedicalOfficer: [ 1, 2 ]
+            ResearchDirector: [ 1, 1 ]
+            CargoTechnician: [ 1, 2 ] #cargo
+            StationEngineer: [ 2, 2 ] #engineers
+            TechnicalAssistant: [ 1, 2 ]
+            SeniorEngineer: [ 1, 2 ]
+            MedicalDoctor: [ 3, 5 ] #medical
+            MedicalIntern: [ 1, 2 ]
+            Paramedic: [ 1, 2 ]
+            Chemist: [ 2, 3 ]
+            SeniorPhysician: [ 1, 2 ]
+            SecurityOfficer: [ 24, 50 ] #security
+            SecurityCadet: [ 14, 40 ] 
+            SeniorOfficer: [ 5, 10 ]
+            Warden: [ 5, 10 ]
+            SeniorResearcher: [ 1, 2 ] #RND
+            Scientist: [ 1, 2 ]
+            Bartender: [ 1, 2 ] #Service
+            Botanist: [ 1, 2 ]
+            Chef: [ 1, 2 ]
+            Janitor: [ 2, 5 ]

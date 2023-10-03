@@ -1,0 +1,37 @@
+- type: entity
+  name: розовый светильник
+  parent: Lantern
+  id: LanternPink
+  description: Похоже в этом светильнике установлена цветная линза.
+  components:
+  - type: PointLight
+    energy: 6
+    color: "#FF85BC"
+
+- type: entity
+  name: розовый фонарик
+  parent: FlashlightLantern
+  id: FlashlightLanternPink
+  description: Похоже в этом фонарике установлена цветная линза.
+  components:
+  - type: PointLight
+    color: "#FF85BC"
+
+- type: entity
+  name: оранжевый светильник
+  parent: Lantern
+  id: LanternOrange
+  description: Похоже в этом светильнике установлена цветная линза.
+  components:
+  - type: PointLight
+    energy: 6
+    color: "#EE7600"
+
+- type: entity
+  name: оранжевый фонарик
+  parent: FlashlightLantern
+  id: FlashlightLanternOrange
+  description: Похоже в этом фонарике установлена цветная линза.
+  components:
+  - type: PointLight
+    color: "#EE7600"

@@ -69,7 +69,7 @@ public partial struct SeedEvolveConditions
     [DataField("requiredMinHealth")] public int RequiredMinHealth;
     [DataField("requiredMaxHealth")] public int RequiredMaxHealth;
     [DataField("requiredMutationLevel")] public int RequiredMutationLevel;
-    [DataField("requiredReagent")] public string? ReagentId;
+    [DataField("requiredReagent")] public string? Reagent;
 }
 
 // TODO reduce the number of friends to a reasonable level. Requires ECS-ing things like plant holder component.
@@ -179,7 +179,7 @@ public partial class SeedData
     [DataField("seedless")] public bool Seedless = false;
 
     /// <summary>
-    ///     If true, rapidly decrease health while growing. Used to kill off
+    ///     If false, rapidly decrease health while growing. Used to kill off
     ///     plants with "bad" mutations.
     /// </summary>
     [DataField("viable")] public bool Viable = true;
@@ -241,6 +241,12 @@ public partial class SeedData
 
     #endregion
 
+    /// <summary>
+    ///     The seed prototypes this seed may mutate into when prompted to.
+    /// </summary>
+    [DataField("mutationPrototypes", customTypeSerializer: typeof(PrototypeIdListSerializer<SeedPrototype>))]
+    public List<string> MutationPrototypes = new();
+
     public SeedData Clone()
     {
         DebugTools.Assert(!Immutable, "There should be no need to clone an immutable seed.");
@@ -254,6 +260,7 @@ public partial class SeedData
 
             PacketPrototype = PacketPrototype,
             ProductPrototypes = new List<string>(ProductPrototypes),
+            MutationPrototypes = new List<string>(MutationPrototypes),
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),

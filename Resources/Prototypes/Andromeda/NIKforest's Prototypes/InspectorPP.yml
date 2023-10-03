@@ -1,0 +1,11 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitInspectorPP
+  name: форма инспектора
+  description: Документы, пожалуйста.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/inspectorpp.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/inspectorpp.rsi

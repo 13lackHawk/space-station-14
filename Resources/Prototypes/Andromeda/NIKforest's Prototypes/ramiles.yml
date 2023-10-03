@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpSkirtFemaleTop
   name: Женский летний топ

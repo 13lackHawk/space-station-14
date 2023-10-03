@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   name: Великий меч
   parent: BaseItem
   id: GreatSword
@@ -12,8 +13,8 @@
     attackRate: 1
     damage:
       types:
-        Slash: 40
-        Structual: 10
+        Slash: 45
+        Structual: 20
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item

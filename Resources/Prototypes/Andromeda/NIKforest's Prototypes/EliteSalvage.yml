@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCargoExpert
   name: комбинезон элитного эксперта по утилизации

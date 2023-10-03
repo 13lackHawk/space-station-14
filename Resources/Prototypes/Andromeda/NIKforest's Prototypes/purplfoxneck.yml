@@ -1,0 +1,9 @@
+- type: entity
+  suffix: Andromeda
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakPurpleFox
+  name: плащ рыжего зверя
+  description: Плащ с изображением рыжего хитрого лиса, выглядит словно живой коварный зверь.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/purplfoxneck.rsi

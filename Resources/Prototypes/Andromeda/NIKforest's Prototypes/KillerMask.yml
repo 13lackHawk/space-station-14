@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingMaskBase
   id: ClothingMaskHockeyKiller
   name: сломанная хокейная маска

@@ -3,6 +3,7 @@
 [RegisterComponent]
 public sealed partial class ZoomiumComponent : Component
 {
+    /*
     [ViewVariables] public TimeSpan NextUpdate = TimeSpan.Zero;
     public TimeSpan UpdateDelay = TimeSpan.FromMilliseconds(900);
     public TimeSpan NextSmallUpdate = TimeSpan.Zero;
@@ -12,4 +13,5 @@ public sealed partial class ZoomiumComponent : Component
 
     [ViewVariables(VVAccess.ReadWrite)] [DataField("severity")]
     public float Severity = 1f;
+    */
 }

@@ -86,7 +86,7 @@
     speechSounds: Alto
   - type: Stamina
     excess: 65
-  - type: OwOAccent
+  #- type: OwOAccent
   - type: Perishable
 
 - type: entity

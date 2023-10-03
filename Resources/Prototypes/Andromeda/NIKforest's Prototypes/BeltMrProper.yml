@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingBeltJanitor
   id: ClothingBeltMrProper
   name: пояс Мистера Пропера

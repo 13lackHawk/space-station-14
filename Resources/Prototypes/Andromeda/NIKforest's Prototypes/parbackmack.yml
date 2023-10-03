@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingBackpack
   id: ClothingBackpackParamedPro
   name: рюкзак парамедика

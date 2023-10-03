@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatTraderCoat
   name: пальто торговца

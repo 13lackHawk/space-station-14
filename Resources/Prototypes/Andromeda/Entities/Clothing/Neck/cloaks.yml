@@ -42,3 +42,13 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/syndie_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCobraCloak
+  name: стильный плащ с буквой S
+  suffix: Андромеда
+  description: Утонченный плащ подчеркивает невероятно качественно вышитая буква "S", идеально мимикрирующая под очертания кобры.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/cobra_cloak.rsi

@@ -1,0 +1,11 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingHeadBase
+  id: ClothingHeadHatRedRog
+  name: Ободок с рожками
+  description: Для любителей душ и блинчиков.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/redrog.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/redrog.rsi

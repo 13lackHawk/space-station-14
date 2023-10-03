@@ -654,14 +654,14 @@
      Steel: 100
      Glass: 900
 
-- type: latheRecipe
-  id: PlantExtractorMachineCircuitboard
-  icon: { sprite: Objects/Misc/module.rsi, state: id_mod }
-  result: PlantExtractorMachineCircuitboard
-  completetime: 4
-  materials:
-    Steel: 100
-    Glass: 900
+#- type: latheRecipe
+#  id: PlantExtractorMachineCircuitboard
+#  icon: { sprite: Objects/Misc/module.rsi, state: id_mod }
+#  result: PlantExtractorMachineCircuitboard
+#  completetime: 4
+#  materials:
+#    Steel: 100
+#    Glass: 900
 
 - type: latheRecipe
   id: SalvageMagnetMachineCircuitboard
@@ -702,4 +702,4 @@
   materials:
      Steel: 100
      Glass: 900
-     Gold: 100     
+     Gold: 100

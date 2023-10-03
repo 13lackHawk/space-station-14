@@ -4116,7 +4116,7 @@ entities:
     - pos: 3.3051276,5.484958
       parent: 818
       type: Transform
-- proto: plant_extractor
+- proto: chem_master
   entities:
   - uid: 218
     components:
