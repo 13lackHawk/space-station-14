@@ -160,7 +160,7 @@ flavor-complex-rocksandstones = like rocks and stones
 
 ## Basic drinks
 flavor-complex-water = like water
-flavor-complex-beer = like piss
+flavor-complex-beer = like fresh and refreshing, with a slight bitterness.
 flavor-complex-ale = like bread
 flavor-complex-cola = like cola
 flavor-complex-vodka = like fermented grain
