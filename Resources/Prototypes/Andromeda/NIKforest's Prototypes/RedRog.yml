@@ -3,7 +3,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatRedRog
   name: Ободок с рожками
-  description: Для любителей душ и блинчиков.
+  description: Вы теперь одеты как ЧЕРТ.
   components:
   - type: Sprite
     sprite: Andromeda/NIKforest/redrog.rsi

@@ -261,3 +261,7 @@
   - type: StealCondition
     prototype: NukeDisk
     owner: objective-condition-steal-station
+  - type: ObjectiveBlacklistRequirement # A-13
+    blacklist:
+      components:
+      - EscapeShuttleCondition
