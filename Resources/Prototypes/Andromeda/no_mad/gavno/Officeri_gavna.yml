@@ -238,7 +238,7 @@
     suitstorage: WeaponPistolMk58
     head: ClothingHeadHatBeretHoS
     id: IDCardCentComGavnaOfficerSesurity
-    ears: ClothingHeadsetCentComCC
+    ears: ClothingHeadsetCentCom
     belt: ClothingBeltSecuritySuper
     pocket2: MagazinePistol
 
@@ -287,7 +287,7 @@
     outerClothing: ClothingOuterRobesJudge
     head: ClothingHeadHatPwig
     id: IDCardCentComGavnaMagistrat
-    ears: ClothingHeadsetCentComCC
+    ears: ClothingHeadsetCentCom
 
 - type: entity
   name:  судья магистрата
@@ -384,7 +384,7 @@
     head: ClothingHeadHatHopcap
     eyes: ClothingEyesGlassesSunglasses
     id: IDCardCentComGavnaPilot
-    ears: ClothingHeadsetCentComCC
+    ears: ClothingHeadsetCentCom
     pocket1: WeaponPistolMk58
     pocket2: MagazinePistol
 
@@ -464,7 +464,7 @@
     suitstorage: WeaponPistolMk58
     head: ClothingHeadHelmetBasic
     id: IDCardPrisonGuard
-    ears: ClothingHeadsetCentComCCZek
+    ears: ClothingHeadsetCentComZek
     belt: ClothingBeltSecuritySuper
     pocket2: MagazinePistol
 
@@ -511,7 +511,7 @@
 
 - type: entity
   parent: ClothingHeadset
-  id: ClothingHeadsetCentComCCZek
+  id: ClothingHeadsetCentComZek
   suffix: CentCom
   name: Гарнитура надзирателя
   description: Стандартная гарнитура ЦК.
