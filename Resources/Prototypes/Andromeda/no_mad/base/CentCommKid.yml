@@ -1,0 +1,4928 @@
+
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetEarthGov
+  name: Гарнитура EarthGov
+  description: Стандартная гарнитура EarthGov.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyEarthGov
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Headsets/base.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Headsets/base.rsi
+  - type: ShowSecurityIcons
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyEarthGov
+  name: ключ шифрования EarthGov
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOfficer
+  name: ключ шифрования Центрального Офицера
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_gold
+    - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyRebel
+  name: ключ шифрования Повстанцев
+  components:
+  - type: EncryptionKey
+    channels:
+    - Syndicate
+    defaultChannel: Syndicate
+  - type: Sprite
+    layers:
+    - state: crypt_rusted
+    - state: synd_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOBRSR6
+  name: ключ шифрования ОБР СР6
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOBRTHT9
+  name: ключ шифрования ОБР ЗТ9
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOBREPS11
+  name: ключ шифрования ОБР ЭПС11
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOBR
+  name: ключ шифрования офицера ОБР
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComDeath
+  name: ключ шифрования Эскадрона Смерти
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: pirate_label
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetRebels
+  name: Гарнитура Повстанца
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRebel
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/robotics.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/robotics.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCC
+  suffix: CentCom
+  name: Гарнитура оператора ЦК
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOperative
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: ShowSecurityIcons
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCC
+  suffix: CentCom
+  name: Гарнитура оператора ЦК
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOperative
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetCentComCCAltDeath
+  suffix: CentCom
+  name: Гарнитура Эскадрона Смерти
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComDeath
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCCMTFEPS11
+  suffix: CentCom
+  name: Гарнитура ОБР
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOBREPS11
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCCMTFSR6
+  suffix: CentCom
+  name: Гарнитура ОБР
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOBRSR6
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCCMTFTHT9
+  suffix: CentCom
+  name: Гарнитура ОБР
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOBRTHT9
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCCMTF
+  suffix: CentCom
+  name: Гарнитура ОБР
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOBR
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetCentComCCAlt
+  suffix: CentCom
+  name: Гарнитура офицера ЦК
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ShowSecurityIcons
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOBR
+      - EncryptionKeyCentComOfficer
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComOperative
+  name: ключ шифрования Центрального Оператора
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentCom
+    defaultChannel: CentCom
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: nano_label
+
+- type: entity
+  name: рация ОБР
+  description: A handy handheld radio.
+  parent: BaseItem
+  id: RadioMTFHandheld
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    state: radio
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: radio
+
+- type: entity
+  name: мусорный мешок специального назначения
+  id: TrashBagExtended
+  parent: BaseStorageItem
+  components:
+  - type: Sprite
+    netSync: false
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Storage
+    capacity: 1000
+    quickInsert: true
+    areaInsert: true
+    storageOpenSound:
+      collection: trashBagRustle
+    storageInsertSound:
+      collection: trashBagRustle
+  - type: Tag
+    tags:
+    - TrashBag
+    - DroneUsable
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: icon
+  - type: Dumpable
+  - type: Clothing
+    slots: [belt]
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+  - type: Item
+    size: 10
+
+- type: entity
+  name: тактический нож
+  parent: BaseItem
+  id: CombatKnifeSpetsnaz
+  description: Нож для оперативников специальных операций, острый!
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+  - type: Tag
+    tags:
+    - Knife
+  - type: Sharp
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/combat_knife.rsi
+    state: icon
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - neck
+  - type: Item
+    sprite: Objects/Weapons/Melee/combat_knife.rsi
+    size: 10
+  - type: ItemCooldown
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 20
+    hitSound:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Tool
+    qualities:
+      - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: TilePrying
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesSpetsnazcombat
+  name: боевые перчатки спецназа
+  description: Эти тактические перчатки огнеупорны и ударопрочны.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/ihscombat.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/ihscombat.rsi
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+  - type: FingerprintMask
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95
+  - type: Thieving
+    stealTime: 1
+    stealthy: true
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+
+- type: soundCollection
+  id: FootstepSoldier
+  files:
+  - /Uploaded/base/ogg/gear1.ogg
+  - /Uploaded/base/ogg/gear2.ogg
+  - /Uploaded/base/ogg/gear3.ogg
+  - /Uploaded/base/ogg/gear4.ogg
+  - /Uploaded/base/ogg/gear5.ogg
+  - /Uploaded/base/ogg/gear6.ogg
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsSpetsnaz
+  name: обувь спецназа
+  suffix: noslip
+  description: Обувь спецназа Nanotrasen, для боевых операций или боевых действий. Борьба - всё, борьба - всегда.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Specific/swat.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Specific/swat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95
+  - type: NoSlip
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSoldier
+      params:
+        volume: -2
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsNedoSpetsnaz
+  name: боевая обувь
+  description: Обувь спецназа Nanotrasen, для боевых операций или боевых действий. Борьба - всё, борьба - всегда.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Boots/jackboots.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Boots/jackboots.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSoldier
+      params:
+        volume: -2
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSpetsnaz
+  name: форма спецвойск
+  description: Форма бойцов спецвойск.
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.70
+        Heat: 0.90
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/Color/black.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/Color/black.rsi
+  - type: SuitSensor
+    controlsLocked: true
+    randomMode: false
+    mode: SensorOff
+
+- type: entity
+  name: боевой стимулятор
+  parent: ChemicalMedipen
+  id: BattleMedipen
+  description: Боевой медипен для быстрого возращения в бой бойца, осторожно, после использования обратиться к настоящему врачу.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 55
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 20
+        - ReagentId: Epinephrine
+          Quantity: 12
+        - ReagentId: THC
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 3
+        - ReagentId: DexalinPlus
+          Quantity: 10
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 70
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+
+- type: entity
+  name: стимулятор спецназа
+  parent: ChemicalMedipen
+  id: SpetsnazMedipen
+  description: Боевой медипен для быстрого возращения в бой бойца, осторожно, после использования обратиться к настоящему врачу.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 80
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 20
+        - ReagentId: Ichor
+          Quantity: 20
+        - ReagentId: Epinephrine
+          Quantity: 15
+        - ReagentId: THC
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+        - ReagentId: DexalinPlus
+          Quantity: 10
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 80
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+
+- type: entity
+  name: боевой космический стимулятор
+  parent: ChemicalMedipen
+  id: BattleSpaceMedipen
+  description: Боевой медипен для более менее безопастного хождения по космосу без скафандра, осторожно, после использования обратиться к настоящему врачу.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 90
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 30
+        - ReagentId: Leporazine
+          Quantity: 20
+        - ReagentId: Barozine
+          Quantity: 40
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 90
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+
+- type: entity
+  name: противовирусный стимулятор
+  parent: ChemicalMedipen
+  id: BattleMedipenAntiVirus
+  description: Боевой медипен для быстрого возращения в бой бойца, осторожно, после использования обратиться к настоящему врачу.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 55
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 20
+        - ReagentId: Epinephrine
+          Quantity: 15
+        - ReagentId: THC
+          Quantity: 10
+        - ReagentId: Ambuzol
+          Quantity: 10
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 55
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+
+- type: entity
+  name: автоматический Силовик
+  parent: WeaponShotgunEnforcer
+  id: WeaponShotgunEnforcerRXBZZ
+  description: Дробовик марки Frozen Star нового поколения. Использует патроны калибра .50 ружейный.
+  components:
+  - type: BallisticAmmoProvider
+    autoCycle: true
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 10
+    proto: ShellShotgun
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+
+- type: entity
+  parent: WeaponShotgunEnforcer
+  id: WeaponShotgunEnforcerBeanbag
+  suffix: Non-Lethal
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgunBeanbag
+
+- type: entity
+  name: Лектер
+  suffix: Зажигательные
+  parent: WeaponRifleLecter
+  id: WeaponRifleLecterFire
+  description: Первоклассная армейская штурмовая винтовка. Использует патроны калибра .20 винтовочный.
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleFire
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifleFire
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+
+- type: entity
+  id: MagazineRifleFire
+  name: "магазин (.20 винтовочно-зажигательные)"
+  parent: BaseMagazineRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleFire
+  - type: Sprite
+    layers:
+    - state: practice
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: CartridgeRifleFire
+  name: патрон (.20 винтовочно-зажигательные)
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletFire
+
+- type: entity
+  id: BulletFire
+  name: огненная пуля
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+  - type: IgniteOnCollide
+    fireStacks: 0.3
+
+#------------------------------------
+  
+- type: dataset
+  id: NameSpetsRXBZZ
+  values:
+  - Оперативник
+    
+- type: dataset
+  id: NamesSGTs
+  values:
+  - Старший Лейтенант
+  - Лейтенант
+  - Капитан
+
+- type: dataset
+  id: NamesCPLs
+  values:
+  - Капрал
+  - Сержант
+  - Старший Сержант
+
+- type: dataset
+  id: NamesPVTs
+  values:
+  - Рядовой
+  - Рядовой
+  - Рядовой
+  - Рядовой
+  - Рядовой
+  - Ефрейтор
+  - Ефрейтор
+  - Ефрейтор
+  
+#------------------------------------
+
+- type: entity
+  id: PaperManualCodes
+  name: коды корректировки
+  suffix: "Vova"
+  parent: Paper
+  components:
+  - type: Paper
+    content: |
+      Коды корректировки:
+      [color=red]ДОЛГ[/color]
+      - Выполнить любой ценой.
+      [color=green]МЕЧ[/color]
+      - Протокол уничтожения цели.
+      [color=blue]ЩИТ[/color]
+      - Протокол оброны секторы,человека.
+      [color=purple]Возмездие[/color]
+      - Протокол зачистки сектора.
+      [color=cyan]Нова[/color]
+      - Протокол задержания.
+      [color=yellow]Пожертвовать[/color]
+      - Протокол на использования всех возможных методов для выполнения задачи, включая потерю юнита во время операции.
+      [color=#8B4513]Допрос[/color]
+      - Протокол допроса.
+      [color=#00FF00]Пост[/color]
+      - Протокол патрулирования местности или же охранна поста.
+      [color=#FFFFFF]Полночь[/color]
+      - Протокол радиомолчание.
+      [color=#EE82EE]Опрос[/color]
+      - Протокол провидения опроса на предмет или же человека.
+      [color=#696969]НЕМЕЗИС[/color]
+      - Разрешение на применение всего арсенала особого отдела, для выполнения задачи.
+
+#------------------------------------
+
+#------------------------------------
+
+- type: entity
+  name: BSG - 900
+  parent: BaseItem
+  id: WeaponBFG900
+  description: Экспериментальнре оружие правительства земли, BlueSpaceGun.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+    fireRate: 1
+    projectileSpeed: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    proto: BFGBullet
+    capacity: 10
+  - type: Appearance
+
+- type: entity
+  id: BFGBullet
+  name: снаряд BSG
+  noSpawn: true
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: bluespace
+  - type: Projectile
+    ignoreResistances: true
+    damage:
+      groups:
+        Brute: 20
+        Burn: 20
+  - type: PointLight
+    enabled: true
+    color: "#0000FF"
+    radius: 5.0
+    energy: 4.0
+
+#----------------------------------------------------------------------
+
+- type: entity
+  parent: CentcomIDCard
+  id: DedSquadronGavnaIDCard
+  name: Id карта оперативника специальных операций
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idcaptain
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Omega-0
+    fullName: Оперативник СпецВойск
+    jobIcon: JobIconDeathSquadron
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconDeathSquadron
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: DeathSquadron
+
+- type: entity
+  parent: CentcomIDCard
+  id: DedSquadronLeaderGavnaIDCard
+  name: Id карта Коммандера Специальных Операций
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idcaptain
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Omega-0
+    fullName: Коммандер СпецВойск
+    jobIcon: JobIconDeathSquadron
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: entity
+  parent: ClothingOuterHardsuitERTEngineer
+  id: ClothingOuterHardsuitERTEngineerReal
+  name: скафандр инженера ОБР
+  description: Защитный скафандр, используемый оперативниками отряда быстрого реагирования.
+  suffix: Нормальная
+  components:
+  - type: PressureProtection
+    highPressureMultiplier: 0.2
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.2
+        Piercing: 0.1
+        Heat: 0.1
+        Radiation: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+- type: entity
+  name: энергетический меч спецназа
+  parent: EnergySword
+  id: EnergySwordDedSad
+  description: Энергетический меч спецвойск NanoTrasen, используеться для веселой нарезки экипажа.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/e_sword.rsi
+    layers:
+      - state: e_sword
+      - state: e_sword_blade
+        color: "#00FFFFFF"
+        visible: false
+        shader: unshaded
+        map: [ "blade" ]
+  - type: PointLight
+    netsync: false
+    enabled: false
+    radius: 2
+    energy: 2
+    color: cyan
+  - type: EnergySword
+    litDamageBonus:
+        types:
+            Slash: 15
+            Heat: 30
+            Blunt: -4.5
+    litDisarmMalus: 0.6
+
+- type: speechSounds
+  id: Metrocop
+  saySound:
+    path: /Uploaded/base/ogg/say/off2.ogg
+  askSound:
+    path: /Uploaded/base/ogg/say/off1.ogg
+  exclaimSound:
+    path: /Uploaded/base/ogg/say/off3.ogg
+
+- type: speechSounds
+  id: Combine
+  saySound:
+    path: /Uploaded/base/ogg/off2.ogg
+  askSound:
+    path: /Uploaded/base/ogg/off3.ogg
+  exclaimSound:
+    path: /Uploaded/base/ogg/off1.ogg
+
+- type: soundCollection
+  id: Metrocop
+  files:
+  - /Uploaded/base/ogg/say/off1.ogg
+  - /Uploaded/base/ogg/say/off2.ogg
+  - /Uploaded/base/ogg/say/off3.ogg
+  - /Uploaded/base/ogg/say/off4.ogg
+
+- type: entity
+  name: Урист Макбайн
+  parent: MobHuman
+  description: Жалкая кучка спецназа.
+  id: MobHumanCombine
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: cyborg
+  - type: Vocal
+    maleScream: /Uploaded/base/ogg/off.ogg
+    femaleScream: /Uploaded/base/ogg/off.ogg
+  - type: Speech
+    speechSounds: Combine
+    soundCooldownTime: 0.1
+  - type: Stamina
+    excess: 250
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      250: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+      150: 0.5
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+      params:
+        volume: 3
+
+- type: soundCollection
+  id: SoldierDeath
+  files:
+  - /Uploaded/base/ogg/combine/die1.ogg
+  - /Uploaded/base/ogg/combine/die2.ogg
+  - /Uploaded/base/ogg/combine/die3.ogg
+  - /Uploaded/base/ogg/combine/die4.ogg
+
+- type: dataset
+  id: NameSpets
+  values:
+  - DipCol
+  - BitCop
+  - Jazz
+  - Yololo
+  - Baycon
+  - Quest
+  - Pod
+  - Nail
+  - Pesok
+  - QSP
+  - Fiery
+  - Limo
+  - Maxvel
+  - Wield
+  - Nompad
+  - Henry
+  - Stick
+  - Crazy
+  - Diamond
+  - Jojo
+  - Isaac
+  - Klark
+  - Burn
+  - Jakarta
+  - Normandy
+  - Aquamarine
+  - Albatross
+  - Barracuda 
+  - Curly 
+  - Fighting Bob
+  - Robust
+  - Walter 
+  - Angel 
+  - Atkins 
+  - Attila 
+  - Kraut 
+  - Balthazar
+  - Joker
+  - Doctor
+  - Patriot
+  - Professor
+  - Gomes
+  - Phoenix
+
+- type: dataset
+  id: NameSpetsCommander
+  values:
+  - Commander
+
+- type: dataset
+  id: NameSpetsOperative
+  values:
+  - Operative
+
+- type: entity
+  parent: CentcomIDCard
+  id: IDSFO
+  name: Id Офицера СП
+  description: Карта, необходимая для доступа в различные области станции.
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idintern-cadet
+    - state: idcentcom
+  - type: Item
+    heldPrefix: gold
+  - type: IdCard
+    jobTitle: Офицер Специальный Операций
+    jobIcon: JobIconNanotrasenOSO
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasenOSO
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: NanotrasenOSO
+
+- type: entity
+  noSpawn: true
+  parent: CentcomIDCardDeathsquad
+  id: CentcomBaseIDCard
+  name: Id карта
+  components:
+  - type: Access
+    groups:
+    - AllAccess
+
+- type: entity
+  parent: CentcomIDCardDeathsquad
+  id: IdCardRXBZZLeader
+  name: Id card leader CBURN
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idgeneticist
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Sierra - 6
+    fullName: Командир РХБЗЗ
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: entity
+  parent: CentcomIDCardDeathsquad
+  id: IdCardRXBZZ
+  name: Id карта Оперативника РХБЗЗ
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idgeneticist
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Sierra - 6
+    fullName: Оперативник РХБЗЗ
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFSrg
+
+- type: entity
+  parent: CentcomIDCard
+  id: OBRGavnaIDCard
+  name: Id карта пехотинца ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: ert_security
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Theta-9
+    fullName: Пехотинец
+    jobIcon: JobIconNanotrasenSec
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFPvtSecurity
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasenSec
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: NanotrasenSec
+
+- type: entity
+  parent: OBRGavnaIDCard
+  id: OBRGavnaMedicIDCard
+  name: Id карта медика ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: ert_medic
+  - type: IdCard
+    jobTitle: Theta-9
+    fullName: Медик отделения
+    jobIcon: JobIconNanotrasenMed
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFCplMedic
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasenMed
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: NanotrasenMed
+
+- type: entity
+  parent: OBRGavnaIDCard
+  id: OBRGavnaEngineerIDCard
+  name: Id карта инженера ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: ert_engineer
+  - type: IdCard
+    jobTitle: Theta-9
+    fullName: Инженер отделения
+    jobIcon: JobIconNanotrasenEngi
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFCplEngineer
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasenEngi
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: NanotrasenEngi
+
+- type: entity
+  parent: OBRGavnaIDCard
+  id: OBRGavnaJunitorIDCard
+  name: Id карта уборщика ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: ert_janitor
+  - type: IdCard
+    jobTitle: Theta-9
+    fullName: Уборщик отделения
+    jobIcon: JobIconNanotrasenjanitor
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFPvtJunitor
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasenjanitor
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: Nanotrasenjanitor
+
+- type: entity
+  parent: CentcomIDCard
+  id: OBRGavnaLeaderIDCard
+  name: Id карта командира ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idcaptain
+    - state: idcentcom
+  - type: Item
+    heldPrefix: silver
+  - type: IdCard
+    jobTitle: Theta-9
+    fullName: Командир отделения
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: entity
+  parent: BaseStorageItem
+  id: ClothingPounchMTF
+  name: подсумок общего назначения
+  description: Тактический штурмовой подсумок.
+  components:
+  - type: Sprite
+    netsync: false
+    state: icon
+    sprite: /Uploaded/base/rsi/Textures/Gear/generalpounch.rsi
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 40
+  - type: Storage
+    capacity: 30
+
+- type: entity
+  parent: BaseStorageItem
+  id: ClothingAmmoPounch
+  name: магазинный подсумок
+  description: Тактический штурмовой подсумок для хранения магазинов.
+  components:
+  - type: Sprite
+    netsync: false
+    state: icon
+    sprite: /Uploaded/base/rsi/Textures/Gear/ammopounch.rsi
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 40
+  - type: Storage
+    capacity: 30
+    whitelist:
+      tags:
+        - MagazineRifle
+        - MagazineLightRifle
+        - MagazineCaselessRifle
+
+- type: entity
+  parent: BaseStorageItem
+  id: ClothingMedicalPounch
+  name: медицинский подсумок
+  description: Тактический штурмовой подсумок для хранения медикоментов.
+  components:
+  - type: Sprite
+    netsync: false
+    state: icon
+    sprite: /Uploaded/base/rsi/Textures/Gear/medicalpounch.rsi
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 60
+  - type: Storage
+    capacity: 40
+    whitelist:
+      tags:
+        - Wrench
+        - Bottle
+        - Spray
+        - Brutepack
+        - Bloodpack
+        - Gauze
+        - Ointment
+        - CigPack
+        - PillCanister
+        - Radio
+        - DiscreteHealthAnalyzer
+      components:
+        - Hypospray
+        - Injector
+        - Pill
+
+- type: entity
+  parent: BaseStorageItem
+  id: ClothingPistolPounch
+  name: пистолетная кобура
+  description: Кобура для пистолетов.
+  components:
+  - type: Sprite
+    netsync: false
+    state: icon
+    sprite: /Uploaded/base/rsi/Textures/Gear/pistolpounch.rsi
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 10
+  - type: Storage
+    capacity: 10
+    whitelist:
+      components:
+        - Gun
+
+- type: entity
+  parent: BaseStorageItem
+  id: ClothingShellPounch
+  name: подсумок для дроби
+  description: Тактический штурмовой подсумок для хранения дроби.
+  components:
+  - type: Sprite
+    netsync: false
+    state: icon
+    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunpounch.rsi
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 60
+  - type: Storage
+    capacity: 50
+    whitelist:
+      tags:
+        - ShellShotgun
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltAmmo
+  name: ammo belt
+  description: A tactical assault belt.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Gear/ammobelt.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Gear/ammobelt.rsi
+  - type: Storage
+    capacity: 80
+    whitelist:
+      tags:
+        - MagazineRifle
+        - MagazineLightRifle
+        - MagazineCaselessRifle
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltGeneralG6
+  name: general belt G6
+  description: A tactical assault belt.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Gear/generalbelt.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Gear/generalbelt.rsi
+  - type: Storage
+    capacity: 60
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMedicalMarine
+  name: medical belt
+  description: Can hold various medical equipment.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Gear/medicalbelt.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Gear/medicalbelt.rsi
+  - type: Storage
+    capacity: 80
+    whitelist:
+      tags:
+        - Wrench
+        - Bottle
+        - Spray
+        - Brutepack
+        - Bloodpack
+        - Gauze
+        - Ointment
+        - CigPack
+        - PillCanister
+        - Radio
+        - DiscreteHealthAnalyzer
+      components:
+        - Hypospray
+        - Injector
+        - Pill
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltPistolHolster
+  name: pistol holster belt
+  description: Can hold various pistol equipment.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Gear/pistolbelt.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Gear/pistolbelt.rsi
+  - type: Storage
+    capacity: 60
+    whitelist:
+      components:
+        - Gun
+      tags:
+        - MagazinePistol
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltShellShotgun
+  name: shell belt
+  description: A tactical assault belt.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunbelt.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunbelt.rsi
+  - type: Storage
+    capacity: 80
+    whitelist:
+      tags:
+        - ShellShotgun
+
+- type: entity
+  parent: ClothingBeltShellShotgun
+  id: ClothingBeltShellShotgunFill
+  suffix: Filled
+  components:
+    - type: StorageFill
+      contents:
+        - id: ShellShotgun
+          amount: 60
+
+- type: accessGroup
+  id: MTFLeader
+  tags:
+  - MTFL
+  - MTF
+  - MTFJ
+  - MTFE
+  - MTFM
+  - MTFS
+
+- type: accessGroup
+  id: MTFSrg
+  tags:
+  - MTF
+  - MTFJ
+  - MTFE
+  - MTFM
+  - MTFS
+
+- type: accessGroup
+  id: MTFCplEngineer
+  tags:
+  - MTF
+  - MTFE
+
+- type: accessGroup
+  id: MTFCplMedic
+  tags:
+  - MTF
+  - MTFM
+
+- type: accessGroup
+  id: MTFPvtSecurity
+  tags:
+  - MTF
+  - MTFS
+
+- type: accessGroup
+  id: MTFPvtJunitor
+  tags:
+  - MTF
+  - MTFJ
+
+- type: accessGroup
+  id: MTFPvt
+  tags:
+  - MTF
+
+- type: accessLevel
+  id: MTF
+  name: id-card-access-level-mtf
+
+- type: accessLevel
+  id: MTFL
+  name: id-card-access-level-mtfl
+
+- type: accessLevel
+  id: MTFS
+  name: id-card-access-level-mtfs
+
+- type: accessLevel
+  id: MTFJ
+  name: id-card-access-level-mtfj
+
+- type: accessLevel
+  id: MTFE
+  name: id-card-access-level-mtfe
+
+- type: accessLevel
+  id: MTFM
+  name: id-card-access-level-mtfm
+
+#-----------------------------------Leader airlock
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockMTFCommandGlassLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockMTFCommandLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFCommandLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFLeaderLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFCommandExternalLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFCommandLocked
+  suffix: МТФ Command
+  components:
+  - type: AccessReader
+    access: [["MTFL"]]
+
+#-----------------------------------Cpls airlock
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockMTFCplsGlassLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockMTFCplsLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFCplLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFCplsLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFCplsExternalLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFCplsLocked
+  suffix: МТФ Cpls
+  components:
+  - type: AccessReader
+    access: [["MTFE"], ["MTFM"]]
+
+#-----------------------------------Medick airlock
+
+- type: entity
+  parent: AirlockMedical
+  id: AirlockMTFMedicalLocked
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+- type: entity
+  parent: AirlockMedicalGlass
+  id: AirlockMTFMedicalLockedGlass
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFMedicalLocked
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFMedicalLocked
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFMedicalExternalLocked
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFMedicalLocked
+  suffix: МТФ Medical
+  components:
+  - type: AccessReader
+    access: [["MTFM"]]
+
+#-----------------------------------Engineer airlock
+
+- type: entity
+  parent: AirlockEngineering
+  id: AirlockMTFEngineeringLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+- type: entity
+  parent: AirlockEngineeringGlass
+  id: AirlockMTFEngineeringGlassLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFEngineeringLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFEngineeringLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFEngineeringExternalLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFEngineeringLocked
+  suffix: МТФ Engineering
+  components:
+  - type: AccessReader
+    access: [["MTFE"]]
+
+#-----------------------------------Security airlock
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockMTFSecurityGlassLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockMTFSecurityLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFSecurityLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFSecurityLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFSecurityExternalLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFSecurityLocked
+  suffix: МТФ Security
+  components:
+  - type: AccessReader
+    access: [["MTFS"]]
+
+#-----------------------------------Janitor airlock
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMTFJanitorGlassLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+- type: entity
+  parent: Airlock
+  id: AirlockMTFJanitorLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFJanitorLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFJanitorLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFJanitorExternalLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorJanitorLocked
+  id: WindoorMTFJanitorLocked
+  suffix: МТФ Janitor
+  components:
+  - type: AccessReader
+    access: [["MTFJ"]]
+
+#-----------------------------------MTF Base airlock
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockMTFGlassLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockMTFLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMTFGlassLockedAlt
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+- type: entity
+  parent: Airlock
+  id: AirlockMTFLockedAlt
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMTFLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecMTFLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+#----External
+
+- type: entity
+  parent: AirlockExternal
+  name: external airlock
+  id: AirlockMTFExternalLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+#----Windoor
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorMTFLocked
+  suffix: МТФ
+  components:
+  - type: AccessReader
+    access: [["MTF"]]
+
+#-----------------------------------
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMREDispancer
+  name: Раздатчик ИРП
+  description: Для тех случаев, когда еда нужна срочно. Лучший ассортимент еды!
+  components:
+  - type: VendingMachine
+    pack: MREDispenserInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: MegaSeedAds
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/seeds.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#326e3f"
+
+- type: vendingMachineInventory
+  id: MREDispenserInventory
+  startingInventory:
+    FoodTinPeaches: 5
+    FoodTinBeans: 5
+    FoodTinMRE: 5
+    FoodSnackMREBrownie: 10
+    FoodSnackNutribrick: 5
+    DrinkMREFlask: 20
+    FoodSnackBoritos: 10
+    FoodBoxNugget: 5
+    FoodSnackSyndi: 10
+    FoodCondimentPacketKetchup: 5
+    FoodCondimentPacketBbq: 5
+    FoodCondimentPacketHotsauce: 5
+    FoodCondimentPacketSoy: 5
+    FoodBoxDonkpocketTeriyaki: 5
+    FoodBoxDonkpocket: 5
+    FoodBoxDonkpocketSpicy: 5
+
+- type: Tag
+  id: NanoTrasen
+
+- type: entity
+  parent: BaseComputerShuttle
+  id: ComputerShuttleMTF
+  name: консоль управления шаттлом
+  description: Используется для пилотирования корабля Мобильно Оперативной Группы.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: security
+    - map: ["computerLayerKeys"]
+      state: security_key
+  - type: Tag
+    tags:
+      - NanoTrasen
+  - type: RadarConsole
+    maxRange: 1536
+  - type: Computer
+    board: ShuttleConsoleCircuitboard
+
+- type: entity
+  parent: ClothingMaskGasERT
+  id: ClothingMaskGasERTV2.1
+  components:
+  - type: ShowSecurityIcons
+
+- type: entity
+  parent: ClothingMaskGasDeathSquad
+  id: ClothingMaskGasDeathSquadV2.1
+  components:
+  - type: ShowSecurityIcons
+
+# Empty mags
+
+- type: Tag
+  id: PowerpackRifle
+
+- type: entity
+  id: BasePowerpackRifle
+  name: "powerpack (5.56)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - PowerpackRifle
+  - type: Item
+    size: 2000
+  - type: Clothing
+    slots: BACK
+    sprite: /Uploaded/base/rsi/Textures/Backpack/backpack.rsi
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeCaselessRifle
+    capacity: 2000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/backpack.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+# Magazines
+- type: entity
+  id: PowerpackRifle
+  name: "powerpack (5.56)"
+  parent: BasePowerpackRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifle
+
+- type: entity
+  name: EarthGov laser rifle
+  parent: BaseWeaponBattery
+  id: WeaponEarthGovLaserRifle
+  suffix: Винтовка
+  description: A Earth Government standard issue laser rifle, use by army and police.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -44
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 50
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: entity
+  name: EarthGov laser machine gun
+  parent: BaseWeaponBattery
+  id: WeaponEarthGovLaserMG
+  suffix: Пулемёт
+  description: A Earth Government standard issue laser machine gun, use by army. Heavy and deadly.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
+    size: 90
+  - type: GunWieldBonus
+    minAngle: -40
+    maxAngle: -40
+  - type: Gun
+    maxAngle: 60
+    minAngle: 60
+    fireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Battery
+    maxCharge: 7500
+    startingCharge: 7500
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 50
+  - type: Wieldable
+    wieldTime: 2.5
+
+- type: entity
+  name: EarthGov laser carbine
+  parent: BaseWeaponBattery
+  id: WeaponEarthGovLaserCarbine
+  suffix: Пистолет-пулемёт
+  description: A Earth Government standard issue laser carbine, use by army and police. Thanks to the short barrel it has better maneuverability in narrow spaces.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
+    size: 30
+  - type: GunWieldBonus
+    minAngle: -6
+    maxAngle: -44
+  - type: Gun
+    minAngle: 7
+    maxAngle: 45
+    fireRate: 5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-C/shot.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 50
+  - type: Wieldable
+    wieldTime: 0.5
+
+- type: entity
+  name: EarthGov laser pistol
+  parent: BaseWeaponBatterySmall
+  id: WeaponEarthGovLaserPistol
+  suffix: Пистолет
+  description: A Earth Government standard issue laser pistol, use by army and police.
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-P/shot.ogg
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-P.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 62.5
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Ma Deuce
+  parent: BaseWeaponRifle
+  id: WeaponRifleMaDeuce
+  suffix: Дебаг
+  description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+  - type: Gun
+    fireRate: 12
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/LMGs/m60.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyRifleMaDeuse
+        insertSound: /Uploaded/base/ogg/Guns64/LMGs/m60_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/m60_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMateriel
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: MultiHandedItem
+
+- type: entity
+  id: BaseMagazineHeavyRifle
+  name: "magazine (.50 BMG)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineHeavyRifle
+  - type: Item
+    size: 15
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 200
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineHeavyRifleMaDeuse
+  name: "magazine (.50 BMG)"
+  parent: BaseMagazineHeavyRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMateriel
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  name: ACP-14
+  parent: BaseWeaponPistol
+  id: WeaponPistolACP14
+  suffix: Пистолет
+  description: The ACP-14, produced by Earth Armories. A reliable sidearm that loads 9x19mm.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/acp14/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/acp14/tiny.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/acp14_shot.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/acp14_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: combat pistol VP-78
+  parent: BaseWeaponPistol
+  id: WeaponPistolVP78
+  suffix: Пистолет
+  description: The VP-78, produced by Markus Henday Inc. A massive, formidable automatic handgun chambered in 9x19mm rounds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/vp78/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/vp78/tiny.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_shot.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolHighCapacity
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: desert eagle
+  parent: BaseWeaponPistol
+  id: WeaponPistolDEagle
+  suffix: Пистолет
+  description: A magnum chambered in .50AE that comes with a serious kick. This one is engraved, "Peace through superior firepower".
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/deagle/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/deagle/tiny.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/deagle.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Pistols/deagle_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMagnumPistol
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/deagle_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/deagle_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMagnumPistol
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnum
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMagnum
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: Tag
+  id: MagazineMagnumPistol
+
+- type: entity
+  id: MagazineMagnumPistolAP
+  name: pistol magazine (.50AE AP)
+  parent: MagazineMagnumPistol
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeMagnumAP
+    whitelist:
+      tags:
+        - CartridgeMagnum
+
+- type: entity
+  id: MagazineMagnumPistol
+  name: pistol magazine (.50AE)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineMagnumPistol
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeMagnum
+    whitelist:
+      tags:
+        - CartridgeMagnum
+    capacity: 9
+  - type: Item
+    size: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Magnum/magnum_pistol_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  name: G-22
+  parent: BaseWeaponPistol
+  id: WeaponPistolG22
+  suffix: Пистолет
+  description: A popular police firearm in the modern day. Chambered in 9x19mm.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/glock22/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/glock22/tiny.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/beretta_shot.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Pistols/beretta_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/beretta_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/beretta_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: HI Browning-88 M4
+  parent: BaseWeaponPistol
+  id: WeaponPistolHIB88M4
+  suffix: Пистолет
+  description: An uncommon handgun used for self-defense but it is often used by terrorist organizations.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/hi_power_br/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/hi_power_br/tiny.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_shot.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: service pistole G23
+  parent: BaseWeaponPistol
+  id: WeaponPistolG23
+  suffix: Пистолет
+  description: A popular self-defense firearm in the modern day. Chambered in 9x19mm.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/service_pistol23/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/service_pistol23/tiny.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Pistols/colt.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol
+        insertSound: /Uploaded/base/ogg/Guns64/Pistols/colt_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/colt_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol
+            - MagazinePistolHighCapacity
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: AKMS
+  parent: BaseWeaponRifle
+  id: WeaponAKMSRifle
+  suffix: Автомат
+  description: An iconic weapon of war. Uses 7.62x39 ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 5
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: entity
+  name: AK74-U
+  parent: BaseWeaponRifle
+  id: WeaponRifleAKSU
+  suffix: Автомат
+  description: An iconic weapon of war. Uses 7.62x39 ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/aksu.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 5
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.5
+
+- type: entity
+  name: AR-18
+  parent: BaseWeaponRifle
+  id: WeaponRifleAR18
+  suffix: Автомат
+  description: The H&K AR-18 carbine is one of the standard rifles used by EarthGov army. It's commonly used by people who prefer greater mobility in combat, like scouts and other light infantry.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/ar18.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: entity
+  name: G-36
+  parent: BaseWeaponRifle
+  id: WeaponRifleG36
+  suffix: Автомат
+  description: The H&K G-36 assault rifle used to be the EarthGov army standard issue rifle.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/g36.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: entity
+  name: M-28
+  parent: BaseWeaponRifle
+  id: WeaponRifleM28
+  suffix: Автомат
+  description: The M-28 assault rifle used to be the EarthGov army standard issue rifle.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m28.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m28_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m28_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m28_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: entity
+  name: STG 44
+  parent: BaseWeaponRifle
+  id: WeaponRifleSTG44
+  suffix: Автомат
+  description: A certified classic, this design was hailed as the first successful assault rifle concept, generally termed a 'storm rifle'. Has a higher than usual firerate for it's class.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 8
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: entity
+  name: M16A4
+  parent: BaseWeaponRifle
+  id: WeaponRifleM16A4
+  suffix: Автомат
+  description: A light, versatile assault rifle. The 4th generation in the M16 platform, this FN variant has added automatic fire selection and retains relevance among mercenaries and militias thanks to its high customizability. it is incredibly good at rapid burst fire, but must be paced correctly."
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m16.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m16_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m16_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: entity
+  name: Famas
+  parent: BaseWeaponRifle
+  id: WeaponRifleFamas
+  suffix: Автомат
+  description: A light, versatile assault rifle."
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/famas.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m16_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m16_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: entity
+  name: MP5
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMP5
+  suffix: Пистолет-пулемёт
+  description: The RivArms SMG-5 submachinegun, an update to a classic design. A light firearm capable of effective one-handed use that is ideal for close to medium range engagements.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 6
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/mp5.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/mp5_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/mp5_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.5
+
+- type: entity
+  name: MP7
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMP7
+  suffix: Пистолет-пулемёт
+  description: An archaic design going back hundreds of years, the SMG-7 was common in its day. Today it sees limited use as cheap computer-printed replicas or family heirlooms, though it somehow got into the hands of colonial rebels.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 8
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/mp7.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.5
+
+- type: entity
+  name: Vector
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunVectorSpecial
+  suffix: Пистолет-пулемёт
+  description: The Vector used by police special force.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 10
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/vector_fire.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.8
+
+- type: entity
+  name: Skorpion VZ-61
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunSkorpion
+  suffix: Пистолет-пулемёт
+  description: A robust, 20th century firearm that's a combination of pistol and submachinegun.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/skorpion.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 2
+    maxAngle: 56
+    fireRate: 7
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/skorpion.ogg
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 25
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/skorpion_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/skorpion_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: MP-38
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMP38
+  suffix: Пистолет-пулемёт
+  description: The MP-38 is a old and cheap machinepistol used by rebels, it presents solid performance at longer ranges in a compact package, although suffers due to a slow rate of fire for its class.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 5
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/mp38.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolBoxSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/mp38_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/mp38_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolBoxSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.8
+
+- type: Tag
+  id: MagazinePistolBoxSubMachineGun
+
+- type: entity
+  id: MagazinePistolBoxSubMachineGun
+  name: SMG box magazine (.9×19mm parabellum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolBoxSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 45
+  - type: Item
+    size: 10
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_boxmag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: MagazinePistolDrumSubMachineGun
+
+- type: entity
+  id: MagazinePistolDrumSubMachineGun
+  name: SMG Drum magazine (.9×19mm parabellum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolDrumSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 71
+  - type: Item
+    size: 10
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_drummag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: MagazinePistolTopSubMachineGun
+
+- type: entity
+  id: MagazinePistolTopSubMachineGun
+  name: SMG top mounted magazine (.9×19mm parabellum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolTopSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 50
+  - type: Item
+    size: 10
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_top_moumted_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  name: Uzi
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunUzi
+  suffix: Пистолет-пулемёт
+  description: A cheap, reliable design and manufacture make this ubiquitous submachinegun useful despite the age. Put the fire selector to full auto for maximum firepower. Use two if you really want to go ham.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/uzi.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 2
+    maxAngle: 46
+    angleIncrease: 9
+    angleDecay: 36
+    fireRate: 12
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/uzi.ogg
+  - type: Clothing
+    slots:
+      - Pocket
+  - type: Item
+    size: 25
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolBoxSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/uzi_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/uzi_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolBoxSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PPSH-41
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunPPSH41
+  suffix: Пистолет-пулемёт
+  description: The PPSh-41 or \"Papasha\" is a USSP model submachinegun that many terrorist organizations had copied all over the years. Despite its small-hitting firepower, its reliablity, extreme longevity and high firepower rate proves useful for the hands of the user.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 9
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/ppsh.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/SMGs/ppsh_empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolDrumSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/ppsh_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/ppsh_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolDrumSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: entity
+  name: P-90
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunP90
+  suffix: Пистолет-пулемёт
+  description: The P-90 is the EarthGov standard issue SMG. Its known for it's compact size and ease of use inside the field. It's usually carried by troops who want a lightweight firearm to rush with.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/p90.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 9
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/SMGs/p90.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolTopSubMachineGun
+        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolTopSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.5
+
+- type: entity
+  name: EarthGov heavy laser rifle
+  parent: BaseWeaponBattery
+  id: WeaponEarthGovLaserSniper
+  suffix: Винтовка
+  description: A Earth Government heavy sniper rifle for a extended combat situation.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -93
+    maxAngle: -94
+  - type: Gun
+    minAngle: 94
+    maxAngle: 95
+    fireRate: 1.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 100
+  - type: Wieldable
+    wieldTime: 2.5
+
+- type: entity
+  name: EarthGov Experemental X-Ray
+  parent: BaseWeaponBattery
+  id: WeaponEarthGovXRay
+  suffix: Винтовка
+  description: A Earth Government Experemental x-ray weapon, it looks like it emits radiation.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-5
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -44
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
+  - type: HitscanBatteryAmmoProvider
+    proto: XrayLaser
+    fireCost: 100
+  - type: Wieldable
+    wieldTime: 2.5
+
+- type: entity
+  name: XM1014
+  parent: BaseWeaponShotgun
+  id: WeaponShotgun39
+  suffix: Дробовик
+  description: The Earth Armories XM1014 combat shotgun is a semi automatic shotgun used by breachers and pointmen within the Earth Army squads. Uses .50 shotgun shells.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
+  - type: BallisticAmmoProvider
+    capacity: 10
+  - type: Wieldable
+    wieldTime: 1.3
+  - type: GunRequiresWield
+  - type: Gun
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Shotguns/sh39.ogg
+
+- type: entity
+  name: Zauer
+  parent: WeaponShotgunBulldog
+  id: WeaponShotgunZauer
+  suffix: Дробовик
+  description: It's a magazine-fed shotgun designed for close quarters combat. Uses .50 shotgun shells.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
+  - type: Wieldable
+    wieldTime: 1.3
+  - type: GunRequiresWield
+
+- type: entity
+  name: BR-64
+  parent: BaseWeaponRifle
+  id: WeaponRifleBR64
+  suffix: Винтовка
+  description: The San Cristo Arms BR-64 is the Marine Corps main battle rifle. It is known for its consistent ability to perform well at most ranges, and close range stopping power. It is mostly used by people who prefer a bigger round than the average.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+  - type: Gun
+    fireRate: 2
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/T64.ogg
+      params:
+        volume: -7
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+  - type: MagazineAmmoProvider
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+    boltClosed: null
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyRifleBR64
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m41a_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m41a_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.3
+
+- type: Tag
+  id: MagazineHeavyRifle
+
+- type: entity
+  id: MagazineHeavyRifleBR64
+  name: rifle magazine (.62 rifle)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineHeavyRifle
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 20
+    proto: CartridgeRifleHeavy
+    whitelist:
+      tags:
+        - CartridgeRifle62
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: BaseCartridgeRifleHeavy
+  name: cartridge (.62 rifle)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeRifle62
+  - type: CartridgeAmmo
+    proto: BulletRifle
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 20combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: CartridgeRifle62
+
+- type: entity
+  id: CartridgeRifleHeavy
+  name: cartridge (.62 rifle)
+  parent: BaseCartridgeRifleHeavy
+  components:
+  - type: Sprite
+    layers:
+    - state: 20combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 20combat
+  - type: CartridgeAmmo
+    proto: BulletHeavy62
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletHeavy62
+  name: bullet (.62 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 39
+
+- type: entity
+  name: GL-79
+  parent: BaseWeaponLauncher
+  id: WeaponLauncherGL70
+  suffix: Гранатомёт
+  description: The GL-70 is the standard grenade launcher used by the Earth Army for area denial and big explosions.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/big.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    proto: GrenadeFrag
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: Wieldable
+    wieldTime: 1.3
+  - type: GunRequiresWield
+
+- type: entity
+  name: RL-5
+  parent: BaseWeaponLauncher
+  id: WeaponLauncherRL5
+  suffix: Ракетомёт
+  description: The RL-5 is the primary anti-armor used around the galaxy. Used to take out light-tanks and enemy structures, the RL-5 rocket launcher is a dangerous weapon with a variety of combat uses.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
+  - type: Gun
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeRocket
+    proto: CartridgeRocket
+    capacity: 1
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 0.8
+  - type: GunRequiresWield
+
+- type: entity
+  name: Mateba
+  parent: BaseWeaponRevolver
+  id: WeaponRevolverMateba
+  suffix: Револьвер
+  description: The iconic sidearm of the dreaded death squads. Uses .45 magnum ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/big.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
+  - type: Gun
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+
+- type: entity
+  name: Kardashev-Mosin
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosin
+  suffix: Винтовка
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Gun
+    fireRate: 0.8
+  - type: Wieldable
+    wieldTime: 0.8
+  - type: GunRequiresWield
+
+- type: entity
+  name: M1 Garand
+  parent: BaseWeaponSniper
+  id: WeaponSniperGarand
+  suffix: Винтовка
+  description: The Carlford-1 is a remastered classic made by Carlford Armories, made to fit in the modern day. Most of the noticeable differences are minor rail modifications, other than that. It is a faithful recreation with the trademark ping sound and all.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/big.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Snipers/garand.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Snipers/sniper_empty.ogg
+  - type: Wieldable
+    wieldTime: 0.8
+  - type: GunRequiresWield
+
+- type: entity
+  name: Kardashev-Mosin AI
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosinAI
+  noSpawn: true
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 0.8
+  - type: Wieldable
+    wieldTime: 0.8
+
+- type: entity
+  name: Kardashev-Mosin AI Sniper
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosinAISniper
+  noSpawn: true
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Gun
+    fireRate: 0.8
+  - type: Wieldable
+    wieldTime: 0.8
+
+- type: entity
+  name: Dragunov
+  parent: BaseWeaponRifle
+  id: WeaponRifleDragunov
+  suffix: Винтовка
+  description: A semiautomatic sniper rifle, famed for it's marksmanship, and is built from the ground up for it.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -44
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 3
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Snipers/svd.ogg
+      params:
+        volume: -5
+  - type: ChamberMagazineAmmoProvider
+  - type: BallisticAmmoProvider
+    soundRack:
+      path: /Uploaded/base/ogg/Guns64/Snipers/svd_cocked.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleLightSniper
+        insertSound: /Uploaded/base/ogg/Guns64/Snipers/svd_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Snipers/svd_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleLightSniper
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifleLight762
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifleLight762
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: Tag
+  id: MagazineRifleLightSniper
+
+- type: entity
+  id: MagazineRifleLightSniper
+  name: rifle magazine (7,62 rifle)
+  description: Standart USSP type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineRifleLightSniper
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 20
+    proto: CartridgeRifleLight762
+    whitelist:
+      tags:
+        - CartridgeRifle762
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: BaseCartridgeRifleLightSniper
+  name: cartridge (7,62 rifle)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeRifle762
+  - type: CartridgeAmmo
+    proto: BulletRifle
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 30combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: CartridgeRifle762
+
+- type: entity
+  id: CartridgeRifleLight762
+  name: cartridge (7,62 rifle)
+  parent: BaseCartridgeRifleLightSniper
+  components:
+  - type: Sprite
+    layers:
+    - state: 30combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 30combat
+  - type: CartridgeAmmo
+    proto: BulletLight762
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletLight762
+  name: bullet (7,62 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 39
+
+- type: entity
+  name: RPD
+  parent: BaseWeaponLightMachineGun
+  id: WeaponLightMachineGunRPD
+  suffix: Пулемёт
+  description: A cheap and robust machinegun, sometimes better known as an 'RPD'. Despite lacking attachment points beyond its underbarrel, remains a popular product on the black market with its cheap cost, high capacity and higher than usual caliber rounds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -30
+    maxAngle: -50
+  - type: Gun
+    minAngle: 34
+    maxAngle: 55
+    fireRate: 5
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRiflePkBox
+        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBox
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.9
+
+- type: entity
+  name: MG-60
+  parent: BaseWeaponLightMachineGun
+  id: WeaponLightMachineGunMG60
+  suffix: Пулемёт
+  description: The Raummetall MG-60 general purpose machinegun is the EarthGov Army's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -30
+    maxAngle: -50
+  - type: Gun
+    minAngle: 34
+    maxAngle: 55
+    fireRate: 5
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/LMGs/t42.ogg
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightMachineGunDrum
+        insertSound: /Uploaded/base/ogg/Guns64/LMGs/t42_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightMachineGunDrum
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.9
+  - type: GunRequiresWield
+
+- type: entity
+  name: M-41
+  parent: BaseWeaponRifle
+  id: WeaponRifleM41
+  suffix: Пулемёт
+  description: The M-41 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/tiny.rsi
+  - type: Gun
+    fireRate: 8
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/LMGs/m60.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyRifleV41
+        insertSound: /Uploaded/base/ogg/Guns64/LMGs/m60_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/m60_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.9
+  - type: GunRequiresWield
+
+- type: entity
+  id: MagazineHeavyRifleV41
+  name: "magazine (.20 rifle)"
+  parent: BaseMagazineHeavyRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    capacity: 200
+    whitelist:
+      tags:
+        - CartridgeRifle
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: MagazineLightMachineGunDrum
+
+- type: entity
+  id: MagazineLightMachineGunDrum
+  name: Drum magazine (.20 винтовочный)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightMachineGunDrum
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeRifle
+    whitelist:
+      tags:
+        - CartridgeRifle
+    capacity: 250
+  - type: Item
+    size: 20
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/mg60.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  name: Spas-12
+  parent: BaseWeaponShotgun
+  id: WeaponShotgun12
+  suffix: Дробовик
+  description: The Earth Armories Spas-12 is the shotgun used by the EarthGov Marine Corps. It's used as a close quarters tool when someone wants something more suited for close range than most people, or as an odd sidearm on your back for emergencies. Uses 50 gauge shells.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/big.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
+  - type: BallisticAmmoProvider
+    capacity: 13
+  - type: Wieldable
+    wieldTime: 1.3
+  - type: GunRequiresWield
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Shotguns/t35.ogg
+
+- type: entity
+  name: MG-100 Vindicator Minigun
+  parent: BaseItem
+  id: WeaponMinigun100
+  suffix: Пулемёт
+  description: A six barreled rotary machine gun, The ultimate in man-portable firepower, capable of laying down high velocity armor piercing rounds this thing will no doubt pack a punch.. If you don't kill all your friends with it, you can use the stablizing system of the Powerpack to fire aimed fire, but you'll move incredibly slowly.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/minigun/big.rsi
+    state: icon
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
+    size: 900
+  - type: Gun
+    minAngle: 1
+    maxAngle: 20
+    fireRate: 10
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/LMGs/minigunSG.ogg
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - PowerpackRifle
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 2.3
+  - type: GunRequiresWield
+
+- type: entity
+  name: Огнемет М6
+  parent: BaseItem
+  id: WeaponflamethrowerSG
+  suffix: Огнемёт
+  description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    state: base
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    size: 40
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 10
+    maxAngle: 60
+    minAngle: 60
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_empty.ogg
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - PowerpackFlame
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+  - type: GunRequiresWield
+
+- type: Tag
+  id: PowerpackFlame
+
+- type: entity
+  id: PowerpackFlame
+  name: "powerpack (flame)"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - PowerpackFlame
+  - type: Item
+    size: 90
+  - type: Clothing
+    slots: BACK
+    sprite: /Uploaded/base/rsi/Textures/Backpack/flamepack.rsi
+  - type: BallisticAmmoProvider
+    proto: FireThrowerBall
+    mayTransfer: true
+    whitelist:
+      tags:
+        - FireThrowerBall
+    capacity: 2000
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/flamepack.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  name: ручной огнемет М6
+  parent: BaseWeaponRifle
+  id: FirethrowerGun
+  suffix: Огнемёт
+  description: Nomadov's jet flamethrower, an amazing thing, on the weapon there is an inscription "Death to the enemies of mankind!"
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 10
+    maxAngle: 60
+    minAngle: 60
+    soundGunshot:
+      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower.ogg
+    soundEmpty:
+      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_empty.ogg
+  - type: AmmoCounter
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: FuelTankFirethrower
+        insertSound: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_reload.ogg
+        ejectSound: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - TankFlamethrower
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Wieldable
+    wieldTime: 1.5
+  - type: GunRequiresWield
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 100
+        reagents:
+        - ReagentId: Water
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: spray
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 10
+  - type: RefillableSolution
+    solution: spray
+  - type: DrainableSolution
+    solution: spray
+  - type: SolutionTransfer
+  - type: ItemCooldown
+  - type: Spray
+    transferAmount: 10
+    spraySound:
+      path: /Audio/Effects/extinguish.ogg
+    sprayedPrototype: ExtinguisherSpray
+    vaporAmount: 3
+    vaporSpread: 30
+    sprayVelocity: 2.0
+  - type: FireExtinguisher
+    hasSafety: true
+
+- type: Tag
+  id: TankFlamethrower
+
+- type: Tag
+  id: FireThrowerBall
+
+- type: entity
+  id: FuelTankFirethrower
+  name: топливный бак для огнемёта
+  description: Удивительная горючая реактивная смесь, которая вспыхивает ярко голубым пламенем.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - TankFlamethrower
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 100
+    proto: FireThrowerBall
+    whitelist:
+      tags:
+        - FireThrowerBall
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/tank.rsi
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/tank.rsi
+    state: base
+    netsync: false
+  - type: Appearance
+
+- type: entity
+  id: FireThrowerBall
+  name: реактивная смесь
+  parent: FoodInjectableBase
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    netsync: false
+    layers:
+    - state: blastwave
+  - type: DeleteOnTrigger
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: Damageable
+    damageContainer: Biological
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ParticlesFireNRF:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3  # fite me
+        friction: 0.2
+  - type: PointLight
+    enabled: true
+    color: "#FF8080"
+    radius: 5.0
+    energy: 4.0
+  - type: Tag
+    tags:
+    - NoSpinOnThrow
+    - FireThrowerBall
+  - type: TimedDespawn
+    lifetime: 5
+  - type: EmbeddableProjectile
+    offset: 0.15,0.15
+  - type: ThrowingAngle
+    angle: 0
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Heat: 5
+
+- type: entity
+  name: струя реактивного пламени
+  description: Очень горячо!
+  id: ParticlesFireNRF
+  components:
+  - type: Physics
+  - type: Sprite
+    layers:
+    - sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/flame.rsi
+      state: fire
+      shader: unshaded
+      map: [ "unshaded" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+           bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Respirator
+    cycleDelay: 0.1
+    saturation: 0.1
+    maxSaturation: 0.1
+    damage:
+      types:
+        Asphyxiation: 10
+    damageRecovery:
+      types:
+        Asphyxiation: 0
+  - type: Temperature
+    coldDamage:
+      types:
+        Cold: 5 #per second, scales with temperature & other constants
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.10
+  - type: AtmosExposed
+  - type: TimedDespawn
+    lifetime: 100
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Heat: 5
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
+  - type: AmbientSound
+    volume: 4
+    range: 7
+    sound:
+      path: /Audio/Effects/fire.ogg
+  - type: IgniteOnCollide
+    fireStacks: 1.8
+  - type: Transform
+    anchored: true
+  - type: IgnitionSource
+    temperature: 700
+    ignited: true
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+    reactions:
+    - reagents: [Water]
+      methods: [Touch]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Heat: 10
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 10
+    ignoreWhitelist:
+      tags:
+      - NoSpinOnThrow
+
+- type: entity
+  name: струя реактивного пламени
+  description: Очень горячо!
+  id: ParticlesFireNRFHELL
+  parent: ParticlesFireNRF
+  suffix: АДское пламе
+  components:
+  - type: EdgeSpreader
+  - type: ActiveEdgeSpreader
+  - type: Kudzu
+  - type: TimedDespawn
+    lifetime: 40
+
+- type: parallax
+  id: FastSky
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/land.png"
+      slowness: 0.58
+      scale: 1,1
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/noise.png"
+      slowness: 0.20
+      scale: "2, 2"
+      scrolling: "0.1, -0.05"

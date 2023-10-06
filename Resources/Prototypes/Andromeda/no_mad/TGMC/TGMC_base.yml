@@ -1,0 +1,1012 @@
+
+# COMMS #
+
+# HIVEMIND COMMS #
+
+- type: radioChannel
+  id: Hivemind
+  name: Улей
+  keycode: 'у'
+  frequency: 8888
+  color: "#800080"
+  longRange: true
+
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyXeno
+  name: коммуникационная железа ксеноморфов
+  components:
+  - type: EncryptionKey
+    channels:
+    - Hivemind
+    defaultChannel: Hivemind
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/xeno_claw.rsi
+    state: icon
+
+- type: entity
+  parent: BaseItem
+  id: XenoHivemindLink
+  name: биоантенна
+  description: Средство связи ксеноморфов.
+  components:
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyXeno
+  - type: Headset
+    requiredSlot: NONE
+  - type: EncryptionKeyHolder
+  - type: Sprite
+    sprite: Objects/Fun/toys.rsi
+    state: plushie_rouny
+    color: "#330033"
+  - type: Unremoveable
+
+
+# MARINE COMMS #
+
+- type: radioChannel
+  id: MarineCommand
+  name: "+Командование"
+  keycode: '+'
+  frequency: 1899
+  color: "#FFFF00"
+  longRange: true
+
+- type: radioChannel
+  id: MarineCommon
+  name: "Экипаж"
+  keycode: 'э'
+  frequency: 1898
+  color: "#0ae22b"
+  longRange: true
+
+- type: radioChannel
+  id: MarineEngineering
+  name: Корабельные инженеры
+  keycode: 'ъ'
+  frequency: 1340
+  color: "#AAAA00"
+  longRange: true
+
+- type: radioChannel
+  id: MarineMedical
+  name: Военные врачи
+  keycode: 'в'
+  frequency: 1339
+  color: "#AAFFAA"
+  longRange: true
+
+- type: radioChannel
+  id: MarineMP
+  name: Военная полиция
+  keycode: 'ы'
+  frequency: 1389
+  color: "#FF5555"
+  longRange: true
+
+- type: radioChannel
+  id: MarineScience
+  name: Учёные
+  keycode: 'з'
+  frequency: 1376
+  color: "#FFAAFF"
+  longRange: true
+
+- type: radioChannel
+  id: MarineCargo
+  name: Снабжение
+  keycode: 'х'
+  frequency: 1338
+  color: "#D2691E"
+  longRange: true
+
+- type: radioChannel
+  id: Alpha
+  name: Альфа
+  keycode: 'а'
+  frequency: 1345
+  color: "#FF0808"
+  longRange: true
+
+- type: radioChannel
+  id: Bravo
+  name: Браво
+  keycode: 'б'
+  frequency: 1346
+  color: "#FFA500"
+  longRange: true
+
+- type: radioChannel
+  id: Charlie
+  name: Чарли
+  keycode: 'ч'
+  frequency: 1348
+  color: "#8d3f9a"
+  longRange: true
+
+- type: radioChannel
+  id: Delta
+  name: Дельта
+  keycode: 'д'
+  frequency: 1350
+  color: "#3d85c6"
+  longRange: true
+
+# ENCRYPTION KEYS #
+
+- type: entity
+  abstract: true
+  parent: EncryptionKey
+  id: EncryptionKeyMarineBase
+  name: ключ шифрования морпехов
+  components:
+  - type: Sprite
+    layers:
+    - state: crypt_silver
+    - state: com_label
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineCaptain
+  name: ключ шифрования капитана
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineCommand
+    - MarineEngineering
+    - MarineMedical
+    - MarineCargo
+    defaultChannel: MarineCommand
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineCommander
+  name: ключ шифрования полевого командира
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineCommand
+    - Alpha
+    - Bravo
+    - Charlie
+    - Delta
+    defaultChannel: MarineCommand
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineCommand
+  name: ключ шифрования командования
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineCommand
+    defaultChannel: MarineCommand
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineCommon
+  name: ключ шифрования общего канала связи
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineCommon
+    defaultChannel: MarineCommon
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineEngineering
+  name: ключ шифрования корабельных инженеров
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineEngineering
+    defaultChannel: MarineEngineering
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineMedical
+  name: ключ шифрования военных медиков
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineMedical
+    defaultChannel: MarineMedical
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineScience
+  name: ключ шифрования учёных
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineScience
+    defaultChannel: MarineScience
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineMP
+  name: ключ шифрования военной полиции
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineMP
+    defaultChannel: MarineMP
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyMarineCargo
+  name: ключ шифрования снабжения морпехов
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineCargo
+    defaultChannel: MarineCargo
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyAlpha
+  name: ключ шифрования отряда альфа
+  components:
+  - type: EncryptionKey
+    channels:
+    - Alpha
+    defaultChannel: Alpha
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyBravo
+  name: ключ шифрования отряда браво
+  components:
+  - type: EncryptionKey
+    channels:
+    - Bravo
+    defaultChannel: Bravo
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyCharlie
+  name: ключ шифрования отряда чарли
+  components:
+  - type: EncryptionKey
+    channels:
+    - Charlie
+    defaultChannel: Charlie
+
+- type: entity
+  parent: EncryptionKeyMarineBase
+  id: EncryptionKeyDelta
+  name: ключ шифрования отряда дельта
+  components:
+  - type: EncryptionKey
+    channels:
+    - Delta
+    defaultChannel: Delta
+
+# HEADSETS #
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetCaptain
+  suffix: MarinesCommand
+  name: гарнитура капитана
+  description: Гарнитура для связи с командованием операцией и экипажем.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCaptain
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetCommander
+  suffix: MarinesCommand
+  name: гарнитура полевого командира
+  description: Гарнитура для связи с командованием операцией и отрядами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommander
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetMarinePilot
+  suffix: MarinesCommand
+  name: гарнитура пилота
+  description: Гарнитура для связи с командованием операцией.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetMarineCommandOfficer
+  suffix: MarinesCommand
+  name: гарнитура штаб-офицера
+  description: Гарнитура для связи с командованием операцией.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommander
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetMarineСhiefEngineer
+  suffix: MarinesCommand
+  name: гарнитура старшего корабельного инженера
+  description: Гарнитура для связи с инженерами и командованием.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyMarineCommon
+      - EncryptionKeyMarineEngineering
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineEngineer
+  suffix: MarinesCommand
+  name: гарнитура корабельного инженера
+  description: Гарнитура для связи с корабельными инженерами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineEngineering
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetMarineCMO
+  suffix: MarinesCommand
+  name: Гарнитура старшего военного врача.
+  description: Гарнитура для связи с медиками и командованием.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyMarineCommon
+      - EncryptionKeyMarineMedical
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/medical.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/medical.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineMedic
+  suffix: MarinesCommand
+  name: гарнитура военного врача
+  description: Гарнитура для связи с военными медиками.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineMedical
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/medical.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/medical.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineScientist
+  suffix: MarinesCommand
+  name: гарнитура учёного
+  description: Гарнитура для связи с учёными.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineScience
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/science.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/science.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineMP
+  suffix: MarinesCommand
+  name: гарнитура военного полицейского
+  description: Гарнитура для связи с военной полицией.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineMP
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetMarineQM
+  suffix: MarinesCommand
+  name: гарнитура квартирмейстера
+  description: Гарнитура для связи с офицерами снабжения и командованием.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyMarineCommon
+      - EncryptionKeyMarineCargo
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineCargo
+  suffix: MarinesCommand
+  name: гарнитура офицера снабжения
+  description: Гарнитура для связи между офицерами снабжения.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCargo
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineCivilian
+  suffix: MarinesCommand
+  name: гарнитура экипажа
+  description: Гарнитура для связи с экипажем корабля.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/base.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetAlpha
+  suffix: MarinesAlpha
+  name: гарнитура отряда альфа
+  description: Стандартная гарнитура для связи внутри отряда.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAlpha
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAlphaSL
+  suffix: MarinesAlpha
+  name: гарнитура командира отряда альфа
+  description: Командирская гарнитура для связи как внутри отряда, так и с другими командирами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyAlpha
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetBravo
+  suffix: MarinesBravo
+  name: гарнитура отряда браво
+  description: Стандартная гарнитура для связи внутри отряда.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBravo
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetBravoSL
+  suffix: MarinesBravo
+  name: гарнитура командира отряда браво
+  description: Командирская гарнитура для связи как внутри отряда, так и с другими командирами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyBravo
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/engineering.rsi
+
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCharlie
+  suffix: MarinesCharlie
+  name: гарнитура отряда чарли
+  description: Стандартная гарнитура для связи внутри отряда.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCharlie
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/science.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/science.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetCharlieSL
+  suffix: MarinesCharlie
+  name: гарнитура командира отряда чарли
+  description: Командирская гарнитура для связи как внутри отряда, так и с другими командирами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyCharlie
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/science.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/science.rsi
+
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetDelta
+  suffix: MarinesDelta
+  name: гарнитура отряда дельта
+  description: Стандартная гарнитура для связи внутри отряда.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyDelta
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetDeltaSL
+  suffix: MarinesDelta
+  name: гарнитура командира отряда дельта
+  description: Командирская гарнитура для связи как внутри отряда, так и с другими командирами.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMarineCommand
+      - EncryptionKeyDelta
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi
+
+
+# GHOST COMMS #
+
+- type: entity
+  id: MobObserver
+  name: observer
+  noSpawn: true
+  save: false
+  description: Boo!
+  components:
+  - type: Mind
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: KinematicController
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.35
+      density: 15
+      mask:
+      - GhostImpassable
+  - type: InputMover
+  - type: Appearance
+  - type: Eye
+    drawFov: false
+  - type: Input
+    context: "ghost"
+  - type: Examiner
+    skipChecks: true
+  - type: Ghost
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Command
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Syndicate
+    - Hivemind
+    - MarineCommand
+    - MarineEngineering
+    - MarineMedical
+    - MarineCargo
+    - Alpha
+    - Bravo
+    - Charlie
+    - Delta
+  - type: Sprite
+    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    netsync: false
+    noRot: true
+    drawdepth: Ghosts
+    sprite: Mobs/Ghosts/ghost_human.rsi
+    state: animated
+    color: "#fff8"
+    layers:
+      - state: animated
+        shader: unshaded
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 8
+    baseWalkSpeed: 5
+  - type: MovementIgnoreGravity
+
+
+# SAFE POWER #
+
+- type: entity
+  parent: GeneratorUranium
+  id: GeneratorUraniumMarine
+  suffix: MarinesGear
+  name: генератор
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+
+- type: entity
+  parent: SubstationBasic
+  id: SubstationBasicMarine
+  name: подстанция
+  suffix: MarinesGear
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+    startingCharge: 250000
+
+# SHUTTERS #
+
+- type: entity
+  id: ShutterMarine
+  parent: BaseStructure
+  name: пластитановые ставни
+  description: вау.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Doors/Shutters/blastdoor.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+      density: 100
+      mask:
+      - FullTileMask
+      layer:
+      - AirlockLayer
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Door
+    pryingQuality: "Sawing"
+    bumpOpen: false
+    clickOpen: false
+    closeTimeOne: 0.4
+    closeTimeTwo: 0.4
+    openTimeOne: 0.4
+    openTimeTwo: 0.4
+    pryTime: -1
+    crushDamage:
+      types:
+        Blunt: 25 # yowch
+    openSound:
+      path: /Audio/Machines/blastdoor.ogg
+    closeSound:
+      path: /Audio/Machines/blastdoor.ogg
+  - type: UserInterface
+    interfaces:
+    - key: enum.WiresUiKey.Key
+      type: WiresBoundUserInterface
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50000000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: DoorSignalControl
+  - type: SignalReceiver
+    inputs:
+      Open: []
+      Close: []
+      Toggle: []
+  - type: Occluder
+  - type: Appearance
+    visuals:
+    - type: AirlockVisualizer
+      simpleVisuals: true
+      animationTime: 1.0
+  - type: RadiationBlocker
+    resistance: 8
+  - type: AutoLinkReceiver
+    channel: Ext3
+
+- type: entity
+  id: SignalButtonMarine
+  parent: SignalButton
+  name: КНОПКА
+  suffix: Autolink, Ext3
+  components:
+    - type: AutoLinkTransmitter
+      channel: Ext3
+    - type: SignalTransmitter
+      transmissionRange: 100
+
+# SERVERS #
+
+- type: entity
+  id: CrewMonitoringServerMarine
+  parent: CrewMonitoringServer
+  name: сервер датчиков здоровья
+  description: Сервирует.
+  suffix: MarinesGear
+  components:
+    - type: WirelessNetworkConnection
+      range: 2000
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterEntertainment
+  id: SurveillanceCameraWirelessRouterEntertainmentMarine
+  name: сервер камер морпехов
+  description: Сервирует.
+  suffix: MarinesGear
+  components:
+    - type: WirelessNetworkConnection
+      range: 2000
+
+# RESEARCH #
+
+- type: entity
+  id: TurretMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: раскладная турель (машинная плата)
+  suffix: MarinesGear
+  components:
+    - type: MachineBoard
+      prototype: MarineTurretUndeployed
+      componentRequirements:
+        BallisticAmmoProvider:
+          Amount: 1
+          DefaultPrototype: MagazineBoxRifleBigMarine
+          ExamineName: "ящик патронов"
+        Battery:
+          Amount: 1
+          DefaultPrototype: PowerCellSmall
+          ExamineName: "батарея"
+      tagRequirements:
+        ProximitySensor:
+          Amount: 1
+          DefaultPrototype: ProximitySensor
+          ExamineName: "датчик движения"
+        Pipe:
+          Amount: 2
+          DefaultPrototype: GasPipeStraight
+          ExamineName: "труба"
+      materialRequirements:
+        Steel: 10
+
+- type: technology
+  name: Средства обороны
+  id: TurretTechnology
+  description: Создание автоматических турелей
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_broken
+  requiredPoints: 15000
+  requiredTechnologies:
+  - PowerCellBasic
+  - RoboticsTechnology
+  - IndustrialEngineering
+  unlockedRecipes:
+  - TurretMachineCircuitboardRecipe
+
+- type: latheRecipe
+  id: TurretMachineCircuitboardRecipe
+  result: TurretMachineCircuitboard
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 1000
+
+- type: entity
+  parent: Protolathe
+  id: CircuitImprinter
+  name: circuit imprinter
+  description: Prints circuit boards for machines.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/circuit_imprinter.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CircuitImprinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    idleState: icon
+    runningState: building
+    dynamicRecipes:
+      - FirelockElectronics
+      - DoorElectronics
+      - APCElectronics
+      - AirAlarmElectronics
+      - FireAlarmElectronics
+      - MailingUnitElectronics
+      - IntercomElectronics
+      - SMESMachineCircuitboard
+      - SubstationMachineCircuitboard
+      - ThermomachineFreezerMachineCircuitBoard
+      - PortableScrubberMachineCircuitBoard
+      - CloningPodMachineCircuitboard
+      - MedicalScannerMachineCircuitboard
+      - CryoPodMachineCircuitboard
+      - CrewMonitoringComputerCircuitboard
+      - VaccinatorMachineCircuitboard
+      - DiagnoserMachineCircuitboard
+      - ChemMasterMachineCircuitboard
+      - ChemDispenserMachineCircuitboard
+      - BiomassReclaimerMachineCircuitboard
+      - SurveillanceCameraRouterCircuitboard
+      - SurveillanceCameraMonitorCircuitboard
+      - SurveillanceWirelessCameraMonitorCircuitboard
+      - SurveillanceCameraWirelessRouterCircuitboard
+      - ComputerTelevisionCircuitboard
+      - SurveillanceWirelessCameraMovableCircuitboard
+      - SurveillanceWirelessCameraAnchoredCircuitboard
+      - HydroponicsTrayMachineCircuitboard
+      - SolarControlComputerCircuitboard
+      - PowerComputerCircuitboard
+      - AutolatheMachineCircuitboard
+      - ProtolatheMachineCircuitboard
+      - ReagentGrinderMachineCircuitboard
+      - HotplateMachineCircuitboard
+      - MicrowaveMachineCircuitboard
+      - UniformPrinterMachineCircuitboard
+      - ShuttleConsoleCircuitboard
+      - RadarConsoleCircuitboard
+      - CircuitImprinterMachineCircuitboard
+      - TechDiskComputerCircuitboard
+      - DawInstrumentMachineCircuitboard
+      - CloningConsoleComputerCircuitboard
+      - StasisBedMachineCircuitboard
+      - OreProcessorMachineCircuitboard
+      - RipleyCentralElectronics
+      - RipleyPeripheralsElectronics
+      - GeneratorPlasmaMachineCircuitboard
+      - GeneratorUraniumMachineCircuitboard
+      - WallmountGeneratorElectronics
+      - WallmountGeneratorAPUElectronics
+      - WallmountSubstationElectronics
+      - EmitterCircuitboard
+      - ThrusterMachineCircuitboard
+      - GyroscopeMachineCircuitboard
+      - GasRecyclerMachineCircuitboard
+      - SeedExtractorMachineCircuitboard
+      - AnalysisComputerCircuitboard
+      - ExosuitFabricatorMachineCircuitboard
+      - AnomalyVesselCircuitboard
+      - APECircuitboard
+      - ArtifactAnalyzerMachineCircuitboard
+      - TraversalDistorterMachineCircuitboard
+      - BoozeDispenserMachineCircuitboard
+      - SodaDispenserMachineCircuitboard
+      - TelecomServerCircuitboard
+      - TurretMachineCircuitboardRecipe
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot

@@ -1,0 +1,585 @@
+- type: entity
+  parent: MobHuman
+  id: MobZombie
+  name: Зомби
+  noSpawn: true
+  description: Странный человек... Очень.
+  components:
+  - type: ZombifyOnDeath
+  - type: RandomHumanoidAppearance
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 49
+        Asphyxiation: 176
+        Slash: 56
+        Blunt: 119
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      70: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      20: 0.7
+      40: 0.5
+  - type: Bloodstream
+    bloodMaxVolume: 0
+
+- type: autoEmote
+  id: ZombineGroan
+  emote: Scream
+  interval: 5.0
+  chance: 0.5
+  withChat: true
+
+- type: accent
+  id: zombine
+  fullReplacements:
+    - Груааа...
+    - Мазги... МАЗГИ!
+    - Сектор...опасен...
+    - Прибывают... мертвецы...
+    - Биотическое... нарушение...
+    - Заражение...
+    - Уаггххх...
+    - Аргхххх...
+    - Осторожно...
+    - Пара...зиты...
+    - Высокий... уровень... опасности...
+    - Живой!
+    - Отступить...
+    - Враг!
+    - Вперед!
+
+- type: soundCollection
+  id: ZombieFootstepCombine
+  files:
+    - /Andromeda/no_mad/zgear1.ogg
+    - /Andromeda/no_mad/zgear2.ogg
+    - /Andromeda/no_mad/zgear3.ogg
+
+- type: soundCollection
+  id: ZombineHuman
+  files:
+  - /Andromeda/no_mad/idle.ogg
+  - /Andromeda/no_mad/idle1.ogg
+  - /Andromeda/no_mad/idle2.ogg
+  - /Andromeda/no_mad/idle3.ogg
+  - /Andromeda/no_mad/idle4.ogg
+  - /Andromeda/no_mad/idle5.ogg
+
+- type: speechSounds
+  id: ZombieCombineScreams
+  saySound:
+    collection: ZombineHuman
+  askSound:
+    collection: ZombineHuman
+  exclaimSound:
+    collection: ZombineHuman
+
+- type: entity
+  noSpawn: true
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsZombieSpetsnaz
+  name: боевая обувь
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/Shoes/Boots/jackboots.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Boots/jackboots.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: ZombieFootstepCombine
+
+#----------------------------------------------------
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieMakaka
+  name: Зомби
+  description: Странный человек... Очень.
+  components:
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieCivilian
+  name: Зомби
+  suffix: Civilian
+  description: Странный человек... Очень.
+  components:
+  - type: Loadout
+    prototypes:
+      - CivilianGearZombie
+      - CivilianGearZombie2
+      - CivilianGearZombie3
+      - CivilianGearZombie4
+      - CivilianGearZombie5
+      - CivilianGearZombie6
+      - CivilianGearZombie7
+      - CivilianGearZombie8
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: startingGear
+  id: CivilianGearZombie
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlue
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie4
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie5
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiRed
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie6
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie7
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiRed
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: CivilianGearZombie8
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlue
+    shoes: ClothingShoesColorBlack
+
+#----------------------------------------------------
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieDed
+  name: Зомби
+  suffix: Ded
+  components:
+  - type: ReplacementAccent
+    accent: zombine
+  - type: Loadout
+    prototypes: [SpecialForceGearZombie]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsOperative
+    - NameSpets
+  - type: RandomHumanoidAppearance
+    randomizeName: False
+  - type: Speech
+    speechSounds: ZombieCombineScreams
+    soundCooldownTime: 0.1
+  - type: Stamina
+    excess: 250
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      250: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+      150: 0.5
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ZombineDeath
+      params:
+        volume: 3
+
+- type: soundCollection
+  id: ZombineDeath
+  files:
+  - /Andromeda/no_mad/die1.ogg
+  - /Andromeda/no_mad/die2.ogg
+
+- type: startingGear
+  id: SpecialForceGearZombie
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    shoes: ClothingShoesBootsZombieSpetsnaz
+    neck: CombatKnifeSpetsnaz
+    outerClothing: ClothingOuterHardsuitDeathsquadZombie
+    suitstorage: OxygenTankFilled
+    head: ClothingHeadHelmetHardsuitDeathsquadZombie
+    id: DedSquadronGavnaIDCard
+    belt: WeaponRevolverMateba
+    pocket1: EnergySword
+    pocket2: WeaponPulsePistol
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterHardsuitDeathsquad
+  id: ClothingOuterHardsuitDeathsquadZombie
+  components:
+  - type: Unremoveable
+
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadHelmetHardsuitDeathsquad
+  id: ClothingHeadHelmetHardsuitDeathsquadZombie
+  components:
+  - type: Unremoveable
+
+#--------------------------------------------------
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieSoldier
+  name: Зомби
+  suffix: Soldier
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+      150: 0.5
+  - type: Stamina
+    excess: 100
+  - type: Speech
+    speechSounds: ZombieCombineScreams
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ZombineDeath
+      params:
+        volume: 3
+  - type: ReplacementAccent
+    accent: zombine
+  - type: Loadout
+    prototypes: [RXBZZombie]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsRXBZZ
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+
+- type: startingGear
+  id: RXBZZombie
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    back: WeaponShotgun39
+    shoes: ClothingShoesBootsZombieSpetsnaz
+    mask: ClothingMaskGasExplorer
+    neck: CombatKnifeSpetsnaz
+    outerClothing: ClothingOuterHardsuitCBURNZombie
+    suitStorage: WeaponLaserGun
+    id: IdCardRXBZZ
+    head: ClothingHeadHelmetCBURNZombie
+    belt: ClothingBeltBandolierRXBZZombie
+    pocket1: MagazineRifle
+    pocket2: MedkitAdvancedRXBZZombie
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterHardsuitCBURN
+  id: ClothingOuterHardsuitCBURNZombie
+  components:
+  - type: Unremoveable
+
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadHelmetCBURN
+  id: ClothingHeadHelmetCBURNZombie
+  components:
+  - type: Unremoveable
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBeltBandolier
+  id: ClothingBeltBandolierRXBZZombie
+  components:
+    - type: Storage
+      capacity: 100
+    - type: StorageFill
+      contents:
+        - id: ShellShotgunIncendiary
+          amount: 2
+        - id: ShellShotgun
+          amount: 7
+
+- type: entity
+  noSpawn: true
+  name: продвинутая аптечка стимуляторов
+  parent: MedkitAdvanced
+  id: MedkitAdvancedRXBZZombie
+  components:
+    - type: Item
+      size: 10
+    - type: Storage
+      capacity: 10
+    - type: StorageFill
+      contents:
+        - id: HandheldHealthAnalyzer
+        - id: BattleMedipenAntiVirus
+          amount: 1
+        - id: BattleMedipen
+          amount: 1
+
+#-----------------------------------------------------------------
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieERT
+  name: Зомби
+  suffix: ERT
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      150: Dead
+  - type: Stamina
+    excess: 80
+  - type: Loadout
+    prototypes: [ERTZombieGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesPVTs
+    - names_last_male
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ZombineDeath
+      params:
+        volume: 3
+
+- type: startingGear
+  id: ERTZombieGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    back: WeaponSubMachineGunMP5
+    shoes: ClothingShoesBootsZombieSpetsnaz
+    head: ClothingHeadHelmetSwat
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterArmorBasic
+    belt: WeaponPistolMk58
+    pocket1: Flare
+    pocket2: MagazinePistolSubMachineGun
+
+#------------------------------------------------------
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieFirefighter
+  name: Зомби
+  suffix: Firefighter
+  components:
+  - type: Loadout
+    prototypes: [FirefighterZombieGear]
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+
+- type: startingGear
+  id: FirefighterZombieGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAtmos
+    back: YellowOxygenTankFilled
+    shoes: ClothingShoesBootsJack
+    mask: ClothingMaskGasAtmos
+    head: ClothingHeadHelmetAtmosFire
+    outerClothing: ClothingOuterSuitAtmosFire
+    pocket1: Flare
+    pocket2: FireExtinguisher
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieSecurity
+  name: Зомби
+  suffix: Security
+  components:
+  - type: Loadout
+    prototypes: 
+      - OfficerSesurityZombieGavna
+      - SecurityCadetZombieGavna
+      - DetectiveGearZombieGavna
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: startingGear
+  id: OfficerSesurityZombieGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    shoes: ClothingShoesBootsJackSec
+    outerClothing: ClothingOuterVestArmorSec
+    suitstorage: WeaponPistolMk58
+    id: SecurityIDCard
+    belt: ClothingBeltSecurityFilled
+    pocket2: MagazinePistol
+
+- type: startingGear
+  id: SecurityCadetZombieGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecGrey
+    shoes: ClothingShoesBootsJackSec
+    outerClothing: ClothingOuterArmorBasic
+    id: SecurityCadetIDCard
+    pocket1: WeaponPistolMk58Nonlethal
+  innerclothingskirt: ClothingUniformJumpskirtSecGrey
+
+- type: startingGear
+  id: DetectiveGearZombieGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetective
+    shoes: ClothingShoesBootsJackSec
+    eyes: ClothingEyesGlassesSunglasses
+    head: ClothingHeadHatFedoraBrown
+    outerClothing: ClothingOuterVestDetective
+    id: DetectiveIDCard
+    belt: ClothingBeltHolsterFilled
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieRiot
+  name: Зомби
+  suffix: Riot
+  components:
+  - type: Loadout
+    prototypes: [RiotGear]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: startingGear
+  id: RiotGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    shoes: ClothingShoesBootsJackSec
+    outerClothing: ClothingOuterArmorRiot
+    id: IDCardPrisonGuard
+    head: ClothingHeadHelmetRiot
+    belt: ClothingBeltSecurityFilled
+    pocket2: WeaponDisabler
+
+- type: entity
+  parent: IDCardStandard
+  id: IDCardPrisonGuard
+  name: Id карта охраны тюрьмы
+  components:
+  - type: Sprite
+    layers:
+    - state: orange
+    - state: idwarden
+  - type: Item
+    heldPrefix: orange
+  - type: IdCard
+    jobTitle: охранник тюрьмы
+  - type: Access
+    tags:
+    - Maintenance
+    - Brig
+    - Security
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieZek
+  name: Зомби
+  suffix: Zek
+  components:
+  - type: Loadout
+    prototypes: [ZekGear]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: startingGear
+  id: ZekGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack
+    id: ZekIDCard
+
+- type: entity
+  parent: IDCardStandard
+  id: ZekIDCard
+  name: Id карта заключенного
+  components:
+  - type: Sprite
+    layers:
+    - state: orange
+  - type: Item
+    heldPrefix: orange
+  - type: IdCard
+    jobTitle: Заключенный
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieMedic
+  name: Зомби
+  suffix: Medic
+  components:
+  - type: Loadout
+    prototypes: [DoctorGearZombie]
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+
+- type: startingGear
+  id: DoctorGearZombie
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatLab
+    id: MedicalIDCard
+    belt: ClothingBeltMedicalFilled
+    pocket1: FlashlightLantern
+  innerclothingskirt: ClothingUniformJumpskirtMedicalDoctor
+
+- type: entity
+  parent: MobZombie
+  id: MobZombieEngineer
+  name: Зомби
+  suffix: Engineer
+  components:
+  - type: Loadout
+    prototypes: [StationEngineerGearZombie]
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+
+- type: startingGear
+  id: StationEngineerGearZombie
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+    jumpsuit: ClothingUniformJumpsuitEngineering
+    shoes: ClothingShoesBootsWork
+    outerClothing: ClothingOuterVestHazard
+    id: EngineeringIDCard
+    eyes: ClothingEyesGlassesMeson
+    belt: ClothingBeltUtilityFilled

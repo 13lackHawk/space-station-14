@@ -1,0 +1,3221 @@
+- type: entity
+  name: united earth gov
+  parent: RubberStampBase
+  id: RubberStampUEG
+  suffix: DO NOT MAP
+  components:
+    - type: Stamp
+      stampedName: Объединенное Правительство Земли
+      stampedColor: "#0F3D87"
+      stampState: "paper_stamp-cmo"
+    - type: Sprite
+      sprite: Objects/Misc/bureaucracy.rsi
+      state: stamp-cmo
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitSpecialForce
+  noSpawn: true
+  name: special force hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/specialforce.rsi
+  - type: Clothing
+    equippedPrefix: off
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/specialforce.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackRIGSpecialForce
+  name: EarthGov special force RIG
+  description: It's a very robust RIG.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/specialforce.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitSpecialForce
+    slot: outerClothing
+    requiredSlot:
+    - back
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingOuterHardsuitDeathsquad
+  id: ClothingOuterHardsuitSpecialForce
+  noSpawn: true
+  name: EarthGov special force hardsuit
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/specialforce.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/specialforce.rsi
+    equipSound: /Uploaded/base/ogg/suit/nominal.ogg
+    unequipSound: /Uploaded/base/ogg/suit/mechmove03.ogg
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSpecialForce
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitRTULeader
+  id: ClothingHeadHelmetHardsuitRTU
+  noSpawn: true
+  name: RTU hardsuit helmet
+  description: A rescue troop unit helmet designed specifically for combat in space and the harsh far-off worlds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
+
+- type: entity
+  parent: ClothingBackpackRIGRTULeader
+  id: ClothingBackpackRIGRTUGrunt
+  name: EarthGov RTU grunt RIG
+  description: It's a very robust backpack.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitRTU
+
+- type: entity
+  parent: ClothingOuterHardsuitRTULeader
+  id: ClothingOuterHardsuitRTU
+  noSpawn: true
+  name: EarthGov RTU hardsuit
+  description: A rescue troop unit suit designed specifically for combat in space and the harsh far-off worlds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/grunthardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/grunthardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRTU
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitRTULeader
+  id: ClothingHeadHelmetHardsuitRTUMedick
+  noSpawn: true
+  name: RTU hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
+
+- type: entity
+  parent: ClothingBackpackRIGRTULeader
+  id: ClothingBackpackRIGRTUMedick
+  name: EarthGov RTU medic RIG
+  description: It's a very robust backpack.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitRTUMedick
+
+- type: entity
+  parent: ClothingOuterHardsuitRTULeader
+  id: ClothingOuterHardsuitRTUMedick
+  noSpawn: true
+  name: EarthGov medic RTU hardsuit
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/medickhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/medickhardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRTUMedick
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitRTULeader
+  id: ClothingHeadHelmetHardsuitRTUEnginegr
+  noSpawn: true
+  name: RTU hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
+
+- type: entity
+  parent: ClothingBackpackRIGRTULeader
+  id: ClothingBackpackRIGRTUEngineer
+  name: EarthGov RTU engineer RIG
+  description: It's a very robust backpack.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitRTUEnginegr
+
+- type: entity
+  parent: ClothingOuterHardsuitRTULeader
+  id: ClothingOuterHardsuitRTUEnginegr
+  noSpawn: true
+  name: EarthGov engineer RTU hardsuit
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/enginegrhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/enginegrhardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRTUEnginegr
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitRTULeader
+  noSpawn: true
+  name: RTU hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+  - type: Clothing
+    equippedPrefix: off
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackRIGRTULeader
+  name: EarthGov RTU leader RIG
+  description: It's a very robust backpack.
+  components:
+  - type: Storage
+    capacity: 250
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTUL.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitRTULeader
+    slot: outerClothing
+    requiredSlot:
+    - back
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitRTULeader
+  noSpawn: true
+  name: EarthGov commander RTU hardsuit
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+    equipSound: /Uploaded/base/ogg/suit/nominal.ogg
+    unequipSound: /Uploaded/base/ogg/suit/mechmove03.ogg
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRTULeader
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitSecurityEgov
+  noSpawn: true
+  name: marine hardsuit helmet
+  description: A marine helmet designed specifically for combat in space and the harsh far-off worlds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/marinehardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Hardsuits/marinehardsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitSecurityEgovSpecial
+  name: special EarthGov force hardsuit
+  description: A marine suit designed specifically for combat in space and the harsh far-off worlds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/marinespecialhardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/marinespecialhardsuit.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.8
+  - type: PressureProtection
+    highPressureMultiplier: 0.002
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.4
+        Heat: 0.2
+        Radiation: 0.20
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSecurityEgov
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitSecurityEgov
+  name: marine hardsuit
+  description: A marine suit designed specifically for combat in space and the harsh far-off worlds.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/marinehardsuit.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/marinehardsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.8
+        Radiation: 0.25
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSecurityEgov
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatEgovCap
+  name: marine navy cap
+  description: Cap made of thick camouflage fabric.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/marine_cap.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/marine_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatEgovOfficerCap
+  name: navy officer cap #имеется ввиду фуражка :humanTorch:
+  description: Navy officer cap. Better than any stripes will emphasize your importance and rank.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/officer_cap.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/officer_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatEgovShtabCap
+  name: officer cap #имеется ввиду фуражка :humanTorch:
+  description: Officer cap. Better than any stripes will emphasize your importance and rank.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/head/shtab.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/head/shtab.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatMarineBeret
+  name: marine navy beret
+  description: Beret made of dense camouflage fabric. Doesn't make you invisible.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/head/beret.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/head/beret.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEgov
+  name: marine navy uniform
+  description: Jumpsuit made of dense camouflage fabric. Doesn't make you invisible.
+  components:
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/marine_suit.rsi
+    - type: Clothing
+      sprite: /Uploaded/base/rsi/Textures/marine_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEgovOfficer
+  name: navy officer uniform
+  description: Navy officer uniform. Better than any stripes will emphasize your importance and rank.
+  components:
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/officer_suit.rsi
+    - type: Clothing
+      sprite: /Uploaded/base/rsi/Textures/officer_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEgovOfficerALT
+  name: officer uniform
+  description: Officer uniform. Better than any stripes will emphasize your importance and rank.
+  components:
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/officer_suitALT.rsi
+    - type: Clothing
+      sprite: /Uploaded/base/rsi/Textures/officer_suitALT.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckIronStar
+  name: iron star medal
+  description: An iron star awarded to members of the SCG for meritorious achievement or service in a combat zone.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Medals/solgov.rsi
+    state: solgov-accessory_iron_star
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Medals/solgov.rsi
+    clothingVisuals:
+      neck:
+      - state: iron_star
+  - type: Item
+    size: 1
+  - type: StaticPrice
+    price: 100000
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckIronSol
+  name: Sol expeditionary medal
+  description: An iron medal awarded to members of the SCG for service outside of the borders of the Sol Central Government.
+  components:
+  - type: Sprite
+    state: solgov-accessory_iron_sol
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: iron_sol
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckBronzesol
+  name: Sol defensive operations medal
+  description: A bronze medal awarded for members of the SCG for service defending the border regions.
+  components:
+  - type: Sprite
+    state: solgov-accessory_bronze_sol
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: bronze_sol
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckSilversword
+  name: combat action medal
+  description: A silver medal awarded to members of the SCG for honorable service while under enemy fire.
+  components:
+  - type: Sprite
+    state: solgov-accessory_silver_sword
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: silver_sword
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckSilversol
+  name: Sol valor medal
+  description: A silver medal awarded for members of the SCG for acts of exceptional valor.
+  components:
+  - type: Sprite
+    state: solgov-accessory_silver_sol
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: silver_sol
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckGoldStar
+  name: gold star medal
+  description: A gold star awarded to members of the SCG for acts of heroism in a combat zone.
+  components:
+  - type: Sprite
+    state: solgov-accessory_gold_star
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: gold_star
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckGoldSun
+  name: solar service medal
+  description: A gold medal awarded to members of the SCG by the Secretary General for significant contributions to the Sol Central Government.
+  components:
+  - type: Sprite
+    state: solgov-accessory_gold_sun
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: gold_sun
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckGoldCrest
+  name: solar honor medal
+  description: A gold medal awarded to members of the Defense Forces by the Secretary General for personal acts of valor and heroism above and beyond the call of duty.
+  components:
+  - type: Sprite
+    state: solgov-accessory_gold_crest
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: gold_crest
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckGoldSol
+  name: Sol sapientarian medal
+  description: A gold medal awarded for members of the SCG for significant contributions to sapient rights.
+  components:
+  - type: Sprite
+    state: solgov-accessory_gold_sol
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: gold_sol
+
+- type: entity
+  parent: ClothingNeckIronStar
+  id: ClothingNeckPinPilot
+  name: pilot's qualification pin
+  description: An gold pin denoting the qualification to fly in the SGDF.
+  components:
+  - type: Sprite
+    state: solgov-accessory_pin_pilot
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: pin_pilot
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMPBand
+  name: military police band
+  description: Damn, it feels good to be a law.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Misc/mpband.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Misc/mpband.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetEGov
+  id: ClothingHeadHelmetEGovPilot
+  name: pilot helmet
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/head/pilothelmet.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/head/pilothelmet.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEGovOffice
+  name: office uniform
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/office.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/office.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingSkirtEGovOffice
+  name: office skirt
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/office.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/office.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEGovShtab
+  name: staff officer uniform
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/shtab.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/shtab.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingSkirtEGovShtab
+  name: staff officer skirt
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/shtab.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/shtab.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEGovGrey
+  name: grey uniform
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/grey.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/grey.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingSkirtEGovGrey
+  name: grey skirt
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/grey.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/grey.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEGovGreen
+  name: green uniform
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/green.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/green.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEGovSpecial
+  name: special force uniform
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/special.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/special.rsi
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskTacticalGas
+  name: tactical gas mask
+  description: A military-grade gas mask that can be connected to an air supply.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Mask/gas.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Mask/gas.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95
+
+- type: entity
+  id: LockerEGov
+  parent: LockerBase
+  name: navy's locker
+  description: A standard-issue EarthGovernment storage unit.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Structures/Storage/closet.rsi
+    noRot: true
+    layers:
+    - state: egov
+    - state: egov_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.StorageVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: EntityStorageVisuals
+    stateBaseClosed: egov
+    stateDoorOpen: egov_open
+    stateDoorClosed: egov_door
+  - type: AccessReader
+    access: [ [ "EarthGov" ] ]
+
+- type: entity
+  name: assault tower shield
+  parent: BaseShield
+  id: EgovShield
+  description: A shield that covers the wearer from head to toe, not everyone can lift this.
+  components:
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/Weapons/Melee/shields.rsi
+      state: egov-icon
+    - type: Item
+      sprite: /Uploaded/base/rsi/Textures/Weapons/Melee/shields.rsi
+      size: 100
+      heldPrefix: egov
+
+- type: entity
+  parent: Clothing
+  id: PagonStandard
+  name: shoulder strap
+  description: A shoulder strap necessary to access various areas.
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Misc/pagoni.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: /Uploaded/base/rsi/Textures/Misc/pagoni.rsi
+  - type: Item
+    heldPrefix: default
+  - type: IdCard
+  - type: Access
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: PagonStandard
+  id: PagonPrivate
+  name: private shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: private
+  - type: IdCard
+    jobTitle: Рядовой
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonCapral
+  name: capral shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: capral
+  - type: IdCard
+    jobTitle: Капрал
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonSerg
+  name: sergant shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: serg
+  - type: IdCard
+    jobTitle: Сержант
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonUnter
+  name: junior unter-officer houlder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: unter
+  - type: IdCard
+    jobTitle: Младший унтер-офицер
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonUnterOfficer
+  name: unter-officer shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: unter2
+  - type: IdCard
+    jobTitle: Унтер-офицер
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonBaseOfficer
+  name: base-officer shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: unter3
+  - type: IdCard
+    jobTitle: Штаб-офицер
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonLeitenant
+  name: lieutenant shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: leitenant
+  - type: IdCard
+    jobTitle: Лейтенант
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonSeniorLeitenant
+  name: senior lieutenant shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: leitenant2
+  - type: IdCard
+    jobTitle: Старший лейтенант
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonHauptman
+  name: captain shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: hauptman
+  - type: IdCard
+    jobTitle: Капитан
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonMayor
+  name: major shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: mayor
+  - type: IdCard
+    jobTitle: Майор
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: PagonStandard
+  id: PagonPolkovnik
+  name: colonel shoulder strap
+  components:
+  - type: Sprite
+    layers:
+    - state: polk
+  - type: IdCard
+    jobTitle: Подполковник
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: Clothing
+  id: IDbadgeStandard
+  name: identification badge
+  description: A badge necessary to access various areas.
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Misc/id_badges.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: /Uploaded/base/rsi/Textures/Misc/id_badges.rsi
+  - type: Item
+    heldPrefix: default
+  - type: Access
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: IDbadgeStandard
+  id: MarineIDbadge
+  name: marine ID badge
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: id_private
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: IDbadgeStandard
+  id: MarineSergeantIDbadge
+  name: marine sergeant ID badge
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: id_sergeant
+  - type: Access
+    tags:
+    - EarthGov
+
+- type: entity
+  parent: IDbadgeStandard
+  id: OfficerIDbadge
+  name: navy officer ID badge
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: id_officer
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: entity
+  parent: IDbadgeStandard
+  id: AgentIDbadge
+  name: Earth Government delegate ID badge
+  components:
+  - type: Sprite
+    state: special
+  - type: Access
+    groups:
+    - EarthGov
+
+- type: accessGroup
+  id: EarthGov
+  tags:
+  - EarthGov
+  - EarthGovCommand
+  - EarthGovSpecialits
+  - EarthGovMedic
+
+- type: accessGroup
+  id: EarthGovSpecialits
+  tags:
+  - EarthGov
+  - EarthGovSpecialits
+
+- type: accessGroup
+  id: EarthGovMedic
+  tags:
+  - EarthGov
+  - EarthGovMedic
+
+- type: accessLevel
+  id: EarthGovCommand
+  name: id-card-access-level-earthgov-command
+
+- type: accessLevel
+  id: EarthGovSpecialits
+  name: id-card-access-level-earthgov
+
+- type: accessLevel
+  id: EarthGovMedic
+  name: id-card-access-level-earthgov
+
+- type: entity
+  name: 711-MarkCL Rivet Gun
+  parent: BaseWeaponPistol
+  id: WeaponPistolRivet
+  description: The 711-MarkCL Rivet Gun is the latest refinement from Timson Tools' long line of friendly tools. Useful for rapid repairs at a distance!
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/rivet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/rivet.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolNail
+        insertSound: /Uploaded/base/ogg/divet_magin.ogg
+        ejectSound: /Uploaded/base/ogg/divet_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolNail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeNail
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeNail
+  - type: Gun
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/rivet_fire.ogg
+      params:
+        volume: -10
+
+- type: Tag
+  id: MagazinePistolNail
+
+- type: entity
+  id: MagazinePistolNail
+  name: nails magazine (.nail)
+  parent: BaseMagazinePistol
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolNail
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeNail
+    whitelist:
+      tags:
+        - CartridgeNail
+    capacity: 45
+  - type: Item
+    size: 5
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/divet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: CartridgeNail
+
+- type: entity
+  id: CartridgeNail
+  name: nail
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeNail
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 45fast #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: BulletNail
+  - type: Appearance
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: BulletNail
+
+- type: entity
+  id: BulletNail
+  name: nail
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    layers:
+    - state: projectiles_divet
+      shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+        Structural: -20
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: Tag
+    tags:
+      - BulletNail
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterNavyVest
+  name: navy vest
+  description: A synthetic armor vest. This one has added ballistic plates.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/armor/navy.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/armor/navy.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.8
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterXenonautenLight
+  name: light shell armor
+  description: A XN-L vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a light variant.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.4
+        Heat: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterXenonautenMedium
+  name: shell armor
+  description: A XN-M vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a medium variant.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate2.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate2.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.4
+        Heat: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Item
+    size: 80
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterXenonautenHeavy
+  name: heavy shell armor
+  description: A XN-H vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a heavy variant.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate3.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/armor/chestplate3.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.2
+        Slash: 0.2
+        Piercing: 0.2
+        Heat: 0.3
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Item
+    size: 80
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetEGov
+  name: helmet
+  description: A usual helmet.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/helmet.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/helmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.9
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetXenonauten
+  name: helmet
+  description: A usual helmet.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/armor/ballistichelmet.rsi
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/armor/ballistichelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.6
+        Heat: 0.8
+        Radiation: 0.8
+        Caustic: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+
+- type: entity
+  parent: Airlock
+  id: AirlockEGov
+  suffix: EarthGov
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/Door.rsi
+
+- type: entity
+  parent: AirlockEGov
+  id: AirlockEGovLocked
+  suffix: EarthGov, Locked
+  components:
+  - type: AccessReader
+    access: [["EarthGov"]]
+
+- type: entity
+  parent: AirlockEGov
+  id: AirlockEGovLockedCommand
+  suffix: EarthGov, Locked Command
+  components:
+  - type: AccessReader
+    access: [["EarthGovCommand"]]
+
+- type: entity
+  parent: MarkerBase
+  id: RandomPosterLegit
+  name: random legit poster spawner
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Wallmounts/posters.rsi
+        state: random_legit
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+      - PosterLegitHereForYourSafety
+      - PosterLegitNanotrasenLogo
+      - PosterLegitCleanliness
+      - PosterLegitHelpOthers
+      - PosterLegitBuild
+      - PosterLegitBlessThisSpess
+      - PosterLegitScience
+      - PosterLegitIan
+      - PosterLegitObey
+      - PosterLegitWalk
+      - PosterLegitStateLaws
+      - PosterLegitLoveIan
+      - PosterLegitSpaceCops
+      - PosterLegitUeNo
+      - PosterLegitGetYourLEGS
+      - PosterLegitDoNotQuestion
+      - PosterLegitWorkForAFuture
+      - PosterLegitSoftCapPopArt
+      - PosterLegitSafetyInternals
+      - PosterLegitSafetyEyeProtection
+      - PosterLegitSafetyReport
+      - PosterLegitReportCrimes
+      - PosterLegitIonRifle
+      - PosterLegitFoamForceAd
+      - PosterLegitCohibaRobustoAd
+      - PosterLegit50thAnniversaryVintageReprint
+      - PosterLegitFruitBowl
+      - PosterLegitPDAAd
+      - PosterLegitNanomichiAd
+      - PosterLegit12Gauge
+      - PosterLegitHighClassMartini
+      - PosterLegitTheOwl
+      - PosterLegitNoERP
+      - PosterLegitCarbonDioxide
+      - PosterLegitDickGumshue
+      - PosterLegitThereIsNoGasGiant
+      - PosterLegitJustAWeekAway
+      - PosterLegitSecWatch
+      - PosterLegitVacation
+      - PosterLegitPeriodicTable
+      - PosterLegitRenault
+      - PosterLegitNTTGC
+      - PosterLegitEarthGovMC
+      - PosterLegitEarthGov
+      - PosterLegitEarthGov2
+      - PosterLegitEarthGov3
+      - PosterLegitEarthGov4
+      - PosterLegitEarthGov5
+      - PosterLegitEarthGov6
+      - PosterLegitEarthGov7
+      - PosterLegitEarthGov8
+      - PosterLegitEarthGov9
+    chance: 1
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitEarthGovMC
+  name: Агитационный плакат EarthGov
+  description: Вступай в корпус морской пехоты ОПЗ!
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/posters.rsi
+    state: poster1
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov
+  name: плакат EarthGov
+  description: Плакат объеденненого правительства земли. На плакате изображен герб ОПЗ.
+  components:
+  - type: Sprite
+    state: poster2
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov2
+  name: будущее за нами
+  description: Во все века, земля была центром прогресса!
+  components:
+  - type: Sprite
+    state: poster3
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov3
+  name: Земле нужен ты
+  description: Агитационный плакат с призывом вступить в федеральные структуры ОПЗ.
+  components:
+  - type: Sprite
+    state: poster4
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov4
+  name: Земля наш дом
+  description: Пропагандистский плакат, напоминая откуда пошла цивилизация по галактике.
+  components:
+  - type: Sprite
+    state: poster5
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov5
+  name: Вступай!
+  description: Запешитесь в резерв армейского спецназа ОПЗ! Станьте героем, о котором знает вся галактика!
+  components:
+  - type: Sprite
+    state: poster6
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov6
+  name: Нет ЛГБТ!
+  description: Скажи нет движению ЛГБТ, это движение пагубно влияет на детей и стариков!
+  components:
+  - type: Sprite
+    state: poster7
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov7
+  name: агитационный плакат EarthGov
+  description: Вступайте в офицерские училища, вы станете командующим целых армий! "Принимаем только людей с высшим образованием, тип образования не важен"
+  components:
+  - type: Sprite
+    state: poster8
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov8
+  name: красная угроза!
+  description: Внимание граждане, будьте осторожны, враги государства все ещё активно занимаются терроризмом, сообщайте о любых возможных подозрений в связи с СССП
+  components:
+  - type: Sprite
+    state: poster9
+
+- type: entity
+  parent: PosterLegitEarthGovMC
+  id: PosterLegitEarthGov9
+  name: дева правосудья
+  description: Правительство Земли всегда была самым справедливым государством. Слава Земле!
+  components:
+  - type: Sprite
+    state: poster10
+
+- type: entity
+  id: IndoorEarthGovertment
+  parent: BannerBase
+  name: EarthGov Indoor Flag
+  description: A Flag displaying the EarthGov logo. It looks rather cheap.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/flag.rsi
+    state: banner
+
+- type: entity
+  name: EarthGov wall banner
+  description: Glory to EarthGov! All hail to Earth Govertment! For the humanity!
+  id: EGovWallBanner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: WallMount
+    arc: 90
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Appearance
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: /Uploaded/base/rsi/Textures/Structures/wallbanner.rsi
+    state: egov
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          BannerBroken:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: EGovWallBanner
+  id: BannerBroken
+  name: broken banner
+  description: "You can't make out anything from the banner's original print. It's ruined."
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: /Uploaded/base/rsi/Textures/Structures/wallbanner.rsi
+    state: egov_broken
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: SCAF shotgun
+  parent: BaseWeaponShotgun
+  id: WeaponSCAFShotgun
+  description: Standard EarthGov issue shotgun.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/clothing.rsi
+    size: 60
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/clothing.rsi
+  - type: BallisticAmmoProvider
+    autoCycle: true
+    whitelist:
+      tags:
+      - ShellShotgun
+      - ShellShotgunPulse
+    capacity: 12
+    proto: ShellShotgunPulse
+  - type: Gun # Corvax-Guns
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_metal.ogg
+
+- type: Tag
+  id: ShellShotgunPulse
+
+- type: entity
+  id: ShellShotgunPulse
+  name: shell (.12 pulse)
+  parent: BaseShellShotgun
+  components:
+  - type: Tag
+    tags:
+    - ShellShotgunPulse
+  - type: CartridgeAmmo
+    proto: PulseBullet
+    count: 6
+    spread: 15
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/battary.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: Tag
+  id: AL9
+
+- type: entity
+  name: AL-9 Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleAL9
+  description: The AL-9 Rifle is a riot control device that is meant for accuracy at long-range.
+  components:
+  - type: Tag
+    tags: 
+      - AL9
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/clothing.rsi
+    size: 90
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/clothing.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    fireRate: 2
+    soundGunshot:
+      path: /Uploaded/base/ogg/sniper.ogg
+      params:
+        volume: -13
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAntiMat90
+        insertSound: /Uploaded/base/ogg/rifle_load.ogg
+        ejectSound: /Uploaded/base/ogg/pulse_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineAntiMat90
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge90
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMat90
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: Tag
+  id: MagazineAntiMat90
+
+- type: entity
+  id: MagazineAntiMat90
+  name: AL-9 magazine
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineAntiMat90
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 20
+    proto: Cartridge90
+    whitelist:
+      tags:
+        - CartridgeAntiMat90
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 5
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/al9.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/al9.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: BaseCartridgeAntiMat90
+  name: cartridge (.39 rifle)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeAntiMat90
+  - type: CartridgeAmmo
+    proto: BulletRifle
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 30training #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: CartridgeAntiMat90
+
+- type: entity
+  id: Cartridge90
+  name: cartridge (.39 rifle)
+  parent: BaseCartridgeAntiMat90
+  components:
+  - type: Sprite
+    layers:
+    - state: 30training #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 30training
+  - type: CartridgeAmmo
+    proto: BulletAntiMat90
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletAntiMat90
+  name: bullet (.39 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 28
+
+- type: Tag
+  id: SCAF
+
+- type: entity
+  name: SCAF heavy rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleSCAF
+  description: The S.C.A.F.'s Bullpup Rifle was wielded by soldiers of the EarthGov during their expedition on Tau Volantis.
+  components:
+  - type: Tag
+    tags: 
+      - SCAF
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/clothing.rsi
+    size: 70
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/clothing.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    fireRate: 1
+    soundGunshot:
+      path: /Uploaded/base/ogg/rifle_shot.ogg
+      params:
+        volume: -8
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyRifle
+        insertSound: /Uploaded/base/ogg/rifle_reload.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifleHeavy
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifleHeavy
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  id: MagazineHeavyRifle
+  name: heavy rifle magazine (.62 rifle)
+  description: Standart EarthGov type of heavy magazines.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineHeavyRifle
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 10
+    proto: CartridgeRifleHeavy
+    whitelist:
+      tags:
+        - CartridgeRifle62
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/scaf.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/scaf.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: SWS
+
+- type: entity
+  name: SWS Motorized Pulse Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleSWS
+  description: The Pulse Rifle is the standard-issue service rifle of the Earth Defense Force and is also common among corporate security officers.
+  components:
+  - type: Tag
+    tags:
+      - SWS
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/big.rsi
+    state: base
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/tiny.rsi
+    size: 70
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -44
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 8
+    soundGunshot:
+      path: /Uploaded/base/ogg/giper_perdesh.ogg
+      params:
+        volume: -13
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePulseRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/lmg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePulseRifle
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: MagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Appearance
+  - type: Wieldable
+    wieldTime: 1.5
+
+- type: entity
+  id: MuzzlePulseEffect
+  noSpawn: true
+  components:
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: Sprite
+    netsync: false
+    drawdepth: Effects
+    layers:
+    - shader: unshaded
+      map: ["enum.EffectLayers.Unshaded"]
+      sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+      state: muzzle_pulse
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+  - type: AnimationPlayer
+
+- type: entity
+  id: BulletPulseEffect
+  noSpawn: true
+  components:
+  - type: TimedDespawn
+    lifetime: 0.25
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+    netsync: false
+    drawdepth: Effects
+    layers:
+    - shader: unshaded
+      map: ["enum.EffectLayers.Unshaded"]
+      state: impact_pulse
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+
+- type: entity
+  id: PulseBullet
+  name: pulse bullet
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+    layers:
+    - state: pulse
+      shader: unshaded
+  - type: Ammo
+    muzzleFlash: MuzzlePulseEffect
+  - type: Projectile
+    impactEffect: BulletPulseEffect
+    damage:
+      types:
+        Heat: 5
+        Piercing: 4
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: Tag
+    tags:
+      - PulseBullet
+
+- type: Tag
+  id: MagazinePulseRifle
+
+- type: Tag
+  id: PulseBullet
+
+- type: entity
+  id: MagazinePulseRifle
+  name: pulse rifle magazine
+  description: Standart EarthGov type of impulse magazines
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePulseRifle
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 70
+    proto: PulseBullet
+    whitelist:
+      tags:
+        - CartridgePulseBullet
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 5
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/sws.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/sws.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: MagazinePistolEGov
+
+- type: entity
+  id: MagazinePistol345
+  name: pistol magazine (.345 magnum)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolEGov
+      - MagazinePistol
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnum345
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeMagnum345
+    capacity: 9
+  - type: Item
+    size: 5
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/divet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: BaseCartridgeMagnum345
+  name: cartridge (.345 magnum)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeMagnum345
+  - type: CartridgeAmmo
+    proto: BulletMagnum
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 45combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: CartridgeMagnum345
+
+- type: entity
+  id: CartridgeMagnum345
+  name: cartridge (.345 magnum)
+  parent: BaseCartridgeMagnum345
+  components:
+  - type: Sprite
+    layers:
+    - state: 45fast #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 45fast
+  - type: CartridgeAmmo
+    proto: BulletMagnum345
+
+- type: Tag
+  id: BulletMagnum345
+
+- type: entity
+  id: BulletMagnum345
+  name: 345 magnum bullet
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    layers:
+    - state: projectiles_divet
+      shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 24
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: Tag
+    tags:
+      - BulletMagnum345
+
+- type: entity
+  name: Divet
+  parent: BaseWeaponPistol
+  id: WeaponPistolDivet
+  description: The Divet is a standard sidearm for police and security personnel of the Earth Goverment.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/divet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/divet.rsi
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+    boltClosed: null
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol345
+        insertSound: /Uploaded/base/ogg/divet_magin.ogg
+        ejectSound: /Uploaded/base/ogg/divet_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolEGov
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnum345
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMagnum345
+  - type: Gun
+    fireRate: 3
+    soundEmpty: /Uploaded/base/ogg/error.ogg
+    soundGunshot:
+      path: /Uploaded/base/ogg/divet_fire.ogg
+      params:
+        volume: -10
+
+- type: entity
+  parent: WeaponPistolDivet
+  id: WeaponPistolDivet2
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/prentor.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/prentor.rsi
+
+- type: entity
+  id: BannerEarthGovertment
+  parent: BannerBase
+  name: EarthGov banner
+  description: A banner displaying the EarthGov logo. It looks rather cheap.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/banner.rsi
+    state: banner
+
+- type: Tag
+  id: EG900
+
+- type: entity
+  name: EG-900
+  parent: BaseWeaponRifle
+  id: WeaponSMGEG-900
+  description: The EG-900 is an EarthGov-designed Submachine Gun, used by its soldiers for urban warfare.
+  components:
+  - type: Tag
+    tags:
+      - EG900
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/tiny.rsi
+    size: 40
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/tiny.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Uploaded/base/ogg/shit/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineEG-900SubMachineGun
+        insertSound: /Uploaded/base/ogg/shit/mag_in.ogg
+        ejectSound: /Uploaded/base/ogg/shit/mag_out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineEG-900
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAuto32
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAuto32
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  id: MagazineEG-900SubMachineGun
+  name: EG-900 magazine (.32 auto)
+  parent: BaseItem
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 30
+    proto: CartridgeAuto32
+    whitelist:
+      tags:
+        - CartridgeAuto32
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Item
+    size: 5
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/eg900.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+      - MagazineEG-900
+
+- type: Tag
+  id: MagazineEG-900
+
+- type: entity
+  id: BaseCartridgeAuto32
+  name: cartridge (.32 auto)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeAuto32
+  - type: CartridgeAmmo
+    proto: BulletRifle
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 35combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: CartridgeAuto32
+
+- type: entity
+  id: CartridgeAuto32
+  name: cartridge (.32 auto)
+  parent: BaseCartridgeAuto32
+  components:
+  - type: Sprite
+    layers:
+    - state: 35combat #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 35combat
+  - type: CartridgeAmmo
+    proto: BulletAuto32
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletAuto32
+  name: bullet (.32 auto)
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    layers:
+    - state: projectiles_divet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+
+- type: Tag
+  id: HPR
+
+- type: entity
+  name: Heavy Pulse Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleHPR
+  description: The Heavy Pulse Rifle is the standard-issue service rifle of the Earth Defense Force.
+  components:
+  - type: Tag
+    tags:
+      - HPR
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/tiny.rsi
+    size: 90
+  - type: Clothing
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/tiny.rsi
+  - type: Gun
+    maxAngle: 30
+    minAngle: 30
+    fireRate: 12
+    soundGunshot:
+      path: /Uploaded/base/ogg/giper_perdesh.ogg
+      params:
+        volume: -13
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePulseRifleHeavy
+        insertSound: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/lmg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePulseRifleHeavy
+      gun_chamber:
+        name: Chamber
+        startingItem: PulseBullet
+        priority: 1
+        whitelist:
+          tags:
+            - PulseBullet
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: MagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: Tag
+  id: MagazinePulseRifleHeavy
+
+- type: entity
+  id: MagazinePulseRifleHeavy
+  name: pulse magazine
+  description: Standart EarthGov type of impulse magazines
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePulseRifleHeavy
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 130
+    proto: PulseBullet
+    whitelist:
+      tags:
+        - CartridgePulseBullet
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/hpr.rsi
+  - type: Sprite
+    netsync: false
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/hpr.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: Clothing
+  id: idcoin
+  name: жетон
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/id.rsi
+    state: base
+  - type: Clothing
+    slots:
+    - idcard
+  - type: Item
+    heldPrefix: default
+  - type: IdCard
+    jobTitle: Армия ОПЗ
+    fullName: Военно-служащий
+    jobIcon: JobIconEarth
+  - type: Access
+    tags:
+    - EarthGov
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: Clothing
+  id: idbadgepmc
+  name: pmc badge
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/id.rsi
+    state: pmc
+  - type: Clothing
+    slots:
+    - idcard
+  - type: Item
+    heldPrefix: default
+  - type: IdCard
+    jobTitle: PMC Desert Busters
+    jobIcon: JobIconEarth
+  - type: Access
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: idbadgepmc
+  id: idbadgepmcOfficer
+  name: pmc badge officer
+  components:
+  - type: IdCard
+    jobTitle: PMC Desert Busters Leader
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEarth
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: Earth
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineEGMC
+  name: Раздатчик формы
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCDrobeInventoryMarine
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: AccessReader
+    access: [["EarthGov"]]
+
+- type: vendingMachineInventory
+  id: EGMCDrobeInventoryMarine
+  startingInventory:
+    ClothingUniformJumpsuitEgov: 10
+    ClothingHeadHelmetRiot: 10
+    ClothingHeadHatEgovCap: 20
+    ClothingMaskTacticalGas: 20
+    ClothingBeltShellShotgunFill: 20
+    ClothingBeltPistolHolster: 20
+    ClothingBeltMedicalMarine: 20
+    ClothingBeltGeneralG6: 20
+    ClothingBeltAmmo: 20
+    ClothingShellPounch: 40
+    ClothingPistolPounch: 40
+    ClothingMedicalPounch: 40
+    ClothingAmmoPounch: 40
+    ClothingPounchMTF: 40
+    ClothingHeadHelmetEGov: 10
+    ClothingOuterNavyVest: 10
+    ClothingOuterArmorBasic: 10
+    ClothingOuterArmorBulletproof: 10
+    ClothingHandsGlovesCombat: 10
+    ClothingShoesBootsCombatFilled: 10
+    FlashlightSeclite: 10
+    ClothingBackpackMilitarySatchel: 10
+    ClothingMilitaryBackpack: 10
+    ClothingHeadsetEarthGov: 10
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineWeaponEGMC
+  name: Раздатчик вооружения
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Armory.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCWeaponInventoryMarine
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: AmmoVendAds
+  - type: AccessReader
+    access: [["EarthGov"]]
+
+- type: vendingMachineInventory
+  id: EGMCWeaponInventoryMarine
+  startingInventory:
+    WeaponPistolACP14: 10
+    WeaponPistolG22: 10
+    MagazinePistol: 20
+    WeaponRifleAR18: 10
+    WeaponRifleFamas: 10
+    WeaponRifleG36: 10
+    WeaponRifleM16A4: 10
+    MagazineRifle: 40
+    WeaponSubMachineGunMP5: 10
+    WeaponSubMachineGunMP7: 10
+    WeaponSubMachineGunVectorSpecial: 10
+    MagazinePistolSubMachineGun: 30
+    WeaponSubMachineGunP90: 10
+    MagazinePistolTopSubMachineGun: 20
+    WeaponEarthGovXRay: 5
+    WeaponEarthGovLaserSniper: 5
+    WeaponEarthGovLaserCarbine: 10
+    WeaponEarthGovLaserRifle: 10
+    WeaponEarthGovLaserPistol: 10
+    WeaponPistolDEagle: 5
+    MagazineMagnumPistol: 10
+    WeaponShotgun39: 10
+    WeaponShotgun12: 10
+    BoxLethalshot: 40
+    WeaponRifleBR64: 10
+    MagazineHeavyRifleBR64: 20
+    WeaponRevolverMateba: 10
+    SpeedLoaderMagnum: 20
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMedicalEGMC
+  name: НаноМед
+  description: Это медицинский раздатчик препаратов. Только натуральные химикаты!
+  suffix: EGMC
+  components:
+  - type: VendingMachine
+    pack: NanoMedPlusInventoryEGMC
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 0.6
+  - type: Advertise
+    pack: NanoMedAds
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/MarineMed.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["EarthGov"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: vendingMachineInventory
+  id: NanoMedPlusInventoryEGMC
+  startingInventory:
+    Brutepack: 40
+    Ointment: 40
+    BruteAutoInjector: 20
+    BurnAutoInjector: 20
+    AntiPoisonMedipen: 20
+    PillCanisterBicaridine: 10
+    PillCanisterDermaline: 10
+    PillCanisterDylovene: 10
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMedicalHyperEGMC
+  name: НаноМед Гипер
+  description: Это медицинский раздатчик препаратов. Только натуральные химикаты!
+  suffix: EGMC
+  components:
+  - type: VendingMachine
+    pack: NanoMedPlusInventoryEGMCMedic
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+    ejectDelay: 0.6
+  - type: Advertise
+    pack: NanoMedAds
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Medick.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["EarthGovMedic"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: vendingMachineInventory
+  id: NanoMedPlusInventoryEGMCMedic
+  startingInventory:
+    HandheldHealthAnalyzer: 20
+    RegenerativeMesh: 40
+    MedicatedSuture: 40
+    MedkitCombatFilled: 20
+    MedkitAdvancedFilled: 20
+    EpinephrineChemistryBottle: 20
+    OmnizineChemistryBottle: 20
+    EphedrineChemistryBottle: 20
+    Hypospray: 2
+    PillCanisterBicaridine: 20
+    PillCanisterDermaline: 20
+    PillCanisterDylovene: 20
+    PillCanisterDexalin: 20
+    BattleMedipen: 10
+    BoxBodyBag: 10
+    CheapRollerBed: 10
+
+- type: entity
+  name: таблетка бикаридина
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillBicaridine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток бикаридина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterBicaridine
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillBicaridine
+        amount: 9
+
+- type: entity
+  name: таблетка дермалина
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillDermaline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Dermaline
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток дермалина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDermaline
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDermaline
+        amount: 9
+
+- type: entity
+  name: таблетка диловена
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillDylovene
+  suffix: MarinesGear
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Dylovene
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток диловена
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDylovene
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDylovene
+        amount: 9
+
+- type: entity
+  name: баночка таблеток дексалина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDexalin
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDexalin
+        amount: 9
+
+- type: Tag
+  id: EarthGov
+
+- type: entity
+  id: FTLPointEarthGov
+  parent: MarkerBase
+  name: FTL point EarthGov
+  components:
+  - type: FTLDestination
+    whitelist:
+      tags:
+      - EarthGov
+  - type: Sprite
+    state: pink
+
+- type: entity
+  parent: BaseComputerShuttle
+  id: ComputerShuttleEarthGov
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: turbinecomp
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: Tag
+    tags:
+      - EarthGov
+  - type: RadarConsole
+    maxRange: 1536
+  - type: WorldLoader
+    radius: 1536
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c94242"
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineEGMCOfficer
+  name: Раздатчик офицерской формы
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCDrobeInventoryMarineOfficer
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: AccessReader
+    access: [["EarthGovCommand"]]
+
+- type: vendingMachineInventory
+  id: EGMCDrobeInventoryMarineOfficer
+  startingInventory:
+    ClothingUniformJumpsuitEgov: 2
+    ClothingUniformEGovShtab: 2
+    ClothingHeadHatEgovCap: 2
+    ClothingMaskTacticalGas: 2
+    ClothingBeltShellShotgunFill: 2
+    ClothingBeltPistolHolster: 2
+    ClothingBeltMedicalMarine: 2
+    ClothingBeltGeneralG6: 2
+    ClothingBeltAmmo: 2
+    ClothingShellPounch: 4
+    ClothingPistolPounch: 4
+    ClothingMedicalPounch: 4
+    ClothingAmmoPounch: 4
+    ClothingPounchMTF: 4
+    ClothingHeadHatEgovShtabCap: 2
+    ClothingHeadHatMarineBeret: 2
+    ClothingHeadHatBeretCentcomNaval: 2
+    ClothingHeadHatERTLeaderBeret: 2
+    ClothingHeadHatBeretMerc: 2
+    ClothingOuterNavyVest: 2
+    ClothingOuterArmorBasic: 2
+    ClothingOuterArmorBulletproof: 2
+    ClothingHandsGlovesCombat: 2
+    ClothingShoesBootsCombatFilled: 2
+    ClothingShoesBootsLaceup: 2
+    FlashlightSeclite: 2
+    ClothingBackpackMilitarySatchel: 2
+    ClothingHeadsetEarthGov: 2
+    ClothingEyesHudSecurity: 2
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineEGMCMedic
+  name: Раздатчик медицинской формы
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCDrobeInventoryMarineMedic
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: AccessReader
+    access: [["EarthGovMedic"]]
+
+- type: vendingMachineInventory
+  id: EGMCDrobeInventoryMarineMedic
+  startingInventory:
+    ClothingUniformJumpsuitEgov: 2
+    ClothingHeadHatEgovCap: 2
+    ClothingMaskTacticalGas: 2
+    ClothingBeltShellShotgunFill: 2
+    ClothingBeltPistolHolster: 2
+    ClothingBeltMedicalMarine: 2
+    ClothingBeltGeneralG6: 2
+    ClothingBeltAmmo: 2
+    ClothingShellPounch: 4
+    ClothingPistolPounch: 4
+    ClothingMedicalPounch: 4
+    ClothingAmmoPounch: 4
+    ClothingPounchMTF: 4
+    ClothingHeadHatBeretBrigmedic: 2
+    ClothingHeadHatBeretSecurityMedic: 2
+    ClothingOuterVestArmorMedSec: 2
+    ClothingHandsGlovesCombat: 2
+    ClothingShoesBootsCombatFilled: 2
+    ClothingShoesColorWhite: 2
+    ClothingHandsGlovesNitrile: 2
+    ClothingEyesHudMedical: 2
+    ClothingBeltParamedicFilled: 2
+    FlashlightSeclite: 2
+    ClothingBackpackDuffelMilitary: 2
+    ClothingHeadsetEarthGov: 2
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineEGMCSpecialits
+  name: Раздатчик формы специалиста
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCDrobeInventoryMarineSpecialits
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: AccessReader
+    access: [["EarthGovSpecialits"]]
+
+- type: vendingMachineInventory
+  id: EGMCDrobeInventoryMarineSpecialits
+  startingInventory:
+    ClothingUniformEGovSpecial: 2
+    ClothingHeadHelmetRiot: 2
+    ClothingHeadHatEgovCap: 2
+    ClothingMaskTacticalGas: 2
+    ClothingBeltShellShotgunFill: 2
+    ClothingBeltPistolHolster: 2
+    ClothingBeltMedicalMarine: 2
+    ClothingBeltGeneralG6: 2
+    ClothingBeltAmmo: 2
+    ClothingShellPounch: 4
+    ClothingPistolPounch: 4
+    ClothingMedicalPounch: 4
+    ClothingAmmoPounch: 4
+    ClothingPounchMTF: 4
+    ClothingHeadHatMarineBeret: 2
+    ClothingHeadHelmetXenonauten: 2
+    ClothingOuterNavyVest: 2
+    ClothingOuterXenonautenLight: 2
+    ClothingOuterXenonautenMedium: 2
+    ClothingOuterXenonautenHeavy: 2
+    ClothingHandsGlovesCombat: 2
+    ClothingShoesBootsCombatFilled: 2
+    FlashlightSeclite: 2
+    ClothingBackpackRIGSpecialits: 2
+    ClothingHeadsetEarthGov: 2
+    ClothingEyesHudSecurity: 2
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackRIGSpecialits
+  name: EarthGov Specialist RIG
+  description: It's a very robust RIG.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/specialforce.rsi
+  - type: Storage
+    capacity: 300
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineWeaponEGMCSpecialits
+  name: Раздатчик вооружения специалиста
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Smartgunner.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCWeaponInventoryMarineSpecialits
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: AmmoVendAds
+  - type: AccessReader
+    access: [["EarthGovSpecialits"]]
+
+- type: vendingMachineInventory
+  id: EGMCWeaponInventoryMarineSpecialits
+  startingInventory:
+    WeaponPistolVP78: 2
+    MagazinePistolHighCapacity: 20
+    WeaponSubMachineGunUzi: 2
+    MagazinePistolBoxSubMachineGun: 20
+    WeaponPistolDivet2: 2
+    WeaponPistolDivet: 2
+    MagazinePistol345: 40
+    WeaponEarthGovLaserMG: 5
+    WeaponPistolDEagle: 5
+    MagazineMagnumPistol: 20
+    WeaponShotgunZauer: 2
+    MagazineShotgun: 20
+    WeaponShotgun39: 10
+    WeaponShotgun12: 10
+    BoxLethalshot: 40
+    WeaponRevolverMateba: 10
+    SpeedLoaderMagnum: 20
+    WeaponLightMachineGunMG60: 1
+    MagazineLightMachineGunDrum: 10
+    WeaponRifleM41: 1
+    MagazineHeavyRifleMaDeuse: 10
+    FirethrowerGun: 1
+    FuelTankFirethrower: 10
+    MagazineBoxRifle: 20
+    WeaponMinigun100: 1
+    PowerpackRifle: 1
+    MagazineBoxLightRifle: 20
+    MagazineBoxPistol: 20
+    MagazineBoxMagnum: 20
+    MagazineBoxCaselessRifle: 20
+    MagazineBoxCaselessRifleBig: 20
+    MagazineBoxLightRifleBig: 20
+    MagazineBoxRifleBig: 20
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineOfficerWeaponEGMC
+  name: офицерский раздатчик вооружения
+  components:
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Leader.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: EGMCWeaponInventoryMarineOfficer
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectState: eject
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: AmmoVendAds
+  - type: AccessReader
+    access: [["EarthGovCommand"]]
+
+- type: vendingMachineInventory
+  id: EGMCWeaponInventoryMarineOfficer
+  startingInventory:
+    WeaponPistolDivet2: 5
+    WeaponPistolDivet: 5
+    MagazinePistol345: 40
+    WeaponRevolverMateba: 5
+    SpeedLoaderMagnum: 20
+    WeaponPistolDEagle: 5
+    MagazineMagnumPistol: 20
+    WeaponSniperGarand: 5
+    SpeedLoaderLightRifle: 20
+    WeaponRifleSTG44: 5
+    MagazineLightRifle: 20
+    WeaponRifleDragunov: 5
+    MagazineRifleLightSniper: 20
+    WeaponSubMachineGunPPSH41: 5
+    MagazinePistolDrumSubMachineGun: 20
+    WeaponSubMachineGunMP38: 5
+    MagazinePistolBoxSubMachineGun: 20
+    ClothingBeltSheathFilled: 5
+
+- type: entity
+  parent: BaseWeaponTurret
+  id: UEGWeaponTurret
+  name: UA-580 point defense sentry
+  description: Стандартная турель точечной защиты, используется военными формированиями ОПЗ.
+  components:
+    - type: BallisticAmmoProvider
+      proto: FlyingShit
+      capacity: 10000
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+          density: 60
+          mask:
+          - MobMask
+          layer:
+          - MobLayer
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: Gun
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+      soundEmpty: /Uploaded/base/ogg/error.ogg
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/Weapons/Turrets/UA-580.rsi
+      drawdepth: Mobs
+      noRot: true
+      layers:
+      - state: turret
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+    - type: HTN
+      rootTask:
+        task: TurretCompound
+      blackboard:
+        RotateSpeed: !type:Single
+          3.141
+        SoundTargetInLOS: !type:SoundPathSpecifier
+          path: /Audio/Effects/double_beep.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 1
+          whitelist:
+            tags:
+              - MagazineCaselessRifleTurret
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: null
+    - type: MagazineAmmoProvider
+    - type: MagazineVisuals
+      magState: mag
+      steps: 2
+      zeroVisible: false
+
+- type: entity
+  parent: UEGWeaponTurret
+  id: UEGWeaponTurretFull
+  suffix: Full
+  components:
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazineCaselessRifleTurret
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 1
+          whitelist:
+            tags:
+              - MagazineCaselessRifleTurret
+
+- type: Tag
+  id: MagazineCaselessRifleTurret
+
+- type: entity
+  id: MagazineCaselessRifleTurret
+  name: "turret magazine (.25 rifle)"
+  parent: BaseMagazineHeavyRifle
+  components:
+  - type: Tag
+    tags:
+      - MagazineCaselessRifleTurret
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: BulletCaselessRifle
+    capacity: 100
+    whitelist:
+      tags:
+        - CartridgeRifle
+        - CartridgeCaselessRifle
+  - type: Item
+    size: 10
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Sprite
+    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: FlyingShit
+  parent: BaseItem
+  noSpawn: true
+  components:
+  - type: TimedDespawn
+    lifetime: 0.1
+
+- type: entity
+  id: FultonBeaconTestUEG
+  parent: BaseFoldable
+  name: UA-580
+  description: Beacon to receive fulton extractions.
+  components:
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.25,-0.4,0.25,0.1"
+          density: 20
+          mask:
+            - Impassable
+    - type: Item
+      size: 30
+    - type: Foldable
+      folded: true
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.FoldedVisuals.State:
+          foldedLayer:
+            True: { state: folded_turret }
+            False: { state: turret }
+    - type: Sprite
+      sprite: /Uploaded/base/rsi/Textures/Weapons/Turrets/UA-580.rsi
+      drawdepth: SmallObjects
+      noRot: true
+      layers:
+        - state: turret
+          map: [ "foldedLayer" ]
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorEGSpecialits
+  suffix: EGMC Specialist
+  components:
+  - type: AccessReader
+    access: [["EarthGovSpecialits"]]
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorEGMedical
+  suffix: EGMC Medic
+  components:
+  - type: AccessReader
+    access: [["EarthGovMedic"]]
+
+- type: entity
+  parent: WindoorSecureArmoryLocked
+  id: WindoorEGCommand
+  suffix: EGMC Command
+  components:
+  - type: AccessReader
+    access: [["EarthGovCommand"]]

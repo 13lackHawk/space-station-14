@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by discord:no_mad#0260",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "private"
+    },
+    {
+      "name": "capral"
+    },
+    {
+      "name": "serg"
+    },
+    {
+      "name": "unter"
+    },
+    {
+      "name": "unter2"
+    },
+    {
+      "name": "unter3"
+    },
+    {
+      "name": "leitenant"
+    },
+    {
+      "name": "leitenant2"
+    },
+    {
+      "name": "hauptman"
+    },
+    {
+      "name": "mayor"
+    },
+    {
+      "name": "polk"
+    }
+  ]
+}

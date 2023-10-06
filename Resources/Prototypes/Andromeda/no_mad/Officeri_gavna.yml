@@ -1,0 +1,562 @@
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaOfficial
+  name: Id карта ПЦК
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idiaa
+    - state: idcentcom
+  - type: Item
+    heldPrefix: silver
+  - type: IdCard
+    jobTitle: Представитель Центрального Командования
+    jobIcon: JobIconNT
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNT
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: NT
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconNanotrasen2
+  icon:
+    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    state: Nanotrasen
+
+- type: startingGear
+  id: CentComGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
+    shoes: ClothingShoesBootsLaceup
+    mask: ClothingMaskGasCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCentcomNaval
+    head: ClothingHeadHatCentcom
+    outerClothing: ClothingOuterArmorCentcomCarapace
+    suitstorage: OxygenTankFilled
+    id: IDCardCentComGavnaOfficial
+    ears: ClothingHeadsetCentCom
+    pocket1: CyberPen
+    pocket2: BoxFolderSecretBlack
+
+- type: entity
+  noSpawn: true
+  parent: BoxFolderBlack
+  id: BoxFolderSecretBlack
+  components:
+    - type: StorageFill
+      contents:
+        - id: PaperManualCodes
+        - id: StationGoalPaper
+        - id: Paper
+        - id: Paper
+        - id: Paper
+
+- type: entity
+  name:  Представитель Центрального Командования
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComGavna
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Представитель Центрального Командования
+    description: Летит на станцию, дабы удостовериться, насколько экипаж станции убог.
+  - type: Loadout
+    prototypes: [CentComGavna]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaOperator
+  name: Id карта диспетчер ЦК
+  components:
+  - type: IdCard
+    jobTitle: Диспетчер Центрального Командования
+    jobIcon: JobIconNanotrasen2
+
+- type: startingGear
+  id: OperatorGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
+    shoes: ClothingShoesBootsLaceup
+    id: IDCardCentComGavnaOperator
+    ears: ClothingHeadsetCentCom
+    pocket1: ClothingMaskGasCentcom
+
+- type: entity
+  name:  Диспетчер Центрального Командования
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComOperatorGavna
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Диспетчер Центрального Командования
+    description: Диспетчер центрального командования, выполняет приказы офицера цк и координирует действия станции.
+  - type: Loadout
+    prototypes: [OperatorGavna]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaOfficer
+  name: Id карта начальника штаба ЦК
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idiaa
+    - state: idcentcom
+  - type: IdCard
+    jobTitle: Начальник Штаба ЦК
+    jobIcon: JobIconNanotrasen2
+
+- type: startingGear
+  id: OfficerGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomFormal
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCentcomNaval
+    head: ClothingHeadHatCentcom
+    id: IDCardCentComGavnaOfficer
+    ears: ClothingHeadsetCentComCCAlt
+    pocket1: ClothingMaskGasCentcom
+
+- type: entity
+  name:  Начальник Штаба ЦК
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComOfficerGavna
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Начальник Штаба ЦК
+    description: Начальник Штаба ЦК, командует цк и издает директивы от имени ЦК.
+  - type: Loadout
+    prototypes: [OfficerGavna]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaOfficerSesurity
+  name: Id карта охраны ЦК
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idsecurityofficer
+  - type: IdCard
+    jobTitle: Офицер Специальной Службы Безопастности
+    jobIcon: JobIconNanotrasenSec
+
+- type: entity
+  noSpawn: true
+  name: дубинка-шокер спецсил
+  parent: Stunbaton
+  id: StunbatonSuper
+  description: Электрошоковая дубинка для обездвиживания людей. Слишком усердное причинение вреда с помощью этого предмета считается дурным тоном.
+  components:
+  - type: Stunbaton
+    energyPerUse: 10
+
+- type: entity
+  noSpawn: true
+  name: дизейблер спецсил
+  parent: WeaponDisabler
+  id: WeaponDisablerSuper
+  description: Оружие для самозащиты, которое изнуряет органические цели, пока они не свалятся с ног.
+  components:
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisabler
+      fireCost: 10
+
+- type: entity
+  name: пояс охраны спецсил
+  description: Может вмещать различное снаряжение службы безопасности, такое как наручники и вспышки.
+  parent: ClothingBeltSecurity
+  id: ClothingBeltSecuritySuper
+  components:
+    - type: Storage
+      capacity: 60
+    - type: StorageFill
+      contents:
+        - id: WeaponDisablerSuper
+        - id: StunbatonSuper
+        - id: GrenadeFlashBang
+        - id: GrenadeFlashBang
+        - id: Handcuffs
+        - id: Handcuffs
+
+- type: startingGear
+  id: OfficerSesurityGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSAlt
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasSecurity
+    neck: CombatKnifeSpetsnaz
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBasic
+    suitstorage: WeaponPistolMk58
+    head: ClothingHeadHatBeretHoS
+    id: IDCardCentComGavnaOfficerSesurity
+    ears: ClothingHeadsetCentComCC
+    belt: ClothingBeltSecuritySuper
+    pocket2: MagazinePistol
+
+- type: entity
+  name:  Охрана ЦК
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComOfficerSesurityGavna
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: security_officer
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Охрана ЦК
+    description: Охрана ЦК, охраняет членов ЦК и саму ЦК.
+  - type: Loadout
+    prototypes: [OfficerSesurityGavna]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaMagistrat
+  name: Id карта судьи магистрата
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idiaa
+  - type: IdCard
+    jobTitle: Судья Магистрата
+    jobIcon: JobIconNanotrasen
+
+- type: startingGear
+  id: MagistratGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSunglasses
+    outerClothing: ClothingOuterRobesJudge
+    head: ClothingHeadHatPwig
+    id: IDCardCentComGavnaMagistrat
+    ears: ClothingHeadsetCentComCC
+
+- type: entity
+  name:  судья магистрата
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComMagistrat
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: lawyer
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Судья Магистрата
+    description: Судит людей. Очивидно...
+  - type: Loadout
+    prototypes: [MagistratGear]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaAdmiral
+  name: Id карта адмирала
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idiaa
+    - state: idcentcom
+  - type: IdCard
+    jobTitle: Адмирал НаноТрейзен
+    jobIcon: JobIconNanotrasen2
+  - type: Access
+    groups:
+    - AllAccess
+    - MTFLeader
+
+- type: startingGear
+  id: CentcomAdmiralGavnaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomAdmiral
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadCapCentcomNaval
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCentcomNaval
+    outerClothing: ClothingOuterArmorCentcomCarapace
+    neck: ClothingNeckCloakCentcomAdmiral
+    id: IDCardCentComGavnaAdmiral
+    ears: ClothingHeadsetCentComCCAlt
+    pocket1: RubberStampCentcom
+
+- type: entity
+  name:  Адмирал НаноТрейзен
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComAdmiral
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Адмирал НаноТрейзен
+    description: Руководитель всего флота нанотрейзен, важная шишка что может впринципе быть.
+  - type: Loadout
+    prototypes: [CentcomAdmiralGavnaGear]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#-----------------------------------------
+
+- type: entity
+  parent: CentcomBaseIDCard
+  id: IDCardCentComGavnaPilot
+  name: Id карта пилота
+  components:
+  - type: IdCard
+    jobTitle: Пилот НаноТрейзен
+    jobIcon: JobIconNanotrasen
+
+- type: startingGear
+  id: CentcomPilotGavnaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNanotrasen
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatHopcap
+    eyes: ClothingEyesGlassesSunglasses
+    id: IDCardCentComGavnaPilot
+    ears: ClothingHeadsetCentComCC
+    pocket1: WeaponPistolMk58
+    pocket2: MagazinePistol
+
+- type: entity
+  name: Пилот НаноТрейзен
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComPilot
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Пилот НаноТрейзен
+    description: Квалифицированный пилот НаноТрейзен.
+  - type: Loadout
+    prototypes: [CentcomPilotGavnaGear]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+#---------------------------------------------------------------------------------
+
+- type: entity
+  name: Заключенный
+  suffix: CentCom
+  parent: MobHuman
+  id: MobHumanZek
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Заключенный
+    description: Заключенной одной из тюрьм.
+  - type: Loadout
+    prototypes: [ZekGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+- type: startingGear
+  id: ZekGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack
+    id: ZekIDCard
+
+- type: entity
+  parent: IDCardStandard
+  id: ZekIDCard
+  name: Id карта заключенного
+  components:
+  - type: Sprite
+    layers:
+    - state: orange
+  - type: Item
+    heldPrefix: orange
+  - type: IdCard
+    jobTitle: Заключенный
+    jobIcon: JobIconPrisoner
+
+#--------------------------------
+
+- type: startingGear
+  id: OfficerSesurityZeksGavna
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    shoes: ClothingShoesBootsJackSec
+    mask: ClothingMaskGasSecurity
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterVestArmorSec
+    suitstorage: WeaponPistolMk58
+    head: ClothingHeadHelmetBasic
+    id: IDCardPrisonGuard
+    ears: ClothingHeadsetCentComCCZek
+    belt: ClothingBeltSecuritySuper
+    pocket2: MagazinePistol
+
+- type: entity
+  name:  Охрана Тюрьмы
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanCentComOfficerSesurityZekGavna
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: security_officer
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Охрана Тюрьмы
+    description: Охрана Тюрьмы, охраняет заключенных и саму Тюрьму.
+  - type: Loadout
+    prototypes: [OfficerSesurityZeksGavna]
+  - type: RandomMetadata
+  - type: RandomHumanoidAppearance
+
+- type: entity
+  parent: IDCardStandard
+  id: IDCardPrisonGuard
+  name: Id карта охраны тюрьмы
+  components:
+  - type: Sprite
+    layers:
+    - state: orange
+    - state: idwarden
+  - type: Item
+    heldPrefix: orange
+  - type: IdCard
+    jobTitle: охранник тюрьмы
+    jobIcon: JobIconSecurityOfficer
+  - type: Access
+    tags:
+    - Maintenance
+    - Brig
+    - Security
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCentComCCZek
+  suffix: CentCom
+  name: Гарнитура надзирателя
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComZek
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCentComZek
+  name: ключ шифрования охраны тюрьмы
+  description: An encryption key used by captain's bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CentComZek
+    defaultChannel: CentComZek
+  - type: Sprite
+    layers:
+    - state: crypt_orange
+    - state: sec_label
+
+- type: radioChannel
+  id: CentComZek
+  name: Тюрьма
+  keycode: 'з'
+  frequency: 1236
+  color: "#2681a5"
+
+- type: entity
+  name: печать колонии
+  parent: RubberStampMime
+  id: RubberStampColony
+  components:
+    - type: Stamp
+      stampedName: Колония
+      stampState: "paper_stamp-trader"
+    - type: Sprite
+      sprite: Objects/Misc/bureaucracy.rsi
+      state: stamp-trader
+
+#-----------------------------------------------------------

@@ -1,0 +1,1363 @@
+# GUNS #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineGuns
+  name: Оружейный автомат
+  description: Автомат со стандартным вооружением космодесанта.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineGunVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/sec.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1
+    energy: 1.2
+    color: "#78645c"
+
+- type: vendingMachineInventory
+  id: MarineGunVendInventory
+  startingInventory:
+    WeaponRifleSWS: 3
+    MagazinePulseRifle: 15
+
+    WeaponRifleSCAF: 3
+    MagazineHeavyRifle: 15
+    MagazineBoxRifleBigMarine: 3
+
+    WeaponSMGEG-900: 3
+    MagazineEG-900SubMachineGun: 15
+    MagazineBoxPistolBigMarine: 3
+
+    WeaponRifleAL9: 3
+    MagazineAntiMat90: 15
+    MagazineBoxMagnumBigMarine: 3
+
+    WeaponSCAFShotgun: 3
+    BoxLethalshot: 10
+    BoxLethalshotSpecialMarine: 5
+
+    WeaponPistolDivet: 3
+    WeaponPistolDivet2: 3
+    MagazinePistol345: 30
+
+- type: entity
+  name: Лектер
+  parent: WeaponRifleLecter
+  id: WeaponRifleLecterMarine
+  description: "Стандартная штурмовая винтовка. Использует патроны калибра .20 винтовочный."
+  suffix: MarinesGear
+  components:
+  - type: Gun
+    fireRate: 5
+    minAngle: 5
+    maxAngle: 15
+    angleIncrease: 1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleMarine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+
+- type: entity
+  name: М-30
+  parent: WeaponRifleM90GrenadeLauncher
+  id: WeaponRifleM30
+  description: "Стреляющая очередями винтовка, выполненная по системе булл-пап. Использует патроны калибра .30 винтовочный."
+  suffix: MarinesGear
+  components:
+  - type: Gun
+    fireRate: 8
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 2
+    selectedMode: Burst
+    availableModes:
+      - Burst
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleMarine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magin.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+
+- type: entity
+  name: Атрейдес
+  parent: WeaponSubMachineGunAtreides
+  id: WeaponSubMachineGunAtreidesMarine
+  description: "Скорострельный пистолет-пулемёт. Использует патроны калибра .35 авто."
+  suffix: MarinesGear
+  components:
+  - type: Gun
+    fireRate: 10
+    minAngle: 15
+    maxAngle: 30
+    angleIncrease: 3
+
+- type: entity
+  name: Вектор
+  parent: WeaponSubMachineGunVector
+  id: WeaponSubMachineGunVectorMarine
+  description: "Тяжёлый пистолет-пулемёт. Использует патроны калибра .45 магнум."
+  suffix: MarinesGear
+  components:
+  - type: Gun
+    fireRate: 6
+    minAngle: 10
+    maxAngle: 20
+    angleIncrease: 3
+
+- type: entity
+  parent: BoxLethalshot
+  id: BoxLethalshotSpecialMarine
+  name: коробка ружейных патронов (импульсные)
+  suffix: MarinesGear
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgunPulse
+    capacity: 12
+
+- type: entity
+  parent: MagazineBoxRifleBig
+  id: MagazineBoxRifleBigMarine
+  name: ящик патронов (.62 rifle)
+  suffix: MarinesGear
+  components:
+  - type: Item
+    size: 30
+  - type: BallisticAmmoProvider
+    proto: BulletHeavy62
+    capacity: 60
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxMagnumBigMarine
+  name: ящик патронов (.39 rifle)
+  suffix: MarinesGear
+  components:
+  - type: Item
+    size: 30
+  - type: BallisticAmmoProvider
+    proto: Cartridge90
+    capacity: 90
+
+- type: entity
+  parent: MagazineBoxCaselessRifleBig
+  id: MagazineBoxPistolBigMarine
+  name: ящик патронов (.32 auto)
+  suffix: MarinesGear
+  components:
+  - type: Item
+    size: 30
+  - type: BallisticAmmoProvider
+    proto: CartridgeAuto32
+
+# CLOTHES #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineClothes
+  name: Одежда и броня
+  description: Автомат с боевым снаряжением космодесанта.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineClothesVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/secdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: vendingMachineInventory
+  id: MarineClothesVendInventory
+  startingInventory:
+    ClothingHeadHelmetHelmetOld: 3
+    ClothingHeadHelmetHelmet: 3
+    ClothingHeadHelmetRiot: 3
+    ClothingHeadHelmetEGov: 3
+    ClothingHeadHatEgovCap: 3
+
+    ClothingMaskGas: 3
+    ClothingMaskGasSecurity: 3
+    
+    ClothingOuterVestArmorSec: 3
+    ClothingOuterArmorBulletproof: 3
+    ClothingOuterVestDetective: 3
+    ClothingOuterVestKevlar: 3
+    ClothingOuterVestWeb: 3
+    ClothingOuterVestWebMerc: 3
+    ClothingOuterNavyVest: 3
+    
+    ClothingBeltMilitaryWebbing: 3
+    ClothingBeltBandolier: 3
+    ClothingBeltHolster: 1
+    
+    ClothingHandsGlovesFingerless: 3
+    ClothingHandsGlovesCombat: 3
+    
+    ClothingEyesGlassesSunglasses: 1
+    ClothingEyesEyepatch: 1
+    
+    HatBandSkull: 1
+    ClothingHeadHatBizarreSoft: 1
+    ClothingHeadHatUshanka: 1
+    ClothingHeadHatFedoraBrown: 1
+    
+    ClothingMarineBackpack: 3
+    ClothingBackpackDuffelMarine: 1
+
+
+- type: entity
+  parent: ClothingMilitaryBackpack
+  id: ClothingMarineBackpack
+  name: рюкзак морпеха
+  description: Удобный рюкзак с дополнительными карманами.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 120
+
+- type: entity
+  parent: ClothingBackpackDuffelMilitary
+  id: ClothingBackpackDuffelMarine
+  name: сумка морпеха
+  description: Сумка внушающих размеров.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 150
+
+
+# MISC #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineEquipment
+  name: Снаряжение морпехов
+  description: Всё необходимое для высадки
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineEquipmentInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/mining.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: vendingMachineInventory
+  id: MarineEquipmentInventory
+  startingInventory:
+    BoxFlare: 5
+    Crowbar: 5
+    Wrench: 5
+    FlashlightSeclite: 5
+    Floodlight: 1
+    GlowstickBase: 5
+    GlowstickYellow: 5
+    GlowstickRed: 5
+    GlowstickBlue: 5
+    BattleMedipen: 5
+    Gauze: 5
+    Brutepack: 5
+    Ointment: 5
+    FireExtinguisher: 5
+    BoxMRE: 5
+    FoodTinMRE: 5
+    DrinkWaterBottleFull: 5
+    DrinkBeer: 1
+    CigPackRed: 4
+    CigPackMarine: 1
+    Lighter: 5
+
+- type: entity
+  name: сигареты морпехов
+  parent: CigPackSyndicate
+  id: CigPackMarine
+  description: Сигареты, раньше выпускавшиеся специально для корпуса морской пехоты.
+
+
+# MEDIC #
+
+- type: entity
+  name: боевой стимулятор
+  parent: ChemicalMedipen
+  id: BattleMedipen
+  description: Боевой медипен для быстрого возращения в бой бойца, осторожно, после использования обратиться к настоящему врачу.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 45
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 10
+        - ReagentId: Epinephrine
+          Quantity: 12
+        - ReagentId: THC
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 3
+        - ReagentId: DexalinPlus
+          Quantity: 10
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 45
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    netsync: false
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineMedical
+  name: Медикаменты
+  description: Раздатчик медикаментов для медиков космодесанта.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineMedInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 0.6
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/medical.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Medical"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: vendingMachineInventory
+  id: MarineMedInventory
+  startingInventory:
+    HandheldHealthAnalyzer: 1
+    ClothingEyesHudMedical: 1
+    ClothingBeltMedical: 1
+    ClothingBackpackMedicalMarine: 1
+    ClothingBackpackDuffelMedicalMarine: 1
+    ClothingHandsGlovesLatex: 1
+    Brutepack: 3
+    Ointment: 3
+    EpinephrineChemistryBottle: 3
+    Syringe: 5
+    PillCanisterBicaridine: 1
+    PillCanisterDermaline: 1
+    PillCanisterDylovene: 1
+    PillCanisterDexalin: 1
+    BattleMedipen: 3
+    BoxBodyBag: 1
+    CheapRollerBed: 1
+
+- type: entity
+  name: таблетка бикаридина
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillBicaridine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток бикаридина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterBicaridine
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillBicaridine
+        amount: 9
+
+- type: entity
+  name: таблетка дермалина
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillDermaline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Dermaline
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток дермалина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDermaline
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDermaline
+        amount: 9
+
+- type: entity
+  name: таблетка диловена
+  description: Без рецепта не отпускать!
+  parent: Pill
+  id: PillDylovene
+  suffix: MarinesGear
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Dylovene
+          Quantity: 15
+
+- type: entity
+  name: баночка таблеток диловена
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDylovene
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDylovene
+        amount: 9
+
+- type: entity
+  name: баночка таблеток дексалина
+  description: Без рецепта не отпускать!
+  parent: PillCanister
+  id: PillCanisterDexalin
+  suffix: MarinesGear
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillDexalin
+        amount: 9
+
+- type: entity
+  parent: ClothingBackpackMedical
+  id: ClothingBackpackMedicalMarine
+  name: рюкзак медика
+  description: Удобный рюкзак для переноски лекарств.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 120
+
+- type: entity
+  parent: ClothingBackpackDuffelMedical
+  id: ClothingBackpackDuffelMedicalMarine
+  name: сумка медика
+  description: Крупная медицинская сумка.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 150
+
+# ENGINEER #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineEngineer
+  name: Снаряжение инженера
+  description: Всё необхоимое для проделывания и заделывания чего надо.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineEngineerInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/engivend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Engineering"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89e2a"
+
+- type: vendingMachineInventory
+  id: MarineEngineerInventory
+  startingInventory:
+    ClothingHeadHatHardhatOrange: 1
+    ClothingEyesGlassesMeson: 1
+    WeaponShotgunSawn: 1
+    BoxLethalshot: 5
+    MarineTurretUndeployed: 2
+    PaperMarineRequestTurret: 1
+    PowerCellHigh: 5
+    ClothingHandsGlovesColorYellow: 1
+    C4: 3
+    PaperMarineRequestC4: 1
+    RemoteSignaller: 1
+    MiningDrill: 1
+    JawsOfLife: 1
+    ClothingBeltUtilityFilled: 1
+    ClothingMaskGasAtmos: 1
+    ClothingBackpackEngineeringMarine: 1
+    ClothingBackpackDuffelEngineeringMarine: 1
+    CableApcStack: 5
+    BoxLighttube: 3
+    SheetSteel: 5
+    SheetPlasteel: 5
+    SheetGlass: 5
+
+- type: entity
+  name: запрос на дополнительную турель
+  parent: PaperMarineRequest
+  id: PaperMarineRequestTurret
+  components:
+  - type: Paper
+    content: "Запрос снаряжения инженера:\n[bold]1х раскладная турель[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: запрос на дополнительную взрывчатку
+  parent: PaperMarineRequest
+  id: PaperMarineRequestC4
+  components:
+  - type: Paper
+    content: "Запрос снаряжения инженера:\n[bold]3х взрывчатка С-4[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  parent: ClothingBackpackEngineering
+  id: ClothingBackpackEngineeringMarine
+  name: рюкзак инженера
+  description: Прочный и вместительный рюкзак.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 150
+
+- type: entity
+  parent: ClothingBackpackDuffelEngineering
+  id: ClothingBackpackDuffelEngineeringMarine
+  name: сумка инженера
+  description: Крупная сумка с множеством карманов.
+  suffix: MarinesGear
+  components:
+  - type: Storage
+    capacity: 200
+
+- type: entity
+  parent: Railing
+  id: MarineRailing
+  name: пласталевые перила
+  description: Прочные.
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    color: "#AAAAAA"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: MarineRailing
+    node: MarineRailingNode
+
+- type: constructionGraph
+  id: MarineRailing
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MarineRailingNode
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: Plasteel
+              amount: 3
+              doAfter: 3
+
+    - node: MarineRailingNode
+      entity: MarineRailing
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 3
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 0.25
+
+- type: construction
+  name: "- пласталевые перила"
+  id: MarineRailingConstruction
+  graph: MarineRailing
+  startNode: start
+  targetNode: MarineRailingNode
+  category: construction-category-structures
+  description: Лучшая защита от ксеноморфов.
+  icon:
+    sprite: Structures/Walls/railing.rsi
+    state: side
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+
+
+- type: entity
+  parent: BaseItem
+  id: MarineTurretUndeployed
+  name: раскладная турель
+  description: Лучший друг инженера. Необходимо собрать (Через меню строительства).
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    layers:
+    - state: syndie_broken
+    - state: syndie_lethal
+  - type: Item
+    size: 30
+  - type: Tag
+    tags:
+      - Turret
+
+- type: Tag
+  id: Turret
+
+- type: entity
+  parent: WeaponTurretNanoTrasen
+  name: турель
+  id: WeaponTurretMarine
+  suffix: MarinesGear
+  description: Лучший друг инженера. Обратно не разбирается.
+  components:
+  - type: Construction
+    graph: MarineTurretGraph
+    node: MarineTurret
+  - type: Repairable
+    fuelcost: 20
+    doAfterDelay: 5
+  - type: PointLight
+    enabled: true
+    radius: 3
+    softness: 5
+    color: "#FFFFFF"
+    autoRot: true
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeAabb
+        bounds: "-0.45,-0.45,0.45,0.45"
+      density: 60
+      mask:
+      - MachineMask
+      layer:
+      - Opaque
+
+- type: constructionGraph
+  id: MarineTurretGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MarineTurret
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - tag: Turret
+              name: раскладная турель
+              icon:
+                sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+                state: syndie_broken
+              doAfter: 10
+    - node: MarineTurret
+      entity: WeaponTurretMarine
+
+- type: construction
+  name: "- раскладная турель"
+  id: MarineTurretConstruction
+  graph: MarineTurretGraph
+  startNode: start
+  targetNode: MarineTurret
+  category: construction-category-structures
+  description: Лучший друг инженера.
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_broken
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+
+# SUPPORT #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineSupport
+  name: Снаряжение специалиста
+  description: Всё необходимое для эффективной поддержки отряда в бою.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineSupportInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/cart.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1
+    energy: 1.3
+    color: "#ffb0b0"
+  - type: AccessReader
+    access: [["Salvage"]]
+
+- type: vendingMachineInventory
+  id: MarineSupportInventory
+  startingInventory:
+    ClothingHeadHelmetRiot: 1
+    ClothingHeadHelmetHelmetOld: 1
+    ClothingMaskGasExplorer: 1
+    ClothingOuterArmorHeavy: 1
+    MarineShield: 1
+    
+    WeaponRifleHPR: 1
+    MagazinePulseRifleHeavy: 10
+
+    #WeaponFlamethrower: 1   - BIG GUNS NOW ONLY IN CARGO
+    PaperMarineRequestFlamethrower: 1
+    FuelTankFlamethrower: 10
+    
+    #WeaponLightMachineGunL6: 1
+    PaperMarineRequestL6SAW: 1
+    MagazineLightRifleBox: 5
+    MagazineBoxLightRifleBigMarine: 5
+    
+    #WeaponShotgunBulldog: 1
+    PaperMarineRequestBulldog: 1
+    MagazineShotgun: 10
+    MagazineShotgunSlug: 10
+    MagazineShotgunIncendiary: 10
+    BoxLethalshot: 30
+    
+    #WeaponSniperAWP: 1
+    PaperMarineRequestAWP: 1
+    MagazineBoxLapuaMagnum: 5
+    
+    #WeaponChinaLake: 1
+    PaperMarineRequestChinaLake: 1
+    GrenadeBlastMarine: 10
+    GrenadeFragMarine: 10
+    
+    ClothingHeadHatOutlawHat: 1
+    ClothingEyesGlassesSunglasses: 1
+    ClothingOuterCoatDetectiveDark: 1
+
+    MarineMachete: 1
+
+- type: entity
+  name: запрос снаряжения
+  parent: Paper
+  id: PaperMarineRequest
+  description: 'Готовая заявка на получение снаряжения, осталось только получить печать командира отряда.'
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    netsync: false
+    layers:
+    - state: paper
+      color: "#f7e574"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#f7e574"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
+    backgroundModulate: "#f7e574"
+    contentImageModulate: "#f7e574"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 16.0, 16.0, 16.0, 16.0
+    headerImagePath: "/Textures/Interface/Paper/paper_heading_cargo_invoice.svg.96dpi.png"
+    headerMargin: 0.0, 12.0, 0.0, 0.0
+
+- type: entity
+  name: запрос на огнемёт
+  parent: PaperMarineRequest
+  id: PaperMarineRequestFlamethrower
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Огнемёт[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: запрос на пулемёт
+  parent: PaperMarineRequest
+  id: PaperMarineRequestL6SAW
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х L6 SAW[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: запрос на автоматический дробовик
+  parent: PaperMarineRequest
+  id: PaperMarineRequestBulldog
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Бульдог[/bold]\n\nПечать командира отряда:"
+
+- type: entity
+  name: запрос на снайперскую винтовку
+  parent: PaperMarineRequest
+  id: PaperMarineRequestAWP
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Ксенобой[/bold]\n\nПечать командира отряда:"
+
+
+- type: entity
+  name: запрос на гранатомёт
+  parent: PaperMarineRequest
+  id: PaperMarineRequestChinaLake
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х China Lake[/bold]\n\nПечать командира отряда:"
+
+
+- type: entity
+  name: запрос на дробовик бульдог
+  parent: PaperMarineRequest
+  id: PaperMarineRequestBulldog
+  components:
+  - type: Paper
+    content: "Запрос снаряжения специалиста:\n[bold]1х Бульдог[/bold]\n\nПечать командира отряда:"
+
+
+- type: entity
+  id: BulletGrenadeBlastMarine
+  parent: BulletGrenadeBlast
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+
+- type: entity
+  id: GrenadeBlastMarine
+  parent: GrenadeBlast
+  name: разрывная граната
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeBlastMarine
+
+- type: entity
+  id: BulletGrenadeFragMarine
+  parent: BulletGrenadeFrag
+  components:
+  - type: Explosive
+    canCreateVacuum: false
+    
+- type: entity
+  id: GrenadeFragMarine
+  parent: GrenadeFrag
+  name: осколочная граната
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeFragMarine
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigMarine
+  name: ящик патронов (.30 винтовочные)
+  suffix: MarinesGear
+  components:
+  - type: Item
+    size: 15
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+
+- type: entity
+  parent: WeaponRifleAL9
+  id: WeaponSniperAWP
+  suffix: MarinesGear
+
+- type: entity
+  parent: MagazineBoxAntiMaterial
+  id: MagazineBoxLapuaMagnum
+  name: ящик патронов (.39 rifle)
+  suffix: MarinesGear
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 30
+    proto: Cartridge90
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+
+- type: entity
+  parent: EgovShield
+  id: MarineShield
+  suffix: MarinesGear
+  components:
+    - type: Blocking
+      passiveBlockModifier: PassiveMarineShieldBlock
+      activeBlockModifier: ActiveMarineShieldBlock
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound: /Audio/Effects/metalbreak.ogg
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetPlasteel1:
+                  min: 1
+                  max: 5
+
+- type: damageModifierSet
+  id: PassiveMarineShieldBlock
+  coefficients:
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.8
+    Heat: 0.8
+
+- type: damageModifierSet
+  id: ActiveMarineShieldBlock
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.6
+    Piercing: 0.6
+    Heat: 0.6
+
+
+- type: entity
+  name: огнемёт
+  id: WeaponFlamethrower
+  parent: BaseWeaponHeavyMachineGun
+  description: "Make It Burn Dem"
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 10
+    soundGunshot:
+      path: /Audio/Effects/extinguish.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: AmmoCounter
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: FuelTankFlamethrower
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - TankFlamethrower
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeFlamethrower
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: Tag
+  id: TankFlamethrower
+
+- type: Tag
+  id: Napalm
+
+- type: entity
+  id: FuelTankFlamethrower
+  name: "топливный бак для огнемёта"
+  parent: BaseItem
+  suffix: MarinesGear
+  components:
+  - type: Tag
+    tags:
+      - TankFlamethrower
+  - type: Item
+    size: 5
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 100
+    proto: CartridgeFlamethrower
+    whitelist:
+      tags:
+        - Napalm
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Tanks/plasma.rsi
+    state: icon
+  - type: Appearance
+
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeFlamethrower
+  suffix: MarinesGear
+  name: напалм
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Napalm
+  - type: CartridgeAmmo
+    proto: FlamethrowerProjectile
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Tanks/plasma.rsi
+    state: icon
+    scale: 0.7, 0.7
+
+- type: entity
+  id: FlamethrowerProjectile
+  name: струя огня
+  description: Ух, горячо!
+  noSpawn: true
+  components:
+  - type: FlyBySound
+  - type: Clickable
+  - type: Sprite
+    netsync: false
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+      shader: unshaded
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+    - id: projectile
+      shape:
+        !type:PhysShapeAabb
+        bounds: "-0.1,-0.1,0.1,0.1"
+      hard: false
+      mask:
+      - Impassable
+      - BulletImpassable
+    - &flybyfixture
+      id: fly-by
+      shape: !type:PhysShapeCircle
+        radius: 0.5
+      layer:
+      - Impassable
+      - MidImpassable
+      - HighImpassable
+      - LowImpassable
+      hard: False
+  - type: PointLight
+    enabled: true
+    color: "#FF8080"
+    radius: 5.0
+    energy: 5.0
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Heat: 12
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: IgniteOnCollide
+    fireStacks: 1
+
+- type: entity
+  parent: MagazineBoxAntiMaterial
+  id: MagazineBoxLapuaMagnum
+  name: ящик патронов (.39 rifle)
+  suffix: MarinesGear
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 30
+    proto: Cartridge90
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+
+# COMMANDER #
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMarineSL
+  name: снаряжение командира
+  description: Всё необходимое настоящему лидеру.
+  suffix: MarinesGear
+  components:
+  - type: VendingMachine
+    pack: MarineSLInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Speech
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/discount.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - texture: Structures/Machines/VendingMachines/maintenance_panel.png
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#6148c7"
+
+
+- type: vendingMachineInventory
+  id: MarineSLInventory
+  startingInventory:
+    HandheldGPSBasic: 1
+    ClothingEyesGlassesSunglasses: 1
+    ClothingEyesEyepatch: 1
+    MarineSLHat: 1
+    MarineSLCape: 1
+    WeaponSubMachineGunC20r: 1
+    MagazinePistolSubMachineGun: 5
+    WeaponRevolverMateba: 1
+    SpeedLoaderMagnumHighVelocity: 3
+    MarineMachete: 1
+    ClothingNeckGoldmedal: 1
+    CigPackMarine: 1
+    Lighter: 1
+
+
+- type: entity
+  name: накидка из шкуры ксеноморфа
+  description: Настоящий трофей.
+  parent: ClothingNeckMantleHOSShoulder
+  id: MarineSLCape
+  suffix: MarinesGear
+
+- type: entity
+  name: шляпа строгого сержанта
+  description: Покажи им что такое дисциплина!
+  parent: ClothingHeadHatHoshat
+  id: MarineSLHat
+  suffix: MarinesGear
+
+- type: entity
+  name: мачете морпеха
+  description: Ксеноморфов режут стоя...
+  parent: Machete
+  id: MarineMachete
+  suffix: MarinesGear
+
+
+
+# TARGETS #
+
+- type: entity
+  name: мишень-королева
+  id: TargetXeno
+  parent: BaseTarget
+  description: Как живой, только не живой.
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true
+    #scale: 0.8, 0.8
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 15500
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel:
+            min: 10
+            max: 10
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: мишень-крушитель
+  id: TargetXenoRavager
+  parent: TargetXeno
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true
+
+- type: entity
+  name: мишень-воин
+  id: TargetXenoBurrower
+  parent: TargetXeno
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/burrower.rsi
+    state: running
+    color: "#FFFF00"
+    shader: StencilClear
+    directional: true

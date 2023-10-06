@@ -1,0 +1,589 @@
+- type: entity
+  parent: ClothingDeathSquadronBackpack
+  id: ClothingBackpackSpecialForce
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: PinpointerNuclear
+        - id: WeaponPulseRifle
+        - id: SpeedLoaderMagnum
+          amount: 2
+        - id: PaperManualCodes
+        - id: C4
+          amount: 8
+        - id: SpetsnazMedipen
+          amount: 4
+        - id: Multitool
+        - id: RemoteSignaller
+        - id: WeaponRifleLecterPan
+        - id: MagazineRiflePan
+          amount: 4
+
+- type: entity
+  suffix: Дисковый
+  parent: WeaponRifleM28
+  id: WeaponRifleLecterPan
+  description: Первоклассная армейская штурмовая винтовка. Использует патроны калибра .20 винтовочный.
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRiflePan
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+
+- type: entity
+  id: MagazineRiflePan
+  name: "дисковый магазин (.20 винтовочные)"
+  parent: BaseMagazineRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    capacity: 96
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/maxim.rsi
+
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadHatBeretHoS
+  id: ClothingHeadHatBeretMobileTaskForce
+  name: берет отдела специальных операций
+  description: Черный берет с вышитой командирской эмблемой. Для офицеров, которые предпочитают стиль безопасности.
+
+- type: startingGear
+  id: SpecialForceGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    shoes: ClothingShoesBootsSpetsnaz
+    belt: WeaponRevolverMateba
+    neck: CombatKnifeSpetsnaz
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    id: DedSquadronGavnaIDCard
+    ears: ClothingHeadsetCentComCCAltDeath
+    pocket1: EnergySwordDedSad
+    pocket2: WeaponPulsePistol
+
+- type: startingGear
+  id: SpecialForceGearCommander
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    shoes: ClothingShoesBootsSpetsnaz
+    belt: WeaponRevolverMateba
+    neck: CombatKnifeSpetsnaz
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    id: DedSquadronLeaderGavnaIDCard
+    head: ClothingHeadHatBeretMobileTaskForce
+    ears: ClothingHeadsetCentComCCAltDeath
+    pocket1: EnergySwordDedSad
+    pocket2: WeaponPulsePistol
+
+- type: startingGear
+  id: SpecialForceGearCommanderFull
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    back: ClothingBackpackSpecialForce
+    shoes: ClothingShoesBootsSpetsnaz
+    mask: ClothingMaskGasDeathSquadV2.1
+    neck: CombatKnifeSpetsnaz
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    outerClothing: ClothingOuterHardsuitDeathsquad
+    suitstorage: OxygenTankFilled
+    head: ClothingHeadHatBeretMobileTaskForce
+    id: DedSquadronLeaderGavnaIDCard
+    ears: ClothingHeadsetCentComCCAltDeath
+    belt: WeaponRevolverMateba
+    pocket1: EnergySwordDedSad
+    pocket2: WeaponPulsePistol
+
+- type: startingGear
+  id: SpecialForceGearFull
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    back: ClothingBackpackSpecialForce
+    shoes: ClothingShoesBootsSpetsnaz
+    mask: ClothingMaskGasDeathSquadV2.1
+    neck: CombatKnifeSpetsnaz
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    outerClothing: ClothingOuterHardsuitDeathsquad
+    suitstorage: OxygenTankFilled
+    id: DedSquadronGavnaIDCard
+    ears: ClothingHeadsetCentComCCAltDeath
+    belt: WeaponRevolverMateba
+    pocket1: EnergySwordDedSad
+    pocket2: WeaponPulsePistol
+
+- type: startingGear
+  id: SpecialForceAgentGearFull
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSpetsnaz
+    back: ClothingBackpackSpecialForce
+    shoes: ClothingShoesChameleonNoSlips
+    mask: ClothingMaskGasDeathSquadV2.1
+    neck: CombatKnifeSpetsnaz
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    outerClothing: ClothingOuterHardsuitDeathsquad
+    suitstorage: OxygenTankFilled
+    id: DedSquadronGavnaIDCard
+    ears: ClothingHeadsetCentComCCAltDeath
+    belt: WeaponRevolverMateba
+    pocket1: EnergySwordDedSad
+    pocket2: WeaponPulsePistol
+
+- type: entity
+  name: Spestnaz
+  suffix: Vova
+  parent: MobHumanCombine
+  description: Жалкая кучка спецназа.
+  id: MobHumanSpecialReAgent
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ai
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Оперативник спец войск
+    description: Элитный солдат отряда Omega - 0, напичканые импланты и курсы космического спецназа сделали из него бесчувственную машину.
+    rules: Выполняйте различные приказы, ваша задача будет варьироваться от задач центрального командования.
+  - type: Loadout
+    prototypes: [SpecialForceGearFull]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsOperative
+    - NameSpets
+  - type: RandomHumanoidAppearance
+    randomizeName: False
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+- type: entity
+  name: SpestnazCommander
+  suffix: Vova
+  parent: MobHumanCombine
+  description: Жалкая кучка спецназа.
+  id: MobHumanSpecialReAgentCOM
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ai
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: коммандер спец войск
+    description: Элитный коммандер отряда Omega - 0, напичканые импланты и курсы космического спецназа сделали из него бесчувственную машину с тактическим интеллектом.
+    rules: Выполняйте различные приказы, ваша задача будет варьироваться от задач центрального командования.
+  - type: Loadout
+    prototypes: [SpecialForceGearCommanderFull]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsCommander
+    - NameSpets
+  - type: RandomHumanoidAppearance
+    randomizeName: False
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+- type: entity
+  name: Spestnaz Super
+  suffix: Vova
+  parent: MobHumanSpecialReAgent
+  description: Жалкая кучка спецназа.
+  id: MobHumanSpecialReAgentInvisible
+  components:
+  - type: Loadout
+    prototypes: [SpecialForceAgentGearFull]
+  - type: Stealth
+  - type: StealthOnMove
+    passiveVisibilityRate: -0.37
+    movementVisibilityRate: 0.2
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+- type: entity
+  parent: BaseWeaponTurret
+  id: WeaponTurretSpetsnaz
+  suffix: SpecialForce
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+#------------------------------------
+
+- type: entity
+  name: Overwatch
+  parent: MobHumanCombine
+  suffix: CentCom Офицер специальный операций
+  id: MobHumanSFOfficer
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: centcom
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Офицер Специальных Операций
+    description: Офицер Специальных Операций, руководитель департамента специальных операций в секторе.
+  - type: Loadout
+    prototypes: [SFOForma]
+  - type: RandomHumanoidAppearance
+    randomizeName: False
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: ShowSecurityIcons
+
+- type: startingGear
+  id: SFOForma
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
+    shoes: ClothingShoesCentcomBlack
+    head: ClothingHeadCapCentcomBlack
+    neck: ClothingNeckCloakCentcomBlack
+    eye: ClothingEyesGlassesSunglasses
+    id: IDSFO
+    ears: ClothingHeadsetCentComCCAlt
+
+#------------------------------------
+
+- type: dataset
+  id: SyndicateNamesSuperNormal
+  values:
+  - Альфа
+  - Браво
+  - Чарли
+  - Дельта
+  - Эхо
+  - Фокстрот
+  - Гольф
+  - Хоутел
+  - Индиа
+  - Джулиет
+  - Кило
+  - Лима
+  - Майк
+  - Новэмбэр
+  - Оскар
+  - Папа
+  - Квебек
+  - Ромео
+  - Сьера
+  - Танго
+  - Юниформ
+  - Виктор
+  - Виски
+  - Иксрей
+  - Зулу
+
+- type: dataset
+  id: SyndicateZvanieSuperNormal
+  values:
+  - Оператор
+
+- type: dataset
+  id: SyndicateZvanieSuperNormalAgent
+  values:
+  - Агент
+
+# Да-да, нюкер, я хз зачем, но пусть будет
+
+- type: entity
+  name: Ядерный оперативник
+  parent: MobHumanCombine
+  suffix: Vova
+  id: MobHumanSyndicateNukeOpsV2.0
+  components:
+  - type: Speech
+    speechSounds: Alto
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: green
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Ядерный оперативник
+    description: GET DAT FUKKEN DISK
+  - type: NukeOperative
+  - type: Loadout
+    prototypes: [SyndicateOperativeGearFull]
+  - type: RandomMetadata
+    nameSegments:
+    - SyndicateZvanieSuperNormal
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+- type: entity
+  name: Ядерный агент
+  parent: MobHumanCombine
+  suffix: Vova
+  id: MobHumanSyndicateNukeOpsV3.0
+  components:
+  - type: Speech
+    speechSounds: Alto
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: green
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Ядерный оперативник
+    description: GET DAT FUKKEN DISK
+  - type: NukeOperative
+  - type: Loadout
+    prototypes: [SyndicateOperativeMedicFull]
+  - type: RandomMetadata
+    nameSegments:
+    - SyndicateZvanieSuperNormalAgent
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+#------------------------------------
+
+- type: startingGear
+  id: RXBZZ
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    back: ClothingBackpackDuffelRXBZZ
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasExplorer
+    eyes: ClothingEyesGlassesSecurity
+    neck: CombatKnifeSpetsnaz
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURN
+    suitstorage: YellowOxygenTankFilled
+    id: IdCardRXBZZ
+    ears: ClothingHeadsetCentComCCMTFSR6
+    belt: ClothingBeltBandolierRXBZZ
+    pocket1: WeaponLaserGun
+
+- type: startingGear
+  id: RXBZZFlamer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    back: PowerpackFlame
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasExplorer
+    eyes: ClothingEyesGlassesSecurity
+    neck: CombatKnifeSpetsnaz
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURN
+    suitstorage: YellowOxygenTankFilled
+    id: IdCardRXBZZ
+    ears: ClothingHeadsetCentComCCMTFSR6
+    belt: ClothingBeltMilitaryWebbingFlamer
+    pocket1: WeaponLaserGun
+
+- type: startingGear
+  id: RXBZZLeader
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    back: ClothingBackpackDuffelRXBZZ
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasExplorer
+    eyes: ClothingEyesGlassesSecurity
+    neck: CombatKnifeSpetsnaz
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURNLeader
+    suitstorage: YellowOxygenTankFilled
+    id: IdCardRXBZZLeader
+    head: ClothingHeadHatERTLeaderBeret
+    ears: ClothingHeadsetCentComCCMTFSR6
+    belt: ClothingBeltBandolierRXBZZ
+    pocket1: WeaponAdvancedLaser
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelMilitary
+  id: ClothingBackpackDuffelRXBZZ
+  components:
+    - type: Storage
+      capacity: 250
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: BoxFlare
+        - id: MedkitAdvancedRXBZZ
+        - id: WeaponDisabler
+        - id: WeaponRifleG36
+        - id: MagazineRifle
+          amount: 4
+        - id: WeaponShotgun39
+
+- type: entity
+  name: продвинутая аптечка стимуляторов
+  parent: MedkitAdvanced
+  id: MedkitAdvancedRXBZZ
+  components:
+    - type: Item
+      size: 10
+    - type: Storage
+      capacity: 100
+    - type: StorageFill
+      contents:
+        - id: HandheldHealthAnalyzer
+        - id: BattleMedipenAntiVirus
+          amount: 5
+        - id: BattleMedipen
+          amount: 10
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBeltBandolier
+  id: ClothingBeltBandolierRXBZZ
+  components:
+    - type: Storage
+      capacity: 100
+    - type: StorageFill
+      contents:
+        - id: ShellShotgunIncendiary
+          amount: 10
+        - id: ShellShotgun
+          amount: 20
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBeltMilitaryWebbing
+  id: ClothingBeltMilitaryWebbingFlamer
+  components:
+    - type: Storage
+      capacity: 100
+    - type: StorageFill
+      contents:
+        - id: WeaponflamethrowerSG
+        - id: MedkitAdvancedRXBZZ
+        - id: WeaponDisabler
+
+- type: entity
+  name:  РХБЗЗ Реагент
+  parent: MobHuman
+  suffix: ready
+  id: MobHumanRXBZZ
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Оперативник РХБЗЗ
+    description: Особый агент НаноТрейзен по борьбе с радиационно, химическо, биологическоми и зомби опасностями.
+  - type: Loadout
+    prototypes: [RXBZZ]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsRXBZZ
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+      params:
+        volume: 2
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+
+- type: entity
+  name:  РХБЗЗ Реагент Огнеметчик
+  parent: MobHuman
+  suffix: ready
+  id: MobHumanRXBZZFlamer
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Огнеметчик РХБЗЗ
+    description: Особый агент НаноТрейзен по борьбе с радиационно, химическо, биологическоми и зомби опасностями.
+  - type: Loadout
+    prototypes: [RXBZZFlamer]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsRXBZZ
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+      params:
+        volume: 2
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+
+- type: entity
+  name:  РХБЗЗ Лидер
+  parent: MobHuman
+  suffix: CentCom
+  id: MobHumanRXBZZLeader
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Лидер РХБЗЗ
+    description: Особый агент НаноТрейзен по борьбе с радиационно, химическо, биологическоми и зомби опасностями.
+  - type: Loadout
+    prototypes: [RXBZZLeader]
+  - type: RandomMetadata
+    nameSegments:
+    - NameSpetsCommander
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+      params:
+        volume: 2
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
