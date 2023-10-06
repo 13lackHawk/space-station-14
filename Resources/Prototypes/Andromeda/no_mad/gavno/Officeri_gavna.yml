@@ -1,5 +1,5 @@
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaOfficial
   name: Id карта ПЦК
   components:
@@ -81,7 +81,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaOperator
   name: Id карта диспетчер ЦК
   components:
@@ -122,7 +122,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaOfficer
   name: Id карта начальника штаба ЦК
   components:
@@ -175,7 +175,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaOfficerSesurity
   name: Id карта охраны ЦК
   components:
@@ -266,7 +266,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaMagistrat
   name: Id карта судьи магистрата
   components:
@@ -313,7 +313,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaAdmiral
   name: Id карта адмирала
   components:
@@ -368,7 +368,7 @@
 #-----------------------------------------
 
 - type: entity
-  parent: CentcomBaseIDCard
+  parent: CentcomIDCard
   id: IDCardCentComGavnaPilot
   name: Id карта пилота
   components:

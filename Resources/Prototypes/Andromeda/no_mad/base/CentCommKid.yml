@@ -1085,7 +1085,7 @@
 - type: entity
   noSpawn: true
   parent: CentcomIDCardDeathsquad
-  id: CentcomBaseIDCard
+  id: CentcomIDCard
   name: Id карта
   components:
   - type: Access
