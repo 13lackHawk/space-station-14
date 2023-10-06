@@ -144,7 +144,7 @@
     gloves: ClothingHandsGlovesCentcomNaval
     head: ClothingHeadHatCentcom
     id: IDCardCentComGavnaOfficer
-    ears: ClothingHeadsetCentComCCAlt
+    ears: ClothingHeadsetCentCom
     pocket1: ClothingMaskGasCentcom
 
 - type: entity
@@ -341,7 +341,7 @@
     outerClothing: ClothingOuterArmorCentcomCarapace
     neck: ClothingNeckCloakCentcomAdmiral
     id: IDCardCentComGavnaAdmiral
-    ears: ClothingHeadsetCentComCCAlt
+    ears: ClothingHeadsetCentCom
     pocket1: RubberStampCentcom
 
 - type: entity
