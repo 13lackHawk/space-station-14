@@ -19,10 +19,10 @@
   name: special force hardsuit helmet
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/specialforce.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/specialforce.rsi
   - type: Clothing
     equippedPrefix: off
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/specialforce.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/specialforce.rsi
 
 - type: entity
   parent: ClothingBackpack
@@ -31,7 +31,7 @@
   description: It's a very robust RIG.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/specialforce.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/specialforce.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterHardsuitSpecialForce
     slot: outerClothing
@@ -48,11 +48,11 @@
   name: EarthGov special force hardsuit
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/specialforce.rsi
+    sprite: /Andromeda/no_mad/Suits/specialforce.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/specialforce.rsi
-    equipSound: /Uploaded/base/ogg/suit/nominal.ogg
-    unequipSound: /Uploaded/base/ogg/suit/mechmove03.ogg
+    sprite: /Andromeda/no_mad/Suits/specialforce.rsi
+    equipSound: /Andromeda/no_mad/suit/nominal.ogg
+    unequipSound: /Andromeda/no_mad/suit/mechmove03.ogg
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSpecialForce
 
@@ -64,9 +64,9 @@
   description: A rescue troop unit helmet designed specifically for combat in space and the harsh far-off worlds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/grunthardsuit.rsi
 
 - type: entity
   parent: ClothingBackpackRIGRTULeader
@@ -75,7 +75,7 @@
   description: It's a very robust backpack.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/RTU.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterHardsuitRTU
 
@@ -87,9 +87,9 @@
   description: A rescue troop unit suit designed specifically for combat in space and the harsh far-off worlds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/grunthardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/grunthardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/grunthardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/grunthardsuit.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRTU
 
@@ -100,9 +100,9 @@
   name: RTU hardsuit helmet
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/medickhardsuit.rsi
 
 - type: entity
   parent: ClothingBackpackRIGRTULeader
@@ -111,7 +111,7 @@
   description: It's a very robust backpack.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/RTU.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterHardsuitRTUMedick
 
@@ -122,9 +122,9 @@
   name: EarthGov medic RTU hardsuit
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/medickhardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/medickhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/medickhardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/medickhardsuit.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRTUMedick
 
@@ -135,9 +135,9 @@
   name: RTU hardsuit helmet
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/enginegrhardsuit.rsi
 
 - type: entity
   parent: ClothingBackpackRIGRTULeader
@@ -146,7 +146,7 @@
   description: It's a very robust backpack.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTU.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/RTU.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterHardsuitRTUEnginegr
 
@@ -157,9 +157,9 @@
   name: EarthGov engineer RTU hardsuit
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/enginegrhardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/enginegrhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/enginegrhardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/enginegrhardsuit.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRTUEnginegr
 
@@ -170,10 +170,10 @@
   name: RTU hardsuit helmet
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
   - type: Clothing
     equippedPrefix: off
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/RescueTroopsUnits/dungeonmasterhardsuit.rsi
 
 - type: entity
   parent: ClothingBackpack
@@ -184,7 +184,7 @@
   - type: Storage
     capacity: 250
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/RTUL.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/RTUL.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterHardsuitRTULeader
     slot: outerClothing
@@ -201,11 +201,11 @@
   name: EarthGov commander RTU hardsuit
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/dungeonmasterhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/RescueTroopsUnits/dungeonmasterhardsuit.rsi
-    equipSound: /Uploaded/base/ogg/suit/nominal.ogg
-    unequipSound: /Uploaded/base/ogg/suit/mechmove03.ogg
+    sprite: /Andromeda/no_mad/RescueTroopsUnits/dungeonmasterhardsuit.rsi
+    equipSound: /Andromeda/no_mad/suit/nominal.ogg
+    unequipSound: /Andromeda/no_mad/suit/mechmove03.ogg
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRTULeader
 
@@ -217,9 +217,9 @@
   description: A marine helmet designed specifically for combat in space and the harsh far-off worlds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/marinehardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/marinehardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Hardsuits/marinehardsuit.rsi
+    sprite: /Andromeda/no_mad/Hardsuits/marinehardsuit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 10000
@@ -237,9 +237,9 @@
   description: A marine suit designed specifically for combat in space and the harsh far-off worlds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/marinespecialhardsuit.rsi
+    sprite: /Andromeda/no_mad/marinespecialhardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/marinespecialhardsuit.rsi
+    sprite: /Andromeda/no_mad/marinespecialhardsuit.rsi
   - type: ClothingSpeedModifier
     walkModifier: 0.75
     sprintModifier: 0.8
@@ -268,9 +268,9 @@
   description: A marine suit designed specifically for combat in space and the harsh far-off worlds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/marinehardsuit.rsi
+    sprite: /Andromeda/no_mad/marinehardsuit.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/marinehardsuit.rsi
+    sprite: /Andromeda/no_mad/marinehardsuit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 10000
@@ -297,9 +297,9 @@
   description: Cap made of thick camouflage fabric.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/marine_cap.rsi
+    sprite: /Andromeda/no_mad/marine_cap.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/marine_cap.rsi
+    sprite: /Andromeda/no_mad/marine_cap.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -308,9 +308,9 @@
   description: Navy officer cap. Better than any stripes will emphasize your importance and rank.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/officer_cap.rsi
+    sprite: /Andromeda/no_mad/officer_cap.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/officer_cap.rsi
+    sprite: /Andromeda/no_mad/officer_cap.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -319,9 +319,9 @@
   description: Officer cap. Better than any stripes will emphasize your importance and rank.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/head/shtab.rsi
+    sprite: /Andromeda/no_mad/head/shtab.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/head/shtab.rsi
+    sprite: /Andromeda/no_mad/head/shtab.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -330,9 +330,9 @@
   description: Beret made of dense camouflage fabric. Doesn't make you invisible.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/head/beret.rsi
+    sprite: /Andromeda/no_mad/head/beret.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/head/beret.rsi
+    sprite: /Andromeda/no_mad/head/beret.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -341,9 +341,9 @@
   description: Jumpsuit made of dense camouflage fabric. Doesn't make you invisible.
   components:
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/marine_suit.rsi
+      sprite: /Andromeda/no_mad/marine_suit.rsi
     - type: Clothing
-      sprite: /Uploaded/base/rsi/Textures/marine_suit.rsi
+      sprite: /Andromeda/no_mad/marine_suit.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -352,9 +352,9 @@
   description: Navy officer uniform. Better than any stripes will emphasize your importance and rank.
   components:
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/officer_suit.rsi
+      sprite: /Andromeda/no_mad/officer_suit.rsi
     - type: Clothing
-      sprite: /Uploaded/base/rsi/Textures/officer_suit.rsi
+      sprite: /Andromeda/no_mad/officer_suit.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -363,9 +363,9 @@
   description: Officer uniform. Better than any stripes will emphasize your importance and rank.
   components:
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/officer_suitALT.rsi
+      sprite: /Andromeda/no_mad/officer_suitALT.rsi
     - type: Clothing
-      sprite: /Uploaded/base/rsi/Textures/officer_suitALT.rsi
+      sprite: /Andromeda/no_mad/officer_suitALT.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -374,10 +374,10 @@
   description: An iron star awarded to members of the SCG for meritorious achievement or service in a combat zone.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Medals/solgov.rsi
+    sprite: /Andromeda/no_mad/Medals/solgov.rsi
     state: solgov-accessory_iron_star
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Medals/solgov.rsi
+    sprite: /Andromeda/no_mad/Medals/solgov.rsi
     clothingVisuals:
       neck:
       - state: iron_star
@@ -510,9 +510,9 @@
   description: Damn, it feels good to be a law.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Misc/mpband.rsi
+    sprite: /Andromeda/no_mad/Misc/mpband.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Misc/mpband.rsi
+    sprite: /Andromeda/no_mad/Misc/mpband.rsi
 
 - type: entity
   parent: ClothingHeadHelmetEGov
@@ -520,9 +520,9 @@
   name: pilot helmet
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/head/pilothelmet.rsi
+    sprite: /Andromeda/no_mad/head/pilothelmet.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/head/pilothelmet.rsi
+    sprite: /Andromeda/no_mad/head/pilothelmet.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -530,9 +530,9 @@
   name: office uniform
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/office.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/office.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/office.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/office.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -540,9 +540,9 @@
   name: office skirt
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/office.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/office.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/office.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/office.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -550,9 +550,9 @@
   name: staff officer uniform
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/shtab.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/shtab.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/shtab.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/shtab.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -560,9 +560,9 @@
   name: staff officer skirt
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/shtab.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/shtab.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/shtab.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/shtab.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -570,9 +570,9 @@
   name: grey uniform
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/grey.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/grey.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/grey.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/grey.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -580,9 +580,9 @@
   name: grey skirt
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/grey.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/grey.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/skirt/grey.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/skirt/grey.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -590,9 +590,9 @@
   name: green uniform
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/green.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/green.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/green.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/green.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -600,9 +600,9 @@
   name: special force uniform
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/special.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/special.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Suits/solgov/suit/special.rsi
+    sprite: /Andromeda/no_mad/Suits/solgov/suit/special.rsi
 
 - type: entity
   parent: ClothingMaskGas
@@ -611,9 +611,9 @@
   description: A military-grade gas mask that can be connected to an air supply.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Mask/gas.rsi
+    sprite: /Andromeda/no_mad/Mask/gas.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Mask/gas.rsi
+    sprite: /Andromeda/no_mad/Mask/gas.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -630,7 +630,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Structures/Storage/closet.rsi
+    sprite: /Andromeda/no_mad/Structures/Storage/closet.rsi
     noRot: true
     layers:
     - state: egov
@@ -656,10 +656,10 @@
   description: A shield that covers the wearer from head to toe, not everyone can lift this.
   components:
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/Weapons/Melee/shields.rsi
+      sprite: /Andromeda/no_mad/Weapons/Melee/shields.rsi
       state: egov-icon
     - type: Item
-      sprite: /Uploaded/base/rsi/Textures/Weapons/Melee/shields.rsi
+      sprite: /Andromeda/no_mad/Weapons/Melee/shields.rsi
       size: 100
       heldPrefix: egov
 
@@ -671,11 +671,11 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Misc/pagoni.rsi
+    sprite: /Andromeda/no_mad/Misc/pagoni.rsi
   - type: Clothing
     slots:
     - idcard
-    sprite: /Uploaded/base/rsi/Textures/Misc/pagoni.rsi
+    sprite: /Andromeda/no_mad/Misc/pagoni.rsi
   - type: Item
     heldPrefix: default
   - type: IdCard
@@ -846,11 +846,11 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Misc/id_badges.rsi
+    sprite: /Andromeda/no_mad/Misc/id_badges.rsi
   - type: Clothing
     slots:
     - idcard
-    sprite: /Uploaded/base/rsi/Textures/Misc/id_badges.rsi
+    sprite: /Andromeda/no_mad/Misc/id_badges.rsi
   - type: Item
     heldPrefix: default
   - type: Access
@@ -947,21 +947,21 @@
   description: The 711-MarkCL Rivet Gun is the latest refinement from Timson Tools' long line of friendly tools. Useful for rapid repairs at a distance!
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/rivet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/rivet.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/rivet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/rivet.rsi
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolNail
-        insertSound: /Uploaded/base/ogg/divet_magin.ogg
-        ejectSound: /Uploaded/base/ogg/divet_magout.ogg
+        insertSound: /Andromeda/no_mad/divet_magin.ogg
+        ejectSound: /Andromeda/no_mad/divet_magout.ogg
         priority: 2
         whitelist:
           tags:
@@ -980,7 +980,7 @@
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/rivet_fire.ogg
+      path: /Andromeda/no_mad/rivet_fire.ogg
       params:
         volume: -10
 
@@ -1006,7 +1006,7 @@
     size: 5
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/divet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/divet.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -1032,7 +1032,7 @@
       - CartridgeNail
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 45fast #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -1053,7 +1053,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    sprite: /Andromeda/no_mad/Effects/muzzle/divet.rsi
     layers:
     - state: projectiles_divet
       shader: unshaded
@@ -1076,9 +1076,9 @@
   description: A synthetic armor vest. This one has added ballistic plates.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/armor/navy.rsi
+    sprite: /Andromeda/no_mad/armor/navy.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/armor/navy.rsi
+    sprite: /Andromeda/no_mad/armor/navy.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1094,9 +1094,9 @@
   description: A XN-L vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a light variant.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1114,9 +1114,9 @@
   description: A XN-M vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a medium variant.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate2.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate2.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate2.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate2.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1139,9 +1139,9 @@
   description: A XN-H vest, also known as Xenonauten, a set vest with modular attachments made to work in many enviroments. This one seems to be a heavy variant.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate3.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate3.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/armor/chestplate3.rsi
+    sprite: /Andromeda/no_mad/armor/chestplate3.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1164,9 +1164,9 @@
   description: A usual helmet.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/helmet.rsi
+    sprite: /Andromeda/no_mad/Textures/helmet.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/helmet.rsi
+    sprite: /Andromeda/no_mad/Textures/helmet.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1184,9 +1184,9 @@
   description: A usual helmet.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/armor/ballistichelmet.rsi
+    sprite: /Andromeda/no_mad/armor/ballistichelmet.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/armor/ballistichelmet.rsi
+    sprite: /Andromeda/no_mad/armor/ballistichelmet.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -1205,7 +1205,7 @@
   suffix: EarthGov
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/Door.rsi
+    sprite: /Andromeda/no_mad/Structures/Door.rsi
 
 - type: entity
   parent: AirlockEGov
@@ -1225,7 +1225,7 @@
 
 - type: entity
   parent: MarkerBase
-  id: RandomPosterLegit
+  id: RandomPosterLegitEGMC
   name: random legit poster spawner
   components:
   - type: Sprite
@@ -1297,7 +1297,7 @@
   description: Вступай в корпус морской пехоты ОПЗ!
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/posters.rsi
+    sprite: /Andromeda/no_mad/Structures/posters.rsi
     state: poster1
 
 - type: entity
@@ -1388,7 +1388,7 @@
   description: A Flag displaying the EarthGov logo. It looks rather cheap.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/flag.rsi
+    sprite: /Andromeda/no_mad/Structures/flag.rsi
     state: banner
 
 - type: entity
@@ -1410,7 +1410,7 @@
     damageModifierSet: Metallic
   - type: Sprite
     drawdepth: WallTops
-    sprite: /Uploaded/base/rsi/Textures/Structures/wallbanner.rsi
+    sprite: /Andromeda/no_mad/Structures/wallbanner.rsi
     state: egov
   - type: Destructible
     thresholds:
@@ -1438,7 +1438,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: /Uploaded/base/rsi/Textures/Structures/wallbanner.rsi
+    sprite: /Andromeda/no_mad/Structures/wallbanner.rsi
     state: egov_broken
   - type: Destructible
     thresholds:
@@ -1459,17 +1459,17 @@
   description: Standard EarthGov issue shotgun.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scafshot/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scafshot/clothing.rsi
     size: 60
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scafshot/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scafshot/clothing.rsi
   - type: BallisticAmmoProvider
     autoCycle: true
     whitelist:
@@ -1499,7 +1499,7 @@
     count: 6
     spread: 15
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/battary.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/battary.rsi
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -1517,24 +1517,24 @@
     tags: 
       - AL9
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/al9/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/al9/clothing.rsi
     size: 90
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/al9/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/al9/clothing.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     fireRate: 2
     soundGunshot:
-      path: /Uploaded/base/ogg/sniper.ogg
+      path: /Andromeda/no_mad/sniper.ogg
       params:
         volume: -13
   - type: ItemSlots
@@ -1542,8 +1542,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineAntiMat90
-        insertSound: /Uploaded/base/ogg/rifle_load.ogg
-        ejectSound: /Uploaded/base/ogg/pulse_magout.ogg
+        insertSound: /Andromeda/no_mad/rifle_load.ogg
+        ejectSound: /Andromeda/no_mad/pulse_magout.ogg
         priority: 2
         whitelist:
           tags:
@@ -1589,10 +1589,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 5
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/al9.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/al9.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/al9.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/al9.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -1618,7 +1618,7 @@
     proto: BulletRifle
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 30training #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -1668,24 +1668,24 @@
     tags: 
       - SCAF
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scaf/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scaf/clothing.rsi
     size: 70
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/scaf/clothing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/scaf/clothing.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     fireRate: 1
     soundGunshot:
-      path: /Uploaded/base/ogg/rifle_shot.ogg
+      path: /Andromeda/no_mad/rifle_shot.ogg
       params:
         volume: -8
   - type: ItemSlots
@@ -1693,7 +1693,7 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineHeavyRifle
-        insertSound: /Uploaded/base/ogg/rifle_reload.ogg
+        insertSound: /Andromeda/no_mad/rifle_reload.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
@@ -1737,10 +1737,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/scaf.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/scaf.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/scaf.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/scaf.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -1765,13 +1765,13 @@
     tags:
       - SWS
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/sws/big.rsi
     state: base
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/sws/tiny.rsi
     size: 70
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/sws/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/sws/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -44
@@ -1780,7 +1780,7 @@
     maxAngle: 45
     fireRate: 8
     soundGunshot:
-      path: /Uploaded/base/ogg/giper_perdesh.ogg
+      path: /Andromeda/no_mad/giper_perdesh.ogg
       params:
         volume: -13
   - type: ItemSlots
@@ -1817,7 +1817,7 @@
     layers:
     - shader: unshaded
       map: ["enum.EffectLayers.Unshaded"]
-      sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+      sprite: /Andromeda/no_mad/Effects/muzzle/pulse.rsi
       state: muzzle_pulse
   - type: EffectVisuals
   - type: Tag
@@ -1832,7 +1832,7 @@
   - type: TimedDespawn
     lifetime: 0.25
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+    sprite: /Andromeda/no_mad/Effects/muzzle/pulse.rsi
     netsync: false
     drawdepth: Effects
     layers:
@@ -1851,7 +1851,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/pulse.rsi
+    sprite: /Andromeda/no_mad/Effects/muzzle/pulse.rsi
     layers:
     - state: pulse
       shader: unshaded
@@ -1896,10 +1896,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 5
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/sws.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/sws.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/sws.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/sws.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -1935,7 +1935,7 @@
     size: 5
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/divet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/divet.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -1961,7 +1961,7 @@
     proto: BulletMagnum
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 45combat #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -1997,7 +1997,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    sprite: /Andromeda/no_mad/Effects/muzzle/divet.rsi
     layers:
     - state: projectiles_divet
       shader: unshaded
@@ -2019,14 +2019,14 @@
   description: The Divet is a standard sidearm for police and security personnel of the Earth Goverment.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/divet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/divet.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/divet.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/divet.rsi
   - type: ChamberMagazineAmmoProvider
     autoEject: true
     boltClosed: null
@@ -2035,8 +2035,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistol345
-        insertSound: /Uploaded/base/ogg/divet_magin.ogg
-        ejectSound: /Uploaded/base/ogg/divet_magout.ogg
+        insertSound: /Andromeda/no_mad/divet_magin.ogg
+        ejectSound: /Andromeda/no_mad/divet_magout.ogg
         priority: 2
         whitelist:
           tags:
@@ -2050,9 +2050,9 @@
             - CartridgeMagnum345
   - type: Gun
     fireRate: 3
-    soundEmpty: /Uploaded/base/ogg/error.ogg
+    soundEmpty: /Andromeda/no_mad/error.ogg
     soundGunshot:
-      path: /Uploaded/base/ogg/divet_fire.ogg
+      path: /Andromeda/no_mad/divet_fire.ogg
       params:
         volume: -10
 
@@ -2061,14 +2061,14 @@
   id: WeaponPistolDivet2
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/prentor.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/prentor.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/prentor.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/prentor.rsi
 
 - type: entity
   id: BannerEarthGovertment
@@ -2077,7 +2077,7 @@
   description: A banner displaying the EarthGov logo. It looks rather cheap.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/banner.rsi
+    sprite: /Andromeda/no_mad/Structures/banner.rsi
     state: banner
 
 - type: Tag
@@ -2093,17 +2093,17 @@
     tags:
       - EG900
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/eg900/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/eg900/tiny.rsi
     size: 40
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/eg900/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/eg900/tiny.rsi
   - type: Gun
     fireRate: 6
     selectedMode: FullAuto
@@ -2111,14 +2111,14 @@
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/shit/shot.ogg
+      path: /Andromeda/no_mad/shit/shot.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineEG-900SubMachineGun
-        insertSound: /Uploaded/base/ogg/shit/mag_in.ogg
-        ejectSound: /Uploaded/base/ogg/shit/mag_out.ogg
+        insertSound: /Andromeda/no_mad/shit/mag_in.ogg
+        ejectSound: /Andromeda/no_mad/shit/mag_out.ogg
         priority: 2
         whitelist:
           tags:
@@ -2153,7 +2153,7 @@
     size: 5
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/eg900.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/eg900.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2185,7 +2185,7 @@
     proto: BulletRifle
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 35combat #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -2218,7 +2218,7 @@
   name: bullet (.32 auto)
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Effects/muzzle/divet.rsi
+    sprite: /Andromeda/no_mad/Effects/muzzle/divet.rsi
     layers:
     - state: projectiles_divet
       shader: unshaded
@@ -2240,7 +2240,7 @@
     tags:
       - HPR
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/hpr/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -2250,16 +2250,16 @@
         map: ["enum.GunVisualLayers.MagUnshaded"]
         shader: unshaded
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/hpr/tiny.rsi
     size: 90
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/hpr/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/hpr/tiny.rsi
   - type: Gun
     maxAngle: 30
     minAngle: 30
     fireRate: 12
     soundGunshot:
-      path: /Uploaded/base/ogg/giper_perdesh.ogg
+      path: /Andromeda/no_mad/giper_perdesh.ogg
       params:
         volume: -13
   - type: ItemSlots
@@ -2317,10 +2317,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/hpr.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/hpr.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Magazine/hpr.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Magazine/hpr.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2339,7 +2339,7 @@
   name: жетон
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/id.rsi
+    sprite: /Andromeda/no_mad/Textures/id.rsi
     state: base
   - type: Clothing
     slots:
@@ -2363,7 +2363,7 @@
   name: pmc badge
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/id.rsi
+    sprite: /Andromeda/no_mad/Textures/id.rsi
     state: pmc
   - type: Clothing
     slots:
@@ -2390,7 +2390,7 @@
   parent: JobIcon
   id: JobIconEarth
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: Earth
 
 - type: entity
@@ -2399,7 +2399,7 @@
   name: Раздатчик формы
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Marine.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2452,7 +2452,7 @@
   name: Раздатчик вооружения
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Armory.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Armory.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2523,7 +2523,7 @@
   - type: Advertise
     pack: NanoMedAds
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/MarineMed.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/MarineMed.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2569,7 +2569,7 @@
   - type: Advertise
     pack: NanoMedAds
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Medick.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Medick.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2743,7 +2743,7 @@
   name: Раздатчик офицерской формы
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Marine.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2801,7 +2801,7 @@
   name: Раздатчик медицинской формы
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Marine.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2855,7 +2855,7 @@
   name: Раздатчик формы специалиста
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Marine.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Marine.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2911,7 +2911,7 @@
   description: It's a very robust RIG.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/RIG/specialforce.rsi
+    sprite: /Andromeda/no_mad/Backpack/RIG/specialforce.rsi
   - type: Storage
     capacity: 300
 
@@ -2921,7 +2921,7 @@
   name: Раздатчик вооружения специалиста
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Smartgunner.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Smartgunner.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2985,7 +2985,7 @@
   name: офицерский раздатчик вооружения
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Structures/VendingMachine/Leader.rsi
+    sprite: /Andromeda/no_mad/Structures/VendingMachine/Leader.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -3059,9 +3059,9 @@
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-      soundEmpty: /Uploaded/base/ogg/error.ogg
+      soundEmpty: /Andromeda/no_mad/error.ogg
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/Weapons/Turrets/UA-580.rsi
+      sprite: /Andromeda/no_mad/Weapons/Turrets/UA-580.rsi
       drawdepth: Mobs
       noRot: true
       layers:
@@ -3136,14 +3136,14 @@
         - CartridgeCaselessRifle
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 2
     zeroVisible: false
   - type: Appearance
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/ua580.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3189,7 +3189,7 @@
             True: { state: folded_turret }
             False: { state: turret }
     - type: Sprite
-      sprite: /Uploaded/base/rsi/Textures/Weapons/Turrets/UA-580.rsi
+      sprite: /Andromeda/no_mad/Weapons/Turrets/UA-580.rsi
       drawdepth: SmallObjects
       noRot: true
       layers:
