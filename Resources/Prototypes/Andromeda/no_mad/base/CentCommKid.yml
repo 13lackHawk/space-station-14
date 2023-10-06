@@ -11,9 +11,9 @@
       key_slots:
       - EncryptionKeyEarthGov
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Headsets/base.rsi
+    sprite: /Andromeda/no_mad/Headsets/base.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Headsets/base.rsi
+    sprite: /Andromeda/no_mad/Headsets/base.rsi
   - type: ShowSecurityIcons
 
 - type: entity
@@ -415,12 +415,12 @@
 - type: soundCollection
   id: FootstepSoldier
   files:
-  - /Uploaded/base/ogg/gear1.ogg
-  - /Uploaded/base/ogg/gear2.ogg
-  - /Uploaded/base/ogg/gear3.ogg
-  - /Uploaded/base/ogg/gear4.ogg
-  - /Uploaded/base/ogg/gear5.ogg
-  - /Uploaded/base/ogg/gear6.ogg
+  - /Andromeda/no_mad/gear1.ogg
+  - /Andromeda/no_mad/gear2.ogg
+  - /Andromeda/no_mad/gear3.ogg
+  - /Andromeda/no_mad/gear4.ogg
+  - /Andromeda/no_mad/gear5.ogg
+  - /Andromeda/no_mad/gear6.ogg
 
 - type: entity
   parent: ClothingShoesBase
@@ -850,7 +850,7 @@
   parent: JobIcon
   id: JobIconDeathSquadron
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: DeathSquadron
 
 - type: entity
@@ -930,28 +930,28 @@
 - type: speechSounds
   id: Metrocop
   saySound:
-    path: /Uploaded/base/ogg/say/off2.ogg
+    path: /Andromeda/no_mad/say/off2.ogg
   askSound:
-    path: /Uploaded/base/ogg/say/off1.ogg
+    path: /Andromeda/no_mad/say/off1.ogg
   exclaimSound:
-    path: /Uploaded/base/ogg/say/off3.ogg
+    path: /Andromeda/no_mad/say/off3.ogg
 
 - type: speechSounds
   id: Combine
   saySound:
-    path: /Uploaded/base/ogg/off2.ogg
+    path: /Andromeda/no_mad/off2.ogg
   askSound:
-    path: /Uploaded/base/ogg/off3.ogg
+    path: /Andromeda/no_mad/off3.ogg
   exclaimSound:
-    path: /Uploaded/base/ogg/off1.ogg
+    path: /Andromeda/no_mad/off1.ogg
 
 - type: soundCollection
   id: Metrocop
   files:
-  - /Uploaded/base/ogg/say/off1.ogg
-  - /Uploaded/base/ogg/say/off2.ogg
-  - /Uploaded/base/ogg/say/off3.ogg
-  - /Uploaded/base/ogg/say/off4.ogg
+  - /Andromeda/no_mad/say/off1.ogg
+  - /Andromeda/no_mad/say/off2.ogg
+  - /Andromeda/no_mad/say/off3.ogg
+  - /Andromeda/no_mad/say/off4.ogg
 
 - type: entity
   name: Урист Макбайн
@@ -963,8 +963,8 @@
     sprite: Markers/jobs.rsi
     state: cyborg
   - type: Vocal
-    maleScream: /Uploaded/base/ogg/off.ogg
-    femaleScream: /Uploaded/base/ogg/off.ogg
+    maleScream: /Andromeda/no_mad/off.ogg
+    femaleScream: /Andromeda/no_mad/off.ogg
   - type: Speech
     speechSounds: Combine
     soundCooldownTime: 0.1
@@ -992,10 +992,10 @@
 - type: soundCollection
   id: SoldierDeath
   files:
-  - /Uploaded/base/ogg/combine/die1.ogg
-  - /Uploaded/base/ogg/combine/die2.ogg
-  - /Uploaded/base/ogg/combine/die3.ogg
-  - /Uploaded/base/ogg/combine/die4.ogg
+  - /Andromeda/no_mad/combine/die1.ogg
+  - /Andromeda/no_mad/combine/die2.ogg
+  - /Andromeda/no_mad/combine/die3.ogg
+  - /Andromeda/no_mad/combine/die4.ogg
 
 - type: dataset
   id: NameSpets
@@ -1079,7 +1079,7 @@
   parent: JobIcon
   id: JobIconNanotrasenOSO
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: NanotrasenOSO
 
 - type: entity
@@ -1155,7 +1155,7 @@
   parent: JobIcon
   id: JobIconNanotrasenSec
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: NanotrasenSec
 
 - type: entity
@@ -1179,7 +1179,7 @@
   parent: JobIcon
   id: JobIconNanotrasenMed
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: NanotrasenMed
 
 - type: entity
@@ -1203,7 +1203,7 @@
   parent: JobIcon
   id: JobIconNanotrasenEngi
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: NanotrasenEngi
 
 - type: entity
@@ -1227,7 +1227,7 @@
   parent: JobIcon
   id: JobIconNanotrasenjanitor
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: Nanotrasenjanitor
 
 - type: entity
@@ -1260,7 +1260,7 @@
   - type: Sprite
     netsync: false
     state: icon
-    sprite: /Uploaded/base/rsi/Textures/Gear/generalpounch.rsi
+    sprite: /Andromeda/no_mad/Gear/generalpounch.rsi
   - type: Clothing
     slots:
       - Pocket
@@ -1278,7 +1278,7 @@
   - type: Sprite
     netsync: false
     state: icon
-    sprite: /Uploaded/base/rsi/Textures/Gear/ammopounch.rsi
+    sprite: /Andromeda/no_mad/Gear/ammopounch.rsi
   - type: Clothing
     slots:
       - Pocket
@@ -1301,7 +1301,7 @@
   - type: Sprite
     netsync: false
     state: icon
-    sprite: /Uploaded/base/rsi/Textures/Gear/medicalpounch.rsi
+    sprite: /Andromeda/no_mad/Gear/medicalpounch.rsi
   - type: Clothing
     slots:
       - Pocket
@@ -1336,7 +1336,7 @@
   - type: Sprite
     netsync: false
     state: icon
-    sprite: /Uploaded/base/rsi/Textures/Gear/pistolpounch.rsi
+    sprite: /Andromeda/no_mad/Gear/pistolpounch.rsi
   - type: Clothing
     slots:
       - Pocket
@@ -1357,7 +1357,7 @@
   - type: Sprite
     netsync: false
     state: icon
-    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunpounch.rsi
+    sprite: /Andromeda/no_mad/Gear/shotgunpounch.rsi
   - type: Clothing
     slots:
       - Pocket
@@ -1376,9 +1376,9 @@
   description: A tactical assault belt.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Gear/ammobelt.rsi
+    sprite: /Andromeda/no_mad/Gear/ammobelt.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Gear/ammobelt.rsi
+    sprite: /Andromeda/no_mad/Gear/ammobelt.rsi
   - type: Storage
     capacity: 80
     whitelist:
@@ -1394,9 +1394,9 @@
   description: A tactical assault belt.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Gear/generalbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/generalbelt.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Gear/generalbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/generalbelt.rsi
   - type: Storage
     capacity: 60
 
@@ -1407,9 +1407,9 @@
   description: Can hold various medical equipment.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Gear/medicalbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/medicalbelt.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Gear/medicalbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/medicalbelt.rsi
   - type: Storage
     capacity: 80
     whitelist:
@@ -1437,9 +1437,9 @@
   description: Can hold various pistol equipment.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Gear/pistolbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/pistolbelt.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Gear/pistolbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/pistolbelt.rsi
   - type: Storage
     capacity: 60
     whitelist:
@@ -1455,9 +1455,9 @@
   description: A tactical assault belt.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/shotgunbelt.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Gear/shotgunbelt.rsi
+    sprite: /Andromeda/no_mad/Gear/shotgunbelt.rsi
   - type: Storage
     capacity: 80
     whitelist:
@@ -2056,7 +2056,7 @@
     size: 2000
   - type: Clothing
     slots: BACK
-    sprite: /Uploaded/base/rsi/Textures/Backpack/backpack.rsi
+    sprite: /Andromeda/no_mad/Backpack/backpack.rsi
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -2070,7 +2070,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/backpack.rsi
+    sprite: /Andromeda/no_mad/Backpack/backpack.rsi
     layers:
     - state: mag-0
       map: ["enum.GunVisualLayers.Base"]
@@ -2099,7 +2099,7 @@
   description: A Earth Government standard issue laser rifle, use by army and police.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-R/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2107,9 +2107,9 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-R/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -44
@@ -2122,7 +2122,7 @@
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-R/shot.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -2144,7 +2144,7 @@
   description: A Earth Government standard issue laser machine gun, use by army. Heavy and deadly.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-MG/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2152,9 +2152,9 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-MG/tiny.rsi
     size: 90
   - type: GunWieldBonus
     minAngle: -40
@@ -2167,7 +2167,7 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-R/shot.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -2189,7 +2189,7 @@
   description: A Earth Government standard issue laser carbine, use by army and police. Thanks to the short barrel it has better maneuverability in narrow spaces.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-C/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2197,9 +2197,9 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-C/tiny.rsi
     size: 30
   - type: GunWieldBonus
     minAngle: -6
@@ -2213,7 +2213,7 @@
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-C/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-C/shot.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -2236,9 +2236,9 @@
   components:
   - type: Gun
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-P/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-P/shot.ogg
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-P.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-P.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2262,28 +2262,28 @@
   description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/madeuce/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
   - type: Gun
     fireRate: 12
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/LMGs/m60.ogg
+      path: /Andromeda/no_mad/Guns64/LMGs/m60.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineHeavyRifleMaDeuse
-        insertSound: /Uploaded/base/ogg/Guns64/LMGs/m60_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/m60_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/LMGs/m60_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/LMGs/m60_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2346,7 +2346,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMateriel
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2361,23 +2361,23 @@
   description: The ACP-14, produced by Earth Armories. A reliable sidearm that loads 9x19mm.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/acp14/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/acp14/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/acp14/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/acp14/tiny.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/acp14_shot.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/acp14_shot.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistol
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/acp14_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns/MagOut/pistol_magout.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/acp14_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
@@ -2407,24 +2407,24 @@
   description: The VP-78, produced by Markus Henday Inc. A massive, formidable automatic handgun chambered in 9x19mm rounds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/vp78/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/vp78/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/vp78/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/vp78/tiny.rsi
   - type: Gun
     selectedMode: FullAuto
     availableModes:
       - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_shot.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/vp70_shot.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/vp70_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolHighCapacity
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/vp70_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Pistols/vp70_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2454,24 +2454,24 @@
   description: A magnum chambered in .50AE that comes with a serious kick. This one is engraved, "Peace through superior firepower".
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/deagle/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/deagle/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/deagle/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/deagle/tiny.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/deagle.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/deagle.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Pistols/deagle_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/deagle_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineMagnumPistol
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/deagle_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/deagle_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/deagle_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Pistols/deagle_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2528,7 +2528,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Magnum/magnum_pistol_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Magnum/magnum_pistol_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2548,21 +2548,21 @@
   description: A popular police firearm in the modern day. Chambered in 9x19mm.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/glock22/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/glock22/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/glock22/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/glock22/tiny.rsi
   - type: Gun
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/beretta_shot.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/beretta_shot.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Pistols/beretta_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/beretta_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistol
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/beretta_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/beretta_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/beretta_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Pistols/beretta_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2592,21 +2592,21 @@
   description: An uncommon handgun used for self-defense but it is often used by terrorist organizations.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/hi_power_br/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/hi_power_br/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/hi_power_br/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/hi_power_br/tiny.rsi
   - type: Gun
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_shot.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/vp70_shot.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Pistols/vp70_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/vp70_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistol
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/vp70_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/vp70_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Pistols/vp70_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2636,22 +2636,22 @@
   description: A popular self-defense firearm in the modern day. Chambered in 9x19mm.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/service_pistol23/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/service_pistol23/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Pistols/service_pistol23/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Pistols/service_pistol23/tiny.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Pistols/colt.ogg
+      path: /Andromeda/no_mad/Guns64/Pistols/colt.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistol
-        insertSound: /Uploaded/base/ogg/Guns64/Pistols/colt_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Pistols/colt_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Pistols/colt_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Pistols/colt_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2681,16 +2681,16 @@
   description: An iconic weapon of war. Uses 7.62x39 ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/akms/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/akms/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/akms/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/akms/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -2699,15 +2699,15 @@
     maxAngle: 45
     fireRate: 5
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/ak47.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ak47_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2739,7 +2739,7 @@
   description: An iconic weapon of war. Uses 7.62x39 ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/aksu.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/aksu.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -2753,15 +2753,15 @@
     maxAngle: 45
     fireRate: 5
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/ak47.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ak47_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2793,16 +2793,16 @@
   description: The H&K AR-18 carbine is one of the standard rifles used by EarthGov army. It's commonly used by people who prefer greater mobility in combat, like scouts and other light infantry.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/ar18/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/ar18/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -2810,16 +2810,16 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/ar18.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/ar18.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m41a_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ar18_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ar18_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2851,16 +2851,16 @@
   description: The H&K G-36 assault rifle used to be the EarthGov army standard issue rifle.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/g36/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/g36/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/g36/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/g36/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -2868,16 +2868,16 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/g36.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/g36.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m41a_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ar18_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ar18_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ar18_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2909,16 +2909,16 @@
   description: The M-28 assault rifle used to be the EarthGov army standard issue rifle.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m28/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m28/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m28/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m28/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -2926,16 +2926,16 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m28.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m28.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m28_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m28_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m28_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m28_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/m28_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/m28_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -2967,16 +2967,16 @@
   description: A certified classic, this design was hailed as the first successful assault rifle concept, generally termed a 'storm rifle'. Has a higher than usual firerate for it's class.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/stg44/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/stg44/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -2985,15 +2985,15 @@
     maxAngle: 45
     fireRate: 8
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/ak47.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ak47_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3025,16 +3025,16 @@
   description: A light, versatile assault rifle. The 4th generation in the M16 platform, this FN variant has added automatic fire selection and retains relevance among mercenaries and militias thanks to its high customizability. it is incredibly good at rapid burst fire, but must be paced correctly."
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m16/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m16/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/m16/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/m16/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -3042,14 +3042,14 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m16.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m16.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m16_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m16_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/m16_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/m16_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3081,16 +3081,16 @@
   description: A light, versatile assault rifle."
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/famas/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/famas/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/famas/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/famas/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -3098,14 +3098,14 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/famas.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/famas.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m16_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m16_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/m16_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/m16_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3137,16 +3137,16 @@
   description: The RivArms SMG-5 submachinegun, an update to a classic design. A light firearm capable of effective one-handed use that is ideal for close to medium range engagements.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp5/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp5/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -28
@@ -3155,14 +3155,14 @@
     maxAngle: 45
     fireRate: 6
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/mp5.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/mp5.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/mp5_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/mp5_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/mp5_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/mp5_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3190,16 +3190,16 @@
   description: An archaic design going back hundreds of years, the SMG-7 was common in its day. Today it sees limited use as cheap computer-printed replicas or family heirlooms, though it somehow got into the hands of colonial rebels.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp7/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp7/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -28
@@ -3208,14 +3208,14 @@
     maxAngle: 45
     fireRate: 8
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/mp7.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/mp7.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/smg_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3243,16 +3243,16 @@
   description: The Vector used by police special force.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/vector/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/vector/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/vector/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/vector/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -28
@@ -3261,14 +3261,14 @@
     maxAngle: 45
     fireRate: 10
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/vector_fire.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/vector_fire.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/smg_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3296,7 +3296,7 @@
   description: A robust, 20th century firearm that's a combination of pistol and submachinegun.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/skorpion.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/skorpion.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3307,7 +3307,7 @@
     maxAngle: 56
     fireRate: 7
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/skorpion.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/skorpion.ogg
   - type: Clothing
     slots:
       - Pocket
@@ -3318,8 +3318,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/skorpion_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/skorpion_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/skorpion_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/skorpion_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3345,16 +3345,16 @@
   description: The MP-38 is a old and cheap machinepistol used by rebels, it presents solid performance at longer ranges in a compact package, although suffers due to a slow rate of fire for its class.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp38/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/mp38/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -28
@@ -3363,14 +3363,14 @@
     maxAngle: 45
     fireRate: 5
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/mp38.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/mp38.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolBoxSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/mp38_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/mp38_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/mp38_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/mp38_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3414,7 +3414,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_boxmag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Pistol/submachinegun_boxmag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3450,7 +3450,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_drummag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Pistol/submachinegun_drummag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3486,7 +3486,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Pistol/submachinegun_top_moumted_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Pistol/submachinegun_top_moumted_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3506,7 +3506,7 @@
   description: A cheap, reliable design and manufacture make this ubiquitous submachinegun useful despite the age. Put the fire selector to full auto for maximum firepower. Use two if you really want to go ham.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/uzi.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/uzi.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3519,7 +3519,7 @@
     angleDecay: 36
     fireRate: 12
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/uzi.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/uzi.ogg
   - type: Clothing
     slots:
       - Pocket
@@ -3530,8 +3530,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolBoxSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/uzi_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/uzi_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/uzi_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/uzi_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3557,16 +3557,16 @@
   description: The PPSh-41 or \"Papasha\" is a USSP model submachinegun that many terrorist organizations had copied all over the years. Despite its small-hitting firepower, its reliablity, extreme longevity and high firepower rate proves useful for the hands of the user.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/ppsh41/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/ppsh41/tiny.rsi
   - type: GunWieldBonus
     minAngle: -22
     maxAngle: -28
@@ -3575,16 +3575,16 @@
     maxAngle: 45
     fireRate: 9
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/ppsh.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/ppsh.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/SMGs/ppsh_empty.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/ppsh_empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolDrumSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/ppsh_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/ppsh_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/ppsh_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/ppsh_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3612,7 +3612,7 @@
   description: The P-90 is the EarthGov standard issue SMG. Its known for it's compact size and ease of use inside the field. It's usually carried by troops who want a lightweight firearm to rush with.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/SMGs/p90.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/SMGs/p90.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3626,14 +3626,14 @@
     maxAngle: 45
     fireRate: 9
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/SMGs/p90.ogg
+      path: /Andromeda/no_mad/Guns64/SMGs/p90.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolTopSubMachineGun
-        insertSound: /Uploaded/base/ogg/Guns64/SMGs/smg_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/SMGs/smg_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/SMGs/smg_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/SMGs/smg_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3661,7 +3661,7 @@
   description: A Earth Government heavy sniper rifle for a extended combat situation.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-S/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3669,9 +3669,9 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EG-S/tiny.rsi
   - type: GunRequiresWield
   - type: GunWieldBonus
     minAngle: -93
@@ -3684,7 +3684,7 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-R/shot.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -3706,7 +3706,7 @@
   description: A Earth Government Experemental x-ray weapon, it looks like it emits radiation.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EGE-XR/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3714,9 +3714,9 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Battery/EGE-XR/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -44
@@ -3728,7 +3728,7 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/EG-R/shot.ogg
+      path: /Andromeda/no_mad/Guns64/EG-R/shot.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 6
@@ -3750,11 +3750,11 @@
   description: The Earth Armories XM1014 combat shotgun is a semi automatic shotgun used by breachers and pointmen within the Earth Army squads. Uses .50 shotgun shells.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/sh-39/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/sh-39/tiny.rsi
   - type: BallisticAmmoProvider
     capacity: 10
   - type: Wieldable
@@ -3762,7 +3762,7 @@
   - type: GunRequiresWield
   - type: Gun
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Shotguns/sh39.ogg
+      path: /Andromeda/no_mad/Guns64/Shotguns/sh39.ogg
 
 - type: entity
   name: Zauer
@@ -3772,16 +3772,16 @@
   description: It's a magazine-fed shotgun designed for close quarters combat. Uses .50 shotgun shells.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/zauer/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/zauer/tiny.rsi
   - type: Wieldable
     wieldTime: 1.3
   - type: GunRequiresWield
@@ -3794,16 +3794,16 @@
   description: The San Cristo Arms BR-64 is the Marine Corps main battle rifle. It is known for its consistent ability to perform well at most ranges, and close range stopping power. It is mostly used by people who prefer a bigger round than the average.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/br-64/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Rifles/br-64/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -43
@@ -3812,11 +3812,11 @@
     minAngle: 24
     maxAngle: 45
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/T64.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/T64.ogg
       params:
         volume: -7
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Rifles/m41a_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/m41a_empty.ogg
   - type: MagazineAmmoProvider
   - type: ChamberMagazineAmmoProvider
     autoEject: true
@@ -3826,8 +3826,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineHeavyRifleBR64
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/m41a_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/m41a_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/m41a_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/m41a_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -3868,10 +3868,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/m16_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -3897,7 +3897,7 @@
     proto: BulletRifle
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 20combat #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -3942,14 +3942,14 @@
   description: The GL-70 is the standard grenade launcher used by the Earth Army for area denial and big explosions.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/gl-64/big.rsi
     layers:
       - state: icon
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/gl-64/tiny.rsi
   - type: AmmoCounter
   - type: Gun
     fireRate: 1
@@ -3985,16 +3985,16 @@
   description: The RL-5 is the primary anti-armor used around the galaxy. Used to take out light-tanks and enemy structures, the RL-5 rocket launcher is a dangerous weapon with a variety of combat uses.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/rpg/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Launchers/rpg/tiny.rsi
   - type: Gun
     fireRate: 0.5
     soundGunshot:
@@ -4024,11 +4024,11 @@
   description: The iconic sidearm of the dreaded death squads. Uses .45 magnum ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Revolver/mateba.rsi/big.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Revolver/mateba.rsi/tiny.rsi
   - type: Gun
     fireRate: 3
     soundGunshot:
@@ -4042,11 +4042,11 @@
   description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/big.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Gun
     fireRate: 0.8
   - type: Wieldable
@@ -4061,17 +4061,17 @@
   description: The Carlford-1 is a remastered classic made by Carlford Armories, made to fit in the modern day. Most of the noticeable differences are minor rail modifications, other than that. It is a faithful recreation with the trademark ping sound and all.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/garand/big.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/garand/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/garand/tiny.rsi
   - type: Gun
     fireRate: 0.8
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Snipers/garand.ogg
+      path: /Andromeda/no_mad/Guns64/Snipers/garand.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Snipers/sniper_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Snipers/sniper_empty.ogg
   - type: Wieldable
     wieldTime: 0.8
   - type: GunRequiresWield
@@ -4084,11 +4084,11 @@
   description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/big.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Gun
     minAngle: 24
     maxAngle: 45
@@ -4104,11 +4104,11 @@
   description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/big.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
   - type: Gun
     fireRate: 0.8
   - type: Wieldable
@@ -4122,16 +4122,16 @@
   description: A semiautomatic sniper rifle, famed for it's marksmanship, and is built from the ground up for it.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/dragunov/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
   - type: GunWieldBonus
     minAngle: -23
     maxAngle: -44
@@ -4143,20 +4143,20 @@
     maxAngle: 45
     fireRate: 3
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Snipers/svd.ogg
+      path: /Andromeda/no_mad/Guns64/Snipers/svd.ogg
       params:
         volume: -5
   - type: ChamberMagazineAmmoProvider
   - type: BallisticAmmoProvider
     soundRack:
-      path: /Uploaded/base/ogg/Guns64/Snipers/svd_cocked.ogg
+      path: /Andromeda/no_mad/Guns64/Snipers/svd_cocked.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifleLightSniper
-        insertSound: /Uploaded/base/ogg/Guns64/Snipers/svd_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Snipers/svd_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Snipers/svd_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Snipers/svd_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -4204,10 +4204,10 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Rifle/svd_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -4233,7 +4233,7 @@
     proto: BulletRifle
   - type: Sprite
     netsync: false
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: /Andromeda/no_mad/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
     - state: 30combat #corvax-resprite
       map: ["enum.AmmoVisualLayers.Base"]
@@ -4278,16 +4278,16 @@
   description: A cheap and robust machinegun, sometimes better known as an 'RPD'. Despite lacking attachment points beyond its underbarrel, remains a popular product on the black market with its cheap cost, high capacity and higher than usual caliber rounds.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/rpd/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/rpd/tiny.rsi
   - type: GunWieldBonus
     minAngle: -30
     maxAngle: -50
@@ -4296,15 +4296,15 @@
     maxAngle: 55
     fireRate: 5
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Rifles/ak47.ogg
+      path: /Andromeda/no_mad/Guns64/Rifles/ak47.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRiflePkBox
-        insertSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Rifles/ak47_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Rifles/ak47_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Rifles/ak47_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -4336,16 +4336,16 @@
   description: The Raummetall MG-60 general purpose machinegun is the EarthGov Army's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/t42/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/t42/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/t42/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/t42/tiny.rsi
   - type: GunWieldBonus
     minAngle: -30
     maxAngle: -50
@@ -4354,7 +4354,7 @@
     maxAngle: 55
     fireRate: 5
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/LMGs/t42.ogg
+      path: /Andromeda/no_mad/Guns64/LMGs/t42.ogg
       params:
         volume: -3
   - type: ChamberMagazineAmmoProvider
@@ -4363,8 +4363,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightMachineGunDrum
-        insertSound: /Uploaded/base/ogg/Guns64/LMGs/t42_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/t42_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/LMGs/t42_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/LMGs/t42_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -4397,28 +4397,28 @@
   description: The M-41 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/v41/big.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/v41/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/v41/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/v41/tiny.rsi
   - type: Gun
     fireRate: 8
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/LMGs/m60.ogg
+      path: /Andromeda/no_mad/Guns64/LMGs/m60.ogg
   - type: ChamberMagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineHeavyRifleV41
-        insertSound: /Uploaded/base/ogg/Guns64/LMGs/m60_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/LMGs/m60_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/LMGs/m60_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/LMGs/m60_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -4455,7 +4455,7 @@
       tags:
         - CartridgeRifle
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Heavy/v41.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -4486,7 +4486,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Magazines/Heavy/mg60.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Magazines/Heavy/mg60.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -4506,11 +4506,11 @@
   description: The Earth Armories Spas-12 is the shotgun used by the EarthGov Marine Corps. It's used as a close quarters tool when someone wants something more suited for close range than most people, or as an odd sidearm on your back for emergencies. Uses 50 gauge shells.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/spas-16/big.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Shotguns/spas-16/tiny.rsi
   - type: BallisticAmmoProvider
     capacity: 13
   - type: Wieldable
@@ -4519,7 +4519,7 @@
   - type: Gun
     fireRate: 1
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Shotguns/t35.ogg
+      path: /Andromeda/no_mad/Guns64/Shotguns/t35.ogg
 
 - type: entity
   name: MG-100 Vindicator Minigun
@@ -4529,10 +4529,10 @@
   description: A six barreled rotary machine gun, The ultimate in man-portable firepower, capable of laying down high velocity armor piercing rounds this thing will no doubt pack a punch.. If you don't kill all your friends with it, you can use the stablizing system of the Powerpack to fire aimed fire, but you'll move incredibly slowly.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/minigun/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/minigun/big.rsi
     state: icon
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
     size: 900
   - type: Gun
     minAngle: 1
@@ -4542,7 +4542,7 @@
     availableModes:
       - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/LMGs/minigunSG.ogg
+      path: /Andromeda/no_mad/Guns64/LMGs/minigunSG.ogg
   - type: ClothingSlotAmmoProvider
     targetSlot: BACK
     providerWhitelist:
@@ -4561,10 +4561,10 @@
   description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
     state: base
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
     size: 40
   - type: Gun
     projectileSpeed: 5
@@ -4575,9 +4575,9 @@
     availableModes:
       - FullAuto
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower.ogg
+      path: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower_empty.ogg
   - type: ClothingSlotAmmoProvider
     targetSlot: BACK
     providerWhitelist:
@@ -4603,7 +4603,7 @@
     size: 90
   - type: Clothing
     slots: BACK
-    sprite: /Uploaded/base/rsi/Textures/Backpack/flamepack.rsi
+    sprite: /Andromeda/no_mad/Backpack/flamepack.rsi
   - type: BallisticAmmoProvider
     proto: FireThrowerBall
     mayTransfer: true
@@ -4615,7 +4615,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Backpack/flamepack.rsi
+    sprite: /Andromeda/no_mad/Backpack/flamepack.rsi
     layers:
     - state: mag-0
       map: ["enum.GunVisualLayers.Base"]
@@ -4635,25 +4635,25 @@
   description: Nomadov's jet flamethrower, an amazing thing, on the weapon there is an inscription "Death to the enemies of mankind!"
   components:
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
   - type: Item
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
   - type: Gun
     projectileSpeed: 5
     fireRate: 10
     maxAngle: 60
     minAngle: 60
     soundGunshot:
-      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower.ogg
+      path: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower.ogg
     soundEmpty:
-      path: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_empty.ogg
+      path: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower_empty.ogg
   - type: AmmoCounter
   - type: Appearance
   - type: ItemSlots
@@ -4661,8 +4661,8 @@
       gun_magazine:
         name: Magazine
         startingItem: FuelTankFirethrower
-        insertSound: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_reload.ogg
-        ejectSound: /Uploaded/base/ogg/Guns64/Flamethrowers/flamethrower_unload.ogg
+        insertSound: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower_reload.ogg
+        ejectSound: /Andromeda/no_mad/Guns64/Flamethrowers/flamethrower_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -4738,9 +4738,9 @@
       ballistic-ammo: !type:Container
   - type: Item
     size: 10
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/tank.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/tank.rsi
   - type: Sprite
-    sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/tank.rsi
+    sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/tank.rsi
     state: base
     netsync: false
   - type: Appearance
@@ -4814,7 +4814,7 @@
   - type: Physics
   - type: Sprite
     layers:
-    - sprite: /Uploaded/base/rsi/Textures/Weapons/Gunsx64/Flamethrowers/flame.rsi
+    - sprite: /Andromeda/no_mad/Weapons/Gunsx64/Flamethrowers/flame.rsi
       state: fire
       shader: unshaded
       map: [ "unshaded" ]
