@@ -1,0 +1,460 @@
+#------------------------------------
+  
+# Leader
+- type: job
+  id: ERTLeaderV2.1
+  name: job-name-ertleader
+  playTimeTracker: JobERTLeader
+  setPreference: false
+  startingGear: ERTLeaderGearEVAV2.1
+  icon: "Nanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+
+- type: startingGear
+  id: ERTLeaderGearEVAV2.1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeaderFilledV2.1
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasERTV2.1
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesSpetsnazcombat
+    outerClothing: ClothingOuterHardsuitERTLeader
+    suitstorage: OxygenTankFilled
+    head: ClothingHeadHatERTLeaderBeret
+    neck: ClothingNeckMantleERTLeader
+    id: OBRGavnaLeaderIDCard
+    ears: ClothingHeadsetCentComCCMTFTHT9
+    belt: ClothingBeltSecurityFilled
+    pocket1: CombatKnifeSpetsnaz
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackERTLeader
+  id: ClothingBackpackERTLeaderFilledV2.1
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: BoxFlare
+        - id: BattleMedipen
+        - id: BattleMedipen
+        - id: WeaponDisabler
+        - id: WeaponPistolACP14
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: WeaponRifleG36
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: BoxHandcuff
+
+
+# Engineer
+- type: job
+  id: ERTEngineerV2.1
+  name: job-name-ertengineer
+  playTimeTracker: JobERTEngineer
+  setPreference: false
+  startingGear: ERTEngineerGearEVAV2.1
+  icon: "Nanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+ 
+
+- type: startingGear
+  id: ERTEngineerGearEVAV2.1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTEngineer
+    back: ClothingBackpackERTEngineerFilledV2.1
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasERTV2.1
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesColorYellow
+    outerClothing: ClothingOuterHardsuitERTEngineerReal
+    suitstorage: OxygenTankFilled
+    id: OBRGavnaEngineerIDCard
+    ears: ClothingHeadsetCentComCCMTFTHT9
+    belt: ClothingBeltChiefEngineerFilled
+    pocket1: CombatKnifeSpetsnaz
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackERTEngineer
+  id: ClothingBackpackERTEngineerFilledV2.1
+  components:
+    - type: Storage
+      capacity: 400
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: BoxFlare
+        - id: BattleMedipen
+        - id: BattleMedipen
+        - id: trayScanner
+        - id: WeaponPistolACP14
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: WeaponShotgun39
+        - id: BoxLethalshot
+          amount: 4
+        - id: C4
+        - id: C4
+        - id: C4
+        - id: C4
+        - id: RCD
+        - id: RCDAmmo
+        - id: RCDAmmo
+        - id: SheetSteel
+          amount: 2
+        - id: SheetPlasteel
+          amount: 2
+        - id: SheetRPGlass
+          amount: 2
+
+
+# Security
+- type: job
+  id: ERTSecurityV2.1
+  name: job-name-ertsecurity
+  playTimeTracker: JobERTSecurity
+  setPreference: false
+  startingGear: ERTSecurityGearEVAV2.1
+  icon: "Nanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+
+
+- type: startingGear
+  id: ERTSecurityGearEVAV2.1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    back: ClothingBackpackERTSecurityFilledV2.1
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasERTV2.1
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTSecurity
+    suitstorage: OxygenTankFilled
+    id: OBRGavnaIDCard
+    ears: ClothingHeadsetCentComCCMTFTHT9
+    belt: ClothingBeltSecurityFilled
+    pocket1: CombatKnifeSpetsnaz
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackERTSecurity
+  id: ClothingBackpackERTSecurityFilledV2.1
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: BoxFlare
+        - id: BattleMedipen
+        - id: BattleMedipen
+        - id: WeaponDisabler
+        - id: WeaponPistolACP14
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: WeaponRifleG36
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: BoxHandcuff
+
+
+# Medical
+- type: job
+  id: ERTMedicalV2.1
+  name: job-name-ertmedic
+  playTimeTracker: JobERTMedical
+  setPreference: false
+  startingGear: ERTMedicalGearEVAV2.1
+  icon: "Nanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+
+
+- type: startingGear
+  id: ERTMedicalGearEVAV2.1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTMedic
+    back: ClothingBackpackERTMedicalFilledV2.1
+    shoes: ClothingShoesBootsNedoSpetsnaz
+    mask: ClothingMaskGasERTV2.1
+    eyes: ClothingEyesHudMedical
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTMedical
+    suitstorage: OxygenTankFilled
+    id: OBRGavnaMedicIDCard
+    ears: ClothingHeadsetCentComCCMTFTHT9
+    belt: ClothingBeltMedicalFilled
+    pocket1: HandheldHealthAnalyzer
+    pocket2: CombatKnifeSpetsnaz
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackERTMedical
+  id: ClothingBackpackERTMedicalFilledV2.1
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+        - id: BoxFlare
+        - id: BattleMedipen
+        - id: BattleMedipen
+        - id: WeaponPistolACP14
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: WeaponRifleG36
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: MagazineRifle
+        - id: MedkitFilled
+        - id: SyringeInaprovaline
+          amount: 2
+        - id: EpinephrineChemistryBottle
+          amount: 2
+        - id: OmnizineChemistryBottle
+        - id: Hypospray
+
+
+
+#Janitor
+- type: job
+  id: ERTJunitorV2.1
+  name: job-name-ertjanitor
+  playTimeTracker: JobERTJanitor
+  setPreference: false
+  startingGear: ERTJanitorGearEVAV2.1
+  icon: "Nanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+
+
+- type: startingGear
+  id: ERTJanitorGearEVAV2.1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor
+    back: ClothingBackpackERTJanitorFilledV2.1
+    shoes: ClothingShoesBootsSpetsnaz
+    mask: ClothingMaskGasERTV2.1
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTJanitor
+    suitstorage: OxygenTankFilled
+    id: OBRGavnaJunitorIDCard
+    ears: ClothingHeadsetCentComCCMTFTHT9
+    belt: ClothingBeltJanitorFilled
+    pocket1: CombatKnifeSpetsnaz
+    pocket2: TrashBagExtended
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackERTJanitor
+  id: ClothingBackpackERTJanitorFilledV2.1
+  components:
+    - type: StorageFill
+      contents:
+        - id: BattleMedipen
+        - id: BattleMedipen
+        - id: WeaponPistolACP14
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: MagazinePistol
+        - id: MedkitFilled
+        - id: BoxLightMixed
+        - id: BoxLightMixed
+        - id: Soap
+
+
+#------------------------------------
+   
+- type: entity
+  name:  Theta - 9 лидер ОБР
+  parent: MobHuman
+  suffix: МТФ
+  id: MobHumanERTLeaderEVAV2.1
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ertleadereva
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ОБР лидер
+    description: Командир отряда Theta - 9, великий воин, герой НТ, знаменитый полководец, мог бы им быть если бы не пошел в Theta - 9.
+  - type: Loadout
+    prototypes: [ERTLeaderGearEVAV2.1]
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesSGTs
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+
+
+# ERT Engineer
+- type: entity
+  name: Theta - 9 инженер ОБР
+  suffix: МТФ
+  parent: MobHuman
+  id: MobHumanERTEngineerEVAV2.1
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ertengineereva
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ОБР инженер
+    description: Инженер отряда Theta - 9, может и не очень хороший инженер, но дело свое знает, наверное.
+  - type: Loadout
+    prototypes: [ERTEngineerGearEVAV2.1]
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesCPLs
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+
+# ERT Security
+- type: entity
+  name: Theta - 9 офицер безопасности ОБР
+  suffix: МТФ
+  parent: MobHuman
+  id: MobHumanERTSecurityEVAV2.1
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ertsecurityeva
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ОБР офицер безопасности
+    description: Солдат или же охранник Theta - 9, прошедший небольшую подготовку и готовый стрелять во все что движеться, я бы не доверил ему даже водяной пистолетик.
+  - type: Loadout
+    prototypes: [ERTSecurityGearEVAV2.1]
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesPVTs
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+
+# ERT Medical
+- type: entity
+  name: Theta - 9 медик ОБР
+  parent: MobHuman
+  suffix: МТФ
+  id: MobHumanERTMedicalEVAV2.1
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ertmedicaleva
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ОБР медик
+    description: Медик отделения Theta - 9, был в медицинском институте, поэтому и взяли в качестве медика, но никого не волнует что он там был всего неделю.
+  - type: Loadout
+    prototypes: [ERTMedicalGearEVAV2.1]
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesCPLs
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+
+# ERT Junitor
+- type: entity
+  name: Theta - 9 уборщик ОБР
+  parent: MobHuman
+  suffix: МТФ
+  id: MobHumanERTJunitorEVAV2.1
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: ertjanitoreva
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: Metrocop
+    soundCooldownTime: 0.1
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: SoldierDeath
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ОБР уборщик
+    description: Уборщик отделения Theta - 9, эй! кто дал ему пистолет?!
+  - type: Loadout
+    prototypes: [ERTJanitorGearEVAV2.1]
+  - type: RandomMetadata
+    nameSegments: 
+    - NamesPVTs
+    - names_last_male
+  - type: RandomHumanoidAppearance
+    randomizeName: false

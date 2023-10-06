@@ -1,0 +1,156 @@
+- type: entity
+  parent: WeaponAKMSRifle
+  id: WeaponRifleAk
+  noSpawn: true
+
+- type: entity
+  parent: WeaponEarthGovXRay
+  id: WeaponXrayCannon
+  noSpawn: true
+
+- type: entity
+  parent: WeaponEarthGovLaserRifle
+  id: WeaponLaserCarbine
+  noSpawn: true
+
+- type: entity
+  parent: WeaponEarthGovLaserSniper
+  id: WeaponLaserCannon
+  noSpawn: true
+
+- type: entity
+  parent: WeaponRifleAR18
+  id: WeaponRifleLecter
+  noSpawn: true
+
+- type: entity
+  parent: WeaponSubMachineGunMP7
+  id: WeaponSubMachineGunAtreides
+  noSpawn: true
+
+- type: entity
+  parent: WeaponPistolHIB88M4
+  id: WeaponPistolViper
+  noSpawn: true
+
+- type: entity
+  parent: WeaponPistolACP14
+  id: WeaponPistolMk58
+  noSpawn: true
+
+- type: entity
+  parent: WeaponPistolG22
+  id: WeaponPistolMk58Nonlethal
+  noSpawn: true
+
+- type: entity
+  parent: WeaponSubMachineGunVectorSpecial
+  id: WeaponSubMachineGunDrozd
+  noSpawn: true
+
+- type: entity
+  parent: WeaponSubMachineGunMP5
+  id: WeaponSubMachineGunDrozdRubber
+  noSpawn: true
+
+- type: entity
+  parent: WeaponShotgun39
+  id: WeaponShotgunEnforcer
+  noSpawn: true
+
+- type: entity
+  parent: WeaponShotgun39
+  id: WeaponShotgunEnforcerRubber
+  noSpawn: true
+
+- type: entity
+  name: practice laser rifle
+  parent: BaseWeaponBattery
+  id: WeaponLaserCarbinePractice
+  description: This modified laser rifle fires harmless beams in the 40-watt range, for target practice.
+  components:
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaserPractice
+    fireCost: 62.5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+
+- type: entity
+  id: CrateArmoryShotgun
+  parent: CrateWeaponSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponShotgun12
+        amount: 2
+      - id: BoxLethalshot
+        amount: 3
+
+- type: entity
+  id: CrateArmorySMG
+  parent: CrateWeaponSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunMP5
+        amount: 2
+      - id: MagazinePistolSubMachineGun
+        amount: 4
+
+- type: entity
+  id: CrateArmoryAssaultRifle
+  parent: CrateWeaponSecure
+  name: ящик штурмовых винтовок
+  description: Содержит две штурмовой винтовки и четыре магазина. Чтобы открыть необходим доступ уровня Оружейной.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleM16A4
+        amount: 2
+      - id: MagazineRifle
+        amount: 4
+
+- type: entity
+  id: CrateArmoryAssaultRifle
+  parent: CrateWeaponSecure
+  name: ящик штурмовых винтовок
+  description: Содержит две штурмовой винтовки и четыре магазина. Чтобы открыть необходим доступ уровня Оружейной.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunMP5
+        amount: 2
+      - id: MagazinePistolSubMachineGun
+        amount: 4
+
+- type: entity
+  id: CrateArmoryLaser
+  parent: CrateWeaponSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponEarthGovLaserCarbine
+        amount: 3
+
+- type: entity
+  id: CrateArmoryPistols
+  parent: CrateWeaponSecure
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolG22
+      amount: 2
+    - id: MagazinePistol
+      amount: 4

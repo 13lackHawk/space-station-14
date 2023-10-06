@@ -18,14 +18,14 @@
   parent: JobIcon
   id: JobIconNT
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: NT
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconNanotrasen2
   icon:
-    sprite: /Uploaded/base/rsi/Textures/Misc/jobicons.rsi
+    sprite: /Andromeda/no_mad/Misc/jobicons.rsi
     state: Nanotrasen
 
 - type: startingGear

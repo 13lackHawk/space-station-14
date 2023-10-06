@@ -1,0 +1,153 @@
+- type: entity
+  noSpawn: true
+  name: Культист
+  parent: MobHuman
+  suffix: Cult
+  id: MobHumanCultGuy
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Культист
+    description: Мужичок который вступил в культ. 
+  - type: Loadout
+    prototypes: [CultGuy]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+- type: entity
+  noSpawn: true
+  name: АКультист
+  parent: MobHuman
+  suffix: Cult
+  id: MobHumanACultistGuy
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Культист
+    description: Мужичок который вступил в культ. 
+  - type: Loadout
+    prototypes: [ACultistGuy]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+- type: entity
+  noSpawn: true
+  name: Аколит
+  parent: MobHuman
+  suffix: Cult
+  id: MobHumanAcolitGuy
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Аколит
+    description: До мозгокостей предан культу. 
+  - type: Loadout
+    prototypes: [AcolitGuy]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+#--------------------------------------------------
+
+- type: entity
+  parent: BaseItem
+  id: ReinforcementRadioCult
+  name: маяк культа
+  suffix: Культист
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanCultGuy
+    name: Культист
+    description: Мужичок который вступил в культ. 
+  - type: EmitSoundOnUse
+    sound: /Audio/Misc/emergency_meeting.ogg
+  - type: ItemCooldown
+  - type: UseDelay
+    delay: 5
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: beacon
+
+- type: entity
+  parent: ReinforcementRadioCult
+  id: ReinforcementACultistGuy
+  name: маяк культа
+  suffix: АКультист
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanACultistGuy
+    name: Культист
+    description: Мужичок который вступил в культ. 
+
+- type: entity
+  parent: ReinforcementRadioCult
+  id: ReinforcementAcolitGuyCult
+  name: маяк культа
+  suffix: Аколит
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanAcolitGuy
+    name: Аколит
+    description: До мозгокостей предан культу. 
+
+#--------------------------------------------------
+
+- type: startingGear
+  id: CultGuy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    shoes: ClothingShoesColorBlack
+    back: RitualDagger
+    outerClothing: ClothingOuterRobesCult
+    head: ClothingHeadHatHoodCulthood
+
+- type: startingGear
+  id: ACultistGuy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    shoes: ClothingShoesCult
+    back: EldritchBlade
+    outerClothing: ClothingOuterRobesCult
+    head: ClothingHeadHatHoodCulthood
+
+- type: startingGear
+  id: AcolitGuy
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    shoes: ClothingShoesCult
+    back: UnholyHalberd
+    outerClothing: ClothingOuterArmorCultSuper
+    head: ClothingHeadHelmetCultSuper
+
+- type: entity
+  parent: ClothingOuterArmorCult
+  id: ClothingOuterArmorCultSuper
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.10
+        Slash: 0.10
+        Piercing: 0.10
+        Heat: 0.10
+
+- type: entity
+  parent: ClothingHeadHelmetCult
+  id: ClothingHeadHelmetCultSuper
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.10
+        Slash: 0.10
+        Piercing: 0.10
+        Heat: 0.10

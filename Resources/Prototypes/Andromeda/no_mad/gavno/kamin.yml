@@ -1,0 +1,1164 @@
+- type: entity
+  id: KaminMicrowave
+  parent: KitchenMicrowave
+  name: камин
+  description: Очаг, в котором горит огонь. Уютно!
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Decoration/fireplace.rsi
+    layers:
+      - state: fireplace
+      - state: fireplace_fire4
+        shader: unshaded
+      - state: fireplace_glow
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.VisualState:
+        enum.MicrowaveVisualizerLayers.Base:
+          Idle:
+          Broken:
+          Cooking:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          Idle:
+          Broken:
+          Cooking:
+      enum.PowerDeviceVisuals.Powered:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          True:
+          False:
+  - type: PointLight
+    radius: 3
+    energy: 3
+    color: "#FF6F00"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: ApcPowerReceiver
+    powerLoad: 0
+    needsPower: False
+
+
+
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterWinterCoatBomber
+  name: куртка-бомбер
+  description: Толстая, поношенная кожаная куртка-бомбер периода Второй мировой войны.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/bomber.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/bomber.rsi
+
+
+
+
+- type: entity
+  name: факел из огненной смеси
+  parent: Torch
+  id: TorchSuper
+  description: Обычный факел, облитый смесью для розжига
+  components:
+    - type: ExpendableLight
+      spentName: expendable-light-burnt-torch-name
+      spentDesc: expendable-light-burnt-torch-desc
+      glowDuration: 500
+      fadeOutDuration: 4
+      iconStateSpent: torch_spent
+      turnOnBehaviourID: turn_on
+      fadeOutBehaviourID: fade_out
+      # Sounds legit nuff
+      litSound:
+        path: /Audio/Items/Flare/flare_on.ogg
+      loopedSound: /Audio/Items/Flare/flare_burn.ogg
+
+
+
+
+- type: entity
+  name: скальпель
+  id: ScalpelCool
+  parent: BaseKnife
+  description: Хирургический инструмент, используемый для выполнения надрезов в плоти.
+  components:
+  - type: Tag
+    tags:
+    - Knife
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    state: scalpel
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvival
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [SurvivalGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+- type: startingGear
+  id: SurvivalGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAerostatic
+    back: WeaponShotgunDoubleBarreled
+    shoes: ClothingShoesBootsWork
+    outerClothing: ClothingOuterWinterCoatBomber
+    pocket1: TorchSuper
+    pocket2: SurvivalKnife
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший грузчик
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalCargo
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [CargoTechGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+- type: startingGear
+  id: CargoTechGearSurvival
+  equipment:
+    head: ClothingHeadHatCargosoft
+    jumpsuit: ClothingUniformJumpsuitCargo
+    shoes: ClothingShoesColorBlack
+    id: CargoIDCard
+    pocket1: SurvivalKnife
+    pocket2: FlashlightLantern
+  innerclothingskirt: ClothingUniformJumpskirtCargo
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший медик
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalMedic
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [DoctorGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+- type: startingGear
+  id: DoctorGearSurvival
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatLab
+    id: MedicalIDCard
+    belt: ClothingBeltMedicalFilled
+    pocket1: FlashlightLantern
+    pocket2: ScalpelCool
+  innerclothingskirt: ClothingUniformJumpskirtMedicalDoctor
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший СБешник
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalSecurity
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [SecurityOfficerGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+- type: startingGear
+  id: SecurityOfficerGearSurvival
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSec
+    shoes: ClothingShoesBootsJack
+    outerClothing: ClothingOuterVestKevlar
+    id: SecurityIDCard
+    belt: ClothingBeltSecurityFilled
+    pocket1: FlashlightSeclite
+    pocket2: CombatKnife
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший Капитан
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalCaptain
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [CaptainGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+
+- type: startingGear
+  id: CaptainGearSurvival
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatCaptain
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    outerClothing: ClothingOuterArmorCaptainCarapace
+    belt: ClothingBeltSheathFilled
+    id: CaptainIDCard
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Выживший Инженер
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalEngineer
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [StationEngineerGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+
+
+- type: startingGear
+  id: StationEngineerGearSurvival
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+    jumpsuit: ClothingUniformJumpsuitEngineering
+    shoes: ClothingShoesBootsWork
+    outerClothing: ClothingOuterVestHazard
+    id: EngineeringIDCard
+    eyes: ClothingEyesGlassesMeson
+    belt: ClothingBeltUtilityFilled
+
+#--------------------------------------------------------------------
+
+- type: entity
+  name: Святой отец
+  suffix: Survival
+  parent: MobHuman
+  id: MobHumanSurvivalChaplain
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Выживший
+    description: Выживший на замершей планете.
+  - type: Loadout
+    prototypes: [ChaplainGearSurvival]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+- type: startingGear
+  id: ChaplainGearSurvival
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    shoes: ClothingShoesColorBlack
+    outerClothing: ClothingOuterHoodieChaplain
+
+- type: entity
+  name: ящерка
+  parent: MobLizard
+  id: MobLizardAngry
+  suffix: Злой
+  components:
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  name: мышь
+  parent: MobMouse
+  id: MobMouseAngry
+  suffix: Злой
+  components:
+  - type: CombatMode
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  name: змея
+  parent: MobSnake
+  id: MobSnakeAngry
+  suffix: Злой
+  components:
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  name: хомяк
+  parent: MobHamster
+  id: MobHamsterAngry
+  suffix: Злой
+  components:
+  - type: CombatMode
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  name: Mimic
+  id: MobMimicDoorWood
+  suffix: Злой
+  parent: MobMimic
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Doors/MineralDoors/wood_door.rsi
+    state: closed
+  - type: Icon
+    sprite: Structures/Doors/MineralDoors/wood_door.rsi
+    state: closed
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 5
+            max: 15
+
+- type: entity
+  name: Mimic
+  id: MobMimicWallWood
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Walls/wood.rsi
+    state: full
+  - type: Icon
+    sprite: Structures/Walls/wood.rsi
+    state: full
+
+- type: entity
+  name: энт
+  id: MobEnt
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree01
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree01
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 10
+
+- type: entity
+  name: энт
+  id: MobEnt2
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree02
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree02
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 10
+
+- type: entity
+  name: энт
+  id: MobEnt3
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree03
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree03
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 10
+
+- type: entity
+  name: энт
+  id: MobEnt4
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree04
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: tree04
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 10
+
+- type: entity
+  name: большой энт
+  id: MobEntBig
+  parent: MobMimicDoorWood
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge01
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge01
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/woodhit.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 10
+
+- type: entity
+  name: большой энт
+  id: MobEntBig2
+  parent: MobEntBig
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge02
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge02
+
+- type: entity
+  name: большой энт
+  id: MobEntBig3
+  parent: MobEntBig
+  description: Surprise. # When this gets a proper write this should use the object's actual description >:)
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge03
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+    state: treelarge03
+
+- type: entity
+  name: дрон материал
+  id: DroneSurvivalMaterial
+  parent: DroneSurvivalMetal
+  suffix: Злой
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 5
+          MaterialCloth1:
+            min: 2
+            max: 6
+          MaterialDurathread:
+            min: 1
+            max: 3
+
+- type: entity
+  name: дрон
+  id: DroneSurvivalFood
+  parent: DroneSurvivalMetal
+  suffix: Злой
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    netsync: false
+    layers:
+    - state: honkbot
+      sprite: Mobs/Silicon/Bots/honkbot.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 5
+            max: 10
+          FoodSnackNutribrick:
+            min: 1
+            max: 1
+          DrinkMREFlask:
+            min: 1
+            max: 1
+          FoodSnackMREBrownie:
+            min: 1
+            max: 5
+
+- type: entity
+  name: дрон
+  id: DroneSurvivalHeals
+  parent: DroneSurvivalMetal
+  suffix: Злой
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    netsync: false
+    layers:
+    - state: medibot
+      sprite: Mobs/Silicon/Bots/medibot.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 5
+            max: 15
+          Ointment:
+            min: 1
+            max: 5
+          Brutepack:
+            min: 1
+            max: 5
+
+- type: entity
+  name: дрон
+  id: DroneSurvivalMetal
+  parent: PlayerSiliconBase
+  suffix: Злой
+  components:
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 5
+  - type: TypingIndicator
+    proto: robot
+  - type: TTS
+    voice: Glados
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: CombatMode
+  - type: HTN
+    rootTask: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - Zombie
+  - type: MobMover
+  - type: InputMover
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Dead
+  - type: Flashable
+  - type: NoSlip
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+      50: 0.5
+  - type: Temperature
+    heatDamageThreshold: 5000
+    currentTemperature: 310.15
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 1 #per second, scales with temperature & other constants
+  - type: Sprite
+    drawdepth: SmallMobs
+    netsync: false
+    layers:
+    - state: drone
+      sprite: Mobs/Silicon/drone.rsi
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.35
+      density: 50
+      mask:
+      - SmallMobMask
+      layer:
+      - SmallMobLayer
+  - type: Appearance
+  - type: Repairable
+    fuelcost: 15
+    doAfterDelay: 8
+  - type: Strippable
+  - type: Tag
+    tags:
+      - ShoesRequiredStepTriggerImmune
+      - CannotSuicide
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 5
+            max: 15
+  - type: RandomMetadata
+    nameSegments:
+    - AIDroneNumberFirst
+    - AIDroneNumber
+    - AIDroneNumberLaster
+    - AIDroneNumberLaster
+    - AIDroneNumberLaster
+
+- type: entity
+  name: onestar mecha
+  id: MobOnestarAngry
+  parent: DroneSurvivalMetal
+  components:
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 20
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 2
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: Sprite
+    drawdepth: Mobs
+    netsync: false
+    layers:
+    - state: onestar_boss
+      sprite: Mobs/Silicon/onestar.rsi
+    - state: onestar_boss_screen
+      sprite: Mobs/Silicon/onestar.rsi
+      shader: unshaded
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeCircle
+        radius: 1
+      density: 160
+      mask:
+      - LargeMobMask
+      layer:
+      - LargeMobLayer
+  - type: Appearance
+    rotate: true
+    states:
+      Alive:
+        Base: onestar_boss
+      Dead:
+        Base: onestar_boss_wrecked
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          onestar_boss_wrecked:
+            min: 1
+            max: 1
+  - type: RandomMetadata
+    nameSegments:
+    - one_star
+
+- type: entity
+  id: onestar_boss_wrecked
+  parent: PlayerSiliconBase
+  name: onestar mecha wrecked
+  components:
+  - type: Sprite
+    state: onestar_boss_wrecked
+    sprite: Mobs/Silicon/onestar.rsi
+    netsync: false
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+    - shape:
+        !type:PhysShapeCircle
+        radius: 0.45
+      density: 1000
+      mask:
+      - MobMask
+      layer:
+      - MobLayer
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetPlasteel1:
+            min: 10
+            max: 40
+          SheetSteel1:
+            min: 20
+            max: 60
+
+- type: dataset
+  id: AIDroneNumberFirst
+  values:
+  - дрон
+
+- type: dataset
+  id: one_star
+  values:
+  - one star mecha
+
+- type: dataset
+  id: AIDroneNumber
+  values:
+  - № 1
+  - № 2
+  - № 3
+  - № 4
+  - № 5
+  - № 6
+  - № 7
+  - № 8
+  - № 9
+
+- type: dataset
+  id: AIDroneNumberLaster
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 0
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalFoodNormal
+  parent: DroneSurvivalFood
+  suffix: Злой Нормальный
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalHealsNormal
+  parent: DroneSurvivalHeals
+  suffix: Злой Нормальный
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalMetalNormal
+  parent: DroneSurvivalMetal
+  suffix: Злой Нормальный
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+
+
+
+
+
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalFoodNormal2
+  parent: DroneSurvivalFood
+  suffix: Злой
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Zombie
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalHealsNormal2
+  parent: DroneSurvivalHeals
+  suffix: Злой
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Zombie
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+- type: entity
+  name: Нормальный дрон
+  id: DroneSurvivalMetalNormal2
+  parent: DroneSurvivalMetal
+  suffix: Злой
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Zombie
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ExplodeBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2

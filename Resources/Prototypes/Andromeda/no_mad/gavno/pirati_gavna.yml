@@ -1,0 +1,311 @@
+- type: entity
+  name: Капитан пиратов
+  parent: MobHuman
+  suffix: Пират
+  id: MobHumanPirateLeader
+  components:
+  - type: GhostTakeoverAvailable
+    name: Капитан пиратов
+    description: Капитан скорее всего будет сидеть на шаттле чтобы его не спёрли, а также  руководить шайкой мерзавцев, чтобы они не творили хуйню и помнили о своей цели. 
+  - type: Loadout
+    prototypes: [PirateLeader]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+- type: startingGear
+  id: PirateLeader
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltSheathFilled
+    back: ClothingBackpackSatchelPirate
+    neck: ClothingNeckCloakNEHoS
+    outerClothing: ClothingOuterWinterPirateL
+    suitstorage: WeaponSniperMosin
+    gloves: ClothingHandsGlovesCombat
+    eye: ClothingEyesGlassesSunglasses
+    head: ClothingHeadHatBeret
+    ears: ClothingHeadsetAltPirate
+    pocket1: WeaponTaser
+    pocket2: WeaponRevolverDeckard
+
+
+- type: entity
+  noSpawn: true
+  name: сумка
+  parent: ClothingBackpackSatchelEngineering
+  id: ClothingBackpackSatchelPirate
+  components:
+    - type: StorageFill
+      contents:
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderMagnumRubber
+        - id: SpeedLoaderMagnumRubber
+        - id: SpeedLoaderMagnum
+        - id: SpeedLoaderMagnum
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingNeckCloakHos
+  id: ClothingNeckCloakNEHoS
+  name: плащ лидера пиратов
+  description: Элегантный черно-красный плащ, предназначенный для тех, кто нагнуть систему под себя!.
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterWinterSec
+  id: ClothingOuterWinterPirateL
+  name: зимнее пальто
+  description: Тяжелая куртка из 'синтетического' меха животных.
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingHeadsetAltSyndicate
+  id: ClothingHeadsetAltPirate
+  name: полноразмерная гарнитура пиратов
+  description: Модифицированный модульный интерком, надеваемый на голову, и содержащий ключ шифрования. Защищает уши от светошумовых зарядов.
+
+
+
+
+
+
+
+
+
+#------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  name: Инженер пиратов
+  parent: MobHuman
+  suffix: Пират
+  id: MobHumanPirateEngi
+  components:
+  - type: GhostTakeoverAvailable
+    name: Инженер пиратов
+    description: мастер по проникновению и взрывчатке. Если что-то не может открыть своим умением, то его "малышки" сделают всю работу за него. 
+  - type: Loadout
+    prototypes: [PirateEngi]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+- type: startingGear
+  id: PirateEngi
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+    shoes: ClothingShoesBootsWork
+    belt: ClothingBeltUtilityFilled
+    back: ClothingBackpackSatchelPirateEngi
+    outerClothing: ClothingOuterWinterBarPirate
+    suitstorage: WeaponShotgunDoubleBarreled
+    neck: ClothingNeckCloakMiner
+    gloves: ClothingHandsGlovesColorYellow
+    head: HatBandGold
+    eye: ClothingEyesGlassesMeson
+    ears: ClothingHeadsetAltPirate
+    pocket1: SurvivalKnife
+    pocket2: RemoteSignaller
+
+
+- type: entity
+  noSpawn: true
+  name: сумка
+  parent: ClothingBackpackSatchelEngineering
+  id: ClothingBackpackSatchelPirateEngi
+  components:
+    - type: StorageFill
+      contents:
+        - id: ShellTranquilizer
+        - id: ShellTranquilizer
+        - id: ShellTranquilizer
+        - id: ShellTranquilizer
+        - id: BoxLethalshot
+        - id: C4
+        - id: C4
+        - id: C4
+        - id: PirateJawsOfLife
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterWinterBar
+  id: ClothingOuterWinterBarPirate
+  name: зимнее пальто
+  description: Тяжелая куртка из 'синтетического' меха животных.
+
+
+
+- type: entity
+  noSpawn: true
+  parent: SyndicateJawsOfLife
+  id: PirateJawsOfLife
+  name: не легальные челюсти жизни
+  description: Используется для входа на станцию или в ее отделы.
+
+
+
+
+
+
+
+
+
+
+#------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  name: Ганнер пиратов
+  parent: MobHuman
+  suffix: Пират
+  id: MobHumanPirateSB
+  components:
+  - type: GhostTakeoverAvailable
+    name: Ганнер пиратов
+    description: основа банды, а также её боевая мощь. Именно он выполняет большую часть работы, от запугивания и рэкета, до взятия в плен капитана станции.
+  - type: Loadout
+    prototypes: [PirateSB]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+- type: startingGear
+  id: PirateSB
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAerostatic
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltSecurityFilled
+    back: ClothingBackpackSatchelPirateSB
+    outerClothing: ClothingOuterCoatNEHoSTrench
+    suitstorage: WeaponRifleAk
+    neck: ClothingNeckCloakMiner
+    gloves: ClothingHandsGlovesCombat
+    head: HatBandSkull
+    eye: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltPirate
+    pocket1: SurvivalKnife
+    pocket2: WeaponPistolHandmade
+
+
+- type: entity
+  noSpawn: true
+  name: сумка
+  parent: ClothingBackpackSatchelEngineering
+  id: ClothingBackpackSatchelPirateSB
+  components:
+    - type: StorageFill
+      contents:
+        - id: MagazineLightRifleRubber
+        - id: MagazineLightRifleRubber
+        - id: MagazineLightRifle
+        - id: MagazinePistolRubber
+        - id: MagazinePistolRubber
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterCoatHoSTrench
+  id: ClothingOuterCoatNEHoSTrench
+  name: тренч
+  description: Этот плащ был разработан специально для демонстрации власти.
+
+
+
+
+
+
+
+
+
+
+
+#------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  name: Педик пиратов
+  parent: MobHuman
+  suffix: Пират
+  id: MobHumanPirateMed
+  components:
+  - type: GhostTakeoverAvailable
+    name: Медик пиратов
+    description: просто душа компании.
+  - type: Loadout
+    prototypes: [PirateMed]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+
+- type: startingGear
+  id: PirateMed
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAerostatic
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltSecurityFilled
+    back: ClothingBackpackSatchelPirateSB
+    outerClothing: ClothingOuterCoatNEHoSTrench
+    suitstorage: WeaponRifleAk
+    neck: ClothingNeckCloakMiner
+    gloves: ClothingHandsGlovesCombat
+    head: HatBandSkull
+    eye: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltPirate
+    pocket1: SurvivalKnife
+    pocket2: WeaponPistolHandmade
+
+
+- type: entity
+  noSpawn: true
+  name: сумка
+  parent: ClothingBackpackSatchelEngineering
+  id: ClothingBackpackSatchelPirateSB
+  components:
+    - type: StorageFill
+      contents:
+        - id: MagazineLightRifleRubber
+        - id: MagazineLightRifleRubber
+        - id: MagazineLightRifle
+        - id: MagazinePistolRubber
+        - id: MagazinePistolRubber
+
+
+- type: entity
+  noSpawn: true
+  parent: ClothingOuterCoatHoSTrench
+  id: ClothingOuterCoatNEHoSTrench
+  name: тренч
+  description: Этот плащ был разработан специально для демонстрации власти.

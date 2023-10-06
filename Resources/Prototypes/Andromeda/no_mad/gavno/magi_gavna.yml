@@ -1,0 +1,499 @@
+- type: startingGear
+  id: LeaderWizardGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPurple
+    head: ClothingHeadHatVioletwizard
+    mask: ClothingMaskBreath
+    neck: ClothingNeckMantleRD
+    outerClothing: ClothingOuterWizardViolet
+    shoes: ClothingShoesWizardSpecial
+    pocket1:
+    pocket2: SpellbookOld
+
+
+- type: startingGear
+  id: BattleWizardGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorDarkBlue
+    back: ClothingBackpackSatchelWizard
+    head: ClothingHeadHatWizard
+    mask: ClothingMaskBreath
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterWizard
+    shoes: ClothingShoesWizardSpecial
+    pocket1:
+    pocket2: SpellbookMagistra
+
+
+- type: startingGear
+  id: IgniteWizardGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorRed
+    back: ClothingBackpackSatchelWizard
+    head: ClothingHeadHatRedwizard
+    mask: ClothingMaskBreath
+    outerClothing: ClothingOuterWizardRed
+    shoes: ClothingShoesWizardSpecial
+    pocket2: SpellbookMagistra
+
+- type: entity
+  parent: ClothingShoesWizard
+  id: ClothingShoesWizardSpecial
+  suffix: noslip
+  components:
+  - type: NoSlip
+
+- type: entity
+  parent: BaseComputer
+  id: ComputerCommssMage
+  name: Коммуникационный компьютер Федерации Волшебников
+  description: Это может быть использовано для различных важных функций. Все еще находится на стадии разработки.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_syndie
+    - map: ["computerLayerKeys"]
+      state: syndie_key
+  - type: CommunicationsConsole
+    title: Объявление Федерации Волшебников
+    sound: /Audio/Announcements/war.ogg
+    global: true
+    color: "#3c87e8"
+  - type: ActivatableUI
+    key: enum.CommunicationsConsoleUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+    - key: enum.CommunicationsConsoleUiKey.Key
+      type: CommunicationsConsoleBoundUserInterface
+  - type: Computer
+    board: CommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#43ccb5"
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitBattleWizard
+  noSpawn: true
+  name: шлем рига боевого мага
+  description: A bizarre gem-encrusted helmet that radiates magical energies.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/wizard.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/wizard.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.2
+        Radiation: 0.5
+  - type: PointLight
+    color: violet
+
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitBattleWizard
+  name: риг боевого мага
+  description: Его носят наемники обеденной федерации волшебников.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+  - type: Item
+    size: 25
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.4
+        Heat: 0.2
+        Radiation: 0.20
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitBattleWizard
+
+
+- type: entity
+  noSpawn: true
+  name: сумка волшебника
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelWizard
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingOuterHardsuitBattleWizard
+        - id: OxygenTankFilled
+
+
+- type: entity
+  id: SpellbookMagistra
+  name: фолиант
+  parent: BaseSpellbook
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Objects/Magic/spellbooks.rsi
+      layers:
+        - state: bookforcewall
+    - type: Spellbook
+      instantSpells:
+        Knock: -1
+        ForceWall: -1
+      worldSpells:
+        Blink: -1
+
+
+- type: entity
+  id: SpellbookMistick
+  name: мистический фолиант
+  parent: BaseSpellbook
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Objects/Magic/spellbooks.rsi
+      layers:
+        - state: bookforcewall
+    - type: Spellbook
+      instantSpells:
+        Knock: -1
+        FlashRune: -1
+        ForceWall: -1
+      entitySpells:
+        Smite: -1
+      worldSpells:
+        Blink: -1
+        Fireball: -1
+        SpawnMagicarpSpell: -1
+
+
+- type: entity
+  id: SpellbookOld
+  name: древний фолиант
+  parent: BaseSpellbook
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Objects/Magic/spellbooks.rsi
+      layers:
+        - state: bookforcewall
+    - type: Spellbook
+      instantSpells:
+        Knock: -1
+        ForceWall: -1
+      worldSpells:
+        Blink: -1
+        Fireball: -1
+
+
+- type: entity
+  name: Урист МагХэндс
+  parent: MobHuman
+  description: Жалкая кучка волшебства.
+  id: MobHumanWizard
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: BallisticAmmoProvider
+    proto: ProjectileWeakFireball
+    capacity: 100
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Magic/blink.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: Stamina
+    excess: 250
+
+- type: entity
+  name: Урист МагIgnite
+  parent: MobHuman
+  description: Жалкая кучка волшебства.
+  id: MobHumanWizardHealth
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: BallisticAmmoProvider
+    proto: FireThrowerBall
+    capacity: 5000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Magic/blink.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
+    fireRate: 10
+    projectileSpeed: 5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+  - type: Stamina
+    excess: 250
+
+- type: entity
+  name: Урист МагНелетал
+  parent: MobHuman
+  description: Жалкая кучка волшебства.
+  id: MobHumanWizardLeader
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: BallisticAmmoProvider
+    proto: MagiyaDisabler
+    capacity: 45
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
+    fireRate: 1
+    projectileSpeed: 7
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Magic/blink.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: Stamina
+    excess: 250
+
+- type: entity
+  parent: PonderingOrb
+  id: ReinforcementPonderingOrbWizard
+  name: шар размышлений
+  suffix: Волшебник
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanWizardReady
+    name: Боевой маг федерации космических волшебников
+    description: Боевой маг умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+- type: entity
+  parent: PonderingOrb
+  id: ReinforcementPonderingOrbWizardHealth
+  name: шар размышлений
+  suffix: Волшебник огнеметчик
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanWizardHealthReady
+    name: Маг огнеметатель федерации космических волшебников
+    description: Маг огнеметатель умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+- type: entity
+  parent: PonderingOrb
+  id: ReinforcementPonderingOrbWizardLeader
+  name: шар размышлений
+  suffix: Верховный волшебник
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanWizardLeaderReady
+    name: Верховный маг федерации космических волшебников
+    description: Верховный маг умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+#------------------------------------
+
+- type: entity
+  noSpawn: true
+  name: Волшебник
+  parent: MobHumanWizard
+  description: Жалкая кучка волшебника.
+  id: MobHumanWizardReady
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: Loadout
+    prototypes: [BattleWizardGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Боевой маг федерации космических волшебников
+    description: Боевой маг умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+- type: entity
+  noSpawn: true
+  name: Волшебник огнеметчик
+  parent: MobHumanWizardHealth
+  description: Жалкая кучка волшебника.
+  id: MobHumanWizardHealthReady
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: Loadout
+    prototypes: [IgniteWizardGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Маг огнеметатель федерации космических волшебников
+    description: Маг огнеметатель умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+
+- type: entity
+  noSpawn: true
+  name: Верховный волшебник
+  parent: MobHumanWizardLeader
+  description: Жалкая кучка волшебства.
+  id: MobHumanWizardLeaderReady
+  components:
+  - type: Icon
+    sprite: Markers/jobs.rsi
+    state: virologist
+  - type: Loadout
+    prototypes: [LeaderWizardGear]
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Верховный маг федерации космических волшебников
+    description: Верховный маг умеющий всякое, ваша миссия будет варьироваться от приказов верховного совета магистров
+
+
+- type: entity
+  id: ProjectileWeakFireball
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletWeakRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 2
+    intensitySlope: 1
+    totalIntensity: 4
+    maxTileBreak: 1
+
+
+- type: entity
+  name : disabler bolt
+  id: MagiyaDisabler
+  parent: BulletDisabler
+  noSpawn: true
+  components:
+  - type: StaminaDamageOnCollide
+    damage: 70
+
+
+- type: dataset
+  id: NamesWizards
+  values:
+  - Wizard Rudolf
+  - Wizard Moostekolos
+  - Wizard Bokenbons
+  - Wizard Yosef
