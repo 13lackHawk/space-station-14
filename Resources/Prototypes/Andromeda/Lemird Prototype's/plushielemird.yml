@@ -1,0 +1,54 @@
+- type: entity
+  parent: BaseItem
+  id: PlushieLemird
+  name: плюшевая Лемирд
+  description: Хотите обнимашек и милоты? Нехватка афродизиака в вашем организме? Новая серия игрушек "Lemird"! Лучшие вайфу на станции! *На обратной стороне игрушки написано то что может издавать странные фразочки и вызвать возбуждение при долгом ношении.*
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushielemird.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/Lemird/plushielemird.rsi
+    size: 25
+  - type: ItemCooldown
+  - type: EmitSoundOnUse
+    sound:
+      collection: PlushieLemird
+  - type: UseDelay
+    delay: 6.5
+  - type: StaticPrice
+    price: 1500
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#FF69B4"
+  - type: EmitSoundOnLand
+    sound:
+      collection: PlushieLemird
+  - type: EmitSoundOnActivate
+    sound:
+      collection: PlushieLemird
+
+- type: soundCollection
+  id: PlushieLemird
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/animesample20.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/animesample18.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/animesample17.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/animesample9.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan10.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan11.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan6.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan12.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan13.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan14.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan15.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan16.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan17.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan19.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan20.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/PlushieLemird/moan21.ogg
