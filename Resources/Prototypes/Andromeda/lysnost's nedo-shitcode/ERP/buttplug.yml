@@ -1,0 +1,195 @@
+- type: entity
+  parent: BaseItem
+  id: BaseButtPlug
+  description: "Wait, it's a porn!"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_pink.rsi
+    state: small
+
+# green
+- type: entity
+  parent: BaseButtPlug
+  id: SmallGreenButtPlug
+  name: green butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_green.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumGreenButtPlug
+  name: green butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_green.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigGreenButtPlug
+  name: green butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_green.rsi
+    state: big
+
+# metal
+- type: entity
+  parent: BaseButtPlug
+  id: SmallMetalButtPlug
+  name: metal butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_metal.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumMetalButtPlug
+  name: metal butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_metal.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigMetalButtPlug
+  name: metal butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_metal.rsi
+    state: big
+
+# pink
+- type: entity
+  parent: BaseButtPlug
+  id: SmallPinkButtPlug
+  name: pink butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_pink.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumPinkButtPlug
+  name: pink butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_pink.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigPinkButtPlug
+  name: pink butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_pink.rsi
+    state: big
+
+# tail
+- type: entity
+  parent: BaseButtPlug
+  id: SmallTailButtPlug
+  name: tail butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_tail.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumTailButtPlug
+  name: tail butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_tail.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigTailButtPlug
+  name: tail butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_tail.rsi
+    state: big
+
+# teal
+- type: entity
+  parent: BaseButtPlug
+  id: SmallTealButtPlug
+  name: teal butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_teal.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumTealButtPlug
+  name: teal butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_teal.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigTealButtPlug
+  name: teal butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_teal.rsi
+    state: big
+
+# yellow
+- type: entity
+  parent: BaseButtPlug
+  id: SmallYellowButtPlug
+  name: yellow butt plug
+  suffix: Small
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_yellow.rsi
+    state: small
+
+- type: entity
+  parent: BaseButtPlug
+  id: MediumYellowButtPlug
+  name: yellow butt plug
+  suffix: Medium
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_yellow.rsi
+    state: medium
+
+- type: entity
+  parent: BaseButtPlug
+  id: BigYellowButtPlug
+  name: yellow butt plug
+  suffix: Big
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/buttplug/buttplug_yellow.rsi
+    state: big

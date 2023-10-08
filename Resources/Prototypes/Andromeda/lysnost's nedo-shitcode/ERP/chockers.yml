@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckChokerSpike
+  name: choker with spikes
+  description: A collar with spikes, which for some reason is considered a female decoration... Why?
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/Chokers/spike.rsi
+  - type: Clothing
+    sprite: Andromeda/lysnost/ERP/Chokers/spike.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckChokerHeart
+  name: choker with heart
+  description: A collar called a choker, with a large gold heart on the front. For pets? Yes? At least I want to believe it.
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/Chokers/heart.rsi
+  - type: Clothing
+    sprite: Andromeda/lysnost/ERP/Chokers/heart.rsi

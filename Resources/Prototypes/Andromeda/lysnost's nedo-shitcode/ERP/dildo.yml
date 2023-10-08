@@ -1,0 +1,65 @@
+- type: entity
+  parent: BaseItem
+  id: BaseDildo
+  description: "Wait, it's a porn!"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/dildo.rsi
+    state: human
+
+- type: entity
+  parent: BaseDildo
+  id: AvianDildo
+  name: avian dildo
+  components:
+  - type: Sprite
+    state: avian
+
+- type: entity
+  parent: BaseDildo
+  id: CanineDildo
+  name: canine dildo
+  components:
+  - type: Sprite
+    state: canine
+
+- type: entity
+  parent: BaseDildo
+  id: DoubleDildo
+  name: double dildo
+  components:
+  - type: Sprite
+    state: double
+
+- type: entity
+  parent: BaseDildo
+  id: DragonDildo
+  name: dragon dildo
+  components:
+  - type: Sprite
+    state: dragon
+
+- type: entity
+  parent: BaseDildo
+  id: EquineDildo
+  name: equine dildo
+  components:
+  - type: Sprite
+    state: equine
+
+- type: entity
+  parent: BaseDildo
+  id: HumanDildo
+  name: human dildo
+  components:
+  - type: Sprite
+    state: human
+
+- type: entity
+  parent: BaseDildo
+  id: TentacleDildo
+  name: tentacle dildo
+  components:
+  - type: Sprite
+    state: tentacle

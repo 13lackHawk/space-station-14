@@ -1,0 +1,85 @@
+- type: entity
+  parent: BaseItem
+  id: BaseCandle
+  description: "Wait, it's not a porn!"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/candle/candle_pink.rsi
+    layers:
+      - state: candle_unlit
+      - state: lit_overlay
+        visible: false
+  - type: ExpendableLight
+    spentName: expendable-light-burnt-candle-name
+    spentDesc: expendable-light-burnt-candle-desc
+    glowDuration: 250
+    fadeOutDuration: 4
+    iconStateSpent: candle_spent # Bug offs that does not show burned. Not ours.
+    turnOnBehaviourID: turn_on
+    fadeOutBehaviourID: fade_out
+    litSound:
+      path: /Audio/Items/Flare/flare_on.ogg
+  - type: Appearance
+    visuals:
+      - type: ExpendableLightVisualizer
+  - type: PointLight
+    enabled: false
+    color: "#DE4E4F"
+    radius: 1.0
+    energy: 2.5
+    netsync: false
+  - type: LightBehaviour
+    behaviours:
+      - !type:RandomizeBehaviour
+        id: turn_on
+        interpolate: Nearest
+        minDuration: 0.02
+        maxDuration: 0.06
+        startValue: 5.0
+        endValue: 3.0
+        property: Energy
+        isLooped: true
+      - !type:FadeBehaviour
+        id: turn_on
+        interpolate: Linear
+        maxDuration: 8.0
+        startValue: 1.0
+        endValue: 1.8
+        property: Radius
+      - !type:RandomizeBehaviour
+        id: fade_out
+        interpolate: Nearest
+        minDuration: 0.02
+        maxDuration: 0.06
+        startValue: 3.0
+        endValue: 5.0
+        property: Energy
+        isLooped: true
+      - !type:FadeBehaviour
+        id: fade_out
+        interpolate: Linear
+        maxDuration: 4.0
+        startValue: 1.8
+        endValue: 1.0
+        property: Radius
+
+- type: entity
+  parent: BaseCandle
+  id: PinkCandle
+  name: pink candle
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/candle/candle_pink.rsi
+  - type: PointLight
+    color: "#DE4E4F"
+    
+- type: entity
+  parent: BaseCandle
+  id: TealCandle
+  name: teal candle
+  components:
+  - type: Sprite
+    sprite: Andromeda/lysnost/ERP/candle/candle_teal.rsi
+  - type: PointLight
+    color: "#2CB587"
