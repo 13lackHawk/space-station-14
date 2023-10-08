@@ -39,7 +39,7 @@ namespace Content.IntegrationTests.Tests.Preferences
             return new(
                 "Charlie Charlieson",
                 "The biggest boy around.",
-                0,
+                 0,
                 "Human",
                 21,
                 Sex.Male,
