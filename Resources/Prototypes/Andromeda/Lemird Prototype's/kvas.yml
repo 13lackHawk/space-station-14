@@ -11,4 +11,4 @@
         - ReagentId: Kvass
           Quantity: 200
   - type: Sprite
-    sprite: Andromeda/Lemird/kvas.rsi
+    sprite: Andromeda/Lemird/kvasbottle.rsi
