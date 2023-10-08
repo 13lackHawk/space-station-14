@@ -1,0 +1,106 @@
+- type: entity
+  name: BaseWeaponSniperHristov
+  parent: BaseItem
+  id: BaseSniperHristov
+  description: Христов - это иконическая снайперская винтовка, которая завоевала репутацию как одно из самых мощных и дальнобойных оружий в мире. Эта винтовка внушительного размера, использующая калибр .60, спроектирована для поражения целей на больших расстояниях и преодолевания бронированных целей. Крайне похожа на Barrett M82.
+  suffix: Винтовка
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: 50
+  - type: Clothing
+    sprite: /Andromeda/Lemird/hristov.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.4
+    minAngle: 50
+    maxAngle: 60
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Andromeda/Lemird/GunShots/hristov.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Andromeda/Lemird/Cock/hristov_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineSniperHristov60
+        insertSound: /Audio/Andromeda/Lemird/MagIn/hristov_magin.ogg
+        ejectSound: /Audio/Andromeda/Lemird/MagOut/hristov_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+           - MagazineHristov
+      gun_chamber:
+        name: Chamber
+        startingItem: BaseAntiMaterial
+        priority: 1
+        whitelist:
+          tags:
+           - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  name: Христов
+  parent: BaseSniperHristov
+  id: WeaponSniperHristov
+  description: Христов - это иконическая снайперская винтовка, которая завоевала репутацию как одно из самых мощных и дальнобойных оружий в мире. Эта винтовка внушительного размера, использующая калибр .60.
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineSniperHristov60
+        insertSound: /Audio/Andromeda/Lemird/MagIn/hristov_magin.ogg
+        ejectSound: /Audio/Andromeda/Lemird/MagOut/hristov_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+           - MagazineHristov
+      gun_chamber:
+        name: Cartridge
+        startingItem: BaseAntiMaterial
+        priority: 1
+        whitelist:
+          tags:
+           - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Wieldable
+    wieldTime: 2.5
+  - type: GunWieldBonus
+    minAngle: -50
+    maxAngle: -60
+  - type: Sprite
+    sprite: Andromeda/Lemird/hristov.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/hristov.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: EmitSoundOnLand
+    sound: /Audio/Andromeda/Lemird/Misc/hristov_onland.ogg

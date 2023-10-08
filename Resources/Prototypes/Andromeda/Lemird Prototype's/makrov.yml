@@ -1,0 +1,92 @@
+- type: entity
+  name: Пистолет Макарова
+  parent: BaseItem
+  id: WeaponPistol9x18mmMakarova
+  description: Для истиного патриота СССР. Использует патроны 9mm.
+  suffix: Пистолет
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: 12
+  - type: Clothing
+    sprite: Andromeda/Lemird/makarov.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Andromeda/Lemird/GunShots/makarov.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Andromeda/Lemird/Cock/makarov_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol9x18mm
+        insertSound: /Audio/Andromeda/Lemird/MagIn/makarov_magin.ogg
+        ejectSound: /Audio/Andromeda/Lemird/MagOut/makarov_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol9x18mm
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x18mm
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x18mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: пистолет Макарова
+  parent: WeaponPistol9x18mmMakarova
+  id: BaseWeaponMakarov
+  description: Макаров Пистолет, по-настоящему классическое и надежное огнестрельное оружие, был создан для самообороны и военного использования. Разработанный в конце 1940-х годов Сергеем Макаровым, этот компактный пистолет использует патроны калибра 9x18 мм, сочетая в себе простоту, удобство ношения и непревзойденную надежность.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/makarov.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistols9x18
+        insertSound: /Audio/Andromeda/Lemird/MagIn/makarov_magin.ogg
+        ejectSound: /Audio/Andromeda/Lemird/MagOut/makarov_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistol9x18mm
+      gun_chamber:
+        name: Cartridge
+        startingItem: Base9x18mm
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x18mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
