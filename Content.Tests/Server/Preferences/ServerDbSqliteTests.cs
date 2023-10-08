@@ -10,7 +10,6 @@ using Content.Shared.Preferences;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
-using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.IoC;
 using Robust.Shared.Maths;
@@ -51,7 +50,6 @@ namespace Content.Tests.Server.Preferences
                 "The biggest boy around.",
                 0,
                 "Human",
-                "Eugene", // Corvax-TTS
                 21,
                 Sex.Male,
                 Gender.Epicene,
@@ -82,7 +80,7 @@ namespace Content.Tests.Server.Preferences
             var conn = new SqliteConnection("Data Source=:memory:");
             conn.Open();
             builder.UseSqlite(conn);
-            return new ServerDbSqlite(() => builder.Options, true, IoCManager.Resolve<IConfigurationManager>(), true);
+            return new ServerDbSqlite(builder.Options);
         }
 
         [Test]
