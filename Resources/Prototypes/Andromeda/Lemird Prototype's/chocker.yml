@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckChocker
+  name: чокер
+  description: Очень удобен на шее!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/chocker.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/chocker.rsi
+  - type: Item
+    size: 10
