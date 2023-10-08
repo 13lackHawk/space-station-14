@@ -1,0 +1,24 @@
+{
+  "License": "CC-BY-SA-3.0",
+  "Copyright": "Taken from https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13",
+  "version": 1,
+  "size": { "x": 32, "y": 32 },
+  "states": [
+    {
+      "name": "big",
+      "delays": [ [ 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3 ] ]
+    },
+    {
+      "name": "medium",
+      "delays": [ [ 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3 ] ]
+    },
+    {
+      "name": "small",
+      "delays": [ [ 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3 ] ]
+    },
+	{
+	  "name": "equipped-UNDERWEARB",
+      "directions": 4
+	}
+  ]
+}

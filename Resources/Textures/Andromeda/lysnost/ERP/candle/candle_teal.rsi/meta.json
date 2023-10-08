@@ -1,0 +1,18 @@
+{
+  "License": "CC-BY-SA-3.0",
+  "Copyright": "Taken from https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13",
+  "version": 1,
+  "size": { "x": 32, "y": 32 },
+  "states": [
+    {
+      "name": "candle_unlit"
+    },
+	{
+	  "name": "candle_spent"
+	},
+    {
+      "name": "lit_overlay",
+      "delays": [ [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ] ]
+	}
+  ]
+}

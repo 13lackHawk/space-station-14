@@ -1,0 +1,21 @@
+{
+  "License": "CC-BY-SA-3.0",
+  "Copyright": "Taken from https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13, https://github.com/space-wizards/space-station-14/blob/4434b3752c844d6744a7ddee8e958ee3bb31d179/Resources/Textures/Mobs/Customization/fox_markings.rsi/vulp_tail.png and by discord user Evgen99#0582",
+  "version": 1,
+  "size": { "x": 32, "y": 32 },
+  "states": [
+    {
+      "name": "big"
+    },
+    {
+      "name": "medium"
+    },
+    {
+      "name": "small"
+    },
+	{
+	  "name": "equipped-UNDERWEARB",
+      "directions": 4
+	}
+  ]
+}
