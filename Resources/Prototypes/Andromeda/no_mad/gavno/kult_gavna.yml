@@ -41,7 +41,7 @@
   name: Аколит
   parent: MobHuman
   suffix: Cult
-  id: MobHumanAcolitGuy
+  id: MobHumanAcoliteGuy
   components:
   - type: GhostTakeoverAvailable
   - type: GhostRole
