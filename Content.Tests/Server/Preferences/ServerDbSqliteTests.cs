@@ -49,6 +49,7 @@ namespace Content.Tests.Server.Preferences
             return new(
                 "Charlie Charlieson",
                 "The biggest boy around.",
+                0,
                 "Human",
                 "Eugene", // Corvax-TTS
                 21,

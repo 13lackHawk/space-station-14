@@ -15,6 +15,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.Andromeda;
+
 
 namespace Content.Shared.Preferences
 {
@@ -35,6 +37,7 @@ namespace Content.Shared.Preferences
         private HumanoidCharacterProfile(
             string name,
             string flavortext,
+            int erpStatus,
             string species,
             string voice, // Corvax-TTS
             int age,
@@ -70,8 +73,8 @@ namespace Content.Shared.Preferences
             Dictionary<string, JobPriority> jobPriorities,
             List<string> antagPreferences,
             List<string> traitPreferences)
-            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.Appearance, other.Clothing, other.Backpack,
-                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences)
+                : this(other.Name, other.FlavorText, (int)other.ERPStatus, other.Species, other.Age,
+            other.Sex, other.Gender, other.Appearance, other.Clothing, other.Backpack, jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences)
         {
         }
 
@@ -84,6 +87,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
+            int erpStatus,
             string species,
             string voice, // Corvax-TTS
             int age,
@@ -96,7 +100,7 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             IReadOnlyList<string> antagPreferences,
             IReadOnlyList<string> traitPreferences)
-            : this(name, flavortext, species, voice, age, sex, gender, appearance, clothing, backpack, new Dictionary<string, JobPriority>(jobPriorities),
+            : this(name, flavortext, erpStatus, species, age, sex, gender, appearance, clothing, backpack, new Dictionary<string, JobPriority>(jobPriorities),
                 preferenceUnavailable, new List<string>(antagPreferences), new List<string>(traitPreferences))
         {
         }
@@ -109,6 +113,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile() : this(
             "John Doe",
             "",
+            0,
             SharedHumanoidAppearanceSystem.DefaultSpecies,
             SharedHumanoidAppearanceSystem.DefaultVoice, // Corvax-TTS
                 18,
@@ -137,6 +142,7 @@ namespace Content.Shared.Preferences
             return new(
                 "John Doe",
                 "",
+                 0,
                 species,
                 SharedHumanoidAppearanceSystem.DefaultVoice, // Corvax-TTS
                 18,
@@ -193,7 +199,7 @@ namespace Content.Shared.Preferences
 
             var name = GetName(species, gender);
 
-            return new HumanoidCharacterProfile(name, "", species, voiceId, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), ClothingPreference.Jumpsuit, BackpackPreference.Backpack,
+            return new HumanoidCharacterProfile(name, "", 0, species, age, sex, gender, HumanoidCharacterAppearance.Random(species, sex), ClothingPreference.Jumpsuit, BackpackPreference.Backpack,
                 new Dictionary<string, JobPriority>
                 {
                     {SharedGameTicker.FallbackOverflowJob, JobPriority.High},
@@ -202,6 +208,7 @@ namespace Content.Shared.Preferences
 
         public string Name { get; private set; }
         public string FlavorText { get; private set; }
+        public EnumERPStatus ERPStatus {get; set;} // Sirena-ERPStatus
         public string Species { get; private set; }
         public string Voice { get; private set; } // Corvax-TTS
 
@@ -234,6 +241,14 @@ namespace Content.Shared.Preferences
         {
             return new(this) { FlavorText = flavorText };
         }
+
+                    // Sirena-ERPStatus-Start
+        public HumanoidCharacterProfile WithERPStatus(EnumERPStatus state)
+        {
+            return new(this) { ERPStatus = state };
+        }
+        // Sirena-ERPStatus-End
+
 
         public HumanoidCharacterProfile WithAge(int age)
         {
@@ -497,6 +512,7 @@ namespace Content.Shared.Preferences
 
             Name = name;
             FlavorText = flavortext;
+            ERPStatus = (EnumERPStatus)erpStatus;
             Age = age;
             Sex = sex;
             Gender = gender;

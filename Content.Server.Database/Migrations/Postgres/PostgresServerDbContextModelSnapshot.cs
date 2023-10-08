@@ -607,7 +607,8 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasKey("Id")
                         .HasName("PK_job");
 
-                    b.HasIndex("ProfileId");
+                    b.HasIndex("ProfileId", "TraitName")
+                        .IsUnique();
 
                     b.HasIndex("ProfileId", "JobName")
                         .IsUnique();
@@ -764,6 +765,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("clothing");
+
+                    b.Property<int>("ERPStatus")
+                        .HasColumnType("integer")
+                        .HasColumnName("erpstatus");
+
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
