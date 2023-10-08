@@ -1,0 +1,102 @@
+- type: entity
+  id: BaseCartridgeHristov
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    netsync: false
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMateriel
+  - type: Item
+    size: 1
+  - type: SpaceGarbage
+
+- type: entity
+  id: CartridgeAntiMateriel
+  name: патрон (.60 крупнокалиберный)
+  parent: BaseCartridgeHristov
+  abstract: true
+  noSpawn: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMateriel
+  - type: CartridgeAmmo
+    proto: BulletSniperHristov
+  - type: Sprite
+    sprite: Andromeda/Lemird/hristovbullet.rsi
+    layers: 
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 150
+
+- type: entity
+  id: BaseAntiMaterial
+  name: патрон (.60 крупнокалиберный)
+  parent: CartridgeAntiMateriel
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperHristov
+
+- type: entity
+  id: BulletSniperHristov
+  name: патрон (.60 крупнокалиберный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 30
+
+- type: entity
+  id: CartridgeSniperHristovAR
+  name: патрон (.60 бронированный)
+  parent: CartridgeAntiMateriel
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperHristovAR
+
+- type: entity
+  id: BulletSniperHristovAR
+  name: патрон (.60 бронированный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 24
+        Slash: 17
+        Piercing: 24
+        Structural: 50
+  - type: StaminaDamageOnCollide
+    damage: 30
+
+- type: entity
+  id: CartridgeSniperHristovHighVelocity
+  name: патрон (.60 высокоскорострельный)
+  parent: CartridgeAntiMateriel
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperHristovHighVelocity
+
+- type: entity
+  id: BulletSniperHristovHighVelocity
+  name: патрон (.60 высокоскорострельный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 48
+        Structural: 40

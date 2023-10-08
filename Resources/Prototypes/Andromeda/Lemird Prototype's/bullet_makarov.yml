@@ -1,0 +1,118 @@
+- type: entity
+  id: BaseCartridge9x18mm
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    netsync: false
+  - type: Tag
+    tags:
+    - 9x18mm
+    - Cartridge9x18mm
+  - type: Item
+    size: 1
+  - type: SpaceGarbage
+
+- type: entity
+  id: Cartridge9x18mm
+  name: патрон (9x18 mm)
+  parent: BaseCartridge9x18mm
+  abstract: true
+  noSpawn: true
+  components:
+  - type: Tag
+    tags:
+      - 9x18mm
+      - Cartridge9x18mm
+  - type: CartridgeAmmo
+    proto: BulletPistol
+  - type: Sprite
+    sprite: Andromeda/Lemird/makarovbullet.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: Base9x18mm
+  name: патрон (9x18 mm)
+  parent: Cartridge9x18mm
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol9x18mm
+
+- type: entity
+  id: BulletPistol9x18mm
+  name: патрон (9x18 mm)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+
+- type: entity
+  id: CartridgePistol9x18Practick
+  name: патрон (9x18 mm учебный)
+  parent: Cartridge9x18mm
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol9x18mmPractice
+
+- type: entity
+  id: BulletPistol9x18mmPractice
+  name: патрон (9x18 mm учебный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  id: CartridgePistolRubber9x18
+  name: патрон (9x18 mm резиновый)
+  parent: Cartridge9x18mm
+  components:
+  - type: CartridgeAmmo
+    proto: BaseBulletRubber9x18mm
+
+- type: entity
+  id: BaseBulletRubber9x18mm
+  name: патрон (9x18 mm резиновый)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/snap.ogg
+  - type: StaminaDamageOnCollide
+    damage: 17
+
+- type: entity
+  id: CartridgePistol9x18Incendiary
+  name: патрон (9x18 mm высокоскорострельный)
+  parent: Cartridge9x18mm
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistolHighVelocity9x18
+
+- type: entity
+  id: BulletPistolHighVelocity9x18
+  name: патрон (9x18 mm высокоскорострельный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 21
