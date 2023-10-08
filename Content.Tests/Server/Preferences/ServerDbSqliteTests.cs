@@ -48,8 +48,8 @@ namespace Content.Tests.Server.Preferences
             return new(
                 "Charlie Charlieson",
                 "The biggest boy around.",
-                0,
                 "Human",
+                "Eugene", // Corvax-TTS
                 21,
                 Sex.Male,
                 Gender.Epicene,
@@ -112,7 +112,7 @@ namespace Content.Tests.Server.Preferences
             var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
             prototypeManager.Initialize();
             prototypeManager.LoadFromStream(new StringReader(Prototypes));
-            await db.InitPrefsAsync(username, new HumanoidCharacterProfile());
+            await db.InitPrefsAsync(username, HumanoidCharacterProfile.Default());
             await db.SaveCharacterSlotAsync(username, CharlieCharlieson(), 1);
             await db.SaveSelectedCharacterIndexAsync(username, 1);
             await db.SaveCharacterSlotAsync(username, null, 1);
