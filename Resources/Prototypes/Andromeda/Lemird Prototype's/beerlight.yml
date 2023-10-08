@@ -36,6 +36,7 @@
   id: DrinkBeerLightBottleFull
   name: бутылка светлого пива
   description: В нём невидно никаких пузырьков, производитель заверяет, что пузырьки были из-за вкусовой добавки. Почему то все думают, то что это пиво из компании "Лемирд"...
+  suffix: Андромеда
   components:
   - type: SolutionContainerManager
     solutions:
@@ -51,6 +52,7 @@
   id: DrinkBeerLightglass
   name: стакан светлого пива
   description: Прозрачный стеклянный сосуд, наполненный золотистым напитком с плотной белой пеной. Аромат свежей травы и цитрусовая горчинка. Легкий, прохладный вкус, словно солнечный пикник.
+  suffix: Андромеда
   components:
   - type: SolutionContainerManager
     solutions:
