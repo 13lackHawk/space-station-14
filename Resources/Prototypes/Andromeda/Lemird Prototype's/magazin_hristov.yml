@@ -1,0 +1,74 @@
+- type: entity
+  id: BaseMagazinerHristov60
+  name: магазин Христова (.60 крупнокалиберный)
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineHristov
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
+    capacity: 5
+  - type: Item
+    size: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Andromeda/Lemird/sniper_hristov_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineSniperHristov60
+  name: магазин Христова (.60 крупнокалиберные)
+  parent: BaseMagazinerHristov60
+  components:
+  - type: BallisticAmmoProvider
+    proto: BaseAntiMaterial
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineSniper60HighVelocity
+  name: магазин Христова (.60 высокоскорострельные)
+  parent: BaseMagazinerHristov60
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniperHristovHighVelocity
+  - type: Sprite
+    layers:
+    - state: high_velocity
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineSniper60AR
+  name: магазин Христова (.60 бронированные)
+  parent: BaseMagazinerHristov60
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniperHristovAR
+  - type: Sprite
+    layers:
+    - state: armor_piercing
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

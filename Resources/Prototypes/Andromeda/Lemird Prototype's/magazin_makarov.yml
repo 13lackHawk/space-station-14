@@ -1,0 +1,88 @@
+- type: entity
+  id: BaseMagazinePistol9x18
+  name: магазин Макарова (9x18 mm)
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistol9x18mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18mm
+    capacity: 8
+  - type: Item
+    size: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Andromeda/Lemird/pistol_makarov_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazinePistols9x18
+  name: магазин Макарова (9x18 mm)
+  parent: BaseMagazinePistol9x18
+  components:
+  - type: BallisticAmmoProvider
+    proto: Base9x18mm
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazinePistol9x18Practice
+  name: магазин Макарова (9x18 mm учебные)
+  parent: BaseMagazinePistol9x18
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol9x18Practick
+  - type: Sprite
+    layers:
+    - state: practice
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazinePistol9x18Rubbers
+  name: магазин Макарова (9x18 mm резиновые)
+  parent: BaseMagazinePistol9x18
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolRubber9x18
+  - type: Sprite
+    layers:
+    - state: rubber
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazinePistolHighCapacity9x18
+  name: магазин Макарова (9x18 mm высокоскорострельные)
+  parent: BaseMagazinePistol9x18
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol9x18Incendiary
+  - type: Sprite
+    layers:
+    - state: high_velocity
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
