@@ -16,7 +16,7 @@
       state: syndie_key
   - type: CommunicationsConsole
     title: Объявление Колонии Строгого Режима
-    sound: /Uploaded/base/ogg/NovaProspect/doklad.ogg
+    sound: /Audio/Andromeda/nomad/doklad.ogg
     global: true
     color: "#3c87e8"
   - type: ActivatableUI
