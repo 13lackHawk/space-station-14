@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ERTJuggernautBeltMercWebbing
+  name: РПС ОБР джаггернаута
+  description: РПС, который был сделан специально под военные условия и был модернизирован... К нему идут трубки которые подключаются к носителю на всю жизнь и снять их будет уже невозможно. Судя по всему по данным трубкам идут какие либо реагенты, либо же они как то связанны с помощью сердцу в кровообращении. Очень объёмный.
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautbeltmercwebbing.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ertjuggernautbeltmercwebbing.rsi
+  - type: Storage
+    capacity: 170
+  - type: Item
+    size: 170
+  - type: StorageFill
+    contents:
+      - id: ERTJuggernautBox
+      - id: PaperWrittenMedipenRed
+      - id: PaperWrittenMedipenOrange
+      - id: PaperWrittenMedipenDarkGreen
+      - id: PaperWrittenMedipenLightGreen
+      - id: PaperWrittenMedipenBrown
+  - type: Unremoveable

@@ -1,0 +1,13 @@
+- type: entity
+  parent: CentcomIDCard
+  id: ERTJuggernautIDCard
+  name: ID карта джаггернаута ОБР
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautidcard.rsi
+    layers:
+    - state: ID_ERT_Juggernaut
+  - type: Item
+    heldPrefix: ID_ERT_Juggernaut

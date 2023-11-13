@@ -1,0 +1,67 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitExosuit
+  name: экзоскелет H2CR
+  description: Громоздкий экзоскелет со своим названием в виде принта на плечах.
+  suffix: Неснимаемый
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.1
+        Slash: 0.3
+        Piercing: 0.2
+        Heat: 0.3
+        Shock: 0.65
+        Radiation: 0.95
+  - type: Sprite
+    sprite: Andromeda/Lemird/exosuit.rsi
+  - type: Item
+    sprite: Andromeda/Lemird/exosuit.rsi
+    size: 500
+  - type: Clothing
+    sprite: Andromeda/Lemird/exosuit.rsi
+    equipSound: 
+    unequipSound: 
+    slots:
+    - OuterClothing
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: ClothingSpeedModifier
+    walkModifier: 0.4
+    sprintModifier: 0.5
+  - type: Storage
+    capacity: 50
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitExosuit
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+    - key: enum.SharedGasTankUiKey.Key
+      type: GasTankBoundUserInterface
+  - type: PressureProtection
+    highPressureMultiplier: 100
+    lowPressureMultiplier: 100
+  - type: Unremoveable
+  - type: CanMoveInAir
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      volume: 5
+      temperature: 293.15
+      moles:
+        - 3692.3077 # oxygen for 2h use + jetpack
+        - 3692.3077 # nitrogen for 2h use + jetpack
+  - type: Jetpack
+    moleUsage: 0.00085
+  - type: InputMover
+    toParent: true
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 1
+    weightlessFriction: 0.3
+    weightlessModifier: 1.2

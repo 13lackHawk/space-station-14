@@ -1,0 +1,37 @@
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitExosuit
+  noSpawn: true
+  name: модульный шлем H2CR
+  description: Крепкий шлем экзоскелета, что обеспечивает превосходную защиту головы и глаз.
+  components:
+  - type: Sprite    
+    sprite: Andromeda/Lemird/exosuithelemt.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: Andromeda/Lemird/exosuithelemt.rsi
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    quickEquip: false
+    slots: [ HEAD ]
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.88
+        Piercing: 0.6
+        Heat: 0.9
+        Asphyxiation: 0.95
+        Cold: 0.95
+        Shock: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: PressureProtection
+    highPressureMultiplier: 100
+    lowPressureMultiplier: 100

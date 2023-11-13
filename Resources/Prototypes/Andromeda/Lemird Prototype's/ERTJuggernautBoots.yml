@@ -1,0 +1,40 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ERTJuggernautBoots
+  name: ботинки экзоскелета
+  description: Ботинки, которые являются частью экзоскелета, и прикреплены к своему владельцу. В этих ботинках вы будете чувствовать своё превосходство над другими.
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautboots.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: Clothing
+    sprite: Andromeda/Lemird/ertjuggernautboots.rsi
+  - type: Magboots
+    toggleAction: ActionToggleMagbootsAdvanced
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+    enabled: false
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: {state: icon-on}
+          False: {state: icon}
+  - type: StaticPrice
+    price: 5000
+  - type: NoSlip
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: ExosuitWalkERT
+  - type: Unremoveable
+
+- type: soundCollection
+  id: ExosuitWalkERT
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk2.ogg

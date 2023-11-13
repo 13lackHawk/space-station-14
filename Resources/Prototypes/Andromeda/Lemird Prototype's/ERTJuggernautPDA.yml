@@ -1,0 +1,30 @@
+- type: entity
+  parent: BasePDA
+  id: ERTJuggernautPDA
+  name: КПК Джаггернаута ОБР
+  description: Вы чувствуете его золотистое превосходство. Как же он умён, как же он силён.
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/pda-ertjuggernaut.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Pda
+    id: ERTJuggernautIDCard
+    state: pda-ERTJuggernaut
+  - type: PdaBorderColor
+    borderColor: "#4169E1"
+    accentHColor: "#191970"
+    accentVColor: "#191970"
+  - type: Icon
+    sprite: Andromeda/Lemird/pda-ertjuggernaut.rsi
+    state: pda-ERTJuggernaut
+  - type: Unremoveable

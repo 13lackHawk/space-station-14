@@ -1,0 +1,102 @@
+- type: job
+  id: ERTJuggernaut
+  name: джаггернаут ОБР
+  description: Это мощная и технологически продвинутая боевая единица, созданная для устранения критических угроз компании Nanotrasen.
+  playTimeTracker: JobERTJuggernaut
+  setPreference: false
+  startingGear: ERTJuggernautGearEVA
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+
+- type: entity
+  id: SpawnPointERTJuggernaut
+  parent: SpawnPointJobBase
+  name: джаггернаут ОБР
+  components:
+  - type: SpawnPoint
+    job_id: ERTJuggernaut
+  - type: Sprite
+    layers:
+     - state: green
+     - sprite: Andromeda/Lemird/ertjuggernaut.rsi
+       state: ertjuggernaut
+
+- type: playTimeTracker
+  id: JobERTJuggernaut
+
+- type: startingGear
+  id: ERTJuggernautGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJuggernautERT
+    back: ClothingBackpackJuggernautFilled
+    shoes: ERTJuggernautBoots
+    mask: ClothingMaskGasJuggernautERT
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitExosuit
+    id: ERTJuggernautPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ERTJuggernautBeltMercWebbing
+    neck: ClothingNeckNanoTrasenPin
+    pocket1: FlashlightSeclite
+    pocket2: CombatKnife
+
+- type: randomHumanoidSettings
+  id: ERTJuggernautSettings
+  randomizeName: false
+  speciesBlacklist:
+  - Diona
+  - Dwarf
+  - SlimePerson
+  components:
+  - type: GhostRole
+    name: ОБР Джаггернаут
+    description: Выдающийся лидер и боец, обладающий мощной броней и оружием. Его задача - координировать и поддерживать команду в опасных миссиях для обеспечения безопасности и выполнения важных задач.
+  - type: GhostTakeoverAvailable
+  - type: Loadout
+    prototypes: [ ERTJuggernautGearEVA ]
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirstMilitaryCorvax
+    - NamesLastERTCallsign
+  - type: Speech
+    speechSounds: JaggernautSpeech
+
+- type: entity
+  id: RandomHumanoidSpawnerERTJuggernaut
+  name: ОБР джаггернаут
+  suffix: Андромеда
+  components:
+    - type: Sprite
+      sprite: Andromeda/Lemird/ertjuggernaut.rsi
+      state: ertjuggernaut
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryCorvax
+      - NamesLastERTCallsign
+    - type: RandomHumanoidSpawner
+      settings: ERTJuggernautSettings
+    - type: Speech
+      speechSounds: JaggernautSpeech
+
+- type: speechSounds
+  id: JaggernautSpeech
+  saySound:
+    collection: ERTJuggernautSpeech
+  askSound:
+    collection: ERTJuggernautSpeech
+  exclaimSound:
+    collection: ERTJuggernautSpeech
+
+- type: soundCollection
+  id: ERTJuggernautSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech5.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ERTJuggernautSpeech/ExosuitSpech6.ogg

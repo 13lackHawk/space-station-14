@@ -1,0 +1,266 @@
+- type: entity
+  name: медипен "red killer"
+  parent: ChemicalMedipen
+  id: ERTRedMedipen
+  description: Устройство использующее улучшенную версия "Dark Injector", позволяет организму поглощать большую дозу лекарств без особых усилий. Были замечены случаи того что сердце не выдерживало столько реагентов в теле. Использовать лишь обученному и подготовленному персоналу, либо под наблюдением врачей.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    size: 10
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    layers:
+    - state: red
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 250
+    injectSound:
+      path: "/Audio/Andromeda/Lemird/Misc/redmedipen.ogg"
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 250
+        reagents:
+          - ReagentId: Dermaline
+            Quantity: 10
+          - ReagentId: Epinephrine
+            Quantity: 20
+          - ReagentId: TranexamicAcid
+            Quantity: 10
+          - ReagentId: Bicaridine
+            Quantity: 15
+          - ReagentId: Inaprovaline
+            Quantity: 20 
+          - ReagentId: Kelotane
+            Quantity: 5
+          - ReagentId: Omnizine
+            Quantity: 50
+          - ReagentId: Tricordrazine
+            Quantity: 30
+          - ReagentId: Dexalin
+            Quantity: 20
+          - ReagentId: PulpedBananaPeel
+            Quantity: 5
+          - ReagentId: DexalinPlus
+            Quantity: 25
+          - ReagentId: Stimulants
+            Quantity: 20
+          - ReagentId: Diphenylmethylamine
+            Quantity: 10
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: медипен "air raid"
+  parent: ChemicalMedipen
+  id: ERTOrangeMedipen
+  description: Устройство основанное на технологии "Night Fire Fox", суть данного устройства заключается в достаточно сильном выпускном клапоне прямо в организм. Дорогое и мощное устройство, используется в военных целят, либо в специальных больницах для особо больных. Использовать может лишь обученный персонал, либо под наблюдением врачей.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    size: 10
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    layers:
+    - state: orange
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 235
+    injectSound:
+      path: "/Audio/Andromeda/Lemird/Misc/orangemedipen.ogg"
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 235
+        reagents:
+          - ReagentId: Dermaline
+            Quantity: 10
+          - ReagentId: Diphenylmethylamine
+            Quantity: 20
+          - ReagentId: Epinephrine
+            Quantity: 20
+          - ReagentId: Kelotane
+            Quantity: 54
+          - ReagentId: Omnizine
+            Quantity: 40
+          - ReagentId: Tricordrazine
+            Quantity: 30
+          - ReagentId: Sigynate
+            Quantity: 16
+          - ReagentId: Siderlac
+            Quantity: 10
+          - ReagentId: Leporazine
+            Quantity: 15
+          - ReagentId: Stimulants
+            Quantity: 20
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: медипен "dark water"
+  parent: ChemicalMedipen
+  id: ERTDarkMedipen
+  description: Устройство которое было сделано при "Dark day - Dark man", и было создано для особых повреждений тела, но не смотря на это игла достаточно тонкая и легко сможет входить в кожу даже сквозь одежду. Обычно такие устройства содержут большое количество реагентов. Использовать лишь обученному персоналу, либо же под наблюдением врачей.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    size: 5
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    layers:
+    - state: dark_green
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 185
+    injectSound:
+      path: "/Audio/Andromeda/Lemird/Misc/darkgreenmedipen.ogg"
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 185
+        reagents:
+          - ReagentId: Dylovene
+            Quantity: 10
+          - ReagentId: Diphenylmethylamine
+            Quantity: 20
+          - ReagentId: Epinephrine
+            Quantity: 20
+          - ReagentId: Stellibinin
+            Quantity: 20
+          - ReagentId: Omnizine
+            Quantity: 30
+          - ReagentId: Tricordrazine
+            Quantity: 30
+          - ReagentId: Ethylredoxrazine
+            Quantity: 20
+          - ReagentId: Stimulants
+            Quantity: 20
+          - ReagentId: Diphenhydramine
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: медипен "light skull"
+  parent: ChemicalMedipen
+  id: ERTLightMedipen
+  description: Устройство созданное компанией "New Fallot", задача данного устройства быстро доставить в тело некоторое количество реагетов. При этом устроство обычно старается защитить оболочку тела. Использовать лишь обученному персоналу, либо под наблюдением врачей.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    size: 5
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    layers:
+    - state: light_green
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 135
+    injectSound:
+      path: "/Audio/Andromeda/Lemird/Misc/lightgreenmedipen.ogg"
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 135
+        reagents:
+          - ReagentId: Arithrazine
+            Quantity: 20
+          - ReagentId: Bicaridine
+            Quantity: 15
+          - ReagentId: Hyronalin
+            Quantity: 20
+          - ReagentId: Phalanximine
+            Quantity: 5
+          - ReagentId: Stimulants
+            Quantity: 20
+          - ReagentId: Diphenylmethylamine
+            Quantity: 20
+          - ReagentId: Tricordrazine
+            Quantity: 5
+          - ReagentId: Dylovene
+            Quantity: 5
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: медипен "make day"
+  parent: ChemicalMedipen
+  id: ERTBrownMedipen
+  description: Устройство использующееся для внедрения и распростронение определённых веществ в тело субъекта, быстрая и эффективная транспротировака происходит из за современной технологии ".DONK". Не советуется использовать не обученому персоналу. Рекомендуется использовать данное устройство под наблюдением врачей.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    size: 5
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautmedipen.rsi
+    layers:
+    - state: brown
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 250
+    injectSound:
+      path: "/Audio/Andromeda/Lemird/Misc/brownmedipen.ogg"
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 250
+        reagents:
+          - ReagentId: Sugar
+            Quantity: 50
+          - ReagentId: Protein
+            Quantity: 20
+          - ReagentId: OilOlive
+            Quantity: 15
+          - ReagentId: Oats
+            Quantity: 20
+          - ReagentId: Flour
+            Quantity: 15
+          - ReagentId: Vinegar
+            Quantity: 5
+          - ReagentId: Cornmeal
+            Quantity: 15
+          - ReagentId: Vitamin
+            Quantity: 30
+          - ReagentId: Rice
+            Quantity: 15
+          - ReagentId: Egg
+            Quantity: 15
+          - ReagentId: Water
+            Quantity: 50
+  - type: Tag
+    tags: []

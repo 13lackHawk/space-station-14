@@ -1,0 +1,19 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitJuggernautERT
+  name: комбинезон джаггернаута ОБР
+  description: Вам кажется что этот костюм достаточно странно выглядит, но на самом деле в нём виднеются бронепластины. А так же судя по всему они намертво закрепляются за хозяине...
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautjampsuit.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ertjuggernautjampsuit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95
+  - type: Unremoveable

@@ -1,0 +1,32 @@
+- type: entity
+  noSpawn: false
+  parent: ClothingBackpackERTSecurity
+  id: ClothingBackpackJuggernautFilled
+  name: рюкзак ОБР джаггернаута
+  description: Хорошо вместительный рюкзак сделанный специально под заказ джаггернауту ОБР. Использует современные технологии и подключается напрямую к носителю. Снять данный рюкзак невозможно.
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautbackpack.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ertjuggernautbackpack.rsi
+  - type: Storage
+    capacity: 600
+  - type: Item
+    size: 600
+  - type: StorageFill
+    contents:
+      - id: WeaponLightMachineGunL6
+      - id: MagazineLightRifleBox
+      - id: MagazineLightRifleBox
+      - id: MagazineLightRifleBox
+      - id: WeaponSubMachineGunAtreides
+      - id: MagazinePistolSubMachineGun
+      - id: MagazinePistolSubMachineGun
+      - id: MagazinePistolSubMachineGun
+      - id: ClothingBeltSecurityFilled
+      - id: RiotBulletShield
+      - id: RiotLaserShield
+      - id: TrackingImplanter
+      - id: Crowbar
+  - type: Unremoveable

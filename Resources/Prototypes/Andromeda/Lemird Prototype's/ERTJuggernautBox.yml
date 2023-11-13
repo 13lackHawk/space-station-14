@@ -1,0 +1,38 @@
+- type: entity
+  name: набор медикоментов джаггернаута
+  parent: BoxCardboard
+  id: ERTJuggernautBox
+  description: Специальная коробка созданная для джаггернаута ОБР, защищена от внешних угроз и имеет в себе лишь самые важные и необходимые медикоменты.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ertjuggernautbox.rsi
+    layers:
+     - state: box
+  - type: Storage
+    capacity: 165
+  - type: Item
+    size: 165
+  - type: StorageFill
+    contents:
+      - id: ERTRedMedipen
+      - id: ERTRedMedipen
+      - id: ERTRedMedipen
+      - id: ERTRedMedipen
+      - id: ERTOrangeMedipen
+      - id: ERTOrangeMedipen
+      - id: ERTOrangeMedipen
+      - id: ERTOrangeMedipen
+      - id: ERTDarkMedipen
+      - id: ERTDarkMedipen
+      - id: ERTLightMedipen
+      - id: ERTLightMedipen
+      - id: ERTBrownMedipen
+      - id: ERTBrownMedipen
+      - id: ERTBrownMedipen
+      - id: ERTBrownMedipen
+      - id: MedicatedSuture
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
+      - id: RegenerativeMesh
+      - id: HandheldHealthAnalyzerUnpowered
