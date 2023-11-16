@@ -66,6 +66,7 @@
     ClothingHeadRastaHat: 2
     ClothingBeltStorageWaistbag: 3
     ClothingEyesGlasses: 6
+    ClothingNeckChocker: 3 # A-13
   contrabandInventory:
     ClothingUniformJumpsuitTacticool: 1
     ClothingUniformJumpskirtTacticool: 1
