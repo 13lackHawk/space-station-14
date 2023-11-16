@@ -149,4 +149,5 @@
       - PosterLegitPeriodicTable
       - PosterLegitRenault
       - PosterLegitNTTGC
+      - PosterLegitRelaxWithLemird # A-13
     chance: 1

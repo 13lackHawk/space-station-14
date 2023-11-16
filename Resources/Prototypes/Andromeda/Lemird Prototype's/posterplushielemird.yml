@@ -1,0 +1,9 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitRelaxWithLemird
+  name: "Отдохни с Лемирдой"
+  description: "На постере изображена плюшевая лемирда, самый лучших собеседник и ваша лучшая подруга. Постер призывает не перерабатывать и отдыхать в меру, чтобы повысить продуктивность."
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/posterlemird.rsi
+    state: poster_plushlemird
