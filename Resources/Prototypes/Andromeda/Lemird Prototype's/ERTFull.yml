@@ -68,7 +68,7 @@
 - type: entity
   id: RandomHumanoidSpawnerERTJuggernaut
   name: ОБР джаггернаут
-  suffix: Андромеда
+  suffix: Роль ОБР, Андромеда
   components:
     - type: Sprite
       sprite: Andromeda/Lemird/ertjuggernaut.rsi
