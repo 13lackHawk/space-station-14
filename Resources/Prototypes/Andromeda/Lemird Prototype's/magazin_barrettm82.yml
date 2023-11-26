@@ -1,0 +1,74 @@
+- type: entity
+  id: BaseMagazinerBarrettM82
+  name: магазин Barrett M82 (.70 крупнокалиберный)
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineBarrettM82.70
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeBarrettM82.70
+    capacity: 5
+  - type: Item
+    size: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Andromeda/Lemird/sniper_barrettm82_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineSniperBarrettM82
+  name: магазин Barrett M82 (.70 крупнокалиберные)
+  parent: BaseMagazinerBarrettM82
+  components:
+  - type: BallisticAmmoProvider
+    proto: BaseBarrettM82.70
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineBarrettM82HighVelocity
+  name: магазин Barrett M82 (.70 высокоскорострельные)
+  parent: BaseMagazinerBarrettM82
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniperBarrettM82HighVelocity
+  - type: Sprite
+    layers:
+    - state: high_velocity
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazineSniperBarrettM82AR
+  name: магазин Barrett M82 (.70 бронированные)
+  parent: BaseMagazinerBarrettM82
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSniperBarrettM82AR
+  - type: Sprite
+    layers:
+    - state: armor_piercing
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

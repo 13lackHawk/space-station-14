@@ -1,0 +1,102 @@
+- type: entity
+  id: BaseCartridgeBarrettM82.70
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    netsync: false
+  - type: Tag
+    tags:
+    - Cartridge.70
+    - CartridgeBarrettM82.70
+  - type: Item
+    size: 1
+  - type: SpaceGarbage
+
+- type: entity
+  id: CartridgeBarrettM82.70
+  name: патрон (.70 крупнокалиберный)
+  parent: BaseCartridgeBarrettM82.70
+  abstract: true
+  noSpawn: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge.70
+    - CartridgeBarrettM82.70
+  - type: CartridgeAmmo
+    proto: BulletSniperBarrettM82.70
+  - type: Sprite
+    sprite: Andromeda/Lemird/barrettm82bullet.rsi
+    layers: 
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 150
+
+- type: entity
+  id: BaseBarrettM82.70
+  name: патрон (.70 крупнокалиберный)
+  parent: CartridgeBarrettM82.70
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperBarrettM82.70
+
+- type: entity
+  id: BulletSniperBarrettM82.70
+  name: патрон (.70 крупнокалиберный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 30
+
+- type: entity
+  id: CartridgeSniperBarrettM82AR
+  name: патрон (.70 бронированный)
+  parent: CartridgeBarrettM82.70
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperBarrettM82AR
+
+- type: entity
+  id: BulletSniperBarrettM82AR
+  name: патрон (.70 бронированный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 24
+        Slash: 17
+        Piercing: 24
+        Structural: 50
+  - type: StaminaDamageOnCollide
+    damage: 30
+
+- type: entity
+  id: CartridgeSniperBarrettM82HighVelocity
+  name: патрон (.70 высокоскорострельный)
+  parent: CartridgeBarrettM82.70
+  components:
+  - type: CartridgeAmmo
+    proto: BulletSniperBarrettM82HighVelocity
+
+- type: entity
+  id: BulletSniperBarrettM82HighVelocity
+  name: патрон (.70 высокоскорострельный)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 48
+        Structural: 40
