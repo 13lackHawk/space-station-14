@@ -64,6 +64,8 @@
     - NamesLastERTCallsign
   - type: Speech
     speechSounds: JaggernautSpeech
+  - type: Stamina
+    critThreshold: 150
 
 - type: entity
   id: RandomHumanoidSpawnerERTJuggernaut
