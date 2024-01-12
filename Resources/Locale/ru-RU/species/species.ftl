@@ -9,4 +9,4 @@ species-name-arachnid = Арахнид
 species-name-felinid = Фелинид
 species-name-vulpkanin = Вульпканин
 species-name-moth = Ниан
-species-name-skeleton = Skeleton
+species-name-skeleton = Скелет
