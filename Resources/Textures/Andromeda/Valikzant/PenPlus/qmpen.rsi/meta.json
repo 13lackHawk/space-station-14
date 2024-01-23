@@ -1,0 +1,22 @@
+{
+ "version": 1,
+ "license": "CC-BY-SA-3.0",
+ "copyright":"Idea by QWERTY-MIHAR. Prototype by Valikzant. Icon by QWERTY-MIHAR. Inhands by Valikzant",
+ "size": {
+   "x": 32,
+   "y": 32
+ },
+ "states": [
+   {
+     "name": "qmpen"
+   },
+   {
+     "name": "qmpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "qmpen-inhand-right",
+     "directions": 4
+   }
+ ]
+}

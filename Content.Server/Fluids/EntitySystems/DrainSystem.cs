@@ -52,6 +52,9 @@ public sealed class DrainSystem : SharedDrainSystem
             !TryComp(args.Target, out DrainComponent? drain))
             return;
 
+        if (!spillable.Drainable)
+            return;
+
         var used = args.Using.Value;
         var target = args.Target;
         Verb verb = new()

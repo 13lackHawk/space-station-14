@@ -1,0 +1,82 @@
+- type: entity
+  name: ручка главы службы безопасности
+  parent: BaseItem
+  suffix: Андромеда
+  id: HosStunPen
+  description: 'Грозная ручка главы службы безопасности. В разложенном виде позволяет легко смотреть оставшиеся чернила, а также бить убегающих преступников.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: Stunbaton
+    secret: true
+    energyPerUse: 10
+  - type: StaminaDamageOnHit
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: StunPenActivation
+      params:
+        volume: -3
+        variation: 0.1
+    soundDeactivate:
+      collection: StunPenDeactivation
+      params:
+        volume: -3
+        variation: 0.1
+    soundFailToActivate:
+      collection: StunPenFalied
+      params:
+        volume: -3
+        variation: 0.250
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+  - type: MeleeWeapon
+    attackRate: 1.5
+    wideAnimationRotation: -200
+    damage:
+      types:
+        Blunt: 10
+    animation: WeaponArcSlash
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/hospen.rsi
+    layers:
+      - state: pen-off
+        map: [ "enum.ToggleVisuals.Layer" ]
+  - type: Item
+    heldPrefix: off
+    size: Tiny
+  - type: Battery
+    maxCharge: 50
+    startingCharge: 50
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 5
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: {state: pen-on}
+          False: {state: pen-off}
+  - type: GuideHelp
+    guides:
+    - Security

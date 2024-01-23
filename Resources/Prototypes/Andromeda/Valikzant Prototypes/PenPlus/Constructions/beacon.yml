@@ -1,0 +1,27 @@
+- type: constructionGraph
+  id: JanBeacon
+  start: unpack
+  graph:
+    - node: unpack
+      edges:
+        - to: pack
+          steps:
+          - tool: JanitorKey
+          completed:
+          - !type:SpawnPrototype
+            prototype: JanBeaconClosed
+            amount: 1
+          - !type:DeleteEntity
+
+    - node: pack
+      entity: JanBeacon
+      edges:
+        - to: unpack
+          steps:
+          - tool: JanitorKey
+          completed:
+          - !type:SpawnPrototype
+            prototype: JanBeacon
+            amount: 1
+          - !type:DeleteEntity
+

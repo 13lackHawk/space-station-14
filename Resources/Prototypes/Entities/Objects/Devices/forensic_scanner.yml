@@ -35,6 +35,9 @@
   id: ForensicReportPaper
   description: 'Circumstantial evidence, at best'
   components:
+  - type: Tag
+    tags:
+    - ForensicReportPaper
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     layers:

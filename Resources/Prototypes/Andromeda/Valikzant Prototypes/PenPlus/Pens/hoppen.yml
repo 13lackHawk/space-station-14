@@ -1,0 +1,28 @@
+- type: entity
+  name: ручка главы персонала
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: HopPen
+  description: 'Шикарная перьевая ручка для любителя бюрократии. Имеет держатель для печатей.'
+  components:
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/hoppen.rsi
+    layers:
+    - state: hoppen
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/hoppen.rsi
+    heldPrefix: hoppen
+  - type: ItemSlots
+    slots:
+      beacon:
+        whitelist:
+          tags:
+            - RubberStampBase
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      penstamp:
+        whitelist:
+          tags:
+          - RubberStampBase

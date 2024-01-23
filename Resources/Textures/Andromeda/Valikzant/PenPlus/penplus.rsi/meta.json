@@ -1,0 +1,623 @@
+{
+ "version": 1,
+ "license": "CC-BY-SA-3.0",
+ "copyright":"Prototype by Valikzant. Sprites by Timofey Polyakov, Naik21, Sad_3brat, Valikzant, QWERTY-MIHAR.",
+ "size": {
+   "x": 32,
+   "y": 32
+ },
+ "states": [
+   {
+     "name": "pen"
+   },
+   {
+     "name": "pen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "pen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "secpen"
+   },
+   {
+     "name": "secpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "secpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "medpen"
+   },
+   {
+     "name": "medpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "medpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "techpen"
+   },
+   {
+     "name": "techpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "techpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "techengpen"
+   },
+   {
+     "name": "techengpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "techengpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "atmospen"
+   },
+   {
+     "name": "atmospen1",
+     "delays": [
+       [
+         0.1,
+         0.1,
+         0.1,
+         0.1,
+         0.5,
+         0.2,
+         0.2,
+         0.2
+       ]
+     ]
+   },
+   {
+     "name": "atmospen2"
+   },
+   {
+     "name": "atmospen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "atmospen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "gorlaxpen"
+   },
+   {
+     "name": "gorlaxpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "gorlaxpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "epaspen"
+   },
+   {
+     "name": "epaspen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "epaspen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "paipen-deactivated-base"
+   },
+   {
+     "name": "paipen-deactivated"
+   },
+   {
+     "name": "paipen-active"
+   },
+   {
+     "name": "paipen-search"
+   },
+   {
+     "name": "paipen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "paipen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "pencil"
+   },
+   {
+     "name": "pencil-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "pencil-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "chimpen"
+   },
+   {
+    "name": "chimpen1"
+   },
+   {
+    "name": "chimpen2"
+   },
+   {
+    "name": "chimpen3"
+   },
+   {
+    "name": "chimpen4"
+   },
+   {
+    "name": "chimpen5"
+   },
+   {
+    "name": "chimpen6"
+   },
+   {
+     "name": "chimpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "chimpen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "parapen"
+   },
+   {
+    "name": "parapen1"
+   },
+   {
+    "name": "parapen2"
+   },
+   {
+    "name": "parapen3"
+   },
+   {
+     "name": "parapen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "parapen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "pillpen"
+   },
+   {
+     "name": "pillpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "pillpen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "psypen1"
+   },
+   {
+    "name": "psypen2"
+   },
+   {
+    "name": "psypen3"
+   },
+   {
+    "name": "psypen4"
+   },
+   {
+    "name": "psypen5"
+   },
+   {
+     "name": "psypen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "psypen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "blade",
+    "delays": [
+      [
+        0.1,
+        0.1
+      ]
+    ]
+   },
+   {
+     "name": "bladepen"
+   },
+   {
+     "name": "bladepen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "bladepen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "salvagepen"
+   },
+   {
+     "name": "salvagepen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "salvagepen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "welderpen"
+   },
+   {
+     "name": "welderpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "welderpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "welderpen1-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "welderpen1-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "welderpen1",
+     "delays": [
+       [
+         0.1,
+         0.1,
+         0.1
+       ]
+     ]
+   },
+   {
+    "name": "cargopen"
+   },
+   {
+     "name": "cargopen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "cargopen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "avdpen"
+   },
+   {
+     "name": "avdpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "avdpen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "journpen"
+   },
+   {
+     "name": "journpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "journpen-inhand-right",
+     "directions": 4
+   },
+   {
+    "name": "barpen"
+   },
+   {
+     "name": "barpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "barpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "janpen"
+   },
+   {
+     "name": "penbeacon"
+   },
+   {
+     "name": "janpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "janpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "penbeacon-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "penbeacon-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "beacon-holo",
+     "delays": [
+       [
+         1,
+         0.9,
+         0.1,
+         0.9,
+         0.1,
+         1,
+         1,
+         0.9,
+         0.1
+       ]
+     ]
+   },
+   {
+     "name": "beacon",
+     "delays": [
+        [
+          1,
+          0.9,
+          0.1,
+          0.9,
+          0.1,
+          1,
+          1,
+          0.9,
+          0.1
+        ]
+      ]
+   },
+   {
+     "name": "beacon-closed"
+   },
+   {
+     "name": "librapen"
+   },
+   {
+     "name": "librapen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "librapen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "librapen-r"
+   },
+   {
+     "name": "librapen-r-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "librapen-r-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "scienpen"
+   },
+   {
+     "name": "scienpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "scienpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "boxerpen_0"
+   },
+   {
+     "name": "boxerpen_10"
+   },
+   {
+     "name": "boxerpen_20"
+   },
+   {
+     "name": "boxerpen_30"
+   },
+   {
+     "name": "boxerpen_40"
+   },
+   {
+     "name": "boxerpen_50"
+   },
+   {
+     "name": "boxerpen_60"
+   },
+   {
+     "name": "boxerpen_70"
+   },
+   {
+     "name": "boxerpen_80"
+   },
+   {
+     "name": "boxerpen_90"
+   },
+   {
+     "name": "boxerpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "boxerpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "chapen"
+   },
+   {
+     "name": "chapen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "chapen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "taserbullet"
+   },
+   {
+     "name": "wardenpen"
+   },
+   {
+     "name": "wardenpen-0"
+   },
+   {
+     "name": "wardenpen-1"
+   },
+   {
+     "name": "wardenpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "wardenpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "clownpen"
+   },
+   {
+     "name": "clownpen1"
+   },
+   {
+     "name": "clownpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "clownpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "crosspen0"
+   },
+   {
+     "name": "crosspen1"
+   },
+   {
+     "name": "crosspen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "crosspen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "hydropen"
+   },
+   {
+     "name": "hydropen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "hydropen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "mimepen"
+   },
+   {
+     "name": "mimepen1"
+   },
+   {
+     "name": "pianopen"
+   },
+   {
+     "name": "pianopen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "pianopen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "zoopen"
+   },
+   {
+     "name": "zoopen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "zoopen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "serpen"
+   },
+   {
+     "name": "serpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "serpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "rollingpen"
+   },
+   {
+     "name": "rollingpen-open"
+   },
+   {
+     "name": "rollingpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "rollingpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "decpen"
+   },
+   {
+     "name": "decpen1"
+   },
+   {
+     "name": "decpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "decpen-inhand-right",
+     "directions": 4
+   },
+   {
+     "name": "print"
+   },
+   {
+     "name": "print1"
+   },
+   {
+     "name": "print2"
+   },
+   {
+     "name": "secflashpen"
+   },
+   {
+     "name": "secflashpen1"
+   },
+   {
+     "name": "secflashpen-inhand-left",
+     "directions": 4
+   },
+   {
+     "name": "secflashpen-inhand-right",
+     "directions": 4
+   }
+ ]
+}

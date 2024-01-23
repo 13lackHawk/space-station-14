@@ -5,6 +5,9 @@
   description: A rubber stamp for stamping important documents.
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - RubberStampBase
   - type: Stamp
     stampedName: stamp-component-stamped-name-default
     stampState: "paper_stamp-generic"

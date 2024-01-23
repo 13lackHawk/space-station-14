@@ -1,0 +1,63 @@
+- type: entity
+  name: ручка главного врача
+  id: CmSprayPen
+  parent: BaseItem
+  suffix: Андромеда
+  description: 'Оснащена распылителем для равномерного нанесения препаратов. "Не оказывать сильное давление" - надпись рядом с пером.'
+  components:
+  - type: Tag
+    tags:
+    - Spray
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/cmpen.rsi
+    state: pencm
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/cmpen.rsi
+    heldPrefix: pencm
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 30
+  - type: MeleeChemicalInjector
+    solution: spray
+  - type: InjectableSolution
+    solution: spray
+  - type: RefillableSolution
+    solution: spray
+  - type: DrainableSolution
+    solution: spray
+  - type: SolutionTransfer
+    maxTransferAmount: 30
+  - type: SolutionInjectOnCollide
+    transferAmount: 15
+    blockSlots: NONE
+  - type: UseDelay
+  - type: Spray
+    transferAmount: 2
+    sprayVelocity: 5
+    spraySound:
+      path: /Audio/Effects/spray2.ogg
+      params:
+        volume: -5
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 5

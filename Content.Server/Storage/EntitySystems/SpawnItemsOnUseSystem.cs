@@ -82,7 +82,7 @@ namespace Content.Server.Storage.EntitySystems
 
             if (component.Sound != null)
             {
-                _audio.PlayPvs(component.Sound, uid);
+                _audio.PlayPvs(component.Sound, args.User); // Исправляет, что звук проигрывался на удаляемом предмете.
             }
 
             component.Uses--;

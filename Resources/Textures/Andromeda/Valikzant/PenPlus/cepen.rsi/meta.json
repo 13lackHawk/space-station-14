@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Idea by Sadbrat3, Prototype by Valikzant, Base sprite by Sadbrat3, Resprite and inhand sprites by Valikzant",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cepen"
+    },
+    {
+      "name": "cepen-on"
+    },
+    {
+      "name": "cepen-overlay"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-light",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-light",
+      "directions": 4
+    }
+  ]
+}

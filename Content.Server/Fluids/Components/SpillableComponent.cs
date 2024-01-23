@@ -15,6 +15,24 @@ public sealed partial class SpillableComponent : Component
     [DataField("spillWorn")]
     public bool SpillWorn = true;
 
+    /// <summary>
+    ///     Будет ли высвечиваться сообщение, когда существо было облито веществом?
+    /// </summary>
+    [DataField("popupOnHit")]
+    public bool PopupOnHit = true;
+
+    /// <summary>
+    ///     Можно ли слить предмет в дренаж?
+    /// </summary>
+    [DataField("drainable")]
+    public bool Drainable = true;
+
+    /// <summary>
+    ///     Будет ли предмет выливаться, если падает на пол?
+    /// </summary>
+    [DataField("spillOnLand")]
+    public bool SpillOnLand = true;
+
     [DataField("spillDelay")]
     public float? SpillDelay;
 

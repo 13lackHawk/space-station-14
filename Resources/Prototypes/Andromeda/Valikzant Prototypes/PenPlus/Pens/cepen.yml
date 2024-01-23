@@ -1,0 +1,79 @@
+- type: entity
+  name: ручка старшего инженера
+  parent: BaseItem
+  suffix: Андромеда
+  id: CeScrewFlashPen
+  description: 'Удобная ручка с отвёрткой и встроенным маломощным фонариком.'
+  components:
+  - type: Tag
+    tags:
+    - Flashlight
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 10
+      soundHit:
+        path: "/Audio/Weapons/bladeslice.ogg"
+  - type: HandheldLight
+    addPrefix: false
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 3
+    netsync: false
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/cepen.rsi
+    layers:
+    - state: cepen
+    - state: cepen-overlay
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 135
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 8
+  - type: Appearance
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: inhand-left-light
+        shader: unshaded
+      right:
+      - state: inhand-right-light
+        shader: unshaded
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+  - type: Tool
+    qualities:
+    - Screwing
+    useSound:
+      collection: Screwdriver
+  - type: Item
+    size: Tiny
+  - type: GuideHelp
+    guides:
+    - Engineering

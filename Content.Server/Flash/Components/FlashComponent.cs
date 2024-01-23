@@ -14,6 +14,10 @@ namespace Content.Server.Flash.Components
         [ViewVariables(VVAccess.ReadWrite)]
         public float Range { get; set; } = 7f;
 
+        [DataField("forceFlash")]
+        [ViewVariables(VVAccess.ReadWrite)]
+        public bool ForceFlash { get; set; } = false;
+
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField("aoeFlashDuration")]
         public int AoeFlashDuration { get; set; } = 2000;

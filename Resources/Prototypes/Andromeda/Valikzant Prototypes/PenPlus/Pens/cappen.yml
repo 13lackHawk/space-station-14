@@ -1,0 +1,21 @@
+- type: entity
+  name: ручка капитана
+  parent: PenBaseNoThrow
+  suffix: Андромеда
+  id: CapPen
+  description: 'Шикарная перьевая ручка капитана. Имеет экстренную кнопку сигнализации, которая звучит так громко, что способна оглушить любого, кто её услышит, даже самого капитана.'
+  components:
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/cappen.rsi
+    state: cappen
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/cappen.rsi
+    heldPrefix: pen
+  - type: Flash
+    forceFlash: true
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_signal.ogg
+      params:
+        volume: 2
+  - type: UseDelay
+    delay: 120 # Чтобы не флудили кнопкой

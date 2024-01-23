@@ -1,0 +1,43 @@
+- type: entity
+  name: ручка квартирмейстера
+  parent: BaseItem
+  suffix: Андромеда
+  id: QmPricePen
+  description: 'В этой ручке хранится огромная база данных о ценах на каждый товар, что позволяет не ждать ограничения подключения к галактическому рынку. Предметы сканируются верхней частью ручки, а клипа выступает в качестве триггера.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/qmpen.rsi
+    state: qmpen
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/qmpen.rsi
+    heldPrefix: placeholder
+    size: Tiny
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+  - type: PriceGun
+  - type: UseDelay
+    delay: 0.3
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 3
+  - type: GuideHelp
+    guides:
+    - Cargo

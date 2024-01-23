@@ -22,18 +22,23 @@
     sprite: Objects/Devices/pda.rsi
     state: pda
   - type: Pda
-    state: pda
+    penSlot:
+      startingItem: StandartPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     paiSlot:
       priority: -2
       whitelist:
         components:
         - PAI
-    penSlot:
-      startingItem: Pen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
     idSlot:
       name: access-id-card-component-default
       ejectSound: /Audio/Machines/id_swipe.ogg
@@ -41,6 +46,7 @@
       whitelist:
         components:
         - IdCard
+    state: pda
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -121,6 +127,18 @@
   description: Why isn't it gray?
   components:
   - type: Pda
+    penSlot:
+      startingItem: StandartPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: PassengerIDCard
     state: pda
   - type: PdaBorderColor
@@ -133,6 +151,18 @@
   description: Why isn't it yellow?
   components:
   - type: Pda
+    penSlot:
+      startingItem: TechPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: TechnicalAssistantIDCard
     state: pda-interntech
   - type: PdaBorderColor
@@ -148,6 +178,18 @@
   description: Why isn't it white? Has a built-in health analyzer.
   components:
   - type: Pda
+    penSlot:
+      startingItem: MedInternPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: MedicalInternIDCard
     state: pda-internmed
   - type: PdaBorderColor
@@ -166,6 +208,18 @@
   description: Why isn't it red?
   components:
   - type: Pda
+    penSlot:
+      startingItem: SecCadetPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: SecurityCadetIDCard
     state: pda-interncadet
   - type: PdaBorderColor
@@ -181,6 +235,18 @@
   description: Why isn't it purple?
   components:
   - type: Pda
+    penSlot:
+      startingItem: ScienPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ResearchAssistantIDCard
     state: pda-internsci
   - type: PdaBorderColor
@@ -196,6 +262,18 @@
   description: Why isn't it gray?
   components:
   - type: Pda
+    penSlot:
+      startingItem: SerPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ServiceWorkerIDCard
     state: pda-internservice
   - type: PdaBorderColor
@@ -211,6 +289,18 @@
   description: Covered in grease and flour.
   components:
   - type: Pda
+    penSlot:
+      startingItem: RollingPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ChefIDCard
     state: pda-cook
   - type: PdaBorderColor
@@ -225,6 +315,18 @@
   description: Has an earthy scent.
   components:
   - type: Pda
+    penSlot:
+      startingItem: HydroPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: BotanistIDCard
     state: pda-hydro
   - type: PdaBorderColor
@@ -240,16 +342,24 @@
   description: Looks can be deceiving.
   components:
   - type: Pda
-    id: ClownIDCard
-    state: pda-clown
     penSlot:
-      startingItem: CrayonOrange # no pink crayon?!?
-      # ^ Still unacceptable.
-      ejectSound: /Audio/Items/bikehorn.ogg
+      startingItem: ClownPen
+      ejectSound:
+        path: /Audio/Items/bikehorn.ogg
+        params:
+          volume: -5
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: ClownIDCard
+    state: pda-clown
   - type: PdaBorderColor
     borderColor: "#C18199"
   - type: Icon
@@ -286,10 +396,38 @@
   description: Suprisingly not on mute.
   components:
   - type: Pda
+    penSlot:
+      startingItem: MimePen
+      priority: -1
+      ejectSound:
+        path: /Audio/Machines/id_insert.ogg
+        params:
+          volume: -30
+      insertSound:
+        path: /Audio/Machines/id_insert.ogg
+        params:
+          volume: -30
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: MimeIDCard
     state: pda-mime
-    idSlot: #  rewrite without sound because mime
+    idSlot: #  rewrite without sound because mime. Ok i will
       name: ID Card
+      ejectSound:
+        path: /Audio/Machines/id_insert.ogg
+        params:
+          volume: -30
+      insertSound:
+        path: /Audio/Machines/id_insert.ogg
+        params:
+          volume: -30
       whitelist:
         components:
         - IdCard
@@ -306,6 +444,18 @@
   description: God's chosen PDA.
   components:
   - type: Pda
+    penSlot:
+      startingItem: ChaPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ChaplainIDCard
     state: pda-chaplain
   - type: PdaBorderColor
@@ -320,6 +470,18 @@
   description: PDA for the guy that orders the guns.
   components:
   - type: Pda
+    penSlot:
+      startingItem: QmPricePen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: QuartermasterIDCard
     state: pda-qm
   - type: PdaBorderColor
@@ -335,6 +497,18 @@
   description: PDA for the guys that order the pizzas.
   components:
   - type: Pda
+    penSlot:
+      startingItem: CargoPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: CargoIDCard
     state: pda-cargo
   - type: PdaBorderColor
@@ -349,6 +523,18 @@
   description: Smells like ash.
   components:
   - type: Pda
+    penSlot:
+      startingItem: SalvagePen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: SalvageIDCard
     state: pda-miner
   - type: PdaBorderColor
@@ -364,6 +550,18 @@
   description: Smells like beer.
   components:
   - type: Pda
+    penSlot:
+      startingItem: BarPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: BartenderIDCard
     state: pda-bartender
   - type: PdaBorderColor
@@ -378,14 +576,20 @@
   description: Smells like books.
   components:
   - type: Pda
-    id: LibrarianIDCard
-    state: pda-library
     penSlot:
-      startingItem: LuxuryPen
+      startingItem: LibraPen
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: LibrarianIDCard
+    state: pda-library
   - type: PdaBorderColor
     borderColor: "#858585"
   - type: Icon
@@ -398,14 +602,20 @@
   description: For lawyers to poach dubious clients.
   components:
   - type: Pda
-    id: LawyerIDCard
-    state: pda-lawyer
     penSlot:
-      startingItem: LuxuryPen
+      startingItem: AVDPen
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: LawyerIDCard
+    state: pda-lawyer
   - type: PdaBorderColor
     borderColor: "#6f6192"
   - type: Icon
@@ -418,6 +628,18 @@
   description: Smells like bleach.
   components:
   - type: Pda
+    penSlot:
+      startingItem: JanPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: JanitorIDCard
     state: pda-janitor
   - type: PdaBorderColor
@@ -432,14 +654,20 @@
   description: Surprisingly no different from your PDA.
   components:
   - type: Pda
-    id: CaptainIDCard
-    state: pda-captain
     penSlot:
-      startingItem: PenCap
+      startingItem: CapPen
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: CaptainIDCard
+    state: pda-captain
   - type: PdaBorderColor
     borderColor: "#7C5D00"
   - type: Icon
@@ -452,14 +680,20 @@
   description: Looks like it's been chewed on.
   components:
   - type: Pda
-    id: HoPIDCard
-    state: pda-hop
     penSlot:
-      startingItem: PenHop
+      startingItem: HopPen
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: HoPIDCard
+    state: pda-hop
   - type: PdaBorderColor
     borderColor: "#789876"
     accentHColor: "#447987"
@@ -473,6 +707,18 @@
   description: Looks like it's barely been used.
   components:
   - type: Pda
+    penSlot:
+      startingItem: CeScrewFlashPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: CEIDCard
     state: pda-ce
   - type: PdaBorderColor
@@ -488,6 +734,18 @@
   description: Rugged and well-worn.
   components:
   - type: Pda
+    penSlot:
+      startingItem: PenEngineer
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: EngineeringIDCard
     state: pda-engineer
   - type: PdaBorderColor
@@ -503,6 +761,18 @@
   description: Extraordinarily shiny and sterile. Has a built-in health analyzer.
   components:
   - type: Pda
+    penSlot:
+      startingItem: CmSprayPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: CMOIDCard
     state: pda-cmo
   - type: PdaBorderColor
@@ -519,6 +789,18 @@
   description: Shiny and sterile. Has a built-in health analyzer.
   components:
   - type: Pda
+    penSlot:
+      startingItem: MedPillPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: MedicalIDCard
     state: pda-medical
   - type: PdaBorderColor
@@ -537,6 +819,18 @@
   description: Shiny and sterile. Has a built-in rapid health analyzer.
   components:
   - type: Pda
+    penSlot:
+      startingItem: ParamedPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ParamedicIDCard
     state: pda-paramedic
   - type: PdaBorderColor
@@ -552,6 +846,18 @@
   description: It has a few discolored blotches here and there.
   components:
   - type: Pda
+    penSlot:
+      startingItem: MedChimPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ChemistIDCard
     state: pda-chemistry
   - type: PdaBorderColor
@@ -567,6 +873,18 @@
   description: It appears surprisingly ordinary.
   components:
   - type: Pda
+    penSlot:
+      startingItem: RdAnomalyPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: RDIDCard
     state: pda-rd
   - type: PdaBorderColor
@@ -583,6 +901,18 @@
   description: It's covered with an unknown gooey substance.
   components:
   - type: Pda
+    penSlot:
+      startingItem: PaiPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ResearchIDCard
     state: pda-science
   - type: PdaBorderColor
@@ -598,6 +928,18 @@
   description: Whosoever bears this PDA is the law.
   components:
   - type: Pda
+    penSlot:
+      startingItem: HosStunPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: HoSIDCard
     state: pda-hos
   - type: PdaBorderColor
@@ -613,6 +955,18 @@
   description: The OS appears to have been jailbroken.
   components:
   - type: Pda
+    penSlot:
+      startingItem: WardenPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: WardenIDCard
     state: pda-warden
   - type: PdaBorderColor
@@ -628,6 +982,18 @@
   description: Red to hide the stains of passenger blood.
   components:
   - type: Pda
+    penSlot:
+      startingItem: SecFlashPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: SecurityIDCard
     state: pda-security
   - type: PdaBorderColor
@@ -668,6 +1034,18 @@
   suffix: Death Squad
   components:
   - type: Pda
+    penSlot:
+      startingItem: DeathSquadPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: CentcomIDCardDeathsquad
 
 - type: entity
@@ -677,6 +1055,18 @@
   description: It fills you with inspiration.
   components:
   - type: Pda
+    penSlot:
+      startingItem: PianoPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: MusicianIDCard
     state: pda-musician
   - type: PdaBorderColor
@@ -696,6 +1086,18 @@
   description: Still smells like plasma.
   components:
   - type: Pda
+    penSlot:
+      startingItem: AtmosPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: AtmosIDCard
     state: pda-atmos
   - type: PdaBorderColor
@@ -711,6 +1113,18 @@
   description: 99 and 44/100ths percent pure plastic.
   components:
   - type: Pda
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: PassengerIDCard
     state: pda-clear
   - type: PdaBorderColor
@@ -725,6 +1139,18 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
+    penSlot:
+      startingItem: GorlaxElitePen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: SyndicateIDCard
     state: pda-syndi
   - type: PdaBorderColor
@@ -822,6 +1248,18 @@
   description: Looks immaculately cleaned.
   components:
   - type: Pda
+    penSlot:
+      startingItem: MedPsyPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: PsychologistIDCard
     state: pda-medical
   - type: PdaBorderColor
@@ -837,14 +1275,20 @@
   description: Smells like freshly printed press.
   components:
   - type: Pda
-    id: ReporterIDCard
-    state: pda-reporter
     penSlot:
-      startingItem: LuxuryPen
+      startingItem: JournPen
       priority: -1
       whitelist:
         tags:
         - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
+    id: ReporterIDCard
+    state: pda-reporter
   - type: PdaBorderColor
     borderColor: "#3f3f74"
   - type: Icon
@@ -857,6 +1301,18 @@
   description: Made with genuine synthetic leather. Crikey!
   components:
   - type: Pda
+    penSlot:
+      startingItem: ZooPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: ZookeeperIDCard
     state: pda-zookeeper
   - type: PdaBorderColor
@@ -871,6 +1327,18 @@
   description: Float like a butterfly, ringtone like a bee.
   components:
   - type: Pda
+    penSlot:
+      startingItem: BoxerPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: BoxerIDCard
     state: pda-boxer
   - type: PdaBorderColor
@@ -886,6 +1354,18 @@
   description: Smells like rain... pouring down the rooftops...
   components:
   - type: Pda
+    penSlot:
+      startingItem: DecPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: DetectiveIDCard
     state: pda-detective
   - type: PdaBorderColor
@@ -923,13 +1403,6 @@
     borderColor: "#1c8f4d"
   - type: Icon
     state: pda-cluwne
-    penSlot:
-      startingItem: CrayonGreen
-      ejectSound: /Audio/Items/bikehorn.ogg
-      priority: -1
-      whitelist:
-        tags:
-        - Write
   - type: Unremoveable
 
 - type: entity
@@ -1013,6 +1486,18 @@
   description: For those days when healing normal syndicates aren't enough, try healing nuclear operatives instead!
   components:
   - type: Pda
+    penSlot:
+      startingItem: GorlaxElitePen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+        - SalvagePenWelder
+        - LibraPenR
+        - RollingPen
+      blacklist:
+        tags:
+        - CrossPen
     id: SyndicateIDCard
     state: pda-syndi-agent
   - type: PdaBorderColor

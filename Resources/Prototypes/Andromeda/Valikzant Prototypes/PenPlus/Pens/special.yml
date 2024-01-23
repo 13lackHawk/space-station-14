@@ -1,0 +1,29 @@
+- type: entity
+  name: ручка эскадрона смерти
+  parent: PenBaseDefault
+  suffix: Андромеда [Не маппить, Админы]
+  id: DeathSquadPen
+  description: 'В эту ручку вложили также не мало бюджета, как и военное снаряжение. Её стержень несёт функцию ввода в организм крайне опасных нано-машин, которые полностью дестабилизируют организм, буквально отключая мозг от тела. Помогает избавляться от буйных врагов, которые даже ничего не почувствуют. По-умолчанию содержит три капсулы с этими безжалостными машинами. Не вколите в себя.'
+  components:
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/special.rsi
+    state: deathpen
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/special.rsi
+    heldPrefix: deathpen
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 300
+        reagents:
+        - ReagentId: Lexorin
+          Quantity: 90
+        - ReagentId: ChloralHydrate
+          Quantity: 150
+        - ReagentId: MuteToxin
+          Quantity: 60
+  - type: Hypospray
+    onlyMobs: false
+    transferAmount: 100
+  - type: UseDelay
+    delay: 3

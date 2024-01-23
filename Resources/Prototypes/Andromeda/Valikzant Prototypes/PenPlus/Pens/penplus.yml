@@ -1,0 +1,1566 @@
+# Made by Valikzant
+
+# Родители для ручек: (Здесь указаны путь для папки, звук бросания и так далее)
+- type: entity
+  name: крутая ручка
+  parent: BaseItem
+  suffix: Андромеда
+  abstract: true
+  id: PenBaseDefault
+  description: 'Эта ручка лучше, чем обычная ручка.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: TileFrictionModifier
+    modifier: 0.4
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    size: Tiny
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 3
+
+- type: entity
+  name: чуть менее крутая ручка
+  parent: BaseItem
+  suffix: Андромеда
+  abstract: true
+  id: PenBaseNoThrow
+  description: 'Не используется компонент бросания.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    size: Tiny
+
+- type: entity
+  name: чуть менее крутая ручка, но чуть круче чем менее крутая
+  parent: BaseItem
+  suffix: Андромеда
+  abstract: true
+  id: PenBaseNoStick
+  description: 'Не используется компонент втыкания.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 3
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    size: Tiny
+
+
+# Косметические ручки: (У них не изменены какие-то параметры в отличии от остальных)
+- type: entity
+  name: ручка
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: StandartPen
+  description: 'Ручка с чёрными чернилами.'
+  components:
+  - type: Sprite
+    state: pen
+  - type: Item
+    heldPrefix: pen
+
+- type: entity
+  name: ручка сервисного работника
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: SerPen
+  description: 'Простая и практичная ручка, которая подойдёт на любой должности! Наверное этим она и уникальна..?'
+  components:
+  - type: Sprite
+    state: serpen
+  - type: Item
+    heldPrefix: serpen
+
+- type: entity
+  name: ручка репортёра
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: JournPen
+  description: 'Не хватало микрофона под рукой, чтобы поставить идеальный кадр во время интервью? Отличное решение: ручка-микрофон.'
+  components:
+  - type: Sprite
+    state: journpen
+  - type: Item
+    heldPrefix: journpen
+
+- type: entity
+  name: элитная пассажирская ручка
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: ElitePassangerPen
+  description: 'Элитная ручка для ценных пассажиров НаноТрейзен. Украшена золотом.'
+  components:
+  - type: Sprite
+    state: epaspen
+  - type: Item
+    heldPrefix: epaspen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+      Gold: 5
+
+- type: entity
+  name: инженерная ручка
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: TechPen
+  description: 'Ручка с интересным игрушечным брелком-мультитулом.'
+  components:
+  - type: Sprite
+    state: techpen
+  - type: Item
+    heldPrefix: techpen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+  - type: GuideHelp
+    guides:
+    - Engineering
+
+- type: entity
+  name: медицинская ручка
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: MedInternPen
+  description: 'Стерильная ручка. Пахнет лекарствами и химией.'
+  components:
+  - type: Sprite
+    state: medpen
+  - type: Item
+    heldPrefix: medpen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+  - type: GuideHelp
+    guides:
+    - Medical
+
+- type: entity
+  name: ручка грузчика
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: CargoPen
+  description: 'Эта ручка обмотана не одним слоем скотча, который раньше использовался для упаковки товаров, теперь же он символизирует лишь долголетие и прошлое.'
+  components:
+  - type: Sprite
+    state: cargopen
+  - type: Item
+    heldPrefix: cargopen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+  - type: GuideHelp
+    guides:
+    - Cargo
+
+- type: entity
+  name: научная ручка
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: ScienPen
+  description: 'Эта ручка прошла через многие эксперименты, что можно сказать по слезшей краске и грубости на ощуп.'
+  components:
+  - type: Sprite
+    state: scienpen
+  - type: Item
+    heldPrefix: scienpen
+    size: Tiny
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+  - type: GuideHelp
+    guides:
+    - Science
+
+- type: entity
+  name: ручка службы безопасности
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: SecCadetPen
+  description: 'Ручка службы безопасности. Позволяет почувствовать власть, держа её в руках.'
+  components:
+  - type: Sprite
+    state: secpen
+  - type: Item
+    heldPrefix: secpen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+  - type: GuideHelp
+    guides:
+    - Security
+
+- type: entity
+  name: карандаш
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: WoodenPencil
+  description: 'Обычный, деревянный карандаш. На ощупь, как грубое дерево.'
+  components:
+  - type: Sprite
+    state: pencil
+  - type: Item
+    heldPrefix: pencil
+  - type: PhysicalComposition
+    materialComposition:
+      Wood: 30
+
+# Косметические ручки+: (Слегка изменены параметры)
+- type: entity
+  name: ручка агента внутренних дел
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: AVDPen
+  description: 'Собираетесь писать самый важный документ? Тогда вы не должны ждать, ведь эта ручка позволит вам писать на бумаге - удивлены? Если нет, то точно удивительно, так то, что кристалл на кончике ручки позволяет стирать чернила, если вдруг ошиблись.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+    - WriteIgnoreStamps # Если станет имбой или злоупотреблением - уберём.
+  - type: Sprite
+    state: avdpen
+  - type: Item
+    heldPrefix: avdpen
+    size: Tiny
+
+- type: entity
+  name: ручка горлакс
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: GorlaxElitePen
+  description: 'Ручка бесстрашных мародёров космоса. Покажите свой статус!'
+  components:
+  - type: Sprite
+    state: gorlaxpen
+  - type: Item
+    heldPrefix: gorlaxpen
+  - type: MeleeWeapon
+    wideAnimationRotation: -60
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 10
+      soundHit:
+        path: "/Audio/Weapons/bladeslice.ogg"
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 10
+
+- type: entity
+  name: ручка психолога
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: MedPsyPen
+  description: 'Ручка, оснащенная жмякалкой! Её можно гладить, жмякать, облизывать, нюхать... Помогает успокоить нервы.'
+  components:
+  - type: Sprite
+    layers:
+      - state: psypen1
+        map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Item
+    heldPrefix: psypen
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          psypen1: ""
+          psypen2: ""
+          psypen3: ""
+          psypen4: ""
+          psypen5: ""
+  - type: UseDelay
+    delay: 1
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+      params:
+        volume: -13
+        variation: 0.03
+  - type: GuideHelp
+    guides:
+    - Medical
+
+- type: entity
+  name: ручка зоотехника
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: ZooPen
+  description: 'Данная ручка имеет в своей конструкции встроенный качественный динамик, который может имитировать звуки различных животных.'
+  components:
+  - type: Sprite
+    state: zoopen
+  - type: Item
+    heldPrefix: zoopen
+  - type: UseDelay
+    delay: 3
+  - type: EmitSoundOnUse
+    sound:
+      collection: ZooPenAnimals
+      params:
+        variation: 0.05
+        volume: -4
+  - type: GuideHelp
+    guides:
+    - Medical
+
+- type: entity
+  name: ручка музыканта
+  parent: [ PenBaseDefault, BaseHandheldInstrument ]
+  suffix: Андромеда
+  description: 'Имеет встроенные клавиши, которые издают звук при нажатии. Проще говоря - перед вами мини-синтезатор прямо в ручке.'
+  id: PianoPen
+  components:
+  - type: Instrument
+    program: 62
+  - type: SwappableInstrument
+    instrumentList:
+      "Electro": {62: 0}
+      "Bubbles": {63: 0}
+  - type: Sprite
+    state: pianopen
+  - type: Item
+    heldPrefix: pianopen
+
+- type: entity
+  name: ручка боксёра
+  parent: PenBaseNoThrow
+  suffix: Андромеда
+  id: BoxerPen
+  description: 'Имеет в конструкции измеритель силы сжатия кулака, который считывает сразу несколько параметров: Рост, Вес, Длина пальцев, Объем мышц... и еще несколько тысяч значений... поэтому результат всегда непредсказуем.'
+  components:
+  - type: Sprite
+    state: boxerpen_0
+  - type: Item
+    heldPrefix: boxerpen
+  - type: UseDelay
+    delay: 1
+  - type: Dice # ИЗМЕРИТЕЛЬ МОЩИ, рандомный.
+    sides: 10
+    multiplier: 10
+    offset: 1
+    currentValue: 0
+    sound:
+      path: /Audio/Items/Handcuffs/rope_takeoff.ogg
+      params:
+        volume: -100
+        variation: 0.05
+
+# Функциональные ручки: (Имеют функции других предметов)
+- type: entity
+  name: ручка учёного
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: PaiPen
+  description: 'С этой ручки началась большая история. Как гласят легенды: Один учёный проводил эксперименты над уменьшением размеров персональных ИИ и ему это успешно удалось. Однако, где применять новую модель - было неизвестно. И вот, пока проект не прикрыли, учёный стал думать и писать идеи на бумаге. Ни одна идея не подходила, но когда он посмотрел на свою ручку, то понял, что вот оно! НаноТрейзен быстро спохватились над добавлением каждой ручке уникальной функции по идее учёного, который теперь живёт отличной жизнью за денежную премию.'
+  components:
+  - type: Sprite
+    layers:
+    - state: paipen-deactivated-base
+    - state: paipen-deactivated
+      shader: unshaded
+      map: ["screen"]
+  - type: Item
+    heldPrefix: paipen
+    size: Tiny
+  - type: Instrument
+    allowPercussion: false
+    handheld: false
+    bank: 1
+    program: 2
+  - type: UserInterface
+    interfaces:
+    - key: enum.InstrumentUiKey.Key
+      type: InstrumentBoundUserInterface
+    - key: enum.StationMapUiKey.Key
+      type: UntrackedStationMapBoundUserInterface
+  - type: Input
+    context: "human"
+  - type: PAI
+  - type: BlockMovement
+  - type: ToggleableGhostRole
+    examineTextMindPresent: pai-system-pai-installed
+    examineTextMindSearching: pai-system-still-searching
+    examineTextNoMind: pai-system-off
+    beginSearchingText: pai-system-searching
+    roleName: pai-system-role-name
+    roleDescription: pai-system-role-description
+    wipeVerbText: pai-system-wipe-device-verb-text
+    wipeVerbPopup: pai-system-wiped-device
+    stopSearchVerbText: pai-system-stop-searching-verb-text
+    stopSearchVerbPopup: pai-system-stopped-searching
+  - type: Examiner
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Science
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Science
+  - type: DoAfter
+  - type: Actions
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
+  - type: MobState
+    allowedStates:
+    - Alive
+  - type: Appearance
+  - type: StationMap
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableGhostRoleVisuals.Status:
+        screen:
+          Off: { state: paipen-deactivated }
+          Searching: { state: paipen-search }
+          On: { state: paipen-active }
+  - type: GuideHelp
+    guides:
+    - Science
+
+- type: entity
+  name: ручка инженера
+  parent: PenBaseNoThrow
+  suffix: Андромеда
+  id: PenEngineer
+  description: 'Крепкая инженерная ручка. Удлиненная основа позволяет взять хороший рычаг для открытия дверей.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+    - Crowbar
+  - type: Sprite
+    state: techengpen
+  - type: Item
+    heldPrefix: techengpen
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    damage:
+      types:
+        Blunt: 6
+  - type: Tool
+    qualities:
+      - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ThrowingAngle
+    angle: 135
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Prying
+  - type: GuideHelp
+    guides:
+    - Engineering
+
+- type: entity
+  name: ручка атмосферного техника
+  parent: PenBaseNoThrow
+  suffix: Андромеда
+  id: AtmosPen
+  description: 'Атмос-ручка. При удержании кнопки включается газоанализатор на небольшом экране сверху, где, по ощущению, находится весь центр массы.'
+  components:
+  - type: Sprite
+    layers:
+      - state: atmospen
+        map: ["analyzer"]
+  - type: Item
+    heldPrefix: atmospen
+  - type: GasAnalyzer
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    closeOnHandDeselect: true
+    key: enum.GasAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.GasAnalyzerUiKey.Key
+      type: GasAnalyzerBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+        enum.GasAnalyzerVisuals.Enabled:
+          enabled:
+            True: { state: atmospen1 }
+            False: { state: atmospen }
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    damage:
+      types:
+        Blunt: 3
+        Slash: 4
+  - type: Damageable
+    damageContainer: Biological
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: Destructible # Думаю добавлю возможность чинить эти ручки потом, только не знаю каким инструментом
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-small-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 3
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-medium-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 4
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-heavy-damage
+        popupType: MediumCaution
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-becomes-broken
+        popupType: LargeCaution
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Andromeda/Valikzant/Penplus/pen_fall_break1.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          AtmosPenBroken:
+            min: 1
+            max: 1
+          ShardGlass:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ThrowingAngle
+    angle: 135
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: GuideHelp
+    guides:
+    - Engineering
+
+- type: entity
+  name: ручка атмосферного техника
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект сломан]
+  id: AtmosPenBroken
+  description: 'Атмос-ручка. Выглядит сломанной.'
+  components:
+  - type: Sprite
+    state: atmospen2
+  - type: Item
+    heldPrefix: atmospen
+  - type: GuideHelp
+    guides:
+    - Engineering
+
+- type: entity
+  name: ручка парамедика
+  parent: PenBaseNoThrow
+  suffix: Андромеда [Гипоручка]
+  id: ParamedPen # Надеюсь не имба, посмотрим как её будут использовать
+  description: 'Многоразовый медипен, оформленный в виде стильной ручки. Способен содержать до 15 унций веществ, которые мгновенно вводятся при инъекции. Внутреннее устройство генерации сжатого воздуха позволит повторно впрыскивать компоненты через несколько минут.'
+  components:
+  - type: Sprite
+    layers:
+      - state: parapen
+      - state: parapen1
+        map: [ "enum.SolutionContainerLayers.Fill" ]
+        visible: false
+  - type: Item
+    heldPrefix: parapen
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 15
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: parapen
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyMobs: false
+    transferAmount: 15
+  - type: UseDelay
+    delay: 120
+  - type: GuideHelp
+    guides:
+    - Medical
+
+- type: entity
+  name: ручка офицера
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: SecFlashPen
+  description: 'Уникальная ручка-вспышка, не позволяет стереть память, но хорошо ослепляет убегающих преступников.'
+  components:
+  - type: Sprite
+    layers:
+      - state: secflashpen
+        map: [ "enum.FlashVisuals.BaseLayer" ]
+  - type: Item
+    heldPrefix: secflashpen
+  - type: Flash
+  - type: LimitedCharges
+    maxCharges: 3
+    charges: 3
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    damage:
+      types:
+        Blunt: 0
+    angle: 10
+  - type: UseDelay
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.FlashVisuals.Burnt:
+        enum.FlashVisuals.BaseLayer:
+          True: {state: secflashpen1}
+  - type: GuideHelp
+    guides:
+    - Security
+
+- type: entity
+  name: ручка врача
+  parent: [ PenBaseNoThrow, BaseStorageItem ] # Умно? Не знал, что так можно, однако - вот. Буду знать. Оно еще и порядок имеет!
+  suffix: Андромеда
+  id: MedPillPen
+  description: 'Ручка со встроенным контейнером для таблеток первой помощи. Конструкция специально устроена так, что места для хранения идеально хватает вокруг пишущего стержня.'
+  components:
+  - type: Tag
+    tags:
+    - PillCanister
+    - Write
+  - type: Storage
+    grid:
+    - 0,0,0,4
+    - 2,0,2,4
+    - 1,0,1,0
+    quickInsert: true
+    areaInsert: true
+    areaInsertRadius: 1
+    storageInsertSound: /Audio/Effects/pill_insert.ogg
+    storageRemoveSound: /Audio/Effects/pill_remove.ogg
+    whitelist:
+      tags:
+        - Pill
+  - type: Sprite
+    state: pillpen
+  - type: Item
+    heldPrefix: pillpen
+  - type: GuideHelp
+    guides:
+    - Medical
+  - type: Dumpable
+
+- type: entity
+  name: ручка химика
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: MedChimPen
+  description: 'Ручка для переноса жидких веществ. Имеет стеклянное окошко, позволяющее видеть оставшиеся чернила и залитые жидкости.'
+  components:
+  - type: Sprite
+    layers:
+      - state: chimpen
+      - state: chimpen1
+        map: [ "enum.SolutionContainerLayers.Fill" ]
+        visible: false
+  - type: Item
+    heldPrefix: chimpen
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        canMix: true
+  - type: Spillable
+    solution: pen
+    spillOnLand: false # Моё
+  - type: RefillableSolution
+    solution: pen
+  - type: DrainableSolution
+    solution: pen
+  - type: ExaminableSolution
+    solution: pen
+  - type: DrawableSolution
+    solution: pen
+  - type: InjectableSolution
+    solution: pen
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      - key: enum.TransferAmountUiKey.Key
+        type: TransferAmountBoundUserInterface
+  - type: Drink
+    solution: pen
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: chimpen
+  - type: GuideHelp
+    guides:
+    - Medical
+
+- type: entity
+  name: ручка утилизатора
+  parent: PenBaseNoThrow
+  suffix: Андромеда [Объект активирован]
+  id: SalvagePenBlade
+  description: 'Ручка, пропитанная максимальной брутальностью и пережитком прошлого. Активированное тонкое лезвие позволяет резать обломки, как расплавленное масло.'
+  components:
+  - type: Sprite
+    layers:
+      - state: bladepen
+      - state: blade
+        visible: true
+        map: [ "light" ]
+        shader: unshaded
+  - type: Item
+    size: Small # Ну наверное лезвие сделает её длиннее.
+    inhandVisuals:
+      left:
+      - state: salvagepen-inhand-left
+      - state: bladepen-inhand-left
+        shader: unshaded
+      right:
+      - state: salvagepen-inhand-right
+      - state: bladepen-inhand-right
+        shader: unshaded
+  - type: Appearance
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 5
+        Heat: 8
+        Structural: 20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-small-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 3
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-medium-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 4
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-heavy-damage
+        popupType: MediumCaution
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-becomes-broken
+        popupType: LargeCaution
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Andromeda/Valikzant/Penplus/pen_fall_break2.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SalvagePenWelder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AmbientSound
+    range: 10
+    volume: -6
+    sound:
+      path: /Audio/Weapons/ebladehum.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+        volume: -6
+    soundNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    damage:
+      types:
+        Slash: 5
+        Heat: 8
+        Structural: 20 # Оно точно работает? Я не понимаю
+  - type: SpawnItemsOnUse
+    items:
+      - id: SalvagePen
+    sound:
+      path: /Audio/Weapons/ebladeoff.ogg
+      params:
+        volume: -10
+
+- type: entity
+  name: ручка утилизатора
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект деактивирован]
+  id: SalvagePen
+  description: 'Ручка, пропитанная максимальной брутальностью и пережитком прошлого. При активации разогревает внутренний стержень до красна и выдвигает его наружу.'
+  components:
+  - type: Sprite
+    state: salvagepen
+  - type: Item
+    heldPrefix: salvagepen
+  - type: SpawnItemsOnUse
+    items:
+      - id: SalvagePenBlade
+    sound:
+      path: /Audio/Weapons/ebladeon.ogg
+      params:
+        volume: -10
+  - type: GuideHelp
+    guides:
+    - Salvage
+
+- type: entity
+  name: ручка утилизатора
+  parent: PenBaseNoThrow
+  suffix: Андромеда [Объект сломан] # Ну типа сломан
+  id: SalvagePenWelder
+  description: 'Ручка, пропитанная максимальной брутальностью и пережитком прошлого. Похоже, что лезвие отвалилось, однако видно еще небольшой огонёк внутри.'
+  components:
+  - type: Tag
+    tags:
+    - SalvagePenWelder # Чтобы можно было положить и внутрь кпк утилизатора
+  - type: Sprite
+    layers:
+      - state: welderpen
+      - state: welderpen1
+        visible: false
+        shader: unshaded
+        map: ["enum.ToggleVisuals.Layer"]
+  - type: Item
+    heldPrefix: welderpen
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    activatedDamage:
+        types:
+            Heat: 8
+  - type: MeleeWeapon
+    wideAnimationRotation: -35
+    damage:
+      types:
+        Blunt: 5
+  - type: ItemToggleSize
+    activatedSize: Ginormous
+  - type: ItemToggleHot
+  - type: ItemToggleDisarmMalus
+    activatedDisarmMalus: 0.6
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: welderpen1-inhand-left
+        shader: unshaded
+      right:
+      - state: welderpen1-inhand-right
+        shader: unshaded
+  - type: UseDelay
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 50
+        maxVol: 50
+  - type: Tool
+    useSound:
+      collection: Welder
+    qualities: Welding
+  - type: Welder
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: orange
+    netsync: false
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: IgnitionSource
+    temperature: 700
+  - type: GuideHelp
+    guides:
+    - Salvage
+
+- type: entity
+  name: ручка уборщика
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: JanPen
+  description: 'Необычная ирония, но эта ручка красивее чем капитанская, а ещё она обладает необычным устройством, а именно - маячком уборщика, который прикреплён к верхней части и может быть отсоединён для последующей установки.'
+  components:
+  - type: Sprite
+    layers:
+    - state: janpen
+  - type: Item
+    heldPrefix: janpen
+  - type: Tool
+    qualities:
+    - JanitorKey # Чтобы только ей можно было пользоваться маячком, удобно.
+  - type: ItemSlots
+    slots:
+      beacon:
+        startingItem: JanBeaconClosed
+        whitelist:
+          tags:
+            - JanBeaconClosed
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      penbeacon:
+        whitelist:
+          tags:
+          - JanBeaconClosed
+  - type: GuideHelp
+    guides:
+    - Janitorial
+
+- type: entity
+  name: ручка библиотекаря
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект в режиме 1]
+  id: LibraPen
+  description: 'Ручка библиотекаря со встроенным этикетировщиком. Переверните ручку, чтобы воспользоваться им.'
+  components:
+  - type: Sprite
+    state: librapen
+  - type: Item
+    heldPrefix: librapen
+  - type: SpawnItemsOnUse
+    items:
+      - id: LibraPenR
+
+- type: entity
+  name: ручка библиотекаря
+  parent: PenBaseNoThrow
+  suffix: Андромеда [Объект в режиме 2]
+  id: LibraPenR
+  description: 'Ручка библиотекаря со встроенным этикетировщиком. Переверните ручку, чтобы снова писать стержнем.'
+  components:
+  - type: Tag
+    tags:
+    - LibraPenR # Чтобы в кпк библиотекаря влезло.
+  - type: Sprite
+    state: librapen-r
+  - type: Item
+    heldPrefix: librapen-r
+  - type: ActivatableUI
+    key: enum.HandLabelerUiKey.Key
+    rightClickOnly: true # Позволят использовать SpawnItemsOnUse не вызывая меню
+  - type: SpawnItemsOnUse
+    items:
+      - id: LibraPen
+  - type: UserInterface
+    interfaces:
+      - key: enum.HandLabelerUiKey.Key
+        type: HandLabelerBoundUserInterface
+  - type: HandLabeler
+    whitelist:
+      components:
+        - Item
+      tags:
+        - Structure
+
+- type: entity
+  name: ручка детектива
+  parent: [ PenBaseNoThrow, BaseStorageItem, BaseBagOpenClose ]
+  suffix: Андромеда
+  id: DecPen
+  description: 'Довольно простая и удобная ручка, которую можно использовать для хранения экспертиз.'
+  components:
+  - type: Sprite
+    layers:
+    - state: decpen
+    - state: decpen1
+      map: ["openLayer"]
+    - state: print
+      map: ["print"]
+      visible: false
+    - state: print1
+      map: ["print1"]
+      visible: false
+    - state: print2
+      map: ["print2"]
+      visible: false
+  - type: Item
+    heldPrefix: decpen
+  - type: Storage
+    storageOpenSound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_storage_open.ogg
+      params:
+        volume: 3
+        variation: 0.1
+    storageInsertSound: null
+    storageRemoveSound: null
+    grid:
+    - 0,0,2,1
+    whitelist:
+      tags:
+      - ForensicReportPaper
+  - type: ThrowingAngle
+    angle: 135
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 3
+  - type: Appearance
+  - type: ItemCounter
+    count:
+      tags: [ForensicReportPaper]
+    composite: true
+    layerStates:
+    - print
+    - print1
+    - print1
+    - print2
+    - print2
+    - print2
+  - type: GuideHelp
+    guides:
+    - Forensics
+
+- type: entity
+  name: ручка клоуна
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: ClownPen
+  description: 'Пёстрые цвета! Уникальный вид! Ну и как же? Не без мелка в комплекте!'
+  components:
+  - type: Sprite
+    layers:
+    - state: clownpen
+  - type: Item
+    heldPrefix: clownpen
+  - type: ItemSlots
+    slots:
+      beacon:
+        startingItem: CrayonOrange
+        whitelist:
+          tags:
+            - CrayonOrange
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      clownpen1:
+        whitelist:
+          tags:
+          - CrayonOrange
+
+- type: entity
+  name: ручка мима
+  parent: PenBaseDefault
+  suffix: Андромеда
+  id: MimePen
+  description: 'Это необычная невидимая ручка, которая идёт в комплекте с мелком! Удивите друзей, как вы пишите на бумаге, держа в руках ничего.'
+  components:
+  - type: Sprite
+    layers:
+    - state: mimepen
+  - type: Item
+  - type: ItemSlots
+    slots:
+      beacon:
+        ejectSound:
+          path: /Audio/Machines/id_insert.ogg
+          params:
+            volume: -30
+        insertSound:
+          path: /Audio/Machines/id_insert.ogg
+          params:
+            volume: -30
+        startingItem: CrayonMime
+        whitelist:
+          tags:
+            - CrayonMime
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      mimepen1:
+        whitelist:
+          tags:
+          - CrayonMime
+
+- type: entity
+  name: ручка ботаника
+  parent: PenBaseDefault
+  suffix: Андромеда
+  description: 'Конструкция этой ручки обросла твёрдым растением, наконечник которой выделяет вещество, похожее на чернила, что делает ручку... такой-же ручкой... Но еще здесь встроена небольшая пипетка! Которая наполнена веществом для экспериментов над геномом растений.'
+  id: HydroPen
+  components:
+  - type: Sprite
+    state: hydropen
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 5
+        reagents:
+        - ReagentId: UnstableMutagen
+          Quantity: 5
+  - type: Injector
+    injectOnly: false
+    ignoreMobs: true
+    minTransferAmount: 1
+    maxTransferAmount: 5
+    transferAmount: 1
+    toggleState: 1
+  - type: ExaminableSolution
+    solution: dropper
+  - type: UserInterface
+    interfaces:
+    - key: enum.TransferAmountUiKey.Key
+      type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: injector
+  - type: Item
+    heldPrefix: hydropen
+
+- type: entity
+  name: ручка бармена
+  parent: PenBaseDefault
+  suffix: Андромеда
+  description: 'Для идеального расчёта количества напитка в ручку встроена пипетка.'
+  id: BarPen
+  components:
+  - type: Sprite
+    state: barpen
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 10
+  - type: Injector
+    injectOnly: false
+    ignoreMobs: true
+    minTransferAmount: 1
+    maxTransferAmount: 10
+    transferAmount: 1
+    toggleState: 1
+  - type: ExaminableSolution
+    solution: dropper
+  - type: UserInterface
+    interfaces:
+    - key: enum.TransferAmountUiKey.Key
+      type: TransferAmountBoundUserInterface
+  - type: Spillable
+    solution: injector
+  - type: Item
+    heldPrefix: barpen
+
+- type: entity
+  name: ручка повара
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект в режиме 1]
+  description: 'Никто не ожидал, но это ручка для раскатывания теста. Колпачок закрыт.' # Как? С кайфом.
+  id: RollingPen
+  components:
+  - type: Tag
+    tags:
+    - RollingPin # Ну
+    - RollingPen # Да
+    # Не суйте только в задницу, пожалуйста. На это тегов нет.
+  - type: Sprite
+    state: rollingpen
+  - type: Item
+    heldPrefix: rollingpen
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 5
+  - type: Tool
+    qualities:
+    - Rolling
+  - type: SpawnItemsOnUse
+    items:
+      - id: RollingPenOpen
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_storage_open.ogg
+      params:
+        volume: 3
+        variation: 0.1
+
+- type: entity
+  name: ручка повара
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект в режиме 2]
+  description: 'Никто не ожидал, но это ручка для раскатывания теста. Колпачок открыт.'
+  id: RollingPenOpen
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: Sprite
+    state: rollingpen-open
+  - type: Item
+    heldPrefix: rollingpen
+  - type: SpawnItemsOnUse
+    items:
+      - id: RollingPen
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_storage_close.ogg
+      params:
+        volume: 3
+        variation: 0.1
+
+- type: entity
+  name: ручка священника
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект в режиме 1]
+  description: 'Изначально НаноТрейзен сомневалось о встраивании креста прямо в конструкцию из-за риска создания скрытого оружия, однако, возможный конфликт с религиозными сторонами переубедил о необходимости такого решения. И всё же, механизм устроен специально так, что крест возможно развернуть только в одну сторону.'
+  id: ChaPen
+  components:
+  - type: Sprite
+    state: chapen
+  - type: Item
+    heldPrefix: chapen
+  - type: SpawnItemsOnUse
+    items:
+      - id: CrossPen
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_storage_open.ogg
+      params:
+        volume: 3
+        variation: 0.1
+
+- type: entity
+  name: ручка священника
+  parent: PenBaseDefault
+  suffix: Андромеда [Объект в режиме 2]
+  description: 'Изначально НаноТрейзен сомневалось о встраивании креста прямо в конструкцию из-за риска создания скрытого оружия, однако, возможный конфликт с религиозными сторонами переубедил о необходимости такого решения. И всё же, механизм устроен специально так, что крест возможно развернуть только в одну сторону.'
+  id: CrossPen
+  components:
+  - type: Tag
+    tags:
+    - Write
+    - CrossPen
+  - type: SolutionContainerManager
+    solutions:
+      health:
+        maxVol: 0.03
+        reagents:
+        - ReagentId: Gold
+          Quantity: 0.03
+  - type: MeleeChemicalInjector
+    transferAmount: 0.01
+    solution: health
+  - type: SolutionTransfer
+    canReceive: false
+    canSend: false
+    canChangeTransferAmount: false
+  - type: DrainableSolution
+    solution: health
+  - type: Sprite
+    layers:
+    - state: crosspen1
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    emptySpriteName: crosspen0
+    fillBaseName: crosspen
+    changeColor: false
+  - type: Appearance
+  - type: Item
+    heldPrefix: crosspen
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/smash.ogg
+    wideAnimationRotation: 135
+    damage:
+      types:
+        Blunt: 3
+        Slash: 4
+
+- type: entity
+  name: ручка смотрителя
+  parent: PenBaseDefault
+  id: WardenPen
+  description: 'Ручка имеет экстренный тазер-заряд с ограниченной дальностью, который уложит любых сбегающих преступников. Через несколько минут заряжается снова.'
+  components:
+  - type: Sprite
+    layers:
+    - state: wardenpen
+      map: ["enum.GunVisualLayers.Base"]
+    - state: wardenpen-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    heldPrefix: wardenpen
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_shoot.ogg
+      params:
+        volume: 1
+  - type: AmmoCounter
+  - type: ProjectileBatteryAmmoProvider
+    proto: PenTaserBullet
+    fireCost: 200
+  - type: Battery
+    maxCharge: 200
+    startingCharge: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: MagazineVisuals
+    magState: wardenpen
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+
+# --- Добавлять больше ручек тут
+
+
+
+# Структуры:
+- type: entity
+  name: маячок мокрого пола # Может так люди будут замечать, что пол мокрый?
+  parent: BaseStructure
+  suffix: Андромеда [Объект активирован]
+  id: JanBeacon
+  description: 'Устройство излучения голопроекции о самой важной уборке на станции! Используйте специальный ключ на ручке уборщика для сворачивания.'
+  components:
+  - type: Transform
+    anchored: true
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Machines/door_lock_on.ogg
+      params:
+        volume: -6
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    layers:
+      - state: "beacon"
+      - state: "beacon-holo"
+        shader: unshaded
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      base:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.1 # Чтобы в небольших коридорах не слишком мешало
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Web
+  - type: Destructible # Ну если мешает, так уж и быть - ломайте
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 13
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          JanBeaconClosed:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/door_lock_off.ogg
+          params:
+            volume: -6
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    enabled: true
+    radius: 3
+    energy: 1.0
+    rotation: 45
+    color: "#FCFF00"
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight # Пхп крутит свет, как ядерка.
+    speed: 30
+  - type: Construction
+    graph: JanBeacon
+    node: unpack
+    defaultTarget: pack
+
+- type: entity
+  name: маячок мокрого пола
+  parent: BaseItem
+  suffix: Андромеда [Объект деактивирован]
+  id: JanBeaconClosed
+  description: 'Устройство излучения голопроекции о самой важной уборке на станции! Положите маячок на пол и активируйте ключем ручки уборщика.'
+  components:
+  - type: Tag
+    tags:
+    - JanBeaconClosed # Для крепления только на ручку уборщика
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Machines/door_lock_off.ogg
+      params:
+        volume: -6
+    params:
+      volume: -6
+  - type: Item
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    state: "beacon-closed"
+  - type: Construction
+    graph: JanBeacon
+    node: pack
+    defaultTarget: unpack
+
+
+# Снаряды:
+- type: entity
+  id: PenTaserBullet
+  name: PenTaserBullet
+  description: If you can see this you're probably dead!
+  noSpawn: true
+  components:
+  - type: Reflective
+  - type: FlyBySound
+  - type: Clickable
+  - type: Sprite
+    rotation: -135
+    noRot: false
+    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
+    layers:
+    - state: taserbullet
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: Projectile
+    damage:
+      types:
+        Heat: 5
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/taser_hit.ogg"
+    soundForce: true
+  - type: StunOnCollide
+    stunAmount: 5
+    knockdownAmount: 5
+  - type: TimedDespawn
+    lifetime: 0.2

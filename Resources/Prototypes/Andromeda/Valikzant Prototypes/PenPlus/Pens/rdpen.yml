@@ -1,0 +1,171 @@
+- type: entity
+  name: ручка научного руководителя
+  parent: BaseItem
+  suffix: Андромеда [Объект деактивирован]
+  id: RdAnomalyPen
+  description: 'Ручка со встроенным сканером аномалий. Раскладной механизм позволяет выдвинуть анализирующую тарелку, которая не оставит шанса ещё не просканированным аномалиям.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/rdpen.rsi
+    state: rdpen-off
+  - type: Item
+    size: Tiny
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 3
+  - type: GuideHelp
+    guides:
+    - Science
+  - type: SpawnItemsOnUse
+    items:
+      - id: RdAnomalyPenActive
+    sound:
+      collection: RdPenActivation
+      params:
+        variation: 0.1
+
+- type: entity
+  name: ручка научного руководителя
+  suffix: Андромеда [Объект активирован]
+  parent: BaseItem
+  id: RdAnomalyPenActive
+  description: 'Ручка со встроенным сканером аномалий. Вращающаяся тарелка позволяет быстрее улавливать сигналы, а встроенный блюспейс-процессор обрабатывает сигналы лучше, чем стандартные сканеры.'
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall_break2.ogg
+      params:
+        volume: -4
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/rdpen.rsi
+    state: rdpen-on
+  - type: UserInterface
+    interfaces:
+      - key: enum.AnomalyScannerUiKey.Key
+        type: AnomalyScannerBoundUserInterface
+  - type: AnomalyScanner
+    scanDoAfterDuration: 3
+  - type: Item
+    heldPrefix: on
+    size: Small
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-small-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 3
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-medium-damage
+        popupType: Medium
+    - trigger:
+        !type:DamageTrigger
+        damage: 4
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-gets-heavy-damage
+        popupType: MediumCaution
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PopupBehavior
+        popup: pen-becomes-broken
+        popupType: LargeCaution
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Andromeda/Valikzant/Penplus/pen_fall_break2.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          RdAnomalyPenBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: GuideHelp
+    guides:
+    - ScannersAndVessels
+  - type: SpawnItemsOnUse
+    items:
+      - id: RdAnomalyPen
+    sound:
+      collection: RdPenDeactivation
+      params:
+        variation: 0.1
+
+- type: entity
+  name: ручка научного руководителя
+  parent: BaseItem
+  suffix: Андромеда [Объект сломан]
+  id: RdAnomalyPenBroken
+  description: 'Ручка со встроенным сканером аномалий. Похоже, что тарелка сильно погнулась и больше напоминает остриё.'
+  components:
+  - type: Tag
+    tags:
+    - Write
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/pen_fall.ogg
+      params:
+        volume: -4
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    attackRate: 1
+    damage:
+      types:
+        Slash: 6
+        Blunt: 6
+  - type: Sprite
+    sprite: Andromeda/Valikzant/Penplus/rdpen.rsi
+    state: rdpen-broken
+  - type: Item
+    heldPrefix: broken
+    size: Tiny
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: GuideHelp
+    guides:
+    - Science
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Andromeda/Valikzant/Penplus/rdpen_failed.ogg
+      params:
+        variation: 0.250

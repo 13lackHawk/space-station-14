@@ -1,0 +1,47 @@
+- type: soundCollection
+  id: StunPenActivation
+  files:
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_activation1.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_activation2.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_activation3.ogg
+
+- type: soundCollection
+  id: StunPenDeactivation
+  files:
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_deactivation1.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_deactivation2.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_deactivation3.ogg
+
+- type: soundCollection
+  id: StunPenFalied
+  files:
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_failed1.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_failed2.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/stunpen_failed3.ogg
+
+- type: soundCollection
+  id: RdPenActivation
+  files:
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_activation1.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_activation2.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_activation3.ogg
+
+- type: soundCollection
+  id: RdPenDeactivation
+  files:
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_deactivation1.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_deactivation2.ogg
+    - /Audio/Andromeda/Valikzant/Penplus/rdpen_deactivation3.ogg
+
+- type: soundCollection
+  id: ZooPenAnimals
+  files:
+    - /Audio/Animals/cat_meow.ogg
+    - /Audio/Animals/cat_meow.ogg
+    - /Audio/Animals/dog_bark1.ogg
+    - /Audio/Animals/fox_squeak.ogg
+    - /Audio/Animals/frog_ribbit.ogg
+    - /Audio/Animals/parrot_raught.ogg
+    - /Audio/Animals/penguin_squawk.ogg
+    - /Audio/Animals/raccoon_chatter.ogg
+    - /Audio/Animals/small_dog_bark_happy.ogg

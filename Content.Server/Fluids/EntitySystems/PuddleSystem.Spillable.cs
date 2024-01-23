@@ -103,6 +103,9 @@ public sealed partial class PuddleSystem
             _adminLogger.Add(LogType.MeleeHit, $"{ToPrettyString(args.User)} splashed {SolutionContainerSystem.ToPrettyString(splitSolution):solution} from {ToPrettyString(entity.Owner):entity} onto {ToPrettyString(hit):target}");
             _reactive.DoEntityReaction(hit, splitSolution, ReactionMethod.Touch);
 
+            if (!entity.Comp.PopupOnHit)
+                return;
+
             _popups.PopupEntity(
                 Loc.GetString("spill-melee-hit-attacker", ("amount", totalSplit / hitCount), ("spillable", entity.Owner),
                     ("target", Identity.Entity(hit, EntityManager))),
@@ -145,7 +148,7 @@ public sealed partial class PuddleSystem
         if (!_solutionContainerSystem.TryGetSolution(entity.Owner, entity.Comp.SolutionName, out var soln, out var solution))
             return;
 
-        if (_openable.IsClosed(entity.Owner))
+        if (_openable.IsClosed(entity.Owner) || !entity.Comp.SpillOnLand)
             return;
 
         if (args.User != null)
