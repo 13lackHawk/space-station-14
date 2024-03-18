@@ -1,0 +1,48 @@
+- type: job
+  id: SeniorOfficer
+  name: инструктор СБ
+  description: Обучать новых офицеров основам обыска и задержания, срокам заключения и правильному обращению с огнестрельным оружием.
+  playTimeTracker: JobSeniorOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 108000 #30 hrs
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 36000 #10 hrs
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 108000 #30 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 360000 #100 hrs
+  startingGear: SeniorOfficerGear
+  icon: "JobIconSeniorOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SeniorOfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorOfficer
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadHatBeretSecurity
+    outerClothing: ClothingOuterArmorBasic
+    id: SeniorOfficerPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolMk58Nonlethal
+  innerClothingSkirt: ClothingUniformJumpskirtSeniorOfficer
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled

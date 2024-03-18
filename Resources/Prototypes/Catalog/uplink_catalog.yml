@@ -1207,6 +1207,7 @@
     whitelist:
     - Zookeeper
     - Scientist
+    - SeniorResearcher # A-13 seniors
     - ResearchDirector
     - Chef
 

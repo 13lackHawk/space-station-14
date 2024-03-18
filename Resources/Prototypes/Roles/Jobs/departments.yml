@@ -57,6 +57,7 @@
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
+  - SeniorEngineer # A-13 seniors
   - StationEngineer
   - TechnicalAssistant
 
@@ -71,6 +72,7 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
+  - SeniorPhysician # A-13 seniors
 
 - type: department
   id: Security
@@ -81,6 +83,7 @@
   - HeadOfSecurity
   - SecurityCadet
   - SecurityOfficer
+  - SeniorOfficer # A-13 seniors
   - Warden
 
 - type: department
@@ -89,6 +92,7 @@
   color: "#D381C9"
   roles:
   - ResearchDirector
+  - SeniorResearcher # A-13 seniors
   - Scientist
   - ResearchAssistant
 
