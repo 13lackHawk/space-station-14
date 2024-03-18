@@ -73,6 +73,7 @@
   - Psychologist
   - Paramedic
   - SeniorPhysician # A-13 seniors
+  - Brigmedic # A-13 brigmedic
 
 - type: department
   id: Security
@@ -85,6 +86,7 @@
   - SecurityOfficer
   - SeniorOfficer # A-13 seniors
   - Warden
+  - Brigmedic # A-13 brigmedic
 
 - type: department
   id: Science

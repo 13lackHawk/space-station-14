@@ -1,0 +1,46 @@
+- type: job
+  id: Brigmedic
+  name: бригмедик
+  description: Боритесь за жизни своих товарищей в тылу службы безопасности! Вы - первая и последняя надежда своего отряда. Да благословит вас Гиппократ.
+  playTimeTracker: JobBrigmedic
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 54000 # 15 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hrs
+  startingGear: BrigmedicGear
+  icon: "Brigmedic"
+  supervisors: главе службы безопасности и главному врачу
+  canBeAntag: false
+  access:
+  - Medical
+  - Security
+  - Brig
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: BrigmedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+    outerClothing: ClothingOuterCoatAMG
+    back: ClothingBackpackBrigmedicFilled
+    shoes: ClothingShoesColorRed
+    gloves: ClothingHandsGlovesNitrile
+    eyes: ClothingEyesHudMedical
+    head: ClothingHeadHatBeretBrigmedic
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    mask: ClothingMaskBreathMedicalSecurity
+    belt: ClothingBeltMedicalFilled
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraSportsAlternative # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
+  innerclothingskirt: ClothingUniformJumpskirtBrigmedic
+  satchel: ClothingBackpackSatchelBrigmedicFilled
+  duffelbag: ClothingBackpackDuffelBrigmedicFilled
