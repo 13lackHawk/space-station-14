@@ -129,3 +129,16 @@
     layers:
       - state: green
       - state: lawyer
+
+- type: entity
+  id: SpawnPointPrisoner
+  parent: SpawnPointJobBase
+  name: заключённый
+  suffix: Спавнер
+  components:
+  - type: SpawnPoint
+    job_id: Prisoner
+  - type: Sprite
+    layers:
+      - state: green
+      - state: prisoner
