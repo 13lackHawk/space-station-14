@@ -84,14 +84,14 @@
   - Paramedic
 
 - type: department
-  id: NanotrasenPrison
-  description: department-NanotrasenPrison-description
+  id: DeepSpacePrison
+  description: department-DeepSpacePrison-description
   color: "#0300a6"
   roles:
-  - HeadOfNanotrasenPrison
-  - NTPOfficer
-  - NTPDoctor
-  - NTPEngineer
+  - HeadOfDeepSpacePrison
+  - DSPOfficer
+  - DSPDoctor
+  - DSPEngineer
 
 - type: department
   id: Security
