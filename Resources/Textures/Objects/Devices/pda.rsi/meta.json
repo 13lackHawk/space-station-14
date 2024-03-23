@@ -11,10 +11,10 @@
       "name": "pda-obs"
     },
     {
-      "name": "pda-HoNTP"
+      "name": "pda-hodsp"
     },
     {
-      "name": "pda-NTP"
+      "name": "pda-dsp"
     },
     {
       "name": "id_overlay"
