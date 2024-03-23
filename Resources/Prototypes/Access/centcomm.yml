@@ -3,12 +3,12 @@
   name: id-card-access-level-central-command
 
 - type: accessLevel
-  id: NanotrasenPrison
-  name: Тюрьма Nanotrasen
+  id: DeepSpacePrison
+  name: Тюрьма "Далёкий космос"
 
 - type: accessLevel
-  id: HoNTP
-  name: Глава тюрьмы Nanotrasen
+  id: HoDSP
+  name: Глава тюрьмы "Далёкий космос"
 
 - type: accessLevel
   id: OfficerBlueShield
