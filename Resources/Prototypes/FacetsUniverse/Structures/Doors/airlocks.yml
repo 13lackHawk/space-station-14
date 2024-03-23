@@ -8,7 +8,7 @@
   suffix: TDS
   components:
   - type: Sprite
-    sprite: FacetsUniverse\Structures\Doors\Airlocks\TDS.rsi
+    sprite: Structures/Doors/Airlocks/Standard/security.rsi
 
 - type: entity
   parent: Airlock
@@ -44,7 +44,7 @@
   suffix: TDS
   components:
   - type: Sprite
-    sprite: FacetsUniverse\Structures\Doors\Glass\TDS.rsi
+    sprite: Structures/Doors/Airlocks/Glass/security.rsi
   - type: PaintableAirlock
     group: Glass
 
