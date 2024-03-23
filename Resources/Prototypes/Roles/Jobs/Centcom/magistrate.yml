@@ -10,7 +10,7 @@
       department: Security
       time: 36000 #10 hrs
     - !type:RoleTimeRequirement
-      role: JobLawyer
+      role: JobIAA
       time: 18000 #5 hrs
   startingGear: MagistrateGear
   icon: "JobIconMagistrate"
