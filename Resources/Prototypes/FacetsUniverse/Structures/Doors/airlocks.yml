@@ -2,7 +2,7 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockTDS
+  id: AirlockDSP
   name: шлюз
   description: Умеет открываться и закрываться.
   suffix: Тюрьма
@@ -12,7 +12,7 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockHoTDS
+  id: AirlockHoDSP
   name: шлюз
   description: Умеет открываться и закрываться.
   suffix: Глава тюрьмы
@@ -38,7 +38,7 @@
 
 - type: entity
   parent: AirlockGlass
-  id: AirlockTDSGlass
+  id: AirlockDSPGlass
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
   suffix: Тюрьма
@@ -50,7 +50,7 @@
 
 - type: entity
   parent: AirlockGlass
-  id: AirlockHoTDSGlass
+  id: AirlockHoDSPGlass
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
   suffix: Глава тюрьмы
