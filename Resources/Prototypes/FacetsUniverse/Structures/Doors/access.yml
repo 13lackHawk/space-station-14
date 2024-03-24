@@ -2,7 +2,7 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockTDSLocked
+  id: AirlockDSPLocked
   name: шлюз
   description: Умеет открываться и закрываться.
   suffix: Тюрьма, Закрыт
@@ -15,13 +15,13 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockHoTDSLocked
+  id: AirlockHoDSPLocked
   name: шлюз
   description: Умеет открываться и закрываться.
   suffix: Глава тюрьмы, Закрыт
   components:
   - type: AccessReader
-    access: [["HoTDS"]]
+    access: [["HoDSP"]]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/command.rsi
   - type: WiresPanelSecurity
@@ -45,7 +45,7 @@
 
 - type: entity
   parent: AirlockGlass
-  id: AirlockTDSGlassLocked
+  id: AirlockDSPGlassLocked
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
   suffix: Тюрьма, Закрыт
@@ -57,13 +57,13 @@
 
 - type: entity
   parent: AirlockGlass
-  id: AirlockHoTDSGlassLocked
+  id: AirlockHoDSPGlassLocked
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
   suffix: Глава тюрьмы, Закрыт
   components:
   - type: AccessReader
-    access: [["HoTDS"]]
+    access: [["HoDSP"]]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/command.rsi
   - type: WiresPanelSecurity
