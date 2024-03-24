@@ -52,10 +52,10 @@
     id: DSPIDCard
     state: pda-DSP
   - type: PdaBorderColor
-    borderColor: "#0300a6"
+    borderColor: "#4386EA"
   - type: Icon
-    sprite: FacetsUniverse\PDA.rsi
-    state: pda-DSP
+    sprite: Objects\Devices\pda.rsi
+    state: pda-dsp
 
 - type: entity
   parent: BasePDA
@@ -67,10 +67,10 @@
     id: HoDSPIDCard
     state: pda-HoDSP
   - type: PdaBorderColor
-    borderColor: "#0300a6"
+    borderColor: "#4386EA"
   - type: Icon
-    sprite: FacetsUniverse\PDA.rsi
-    state: pda-HoDSP
+    sprite: Objects\Devices\pda.rsi
+    state: pda-dsp
 
 - type: entity
   parent: BasePDA
