@@ -87,10 +87,10 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockTDSmaintLocked
+  id: AirlockDSPmaintLocked
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: TDS, Locked
+  suffix: Тюрьма, Закрыт
   components:
   - type: AccessReader
     access: [["DeepSpacePrison"]]
@@ -99,13 +99,13 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockHoTDSmaintLocked
+  id: AirlockHoDSPmaintLocked
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: HoTDS, Locked
+  suffix: Глава тюрьмы, Закрыт
   components:
   - type: AccessReader
-    access: [["HoTDS"]]
+    access: [["HoDSP"]]
   - type: Sprite
     sprite: Structures\Doors\Airlocks\Standard\maint.rsi
   - type: WiresPanelSecurity
