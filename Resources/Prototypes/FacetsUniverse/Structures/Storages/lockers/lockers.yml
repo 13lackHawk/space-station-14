@@ -1,29 +1,29 @@
-# TDS
+# DSP
 - type: entity
-  id: LockerHoTDS
+  id: LockerHoDSP
   parent: LockerBaseSecure
   name: шкаф главы тюрьмы "Далёкий космос"
   description: Шкафчик главного в тюрьме!
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: TDS
-    stateDoorOpen: TDS_open
-    stateDoorClosed: HoTDS_door
+    stateBaseClosed: DSP
+    stateDoorOpen: DSP_open
+    stateDoorClosed: HoDSP_door
   - type: AccessReader
-    access: [["HoTDS"]]
+    access: [["HoDSP"]]
 
 - type: entity
-  id: LockerTDS
+  id: LockerDSP
   parent: LockerBaseSecure
   name: шкаф тюрьмы "Далёкий космос"
   description: Шкафчик космической тюрьмы!
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: TDS
-    stateDoorOpen: TDS_open
-    stateDoorClosed: TDS_door
+    stateBaseClosed: DSP
+    stateDoorOpen: DSP_open
+    stateDoorClosed: DSP_door
   - type: AccessReader
     access: [["DeepSpacePrison"]]
 
