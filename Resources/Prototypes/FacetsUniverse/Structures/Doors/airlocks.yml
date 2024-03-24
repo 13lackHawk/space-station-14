@@ -5,7 +5,7 @@
   id: AirlockTDS
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: TDS
+  suffix: Тюрьма
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/security.rsi
@@ -15,7 +15,7 @@
   id: AirlockHoTDS
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: HoTDS
+  suffix: Глава тюрьмы
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/command.rsi
@@ -27,7 +27,7 @@
   id: AirlockOBS
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: ОСЩ
+  suffix: Офицер "Синий Щит"
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/command.rsi
@@ -41,7 +41,7 @@
   id: AirlockTDSGlass
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
-  suffix: TDS
+  suffix: Тюрьма
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
@@ -53,7 +53,7 @@
   id: AirlockHoTDSGlass
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
-  suffix: HoTDS
+  suffix: Глава тюрьмы
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/command.rsi
@@ -67,7 +67,7 @@
   id: AirlockOBSGlass
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
-  suffix: ОСЩ
+  suffix: Офицер "Синий Щит"
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/command.rsi
