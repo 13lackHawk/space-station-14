@@ -5,10 +5,10 @@
   id: AirlockTDSLocked
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: TDS, Locked
+  suffix: Тюрьма, Закрыт
   components:
   - type: AccessReader
-    access: [["NanotrasenPrison"]]
+    access: [["DeepSpacePrison"]]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/security.rsi
 
@@ -18,7 +18,7 @@
   id: AirlockHoTDSLocked
   name: шлюз
   description: Умеет открываться и закрываться.
-  suffix: HoTDS, Locked
+  suffix: Глава тюрьмы, Закрыт
   components:
   - type: AccessReader
     access: [["HoTDS"]]
@@ -48,7 +48,7 @@
   id: AirlockTDSGlassLocked
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
-  suffix: TDS, Locked
+  suffix: Тюрьма, Закрыт
   components:
   - type: AccessReader
     access: [["DeepSpacePrison"]]
@@ -60,7 +60,7 @@
   id: AirlockHoTDSGlassLocked
   name: стеклянный шлюз
   description: Умеет открываться и закрываться, стеклянный ещё.
-  suffix: HoTDS, Locked
+  suffix: Глава тюрьмы, Закрыт
   components:
   - type: AccessReader
     access: [["HoTDS"]]
