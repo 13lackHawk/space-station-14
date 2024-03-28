@@ -37,9 +37,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: OBS
-    stateDoorOpen: OBS_open
-    stateDoorClosed: OBS_door
+    stateBaseClosed: obs
+    stateDoorOpen: obs_open
+    stateDoorClosed: obs_door
   - type: AccessReader
     access: [["OfficerBlueShield"]]
 
