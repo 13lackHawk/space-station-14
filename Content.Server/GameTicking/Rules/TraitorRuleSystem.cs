@@ -259,10 +259,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             if (chance > 1)
                 chance = 1;
 
-			       // A-13 SponsorAntag start
-			       if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-				     chance = 1;
-             // A-13 SponsorAntag end
+            // A-13 SponsorAntag start
+            if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                chance = 1;
+            // A-13 SponsorAntag end
 
             // Now that we've calculated our chance, roll and make them a traitor if we roll under.
             // You get one shot.

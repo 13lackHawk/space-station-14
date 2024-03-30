@@ -194,8 +194,8 @@
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: BaseUplinkRadio60TC
     belt: ClothingBeltMilitaryWebbing
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtOperative
-  underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   satchel: ClothingBackpackDuffelSyndicateOperative

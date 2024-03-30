@@ -14,6 +14,6 @@ jobs:
       - name: Check for Merge Conflicts
         uses: ike709/actions-label-merge-conflict@9eefdd17e10566023c46d2dc6dc04fcb8ec76142
         with:
-          dirtyLabel: "bug"
+          dirtyLabel: "Merge Conflict" #A-13 Actions fix
           repoToken: "${{ secrets.GITHUB_TOKEN }}" #A-13 Actions fix
           commentOnDirty: "This pull request has conflicts, please resolve those before we can evaluate the pull request."

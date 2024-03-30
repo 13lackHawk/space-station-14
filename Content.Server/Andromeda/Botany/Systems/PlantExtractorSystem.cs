@@ -22,7 +22,6 @@ using Robust.Shared.Timing;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Content.Shared.Chemistry.Reagent;
-using Content.Shared.FixedPoint;
 using Content.Shared.Random;
 using Robust.Server.Audio;
 using Content.Server.Chemistry.Containers.EntitySystems;
@@ -265,7 +264,7 @@ namespace Content.Server.Andromeda.Botany.Systems
             if (inputContainer.ContainedEntities.Count >= component.StorageMaxEntities)
                 return;
 
-            if (!inputContainer.Insert(heldEnt, EntityManager))
+            if (!_containerSystem.Insert(heldEnt, inputContainer))
                 return;
 
             args.Handled = true;
@@ -295,7 +294,7 @@ namespace Content.Server.Andromeda.Botany.Systems
             ClickSound(uid, component);
             foreach (var entity in inputContainer.ContainedEntities.ToList())
             {
-                inputContainer.Remove(entity);
+                _containerSystem.Remove(entity, inputContainer);
                 _randomHelper.RandomOffset(entity, 0.4f);
             }
 
@@ -311,7 +310,7 @@ namespace Content.Server.Andromeda.Botany.Systems
 
             var ent = GetEntity(message.EntityId);
 
-            if (inputContainer.Remove(ent))
+            if (_containerSystem.Remove(ent, inputContainer))
             {
                 _randomHelper.RandomOffset(ent, 0.4f);
                 ClickSound(uid, component);
