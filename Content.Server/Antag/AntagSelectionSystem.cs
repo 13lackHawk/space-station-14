@@ -222,7 +222,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     /// <param name="eligiblePlayers">List of eligible players</param>
     /// <param name="count">How many to choose</param>
     /// <returns>Up to the specified count of elements from the provided list</returns>
-    public List<EntityUid> ChooseAntags(int count, List<EntityUid> eligiblePlayers, List<ICommonSession> prefList) //A-13
+    public List<EntityUid> ChooseAntags(int count, List<EntityUid> eligiblePlayers)
     {
         var chosenPlayers = new List<EntityUid>();
 
@@ -232,12 +232,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 break;
 
             chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
-        }
-
-        for (var i = 0; i < count; i++)
-        {
-            chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
-            Log.Info("Selected a preferred antag.");
         }
 
         return chosenPlayers;
@@ -261,6 +255,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             }
 
             // A-13 SponsorAntag start
+            /*
             var sponsorPrefList = new List<ICommonSession>();
             var allPlayers = _playerSystem.Sessions.ToList();
             foreach (var player in allPlayers)
@@ -288,6 +283,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             //    break;
             //}
             // A-13 SponsorAntag end
+            */
 
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
