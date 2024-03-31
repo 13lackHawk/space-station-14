@@ -106,8 +106,8 @@
   components:
   - type: Sprite
     layers:
-    - state: gold
-    - state: idcaptain
+    - state: default
+    - state: idclown
   - type: Item
     heldPrefix: gold
   - type: PresetIdCard
@@ -249,8 +249,8 @@
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: idclown
+    - state: gold
+    - state: idcaptain
   - type: PresetIdCard
     job: Clown
 
