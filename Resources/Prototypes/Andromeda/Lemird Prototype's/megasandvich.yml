@@ -1,5 +1,5 @@
 - type: entity
-  name: гипер сендвич
+  name: гипер сэндвич
   parent: FoodBurgerBase
   id: FoodSandwichHyperRealistic
   description: Сразу вспоминается - "Пулемётчик!"...
@@ -25,7 +25,7 @@
 
 - type: microwaveMealRecipe
   id: RecipeHyperrealisticSandwich
-  name: рецепт гипер сендвича
+  name: рецепт гипер сэндвича
   result: FoodSandwichHyperRealistic
   time: 15
   solids:
