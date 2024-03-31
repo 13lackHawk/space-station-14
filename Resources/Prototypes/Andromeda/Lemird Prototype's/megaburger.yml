@@ -1,0 +1,34 @@
+- type: entity
+  name: гипер сендвич
+  parent: FoodBurgerBase
+  id: FoodSandwichHyperRealistic
+  description: Сразу вспоминается - "Пулемётчик!"...
+  components:
+  - type: FlavorProfile
+    flavors:
+      - magical
+  - type: Sprite
+    sprite: Andromeda/Lemird/hypersandwich.rsi
+    state: hyperrealistic
+    scale: 0.125, 0.125
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 100
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 40
+        - ReagentId: Protein
+          Quantity: 40
+        - ReagentId: SpaceDrugs
+          Quantity: 20
+
+- type: microwaveMealRecipe
+  id: RecipeHyperrealisticSandwich
+  name: рецепт гипер сендвича
+  result: FoodSandwichHyperRealistic
+  time: 15
+  solids:
+    FoodBurgerPlain: 1
+  reagents:
+    SpaceDrugs: 5
