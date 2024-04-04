@@ -17,9 +17,9 @@ using Robust.Shared.Random;
 using System.Linq;
 using Content.Shared.Chat;
 using Robust.Shared.Enums;
-using Content.Server.Corvax.Sponsors; //A-13
-using Content.Server.Andromeda.Roles; //A-13
-using Robust.Server.Player; //A-13
+using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
+using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
+using Robust.Server.Player; //A-13 SponsorAntag
 
 namespace Content.Server.Antag;
 
@@ -30,8 +30,8 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     [Dependency] private readonly JobSystem _jobs = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; //A-13
-    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; //A-13 SponsorAntag
+    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
 
     #region Eligible Player Selection
     /// <summary>
@@ -57,7 +57,17 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
         foreach (var player in playerSessions)
         {
             if (IsPlayerEligible(player, antagPrototype, includeAllJobs, acceptableAntags, ignorePreferences, allowNonHumanoids, customExcludeCondition))
+            {
+                //A-13 No Thief-Agents system v5 start
+                if (player.AttachedEntity.HasValue && HasComp<ThiefCheckComponent>(player.AttachedEntity.Value))
+                {
+                    Log.Warning($"[AntagSelectionSystem] Игрок {player.Name} пропущен для избежания дублирования.");
+                    continue;
+                }
+                //A-13 No Thief-Agents system v5 end
+
                 eligiblePlayers.Add(player.AttachedEntity!.Value);
+            }
         }
 
         return eligiblePlayers;
@@ -198,6 +208,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     /// <returns>Up to the specified count of elements from all provided lists</returns>
     public List<EntityUid> ChooseAntags(int count, params List<EntityUid>[] eligiblePlayerLists)
     {
+        Log.Info($"[AntagSelectionSystem] Вход в ChooseAntags(1)"); //A-13 SponsorAntag
         var chosenPlayers = new List<EntityUid>();
         foreach (var playerList in eligiblePlayerLists)
         {
@@ -217,14 +228,39 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
         return chosenPlayers;
     }
     /// <summary>
-    /// Helper method to choose antags from a list
+    /// Helper method to choose antags from a list, giving priority to sponsored players.
     /// </summary>
     /// <param name="eligiblePlayers">List of eligible players</param>
     /// <param name="count">How many to choose</param>
     /// <returns>Up to the specified count of elements from the provided list</returns>
     public List<EntityUid> ChooseAntags(int count, List<EntityUid> eligiblePlayers)
     {
+        Log.Info($"[AntagSelectionSystem] Вход в ChooseAntags(2)"); //A-13 SponsorAntag
         var chosenPlayers = new List<EntityUid>();
+
+        //A-13 SponsorAntag start
+        var sponsorPrefList = new List<EntityUid>();
+        foreach (var player in eligiblePlayers)
+        {
+            if (_playerSystem.TryGetSessionByEntity(player, out var session) &&
+                //Используйте "session.UserId" для тестов, закомментировав часть кода "_sponsorsManager":
+                //session.UserId == new Guid("{ВАШ UserId}"))
+                _sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
+            {
+                sponsorPrefList.Add(player);
+                Log.Info($"[AntagSelectionSystem] Игрок с именем {session.Name} добавлен в список спонсорских кандидатов на роль антагониста.");
+            }
+        }
+
+        while (sponsorPrefList.Count > 0 && count > 0)
+        {
+            var player = RobustRandom.PickAndTake(sponsorPrefList);
+            eligiblePlayers.Remove(player);
+            chosenPlayers.Add(player);
+            count--;
+            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как спонсорский антагонист. Оставшееся количество мест: {count}");
+        }
+        //A-13 SponsorAntag end
 
         for (var i = 0; i < count; i++)
         {
@@ -245,6 +281,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     /// <returns>Up to the specified count of elements from all provided lists</returns>
     public List<ICommonSession> ChooseAntags(int count, params List<ICommonSession>[] eligiblePlayerLists)
     {
+        Log.Info($"[AntagSelectionSystem] Вход в ChooseAntagsICommonSession(1)"); //A-13 SponsorAntag
         var chosenPlayers = new List<ICommonSession>();
         foreach (var playerList in eligiblePlayerLists)
         {
@@ -253,44 +290,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             {
                 playerList.Remove(chosenPlayer);
             }
-
-            // A-13 SponsorAntag start
-            var sponsorPrefList = new List<ICommonSession>();
-            foreach (var player in playerList)
-            {
-                try
-                {
-                    Log.Info($"[AntagSelection] Проверка спонсорской информации для пользователя с ID: {player.UserId}");
-                    //if (player.UserId == new Guid("{Ваш UserId}")) Используется лишь для тестов, проверку ниже необходимо будет закомментировать.
-                    if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorData))
-                    {
-                        Log.Info($"[AntagSelection] Информация о спонсоре найдена: ExtraSlots = {sponsorData.ExtraSlots}");
-                        if (sponsorData.ExtraSlots >= 7)
-                        {
-                            Log.Info($"[AntagSelection] Игрок {player} прошел проверку на спонсорство.");
-                            sponsorPrefList.Add(player);
-                        }
-                    }
-                    else
-                    {
-                        Log.Warning($"[AntagSelection] Информация о спонсоре для пользователя с ID: {player.UserId} не найдена.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"[AntagSelection] Ошибка при получении информации о спонсоре для пользователя с ID: {player.UserId}: {ex}");
-                }
-            }
-
-            while (sponsorPrefList.Count > 0 && count > 0)
-            {
-                var player = RobustRandom.PickAndTake(sponsorPrefList);
-                playerList.Remove(player);
-                chosenPlayers.Add(player);
-                count -= 1;
-                Log.Info($"[AntagSelection] Игрок {player} выбран как спонсорский антаг. Оставшиеся слоты: {count}");
-            }
-            // A-13 SponsorAntag end
 
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
@@ -309,15 +308,55 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     /// <returns>Up to the specified count of elements from the provided list</returns>
     public List<ICommonSession> ChooseAntags(int count, List<ICommonSession> eligiblePlayers)
     {
+        Log.Info($"[AntagSelectionSystem] Вход в ChooseAntagsICommonSession(2)"); //A-13 SponsorAntag
         var chosenPlayers = new List<ICommonSession>();
 
-        for (int i = 0; i < count; i++)
+        // A-13 SponsorAntag start
+        var sponsorPrefList = new List<ICommonSession>();
+        foreach (var player in eligiblePlayers)
         {
-            if (eligiblePlayers.Count == 0)
-                break;
-
-            chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
+            try
+            {
+                //Используйте "player.UserId" для тестов, закомментировав часть кода "_sponsorsManager":
+                //if (player.UserId == new Guid("{ВАШ UserId}"))
+                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
+                {
+                    Log.Info($"[AntagSelectionSystem] Игрок {player} прошел проверку на спонсорство.");
+                    sponsorPrefList.Add(player);
+                }
+                else
+                {
+                    Log.Warning($"[AntagSelectionSystem] Информация о спонсоре для пользователя с ID: {player.UserId} не найдена или недостаточно слотов.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[AntagSelectionSystem] Ошибка при получении информации о спонсоре для пользователя с ID: {player.UserId}: {ex}");
+            }
         }
+
+        while (sponsorPrefList.Count > 0 && count > 0)
+        {
+            var player = RobustRandom.PickAndTake(sponsorPrefList);
+            eligiblePlayers.Remove(player);
+            chosenPlayers.Add(player);
+            count--;
+            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как спонсорский антаг. Оставшиеся слоты: {count}");
+        }
+
+        if (count == 0 || eligiblePlayers.Count == 0)
+        {
+            return chosenPlayers;
+        }
+
+        while (sponsorPrefList.Count <= 0 && eligiblePlayers.Count > 0 && count > 0)
+        {
+            var player = RobustRandom.PickAndTake(eligiblePlayers);
+            chosenPlayers.Add(player);
+            count--;
+            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как НЕ спонсорский антаг. Оставшиеся слоты: {count}");
+        }
+        // A-13 SponsorAntag end
 
         return chosenPlayers;
     }

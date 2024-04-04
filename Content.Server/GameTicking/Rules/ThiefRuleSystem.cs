@@ -91,10 +91,8 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
             EnsureComp<PacifiedComponent>(thief);
         }
 
-        // A-13 No Thief-Agents system v5
-        EnsureComp<ThiefCheckComponent>(thief);
-        // A-13 No Thief-Agents system v5
-        
+        EnsureComp<ThiefCheckComponent>(thief); //A-13 No Thief-Agents system v5
+
         //Generate objectives
         GenerateObjectives(mindId, mind, thiefRule);
 

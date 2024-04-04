@@ -113,38 +113,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             return;
 
         var traitorsToSelect = _antagSelection.CalculateAntagCount(_playerManager.PlayerCount, PlayersPerTraitor, MaxTraitors);
-        var selectedTraitors = new List<EntityUid>(); // A-13 SponsorAntag
-
-        // A-13 SponsorAntag start
-        var sponsorTraitors = new List<EntityUid>();
-        Log.Info($"[TraitorStart] Начинаем проверку спонсоров среди {eligiblePlayers.Count} игроков.");
-
-        foreach (var player in eligiblePlayers)
-        {
-            if (_playerManager.TryGetSessionByEntity(player, out var session) &&
-                //session.UserId == new Guid("{Ваш UserId}")) Используется лишь для тестов, проверку ниже необходимо будет закомментировать.
-                _sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
-            {
-                Log.Info($"[TraitorStart] {player} является спонсором и может быть добавлен в список спонсорских синдикатов.");
-                sponsorTraitors.Add(player);
-            }
-            else
-            {
-                Log.Warning($"[TraitorStart] {player} не является спонсором и не может быть в список спонсорских синдикатов.");
-            }
-        }
-
-        while (sponsorTraitors.Count > 0 && traitorsToSelect > 0)
-        {
-            var playersponsor = RobustRandom.PickAndTake(sponsorTraitors);
-            eligiblePlayers.Remove(playersponsor);
-            selectedTraitors.Add(playersponsor);
-            traitorsToSelect -= 1;
-            Log.Info($"[TraitorStart] Игрок {playersponsor} выбран как спонсорский антаг. Оставшиеся слоты: {traitorsToSelect}");
-        }
-        // A-13 SponsorAntag end
-
-        selectedTraitors.AddRange(_antagSelection.ChooseAntags(traitorsToSelect, eligiblePlayers)); // A-13 SponsorAntag
+        var selectedTraitors = _antagSelection.ChooseAntags(traitorsToSelect, eligiblePlayers);
 
         MakeTraitor(selectedTraitors, component);
     }

@@ -47,7 +47,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Linq;
-using Content.Server.Corvax.Sponsors; // Andromeda SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -73,7 +72,6 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
     [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly AntagSelectionSystem _antagSelection = default!;
-    [Dependency] private readonly SponsorsManager _sponsors = default!; // A-13
 
     private ISawmill _sawmill = default!;
 
