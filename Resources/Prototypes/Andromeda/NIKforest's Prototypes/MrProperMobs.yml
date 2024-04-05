@@ -753,6 +753,7 @@
       - key: enum.RadarConsoleUiKey.Key
         toggleAction: ActionAGhostShowRadar
   - type: RadarConsole
+    followEntity: true
   - type: NpcFactionMember
     factions:
     - SimpleHostile
@@ -838,10 +839,10 @@
     damageCap: 89
     damage:
       types:
-        Poison: -0.05
+        Poison: -0.90
       groups:
-        Brute: -0.05
-        Burn: -0.05
+        Brute: -0.90
+        Burn: -0.90
   - type: SlowOnDamage
     speedModifierThresholds:
       100: 0.7
@@ -924,6 +925,7 @@
       - key: enum.RadarConsoleUiKey.Key
         toggleAction: ActionAGhostShowRadar
   - type: RadarConsole
+    followEntity: true
   - type: NpcFactionMember
     factions:
     - SimpleHostile
@@ -982,10 +984,10 @@
     damageCap: 89
     damage:
       types:
-        Poison: -0.05
+        Poison: -0.55
       groups:
-        Brute: -0.05
-        Burn: -0.05
+        Brute: -0.55
+        Burn: -0.55
   - type: Gun
     fireRate: 0.5
     useKey: false
