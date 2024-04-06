@@ -311,27 +311,20 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
         Log.Info($"[AntagSelectionSystem] Вход в ChooseAntagsICommonSession(2)"); //A-13 SponsorAntag
         var chosenPlayers = new List<ICommonSession>();
 
-        // A-13 SponsorAntag start
+        //A-13 SponsorAntag start
         var sponsorPrefList = new List<ICommonSession>();
         foreach (var player in eligiblePlayers)
         {
-            try
+            //Используйте "player.UserId" для тестов, закомментировав часть кода "_sponsorsManager":
+            //if (player.UserId == new Guid("{ВАШ UserId}"))
+            if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
             {
-                //Используйте "player.UserId" для тестов, закомментировав часть кода "_sponsorsManager":
-                //if (player.UserId == new Guid("{ВАШ UserId}"))
-                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
-                {
-                    Log.Info($"[AntagSelectionSystem] Игрок {player} прошел проверку на спонсорство.");
-                    sponsorPrefList.Add(player);
-                }
-                else
-                {
-                    Log.Warning($"[AntagSelectionSystem] Информация о спонсоре для пользователя с ID: {player.UserId} не найдена или недостаточно слотов.");
-                }
+                Log.Info($"[AntagSelectionSystem] Игрок {player} прошёл проверку на спонсорство.");
+                sponsorPrefList.Add(player);
             }
-            catch (Exception ex)
+            else
             {
-                Log.Error($"[AntagSelectionSystem] Ошибка при получении информации о спонсоре для пользователя с ID: {player.UserId}: {ex}");
+                Log.Warning($"[AntagSelectionSystem] Игрок {player} не прошёл проверку на спонсорство или его уровень слишком маленький.");
             }
         }
 
@@ -341,12 +334,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             eligiblePlayers.Remove(player);
             chosenPlayers.Add(player);
             count--;
-            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как спонсорский антаг. Оставшиеся слоты: {count}");
-        }
-
-        if (count == 0 || eligiblePlayers.Count == 0)
-        {
-            return chosenPlayers;
+            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как спонсорский антаг.");
         }
 
         while (sponsorPrefList.Count <= 0 && eligiblePlayers.Count > 0 && count > 0)
@@ -354,7 +342,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             var player = RobustRandom.PickAndTake(eligiblePlayers);
             chosenPlayers.Add(player);
             count--;
-            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как НЕ спонсорский антаг. Оставшиеся слоты: {count}");
+            Log.Info($"[AntagSelectionSystem] Игрок {player} выбран как НЕ спонсорский антаг.");
         }
         // A-13 SponsorAntag end
 
