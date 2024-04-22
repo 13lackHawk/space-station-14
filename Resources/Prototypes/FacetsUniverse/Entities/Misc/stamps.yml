@@ -9,7 +9,7 @@
       stampedColor: "#292929"
       stampState: "paper_stamp-ok"
     - type: Sprite
-      sprite: FacetsUniverse\stamps.rsi
+      sprite: FacetsUniverse/stamps.rsi
       state: stamp-magistrate
 
 - type: entity
@@ -23,5 +23,5 @@
       stampedColor: "#0300A6"
       stampState: "paper_stamp-cap"
     - type: Sprite
-      sprite: FacetsUniverse\stamps.rsi
+      sprite: FacetsUniverse/stamps.rsi
       state: stamp-hodsp
