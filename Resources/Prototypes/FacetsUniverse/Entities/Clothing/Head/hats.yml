@@ -5,9 +5,9 @@
   description: Берет настоящего мужчины!
   components:
   - type: Sprite
-    sprite: FacetsUniverse\Clothing\Head\BeretOBS.rsi
+    sprite: FacetsUniverse/Clothing/Head/BeretOBS.rsi
   - type: Clothing
-    sprite: FacetsUniverse\Clothing\Head\BeretOBS.rsi
+    sprite: FacetsUniverse/Clothing/Head/BeretOBS.rsi
   - type: Tag
     tags:
     - ClothMade
