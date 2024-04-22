@@ -12,9 +12,9 @@
       - EncryptionKeySecurity
       - EncryptionKeyMedical
   - type: Sprite
-    sprite: FacetsUniverse\Clothing\headsets\DeepSpacePrison.rsi
+    sprite: FacetsUniverse/Clothing/headsets/DeepSpacePrison.rsi
   - type: Clothing
-    sprite: FacetsUniverse\Clothing\headsets\DeepSpacePrison.rsi
+    sprite: FacetsUniverse/Clothing/headsets/DeepSpacePrison.rsi
 
 - type: entity
   parent: ClothingHeadsetAlt
@@ -31,9 +31,9 @@
       - EncryptionKeySecurity
       - EncryptionKeyDeepSpacePrison
   - type: Sprite
-    sprite: FacetsUniverse\Clothing\headsets\DeepSpacePrison.rsi
+    sprite: FacetsUniverse/Clothing/headsets/DeepSpacePrison.rsi
   - type: Clothing
-    sprite: FacetsUniverse\Clothing\headsets\DeepSpacePrison.rsi
+    sprite: FacetsUniverse/Clothing/headsets/DeepSpacePrison.rsi
 
 - type: entity
   parent: ClothingHeadset
