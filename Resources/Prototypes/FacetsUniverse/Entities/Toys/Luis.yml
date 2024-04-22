@@ -5,5 +5,5 @@
   description: Несмотря на то, что он плюшевый-не рекомендуется подходить ближе чем на метр, особенно если ты феленид
   components:
   - type: Sprite
-    sprite: FacetsUniverse\Toys.rsi
+    sprite: FacetsUniverse/Toys.rsi
     state: luis
