@@ -24,7 +24,7 @@
   - type: PdaBorderColor
     borderColor: "#4099ff"
   - type: Icon
-    sprite: FacetsUniverse\PDA.rsi
+    sprite: FacetsUniverse/PDA.rsi
     state: pda-obs
 
 - type: entity
@@ -54,7 +54,7 @@
   - type: PdaBorderColor
     borderColor: "#4386EA"
   - type: Icon
-    sprite: Objects\Devices\pda.rsi
+    sprite: Objects/Devices/pda.rsi
     state: pda-dsp
 
 - type: entity
@@ -69,7 +69,7 @@
   - type: PdaBorderColor
     borderColor: "#4386EA"
   - type: Icon
-    sprite: Objects\Devices\pda.rsi
+    sprite: Objects/Devices/pda.rsi
     state: pda-dsp
 
 - type: entity
