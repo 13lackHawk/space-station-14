@@ -95,7 +95,7 @@
   - type: AccessReader
     access: [["DeepSpacePrison"]]
   - type: Sprite
-    sprite: Structures\Doors\Airlocks\Standard\maint.rsi
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
 - type: entity
   parent: Airlock
@@ -107,7 +107,7 @@
   - type: AccessReader
     access: [["HoDSP"]]
   - type: Sprite
-    sprite: Structures\Doors\Airlocks\Standard\maint.rsi
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
 
@@ -121,6 +121,6 @@
   - type: AccessReader
     access: [["OfficerBlueShield"]]
   - type: Sprite
-    sprite: Structures\Doors\Airlocks\Standard\maint.rsi
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
