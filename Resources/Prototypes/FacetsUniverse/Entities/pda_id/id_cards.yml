@@ -5,7 +5,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: idpilotsb
@@ -21,7 +21,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: centcom
     - state: idobs
@@ -38,7 +38,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: Objects\Misc\id_cards.rsi
+    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idroboticist
@@ -52,7 +52,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: iddsp
@@ -66,7 +66,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: idhodsp
@@ -80,7 +80,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: iddsp_engineer
@@ -94,7 +94,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: iddsp_doctor
@@ -108,7 +108,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: idanomalist
@@ -122,7 +122,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: idbombodel
@@ -136,7 +136,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: default
     - state: idxenoarchaeologist
@@ -150,7 +150,7 @@
   description: ID Карта.
   components:
   - type: Sprite
-    sprite: FacetsUniverse\id_cards.rsi
+    sprite: FacetsUniverse/id_cards.rsi
     layers:
     - state: centcom
     - state: idmagistrate
