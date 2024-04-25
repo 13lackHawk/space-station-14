@@ -68,7 +68,6 @@
     failChance: 0
     locPrefix: "necro"
     healSound: "/Audio/Effects/lightburn.ogg"
-    cooldownTime: 1.3
   - type: Summonable
     specialItem: SpawnPointGhostCerberus
     respawnTime: 300
@@ -76,6 +75,19 @@
     sprite: Objects/Specific/Chapel/necronomicon.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-BibleNecronomicon-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-BibleNecronomicon-service
+      jobRequired:
+        - Chaplain
+        - Librarian
+# Corvax-HiddenDesc-End
 
 - type: entity
   id: ActionBibleSummon

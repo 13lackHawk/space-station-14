@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - type: job
   id: Detective
   name: job-name-detective
@@ -36,3 +37,43 @@
   innerClothingSkirt: ClothingUniformJumpskirtDetective
   satchel: ClothingBackpackSatchelSecurityFilledDetective
   duffelbag: ClothingBackpackDuffelSecurityFilledDetective
+=======
+- type: job
+  id: Detective
+  name: job-name-detective
+  description: job-description-detective
+  playTimeTracker: JobDetective
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 72000 #20 hrs # Corvax-RoleTime
+  startingGear: DetectiveGear
+  icon: "JobIconDetective"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Detective
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: DetectiveGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetective
+    back: ClothingBackpackSecurityFilledDetective
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadHatFedoraBrown
+    outerClothing: ClothingOuterVestDetective
+    id: DetectivePDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltHolsterFilled
+  innerClothingSkirt: ClothingUniformJumpskirtDetective
+  satchel: ClothingBackpackSatchelSecurityFilledDetective
+  duffelbag: ClothingBackpackDuffelSecurityFilledDetective
+>>>>>>> cd80c5fd2665ba03d5317e46bdea8f983c3afb7d
