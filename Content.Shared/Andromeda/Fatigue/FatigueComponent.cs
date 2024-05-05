@@ -2,9 +2,12 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.Andromeda.Fatigue;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class FatigueComponent : Component
 {
+    [DataField("uid"), AutoNetworkedField]
+    public EntityUid Uid;
+
     [DataField("currentFatigue"), ViewVariables(VVAccess.ReadWrite)]
     public int CurrentFatigue { get; set; }
 

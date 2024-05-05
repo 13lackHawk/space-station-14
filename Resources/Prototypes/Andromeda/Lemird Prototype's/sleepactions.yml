@@ -1,0 +1,12 @@
+- type: entity
+  id: ActionSleepFatigue
+  name: Заснуть
+  description: Вы можете заснуть в любое время, в любом месте. Если конечно хотите.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 10
+    icon: { sprite: Andromeda/Lemird/sleepactions.cs, state: sleep_sit }
+    event: !type:SleepActionEvent
+    checkCanInteract: false
+    checkConsciousness: false
