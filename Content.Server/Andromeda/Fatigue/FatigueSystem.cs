@@ -13,6 +13,8 @@ using Content.Shared.NukeOps;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Actions;
 using Content.Server.Bed.Sleep;
+using Content.Shared.Toggleable;
+using Content.Shared.Buckle.Components;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem
@@ -32,7 +34,7 @@ public sealed class FatigueSystem : EntitySystem
         SubscribeLocalEvent<FatigueComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<SleepingComponent, SleepStateChangedEvent>(OnSleepStateChanged);
         SubscribeLocalEvent<FatigueComponent, RejuvenateEvent>(OnRejuvenate);
-        SubscribeLocalEvent<SleepActionEvent>(OnSleepAction);
+        SubscribeLocalEvent<ToggleActionEvent>(OnSleepAction);
     }
 
     public override void Update(float frameTime)
@@ -137,7 +139,7 @@ public sealed class FatigueSystem : EntitySystem
         }
     }
 
-    private void OnSleepAction(SleepActionEvent args)
+    private void OnSleepAction(ToggleActionEvent args)
     {
         if (args.Handled)
             return;
@@ -145,9 +147,21 @@ public sealed class FatigueSystem : EntitySystem
         if (!EntityManager.TryGetComponent<FatigueComponent>(args.Performer, out var fatigueComponent))
             return;
 
-        var sleepingSystem = _entManager.System<SleepingSystem>();
-        sleepingSystem.TrySleeping(args.Performer);
-        args.Handled = true;
+        if (EntityManager.TryGetComponent<BuckleComponent>(args.Performer, out var buckleComponent))
+        {
+            if (buckleComponent.Buckled)
+            {
+                var sleepingSystem = _entManager.System<SleepingSystem>();
+                sleepingSystem.TrySleeping(args.Performer);
+                //Log.Info($"Удалось выполнить условие потому что, {args.Performer} пристёгнут.");
+                args.Handled = true;
+            }
+            else
+            {
+                _popupSystem.PopupCursor(Loc.GetString("Вы не пристёгнуты"), args.Performer, PopupType.Medium);
+                //Log.Warning($"{args.Performer} не пристёгнут, невозможно уложить его спать.");
+            }
+        }
     }
 
     private void OnRejuvenate(EntityUid uid, FatigueComponent component, RejuvenateEvent args)

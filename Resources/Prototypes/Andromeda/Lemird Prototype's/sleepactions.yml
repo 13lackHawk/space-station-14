@@ -5,8 +5,8 @@
   noSpawn: true
   components:
   - type: InstantAction
-    useDelay: 10
+    useDelay: 20
     icon: { sprite: Andromeda/Lemird/sleepactions.cs, state: sleep_sit }
-    event: !type:SleepActionEvent
+    event: !type:ToggleActionEvent
     checkCanInteract: false
     checkConsciousness: false
