@@ -625,7 +625,7 @@
   - type: SolutionContainerManager
     solutions:
       hypospray:
-        maxVol: 15
+        maxVol: 5
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 3
@@ -636,7 +636,7 @@
     solution: hypospray
   - type: Hypospray
     onlyMobs: false
-    transferAmount: 15
+    transferAmount: 5
   - type: UseDelay
     delay: 120
   - type: GuideHelp
