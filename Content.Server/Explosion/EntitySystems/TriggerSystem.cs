@@ -150,7 +150,7 @@ namespace Content.Server.Explosion.EntitySystems
         private void HandleFlashTrigger(EntityUid uid, FlashOnTriggerComponent component, TriggerEvent args)
         {
             // TODO Make flash durations sane ffs.
-            _flashSystem.FlashArea(uid, args.User, force: false, component.Range, component.Duration * 1000f); // A-13 'force: false' set to false due usage for trigger granades only and to not break balance. - 'PenPlus+'
+            _flashSystem.FlashArea(uid, args.User, component.Range, component.Duration * 1000f);
             args.Handled = true;
         }
 

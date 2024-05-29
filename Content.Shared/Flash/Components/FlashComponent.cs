@@ -16,12 +16,6 @@ namespace Content.Shared.Flash.Components
         [ViewVariables(VVAccess.ReadWrite)]
         public float Range { get; set; } = 7f;
 
-        // A-13 new variable for component ForceFlash to ignore protection if needed. - 'PenPlus+' start
-        [DataField("forceFlash")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool ForceFlash { get; set; } = false;
-        // A-13 new variable for component ForceFlash to ignore protection if needed. - 'PenPlus+' end
-
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField("aoeFlashDuration")]
         public int AoeFlashDuration { get; set; } = 2000;

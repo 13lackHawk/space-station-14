@@ -419,13 +419,6 @@
   #- type: ExaminableSolution
   #  solution: hypospray
 # Corvax-HiddenDesc-End
-  - type: Sprite
-    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
-    state: pen
-  - type: Item
-    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
-    heldPrefix: pen
-    size: Tiny
   - type: Hypospray
     onlyMobs: false
   - type: UseDelay

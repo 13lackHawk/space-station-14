@@ -5,13 +5,6 @@
   description: A dark ink pen.
   id: PenExploding
   components:
-  - type: Sprite
-    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
-    state: pen
-  - type: Item
-    sprite: Andromeda/Valikzant/Penplus/penplus.rsi
-    heldPrefix: pen
-    size: Tiny
   - type: OnUseTimerTrigger
     delay: 4
     examinable: false

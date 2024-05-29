@@ -28,18 +28,12 @@
       whitelist:
         components:
         - PAI
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: StandartPen
+    penSlot:
+      startingItem: Pen
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     idSlot:
       name: access-id-card-component-default
       ejectSound: /Audio/Machines/id_swipe.ogg
@@ -127,18 +121,6 @@
   description: Why isn't it gray?
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: StandartPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: PassengerIDCard
     state: pda
   - type: PdaBorderColor
@@ -151,18 +133,6 @@
   description: Why isn't it yellow?
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: TechPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: TechnicalAssistantIDCard
     state: pda-interntech
   - type: PdaBorderColor
@@ -178,18 +148,6 @@
   description: Why isn't it white? Has a built-in health analyzer.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: MedInternPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: MedicalInternIDCard
     state: pda-internmed
   - type: PdaBorderColor
@@ -208,18 +166,6 @@
   description: Why isn't it red?
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: SecCadetPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: SecurityCadetIDCard
     state: pda-interncadet
   - type: PdaBorderColor
@@ -235,18 +181,6 @@
   description: Why isn't it purple?
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: ScienPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ResearchAssistantIDCard
     state: pda-internsci
   - type: PdaBorderColor
@@ -262,18 +196,6 @@
   description: Why isn't it gray?
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: SerPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ServiceWorkerIDCard
     state: pda-internservice
   - type: PdaBorderColor
@@ -289,18 +211,6 @@
   description: Covered in grease and flour.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: RollingPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ChefIDCard
     state: pda-cook
   - type: PdaBorderColor
@@ -315,18 +225,6 @@
   description: Has an earthy scent.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: HydroPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: BotanistIDCard
     state: pda-hydro
   - type: PdaBorderColor
@@ -344,22 +242,14 @@
   - type: Pda
     id: ClownIDCard
     state: pda-clown
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: ClownPen
-      ejectSound:
-        path: /Audio/Items/bikehorn.ogg
-        params:
-          volume: -5
+    penSlot:
+      startingItem: CrayonOrange # no pink crayon?!?
+      # ^ Still unacceptable.
+      ejectSound: /Audio/Items/bikehorn.ogg
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
   - type: PdaBorderColor
     borderColor: "#C18199"
   - type: Icon
@@ -396,38 +286,10 @@
   description: Suprisingly not on mute.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens and no volume for mime pda. - 'PenPlus+' start
-      startingItem: MimePen
-      priority: -1
-      ejectSound:
-        path: /Audio/Machines/id_insert.ogg
-        params:
-          volume: -30
-      insertSound:
-        path: /Audio/Machines/id_insert.ogg
-        params:
-          volume: -30
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens and no volume for mime pda. - 'PenPlus+' end
     id: MimeIDCard
     state: pda-mime
-    idSlot: # A-13 Rewriten with no volume for mime pda. - 'PenPlus+' start
+    idSlot: #  rewrite without sound because mime
       name: ID Card
-      ejectSound:
-        path: /Audio/Machines/id_insert.ogg
-        params:
-          volume: -30
-      insertSound:
-        path: /Audio/Machines/id_insert.ogg
-        params:
-          volume: -30 # A-13 Rewriten with no volume for mime pda. - 'PenPlus+' end
       whitelist:
         components:
         - IdCard
@@ -444,18 +306,6 @@
   description: God's chosen PDA.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: ChaPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ChaplainIDCard
     state: pda-chaplain
   - type: PdaBorderColor
@@ -470,18 +320,6 @@
   description: PDA for the guy that orders the guns.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: QmPricePen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: QuartermasterIDCard
     state: pda-qm
   - type: PdaBorderColor
@@ -497,18 +335,6 @@
   description: PDA for the guys that order the pizzas.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: CargoPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: CargoIDCard
     state: pda-cargo
   - type: PdaBorderColor
@@ -523,18 +349,6 @@
   description: Smells like ash.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: SalvagePen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: SalvageIDCard
     state: pda-miner
   - type: PdaBorderColor
@@ -550,18 +364,6 @@
   description: Smells like beer.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: BarPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: BartenderIDCard
     state: pda-bartender
   - type: PdaBorderColor
@@ -576,20 +378,14 @@
   description: Smells like books.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: LibraPen
+    id: LibrarianIDCard
+    state: pda-library
+    penSlot:
+      startingItem: LuxuryPen
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
-    id: LibrarianIDCard
-    state: pda-library
   - type: PdaBorderColor
     borderColor: "#858585"
   - type: Icon
@@ -602,20 +398,14 @@
   description: For lawyers to poach dubious clients.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: AVDPen
+    id: LawyerIDCard
+    state: pda-lawyer
+    penSlot:
+      startingItem: LuxuryPen
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
-    id: LawyerIDCard
-    state: pda-lawyer
   - type: PdaBorderColor
     borderColor: "#6f6192"
   - type: Icon
@@ -628,18 +418,6 @@
   description: Smells like bleach.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: JanPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: JanitorIDCard
     state: pda-janitor
   - type: PdaBorderColor
@@ -656,18 +434,12 @@
   - type: Pda
     id: CaptainIDCard
     state: pda-captain
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: CapPen
+    penSlot:
+      startingItem: PenCap
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
   - type: PdaBorderColor
     borderColor: "#7C5D00"
   - type: Icon
@@ -680,20 +452,14 @@
   description: Looks like it's been chewed on.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: HopPen
+    id: HoPIDCard
+    state: pda-hop
+    penSlot:
+      startingItem: PenHop
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
-    id: HoPIDCard
-    state: pda-hop
   - type: PdaBorderColor
     borderColor: "#789876"
     accentHColor: "#447987"
@@ -707,18 +473,6 @@
   description: Looks like it's barely been used.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: CeScrewFlashPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: CEIDCard
     state: pda-ce
   - type: PdaBorderColor
@@ -734,18 +488,6 @@
   description: Rugged and well-worn.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: PenEngineer
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: EngineeringIDCard
     state: pda-engineer
   - type: PdaBorderColor
@@ -761,18 +503,6 @@
   description: Extraordinarily shiny and sterile. Has a built-in health analyzer.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: CmSprayPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: CMOIDCard
     state: pda-cmo
   - type: PdaBorderColor
@@ -789,18 +519,6 @@
   description: Shiny and sterile. Has a built-in health analyzer.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: MedPillPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: MedicalIDCard
     state: pda-medical
   - type: PdaBorderColor
@@ -819,18 +537,6 @@
   description: Shiny and sterile. Has a built-in rapid health analyzer.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: ParamedPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ParamedicIDCard
     state: pda-paramedic
   - type: PdaBorderColor
@@ -846,18 +552,6 @@
   description: It has a few discolored blotches here and there.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: MedChimPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ChemistIDCard
     state: pda-chemistry
   - type: PdaBorderColor
@@ -873,18 +567,6 @@
   description: It appears surprisingly ordinary.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: RdAnomalyPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: RDIDCard
     state: pda-rd
   - type: PdaBorderColor
@@ -901,18 +583,6 @@
   description: It's covered with an unknown gooey substance.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: PaiPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ResearchIDCard
     state: pda-science
   - type: PdaBorderColor
@@ -928,18 +598,6 @@
   description: Whosoever bears this PDA is the law.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: HosStunPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: HoSIDCard
     state: pda-hos
   - type: PdaBorderColor
@@ -955,18 +613,6 @@
   description: The OS appears to have been jailbroken.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: WardenPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: WardenIDCard
     state: pda-warden
   - type: PdaBorderColor
@@ -982,18 +628,6 @@
   description: Red to hide the stains of passenger blood.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: SecFlashPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: SecurityIDCard
     state: pda-security
   - type: PdaBorderColor
@@ -1052,18 +686,6 @@
   suffix: Death Squad
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: DeathSquadPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: CentcomIDCardDeathsquad
 
 - type: entity
@@ -1073,18 +695,6 @@
   description: It fills you with inspiration.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: PianoPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: MusicianIDCard
     state: pda-musician
   - type: PdaBorderColor
@@ -1104,18 +714,6 @@
   description: Still smells like plasma.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: AtmosPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: AtmosIDCard
     state: pda-atmos
   - type: PdaBorderColor
@@ -1131,18 +729,6 @@
   description: 99 and 44/100ths percent pure plastic.
   components:
   - type: Pda
-    penSlot: # A-13 New whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: Pen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New whitelist and blacklist for other pens. - 'PenPlus+' end
     id: PassengerIDCard
     state: pda-clear
   - type: PdaBorderColor
@@ -1157,18 +743,6 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: GorlaxElitePen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: SyndicateIDCard
     state: pda-syndi
   - type: PdaBorderColor
@@ -1279,18 +853,6 @@
   description: Looks immaculately cleaned.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: MedPsyPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: PsychologistIDCard
     state: pda-medical
   - type: PdaBorderColor
@@ -1306,20 +868,14 @@
   description: Smells like freshly printed press.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: JournPen
+    id: ReporterIDCard
+    state: pda-reporter
+    penSlot:
+      startingItem: LuxuryPen
       priority: -1
       whitelist:
         tags:
         - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
-    id: ReporterIDCard
-    state: pda-reporter
   - type: PdaBorderColor
     borderColor: "#3f3f74"
   - type: Icon
@@ -1332,18 +888,6 @@
   description: Made with genuine synthetic leather. Crikey!
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: ZooPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: ZookeeperIDCard
     state: pda-zookeeper
   - type: PdaBorderColor
@@ -1358,18 +902,6 @@
   description: Float like a butterfly, ringtone like a bee.
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: BoxerPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: BoxerIDCard
     state: pda-boxer
   - type: PdaBorderColor
@@ -1385,18 +917,6 @@
   description: Smells like rain... pouring down the rooftops...
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: DecPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: DetectiveIDCard
     state: pda-detective
   - type: PdaBorderColor
@@ -1524,18 +1044,6 @@
   description: For those days when healing normal syndicates aren't enough, try healing nuclear operatives instead!
   components:
   - type: Pda
-    penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
-      startingItem: GorlaxElitePen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-        - SalvagePenWelder
-        - LibraPenR
-        - RollingPen
-      blacklist:
-        tags:
-        - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
     id: SyndicateIDCard
     state: pda-syndi-agent
   - type: PdaBorderColor
