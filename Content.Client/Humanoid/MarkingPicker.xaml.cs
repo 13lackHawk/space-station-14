@@ -223,13 +223,6 @@ public sealed partial class MarkingPicker : Control
 
             var item = CMarkingsUnused.AddItem($"{GetMarkingName(marking)}", marking.Sprites[0].Frame0());
             item.Metadata = marking;
-
-            // A-13 Sponsor service start
-            if (marking.SponsorOnly)
-            {
-                item.Disabled = false;
-            }
-            // A-13 Sponsor service end
         }
 
         CMarkingPoints.Visible = _currentMarkings.PointsLeft(_selectedMarkingCategory) != -1;
